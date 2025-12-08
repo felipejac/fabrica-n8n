@@ -578,6 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.openSettings = openSettings;
     window.closeSettings = closeSettings;
     window.saveSettings = saveSettings;
+    window.askToolbox = askToolbox;
     window.openAICreator = openAICreator;
     window.closeAICreator = closeAICreator;
     window.generateWorkflowAI = generateWorkflowAI;
@@ -591,5 +592,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.diagnoseError = diagnoseError;
     window.downloadTemplate = downloadTemplate;
     window.generateFiles = generateFiles;
+    window.enrichCSV = enrichCSV;
 
 });
