@@ -218,8 +218,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderAcademy(filter = 'all') {
       const grid = el('academy-grid');
+      const filtersContainer = el('academy-filters');
+      
+      if(!grid || !filtersContainer) return; // Guard clause
+      
+      // Limpar grid
       grid.innerHTML = '';
+      
+      // Renderizar snippets
       const filtered = filter === 'all' ? academySnippets : academySnippets.filter(s => s.type === filter);
+      
+      if(filtered.length === 0) {
+          grid.innerHTML = '<p class="col-span-full text-center text-slate-500">Nenhum snippet encontrado.</p>';
+          return;
+      }
       
       filtered.forEach(s => {
           const card = document.createElement('div');
@@ -232,9 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
           grid.appendChild(card);
       });
       
-      // Renderizar filtros se ainda não existem
-      const filtersContainer = el('academy-filters');
-      if(filtersContainer && filtersContainer.children.length === 0) {
+      // Renderizar filtros na primeira vez
+      if(filtersContainer.children.length === 0) {
           const types = ['all', ...new Set(academySnippets.map(s => s.type))];
           types.forEach(type => {
               const btn = document.createElement('button');
@@ -245,12 +256,14 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       }
       
-      // Aplicar highlight após um pequeno delay
+      // Aplicar highlight após renderização
       setTimeout(() => {
-          document.querySelectorAll('pre code').forEach((block) => { 
-              if(window.hljs) hljs.highlightElement(block); 
+          document.querySelectorAll('#academy-grid pre code').forEach((block) => { 
+              if(window.hljs) {
+                  hljs.highlightElement(block); 
+              }
           });
-      }, 100);
+      }, 50);
   }
 
   function filterAcademy(type, btnElement) {
