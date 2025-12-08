@@ -204,7 +204,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- ACADEMY DATA (Static Content) ---
-  const academySnippets = [ /* omitted for brevity in this file */ ];
+  const academySnippets = [
+      { type: 'javascript', title: 'Extrair JSON de String', desc: 'Parse JSON de uma string com tratamento de erro', code: 'try { const obj = JSON.parse(input); return obj; } catch(e) { return { error: e.message }; }' },
+      { type: 'javascript', title: 'Formatar Data ISO', desc: 'Converter timestamp para data legível', code: 'const date = new Date(input); return date.toLocaleDateString("pt-BR", { year: "numeric", month: "2-digit", day: "2-digit" });' },
+      { type: 'javascript', title: 'Filtrar Array por Propriedade', desc: 'Filter items baseado em condição', code: 'return items.filter(item => item.status === "ativo" && item.value > 100);' },
+      { type: 'regex', title: 'Validar Email', desc: 'Regex para emails válidos', code: '/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/' },
+      { type: 'regex', title: 'Extrair URLs', desc: 'Capturar URLs em texto', code: '/https?:\\/\\/[^\\s]+/g' },
+      { type: 'cron', title: 'Rodar Diariamente 8AM', desc: 'Cron expression para 8 da manhã', code: '0 8 * * *' },
+      { type: 'cron', title: 'Rodar a Cada 30min', desc: 'Cron para executar de meia em meia hora', code: '*/30 * * * *' },
+      { type: 'javascript', title: 'Remover Duplicatas', desc: 'Remove itens duplicados de um array', code: 'return [...new Set(items.map(JSON.stringify))].map(JSON.parse);' },
+      { type: 'javascript', title: 'Agrupar por Chave', desc: 'Agrupa items baseado em uma propriedade', code: 'return items.reduce((acc, item) => { acc[item.category] = [...(acc[item.category] || []), item]; return acc; }, {});' },
+  ];
 
   function renderAcademy(filter = 'all') {
       const grid = el('academy-grid');
@@ -223,6 +233,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       // Re-aplicar highlight
       document.querySelectorAll('pre code').forEach((block) => { hljs.highlightElement(block); });
+      
+      // Renderizar filtros se ainda não existem
+      const filtersContainer = el('academy-filters');
+      if(filtersContainer && filtersContainer.children.length === 0) {
+          const types = ['all', ...new Set(academySnippets.map(s => s.type))];
+          types.forEach(type => {
+              const btn = document.createElement('button');
+              btn.textContent = type === 'all' ? 'Todos' : type.charAt(0).toUpperCase() + type.slice(1);
+              btn.className = type === 'all' ? "px-4 py-2 rounded-full bg-slate-800 text-white text-sm font-medium shadow transition-all hover:scale-105" : "px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-all hover:scale-105";
+              btn.onclick = () => filterAcademy(type, btn);
+              filtersContainer.appendChild(btn);
+          });
+      }
   }
 
   function filterAcademy(type, btnElement) {
