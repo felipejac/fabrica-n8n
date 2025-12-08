@@ -218,62 +218,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderAcademy(filter = 'all') {
       const grid = el('academy-grid');
-      const filtersContainer = el('academy-filters');
+      if(!grid) return;
       
-      if(!grid || !filtersContainer) return; // Guard clause
-      
-      // Limpar grid
-      grid.innerHTML = '';
-      
-      // Renderizar snippets
       const filtered = filter === 'all' ? academySnippets : academySnippets.filter(s => s.type === filter);
+      grid.innerHTML = filtered.map(s => `
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+              <h3 class="font-semibold text-slate-900 mb-2">${s.title}</h3>
+              <p class="text-sm text-slate-600 mb-3">${s.desc}</p>
+              <pre class="bg-slate-900 p-3 rounded text-slate-100 text-xs overflow-x-auto"><code>${s.code}</code></pre>
+          </div>
+      `).join('');
       
-      if(filtered.length === 0) {
-          grid.innerHTML = '<p class="col-span-full text-center text-slate-500">Nenhum snippet encontrado.</p>';
-          return;
-      }
-      
-      filtered.forEach(s => {
-          const card = document.createElement('div');
-          card.className = "bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col hover:shadow-md transition-shadow";
-          card.innerHTML = `
-          <h3 class=\"font-semibold text-slate-900 mb-2\">${s.title}</h3>
-          <p class=\"text-sm text-slate-600 mb-3\">${s.desc}</p>
-          <pre><code class=\"language-javascript\">${s.code}</code></pre>
-          `;
-          grid.appendChild(card);
-      });
-      
-      // Renderizar filtros na primeira vez
-      if(filtersContainer.children.length === 0) {
+      // Gerar filtros na primeira renderização
+      const fc = el('academy-filters');
+      if(fc && fc.children.length === 0) {
           const types = ['all', ...new Set(academySnippets.map(s => s.type))];
-          types.forEach(type => {
-              const btn = document.createElement('button');
-              btn.textContent = type === 'all' ? 'Todos' : type.charAt(0).toUpperCase() + type.slice(1);
-              btn.className = type === 'all' ? "px-4 py-2 rounded-full bg-slate-800 text-white text-sm font-medium shadow transition-all hover:scale-105" : "px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-all hover:scale-105";
-              btn.onclick = () => filterAcademy(type, btn);
-              filtersContainer.appendChild(btn);
-          });
+          fc.innerHTML = types.map(t => `<button onclick="filterAcademy('${t}')" class="px-4 py-2 rounded-full ${t === 'all' ? 'bg-slate-800 text-white' : 'bg-white border border-slate-200 text-slate-600'} text-sm font-medium hover:scale-105 transition-all">${t === 'all' ? 'Todos' : t.charAt(0).toUpperCase() + t.slice(1)}</button>`).join('');
       }
-      
-      // Aplicar highlight após renderização
-      setTimeout(() => {
-          document.querySelectorAll('#academy-grid pre code').forEach((block) => { 
-              if(window.hljs) {
-                  hljs.highlightElement(block); 
-              }
-          });
-      }, 50);
   }
 
   function filterAcademy(type, btnElement) {
       renderAcademy(type);
       document.querySelectorAll('#academy-filters button').forEach(b => {
-          b.className = "px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-all hover:scale-105";
+          b.className = "px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:scale-105 transition-all";
       });
-      if (btnElement) {
-          btnElement.className = "px-4 py-2 rounded-full bg-slate-800 text-white text-sm font-medium shadow transition-all hover:scale-105";
-      }
+      event.target.className = "px-4 py-2 rounded-full bg-slate-800 text-white text-sm font-medium hover:scale-105 transition-all";
   }
 
   function copyCode(btn, encodedCode) {
