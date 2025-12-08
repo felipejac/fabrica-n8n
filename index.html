@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N8N Factory - Gerador e Biblioteca com IA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bibliotecas para CSV e ZIP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .aspect-video { aspect-ratio: 16 / 9; }
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800 flex flex-col">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between h-auto md:h-16 py-2 md:py-0 gap-2 md:gap-0">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 cursor-pointer w-full md:w-auto" onclick="switchView('generator')">
+                    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-2 rounded-lg shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-900 tracking-tight">N8N Factory <span class="text-xs text-indigo-500 font-normal border border-indigo-100 bg-indigo-50 px-1 rounded">AI Powered</span></h1>
+                        <p class="text-xs text-slate-500 font-medium">Automação de Conteúdo</p>
+                    </div>
+                </div>
+
+                <!-- Menu Desktop & Mobile -->
+                <nav class="flex w-full md:w-auto items-center gap-2 bg-slate-100 p-1 rounded-lg overflow-x-auto">
+                    <button onclick="switchView('generator')" id="nav-generator" class="flex-1 md:flex-none whitespace-nowrap px-3 md:px-4 py-2 rounded-md text-sm font-medium transition-all text-slate-700 bg-white shadow-sm">
+                        🏭 Gerador
+                    </button>
+                    <button onclick="switchView('library')" id="nav-library" class="flex-1 md:flex-none whitespace-nowrap px-3 md:px-4 py-2 rounded-md text-sm font-medium transition-all text-slate-600 hover:text-slate-900 hover:bg-white/50">
+                        📚 Biblioteca
+                    </button>
+                    <button onclick="toggleTutorial()" class="flex-1 md:flex-none whitespace-nowrap px-3 md:px-4 py-2 rounded-md text-sm font-medium transition-all text-slate-600 hover:text-slate-900 hover:bg-white/50 flex items-center justify-center gap-2">
+                         Tutorial
+                    </button>
+                    <div class="w-px h-6 bg-slate-300 mx-1"></div>
+                    <button onclick="openSettings()" class="flex-none px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/50" title="Configurar API Key">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- ========================================== -->
+        <!-- VIEW: GENERATOR (Original Tool)           -->
+        <!-- ========================================== -->
+        <section id="generator-view" class="fade-in">
+            <!-- Tutorial (Collapsible) -->
+            <div id="tutorial-section" class="mb-8 hidden bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 bg-slate-50 relative">
+                    <button onclick="toggleTutorial()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="w-full aspect-video bg-slate-800 rounded-lg shadow-lg flex items-center justify-center relative group">
+                            <!-- Placeholder do Vídeo -->
+                            <div class="text-center text-slate-400 p-4">
+                                <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                <p class="text-sm">Insira o iframe do vídeo aqui</p>
+                            </div>
+                             <!-- Botão Play Fake para demo -->
+                             <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all cursor-pointer">
+                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-110 transition-transform">
+                                    <svg class="w-8 h-8 text-indigo-600 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" /></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prose prose-sm text-slate-600">
+                            <h3 class="text-lg font-bold text-slate-900">Tutorial Rápido</h3>
+                            <p>Aprenda a criar dezenas de páginas Markdown em segundos.</p>
+                            <ol class="list-decimal pl-4 space-y-2">
+                                <li>Cole seu CSV com cabeçalho na esquerda.</li>
+                                <li>Configure o Template usando variáveis <code>{{ nome }}</code>.</li>
+                                <li>Verifique a prévia e baixe o ZIP.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
+                <!-- Inputs (Left) -->
+                <div class="flex flex-col gap-6">
+                    <!-- CSV Input -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="bg-slate-50 px-4 py-3 border-b border-slate-200 flex justify-between items-center">
+                            <h2 class="font-semibold text-slate-700 flex items-center gap-2">
+                                <span class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-0.5 rounded">1</span> Fonte de Dados (CSV)
+                            </h2>
+                            <button onclick="enrichCSV()" id="enrichBtn" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded flex items-center gap-1 transition-colors">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                ✨ Enriquecer com IA
+                            </button>
+                        </div>
+                        <div class="p-4 relative">
+                            <textarea id="csvInput" class="w-full h-48 p-3 bg-slate-50 border border-slate-300 rounded-lg font-mono text-xs focus:ring-2 focus:ring-blue-500 outline-none resize-y transition-all" spellcheck="false" placeholder="Cole seu CSV aqui...">software_a,software_b,tipo_evento,caso_uso_resumido,titulo_pagina,slug_url,descricao_curta,json_n8n_url,passos_resumo,tags
+"Facebook Lead Ads","WhatsApp (Chatwoot)","lead","enviar novos leads para um número ou inbox de WhatsApp em tempo real","Como enviar leads do Facebook Ads para o WhatsApp (Chatwoot) usando N8N","facebook-ads-para-whatsapp-chatwoot-n8n","","https://seu-dominio.com/templates/facebook-ads-chatwoot-n8n.json","","marketing, leads, whatsapp, chatwoot"
+"Typeform","Google Sheets","formulario","registrar respostas de formulário em planilha","Como integrar Typeform com Google Sheets usando N8N","typeform-para-google-sheets-n8n","","https://seu-dominio.com/templates/typeform-google-sheets-n8n.json","","formularios, planilhas, marketing"</textarea>
+                            <!-- Loading Overlay for CSV -->
+                            <div id="csvLoading" class="hidden absolute inset-0 bg-white/80 flex flex-col items-center justify-center z-10 rounded-lg">
+                                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mb-2"></div>
+                                <span class="text-sm text-indigo-700 font-medium">A IA está escrevendo...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Template Input -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex-1 flex flex-col">
+                        <div class="bg-slate-50 px-4 py-3 border-b border-slate-200 flex justify-between items-center">
+                            <h2 class="font-semibold text-slate-700 flex items-center gap-2">
+                                <span class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-0.5 rounded">2</span> Template Markdown
+                            </h2>
+                            <span class="text-xs text-slate-400">Use {{ variavel }}</span>
+                        </div>
+                        <div class="p-4 flex-1 flex flex-col">
+                            <textarea id="templateInput" class="w-full flex-1 min-h-[12rem] p-3 bg-slate-50 border border-slate-300 rounded-lg font-mono text-xs focus:ring-2 focus:ring-blue-500 outline-none resize-y transition-all" spellcheck="false" placeholder="Cole seu template aqui...">---
+title: "{{ titulo_pagina }}"
+slug: "{{ slug_url }}"
+tags: "{{ tags }}"
+description: "{{ descricao_curta }}"
+---
+
+# {{ titulo_pagina }}
+
+{{ descricao_curta }}
+
+## Visão geral
+Origem: {{ software_a }} -> Destino: {{ software_b }}
+
+## Passo a passo
+{{ passos_resumo }}
+
+[Baixar JSON]({{ json_n8n_url }})</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview (Right) -->
+                <div class="flex flex-col gap-6">
+                    <div class="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden flex flex-col h-full sticky top-20">
+                        <div class="bg-slate-900 text-white px-4 py-3 flex justify-between items-center">
+                            <h2 class="font-semibold flex items-center gap-2">Live Preview</h2>
+                            <span id="previewBadge" class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">Aguardando...</span>
+                        </div>
+                        
+                        <div class="flex-1 bg-slate-50 relative">
+                            <textarea id="previewOutput" readonly class="w-full h-full p-6 bg-slate-50 text-slate-700 font-mono text-sm resize-none focus:outline-none"></textarea>
+                        </div>
+
+                        <div class="p-6 bg-white border-t border-slate-200">
+                            <button onclick="generateFiles()" id="downloadBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2">
+                                <span>Gerar e Baixar ZIP</span>
+                            </button>
+                            <p id="errorMsg" class="hidden mt-2 text-center text-xs text-red-600 font-medium"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- VIEW: LIBRARY (Updated Feature)           -->
+        <!-- ========================================== -->
+        <section id="library-view" class="hidden fade-in">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-slate-900">Biblioteca de Templates N8N</h2>
+                <p class="mt-2 text-slate-600">Mais de <span class="font-bold text-blue-600">3.200</span> fluxos de automação prontos. Use a busca ou crie com IA.</p>
+                
+                <!-- Search & AI Create -->
+                <div class="max-w-2xl mx-auto mt-6 flex gap-2">
+                    <div class="relative flex-grow">
+                        <input type="text" id="searchInput" onkeyup="filterLibrary()" placeholder="Buscar templates (ex: OpenAI, Slack)..." class="w-full pl-10 pr-4 py-3 rounded-l-full border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
+                        <svg class="w-5 h-5 text-slate-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <button onclick="openAICreator()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-r-full font-medium shadow-md transition-all flex items-center gap-2 whitespace-nowrap">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Criar com IA
+                    </button>
+                </div>
+            </div>
+
+            <!-- AI Creator Panel (Hidden by default) -->
+            <div id="aiCreatorPanel" class="hidden max-w-2xl mx-auto mb-8 bg-indigo-50 border border-indigo-100 rounded-xl p-6 relative animate-in slide-in-from-top-4">
+                <button onclick="closeAICreator()" class="absolute top-2 right-2 text-indigo-400 hover:text-indigo-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <h3 class="text-lg font-bold text-indigo-900 mb-2">Descreva sua automação</h3>
+                <p class="text-sm text-indigo-700 mb-4">A IA vai gerar um template customizado (JSON) e adicionar à sua biblioteca.</p>
+                <textarea id="aiPrompt" class="w-full p-3 rounded-lg border border-indigo-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm h-24 mb-4" placeholder="Ex: Eu quero um fluxo que monitore o preço do Bitcoin a cada hora e me envie um email se subir mais de 5%..."></textarea>
+                <button onclick="generateWorkflowAI()" id="btnGenerateAI" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow transition-all flex justify-center items-center gap-2">
+                    <span>✨ Gerar Workflow</span>
+                </button>
+            </div>
+
+            <!-- Grid de Templates -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="template-grid">
+                <!-- Cards serão injetados aqui via JS -->
+            </div>
+            
+            <div id="no-results" class="hidden text-center py-12 text-slate-500">
+                <p class="text-lg">Nenhum template encontrado para sua busca.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="hidden fixed inset-0 bg-black/50 z-[60] flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 transform transition-all scale-100">
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Configurações</h3>
+            
+            <!-- Aviso de Segurança (NOVO) -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-md">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-xs text-blue-700">
+                            <strong>Segurança em primeiro lugar (Modelo BYOK):</strong><br>
+                            Sua chave de API é armazenada <em>exclusivamente</em> no armazenamento local (Local Storage) do seu navegador. Ela <strong>nunca</strong> é enviada para os nossos servidores (pois este é um site estático sem backend). A conexão é feita diretamente do seu navegador para a API do Google.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-slate-700 mb-2">Google Gemini API Key</label>
+                <input type="password" id="apiKeyInput" class="w-full p-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="Cole sua chave aqui...">
+                <p class="text-xs text-slate-500 mt-1">Necessária para enriquecer CSVs e criar workflows com IA.</p>
+            </div>
+            <div class="flex justify-end gap-2">
+                <button onclick="closeSettings()" class="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded text-sm">Cancelar</button>
+                <button onclick="saveSettings()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Logic -->
+    <script>
+        // --- API & IA LOGIC ---
+        const apiKey = ""; // Será preenchida pelo runtime ou input do usuário
+        let userApiKey = localStorage.getItem('gemini_api_key') || "";
+
+        function openSettings() {
+            document.getElementById('apiKeyInput').value = userApiKey;
+            document.getElementById('settingsModal').classList.remove('hidden');
+        }
+
+        function closeSettings() {
+            document.getElementById('settingsModal').classList.add('hidden');
+        }
+
+        function saveSettings() {
+            userApiKey = document.getElementById('apiKeyInput').value.trim();
+            localStorage.setItem('gemini_api_key', userApiKey);
+            closeSettings();
+            alert("API Key salva com sucesso!");
+        }
+
+        function getActiveKey() {
+            // Prioriza input do usuário, senão tenta a do ambiente (se injetada)
+            return userApiKey || apiKey;
+        }
+
+        async function callGemini(prompt) {
+            const key = getActiveKey();
+            if (!key) {
+                openSettings();
+                throw new Error("Por favor, configure sua API Key do Gemini nas configurações.");
+            }
+
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${key}`;
+            
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }]
+                })
+            });
+
+            if (!response.ok) {
+                const err = await response.json();
+                throw new Error(err.error?.message || "Erro ao chamar Gemini API");
+            }
+
+            const data = await response.json();
+            return data.candidates?.[0]?.content?.parts?.[0]?.text;
+        }
+
+        // --- FEATURE: ENRICH CSV ---
+        async function enrichCSV() {
+            const csvText = document.getElementById('csvInput').value;
+            const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
+            
+            if (parsed.data.length === 0) return alert("Adicione dados ao CSV primeiro.");
+
+            const loading = document.getElementById('csvLoading');
+            const btn = document.getElementById('enrichBtn');
+            
+            loading.classList.remove('hidden');
+            btn.disabled = true;
+
+            try {
+                // Pegar apenas linhas com campos vazios para economizar tokens
+                const rowsToProcess = parsed.data.filter(r => !r.descricao_curta || !r.passos_resumo).slice(0, 5); // Limitando a 5 por vez para demo
+                
+                if (rowsToProcess.length === 0) throw new Error("Todas as linhas já parecem preenchidas!");
+
+                const prompt = `
+                    Act as a helpful data assistant. I have a list of software automations.
+                    For each item, generate a short Portuguese description ('descricao_curta') and summary steps ('passos_resumo') if they are missing.
+                    
+                    Input Data (JSON):
+                    ${JSON.stringify(rowsToProcess)}
+
+                    Return ONLY a JSON array with the updated objects. Do not wrap in markdown code blocks.
+                `;
+
+                const resultText = await callGemini(prompt);
+                const cleanedText = resultText.replace(/```json|```/g, '').trim();
+                const enrichedRows = JSON.parse(cleanedText);
+
+                // Merge results back
+                enrichedRows.forEach(enriched => {
+                    const originalIndex = parsed.data.findIndex(r => r.titulo_pagina === enriched.titulo_pagina);
+                    if (originalIndex !== -1) {
+                        parsed.data[originalIndex].descricao_curta = enriched.descricao_curta;
+                        parsed.data[originalIndex].passos_resumo = enriched.passos_resumo;
+                    }
+                });
+
+                // Update UI
+                const newCSV = Papa.unparse(parsed.data);
+                document.getElementById('csvInput').value = newCSV;
+                updatePreview(); // Trigger visual update
+                alert("Dados enriquecidos com sucesso!");
+
+            } catch (e) {
+                alert("Erro: " + e.message);
+            } finally {
+                loading.classList.add('hidden');
+                btn.disabled = false;
+            }
+        }
+
+        // --- FEATURE: AI WORKFLOW GENERATOR ---
+        function openAICreator() {
+            document.getElementById('aiCreatorPanel').classList.remove('hidden');
+            document.getElementById('aiPrompt').focus();
+        }
+        
+        function closeAICreator() {
+            document.getElementById('aiCreatorPanel').classList.add('hidden');
+        }
+
+        async function generateWorkflowAI() {
+            const userPrompt = document.getElementById('aiPrompt').value;
+            if (!userPrompt) return alert("Descreva sua automação primeiro.");
+
+            const btn = document.getElementById('btnGenerateAI');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = `<svg class="animate-spin h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Criando...`;
+            btn.disabled = true;
+
+            try {
+                const systemPrompt = `
+                    You are an n8n workflow expert. Create a valid JSON object representing a template for the user's request.
+                    Structure:
+                    {
+                        "id": ${Date.now()},
+                        "title": "Short catchy title in Portuguese",
+                        "creator": "AI_Genius",
+                        "url": "#",
+                        "rating": 5,
+                        "desc": "Description in Portuguese.",
+                        "tags": ["Tag1", "Tag2"],
+                        "nodes": [
+                            { "name": "Trigger", "type": "n8n-nodes-base.webhook", "position": [100, 300] },
+                            { "name": "Action", "type": "n8n-nodes-base.httpRequest", "position": [300, 300] }
+                        ]
+                    }
+                    User Request: "${userPrompt}"
+                    Return ONLY raw JSON. No markdown.
+                `;
+
+                const resultText = await callGemini(systemPrompt);
+                const cleanedText = resultText.replace(/```json|```/g, '').trim();
+                const newTemplate = JSON.parse(cleanedText);
+
+                // Add to library
+                templateLibrary.unshift(newTemplate); // Add to top
+                renderLibrary(); // Re-render
+                closeAICreator();
+                document.getElementById('aiPrompt').value = "";
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                alert("Workflow criado com sucesso! Ele apareceu no topo da lista.");
+
+            } catch (e) {
+                alert("Erro ao criar workflow: " + e.message);
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        // --- VIEW MANAGEMENT ---
+        function switchView(viewName) {
+            const genView = document.getElementById('generator-view');
+            const libView = document.getElementById('library-view');
+            const navGen = document.getElementById('nav-generator');
+            const navLib = document.getElementById('nav-library');
+
+            if (viewName === 'generator') {
+                genView.classList.remove('hidden');
+                libView.classList.add('hidden');
+                navGen.classList.add('bg-white', 'shadow-sm', 'text-slate-700');
+                navGen.classList.remove('text-slate-600', 'hover:bg-white/50');
+                navLib.classList.remove('bg-white', 'shadow-sm', 'text-slate-700');
+                navLib.classList.add('text-slate-600', 'hover:bg-white/50');
+            } else {
+                genView.classList.add('hidden');
+                libView.classList.remove('hidden');
+                navLib.classList.add('bg-white', 'shadow-sm', 'text-slate-700');
+                navLib.classList.remove('text-slate-600', 'hover:bg-white/50');
+                navGen.classList.remove('bg-white', 'shadow-sm', 'text-slate-700');
+                navGen.classList.add('text-slate-600', 'hover:bg-white/50');
+                renderLibrary(); 
+            }
+        }
+
+        function toggleTutorial() {
+            const el = document.getElementById('tutorial-section');
+            el.classList.toggle('hidden');
+            if(!el.classList.contains('hidden')) switchView('generator');
+        }
+
+        // --- TEMPLATE DATA & LOGIC ---
+        // Lista Base (simulada)
+        let templateLibrary = [
+            { id: 1, title: "OpenAI Chatbot com Memória", creator: "n8n-community", url: "https://n8n.io/workflows/1234", rating: 5, desc: "Crie um chatbot inteligente que lembra o contexto da conversa usando OpenAI e Redis/Postgres para memória.", tags: ["AI", "Chatbot", "OpenAI"], nodes: [] },
+            { id: 2, title: "Google Sheets para WhatsApp", creator: "automation_guru", url: "https://n8n.io/workflows/1235", rating: 4, desc: "Monitore uma planilha do Google. Quando uma nova linha for adicionada, envie um alerta via API do WhatsApp.", tags: ["Sheets", "WhatsApp", "Notificação"], nodes: [] }
+        ];
+        
+        // Populate Fake Library
+        function expandLibrary() {
+             const sources = ["Typeform", "Stripe", "Shopify", "GitHub", "Google Sheets", "Slack", "Discord", "Gmail", "Zoom"];
+             const actions = ["OpenAI", "Slack", "Google Drive", "Notion", "Airtable", "Telegram", "HubSpot", "Jira"];
+             for (let i = 3; i <= 60; i++) {
+                const src = sources[Math.floor(Math.random() * sources.length)];
+                const act = actions[Math.floor(Math.random() * actions.length)];
+                templateLibrary.push({
+                    id: i,
+                    title: `Sincronizar ${src} com ${act}`,
+                    creator: "n8n_user_" + i,
+                    url: "#",
+                    rating: (Math.random() * 2 + 3).toFixed(1),
+                    desc: `Automatize processos entre ${src} e ${act} de forma eficiente.`,
+                    tags: [src, act, "Auto"],
+                    nodes: []
+                });
+             }
+        }
+        expandLibrary();
+
+        // Função de Renderização
+        function renderLibrary(filterText = "") {
+            const grid = document.getElementById('template-grid');
+            const noResults = document.getElementById('no-results');
+            grid.innerHTML = '';
+            
+            const filteredList = filterText 
+                ? templateLibrary.filter(t => 
+                    t.title.toLowerCase().includes(filterText.toLowerCase()) || 
+                    t.tags.some(tag => tag.toLowerCase().includes(filterText.toLowerCase())))
+                : templateLibrary;
+
+            if (filteredList.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            const LIMIT = 50;
+            const listToRender = filteredList.slice(0, LIMIT);
+
+            listToRender.forEach(template => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden group";
+                
+                // Highlight AI generated cards
+                const isAI = template.creator === "AI_Genius";
+                const borderClass = isAI ? "border-indigo-300 ring-1 ring-indigo-100" : "";
+                if(isAI) card.className += " " + borderClass;
+
+                const tagsHtml = template.tags.slice(0, 3).map(tag => 
+                    `<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-600 border border-slate-200">${tag}</span>`
+                ).join('');
+
+                let starsHtml = '';
+                const rating = Math.round(template.rating);
+                for (let i = 1; i <= 5; i++) {
+                    const fillColor = i <= rating ? 'text-yellow-400' : 'text-gray-200';
+                    starsHtml += `<svg class="w-3 h-3 ${fillColor} fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`;
+                }
+
+                card.innerHTML = `
+                    <div class="p-5 flex-1 flex flex-col relative">
+                        ${isAI ? '<span class="absolute top-0 right-0 bg-indigo-600 text-white text-[9px] px-2 py-1 rounded-bl-lg font-bold">AI GENERATED</span>' : ''}
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="text-[10px] font-mono text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">#${template.id}</span>
+                        </div>
+                        
+                        <h3 class="text-sm font-bold text-slate-800 leading-tight mb-1 line-clamp-2 min-h-[2.5rem]" title="${template.title}">${template.title}</h3>
+                        <p class="text-[10px] text-slate-400 mb-2">por @${template.creator}</p>
+
+                        <div class="flex items-center gap-1 mb-3">
+                            ${starsHtml} <span class="text-[10px] text-slate-400 ml-1">(${template.rating})</span>
+                        </div>
+
+                        <p class="text-slate-500 text-xs mb-4 line-clamp-3 flex-1">${template.desc}</p>
+                        
+                        <div class="flex flex-wrap gap-1 mt-auto">
+                            ${tagsHtml}
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 px-5 py-3 border-t border-slate-100">
+                        <button onclick="downloadTemplate(${template.id})" class="w-full flex items-center justify-center gap-2 bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-200 text-slate-700 hover:text-blue-700 font-medium py-1.5 px-3 rounded-md transition-all text-xs shadow-sm">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Baixar JSON
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterLibrary() {
+            const text = document.getElementById('searchInput').value;
+            renderLibrary(text);
+        }
+
+        function downloadTemplate(id) {
+            const template = templateLibrary.find(t => t.id === id);
+            if (!template) return;
+            const n8nStructure = {
+                name: template.title,
+                nodes: template.nodes || [], 
+                connections: {},
+                meta: { creator: template.creator, source: "N8N Factory Library", generated: true }
+            };
+            const blob = new Blob([JSON.stringify(n8nStructure, null, 2)], {type: "application/json;charset=utf-8"});
+            saveAs(blob, `${template.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.json`);
+        }
+
+
+        // --- GENERATOR LOGIC (CSV -> MD) ---
+        const csvInput = document.getElementById('csvInput');
+        const templateInput = document.getElementById('templateInput');
+        const previewOutput = document.getElementById('previewOutput');
+        const previewBadge = document.getElementById('previewBadge');
+        const errorMsg = document.getElementById('errorMsg');
+
+        csvInput.addEventListener('input', debounce(updatePreview, 500));
+        templateInput.addEventListener('input', debounce(updatePreview, 500));
+        window.addEventListener('DOMContentLoaded', updatePreview);
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => { clearTimeout(timeout); func(...args); };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function parseCSV() {
+            const csvContent = csvInput.value.trim();
+            if (!csvContent) return null;
+            const results = Papa.parse(csvContent, { header: true, skipEmptyLines: true });
+            if (results.errors.length > 0) return { error: "Erro no formato do CSV." };
+            return { data: results.data };
+        }
+
+        function updatePreview() {
+            errorMsg.classList.add('hidden');
+            const result = parseCSV();
+            
+            if (!result || result.error) {
+                previewOutput.value = result ? result.error : "";
+                previewBadge.innerText = result ? "Erro" : "Aguardando";
+                previewBadge.className = "text-xs bg-slate-600 px-2 py-1 rounded text-white";
+                return;
+            }
+
+            const data = result.data;
+            if (data.length === 0) return;
+
+            const firstRow = data[0];
+            let template = templateInput.value;
+
+            for (const [key, value] of Object.entries(firstRow)) {
+                const regex = new RegExp(`{{\\s*${key}\\s*}}`, 'g');
+                template = template.replace(regex, value || '');
+            }
+
+            previewOutput.value = template;
+            previewBadge.innerText = `Visualizando 1 de ${data.length}`;
+            previewBadge.className = "text-xs bg-green-600 px-2 py-1 rounded text-white";
+        }
+
+        function generateFiles() {
+            const downloadBtn = document.getElementById('downloadBtn');
+            const originalText = downloadBtn.innerHTML;
+            downloadBtn.innerHTML = "Processando...";
+            downloadBtn.disabled = true;
+
+            setTimeout(() => {
+                try {
+                    const result = parseCSV();
+                    if (!result || result.error) throw new Error("CSV inválido");
+                    
+                    const zip = new JSZip();
+                    const templateOriginal = templateInput.value;
+
+                    result.data.forEach((row, i) => {
+                        let content = templateOriginal;
+                        let filename = row['slug_url'] || `arquivo-${i+1}`;
+                        if (!filename.endsWith('.md')) filename += '.md';
+
+                        for (const [key, value] of Object.entries(row)) {
+                            const regex = new RegExp(`{{\\s*${key}\\s*}}`, 'g');
+                            content = content.replace(regex, value || '');
+                        }
+                        zip.file(filename, content);
+                    });
+
+                    zip.generateAsync({type:"blob"}).then(content => {
+                        saveAs(content, "conteudo-n8n.zip");
+                        downloadBtn.innerHTML = "Sucesso!";
+                        setTimeout(() => {
+                            downloadBtn.innerHTML = originalText;
+                            downloadBtn.disabled = false;
+                        }, 2000);
+                    });
+                } catch (e) {
+                    errorMsg.innerText = "Erro ao gerar arquivos.";
+                    errorMsg.classList.remove('hidden');
+                    downloadBtn.disabled = false;
+                    downloadBtn.innerHTML = originalText;
+                }
+            }, 500);
+        }
+    </script>
+</body>
+</html>
