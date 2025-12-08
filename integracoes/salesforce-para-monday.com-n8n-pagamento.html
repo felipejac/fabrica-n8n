@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- SEO -->
-    <title>Como integrar Salesforce com Monday.com para pagamento usando N8N | AI Factory</title>
-    <meta name="description" content="Automatize pagamento integrando Salesforce e Monday.com com N8N. Marketing automation e segmentação. Tutorial passo a passo e template JSON grátis.">
+    <title>Salesforce para Monday.com | Automação de Pagamento com n8n | AI Factory</title>
+    <meta name="description" content="Integre Salesforce com Monday.com para automatizar pagamento processado de forma inteligente e confiável Tutorial passo a passo e template JSON grátis.">
     <meta name="keywords" content="n8n, Salesforce, Monday.com, automação, integração, workflow">
     <meta name="author" content="AI Factory">
     <meta name="theme-color" content="#4f46e5">
     <link rel="canonical" href="https://felipejac.github.io/n8n-factory/integracoes/salesforce-para-monday.com-n8n-pagamento.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Como integrar Salesforce com Monday.com para pagamento usando N8N">
-    <meta property="og:description" content="Automatize pagamento integrando Salesforce e Monday.com com N8N. Marketing automation e segmentação.">
+    <meta property="og:title" content="Salesforce para Monday.com | Automação de Pagamento com n8n">
+    <meta property="og:description" content="Integre Salesforce com Monday.com para automatizar pagamento processado de forma inteligente e confiável">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://felipejac.github.io/n8n-factory/integracoes/salesforce-para-monday.com-n8n-pagamento.html">
     <meta property="og:site_name" content="AI Factory">
@@ -54,14 +54,14 @@
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": "Como integrar Salesforce com Monday.com para pagamento usando N8N",
-      "description": "Automatize pagamento integrando Salesforce e Monday.com com N8N. Marketing automation e segmentação.",
+      "name": "Salesforce para Monday.com | Automação de Pagamento com n8n",
+      "description": "Integre Salesforce com Monday.com para automatizar pagamento processado de forma inteligente e confiável",
       "step": [
-        {"@type": "HowToStep", "text": "Conectar Trigger Salesforce"},
-{"@type": "HowToStep", "text": "Validar dados"},
-{"@type": "HowToStep", "text": "Formatar para Monday.com"},
-{"@type": "HowToStep", "text": "Enviar/Criar no Monday.com"},
-{"@type": "HowToStep", "text": "Registrar resultado"}
+        {"@type": "HowToStep", "text": "1. Conectar Salesforce
+2. Configurar gatilho de pagamento
+3. Mapear dados
+4. Sincronizar com Monday.com
+5. Testar workflow"}
       ],
       "tool": [
         { "@type": "HowToTool", "name": "n8n" },
@@ -127,8 +127,8 @@
                             <span class="text-slate-300">→</span>
                             <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full uppercase tracking-wider">Monday.com</span>
                         </div>
-                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Como integrar Salesforce com Monday.com para pagamento usando N8N</h1>
-                        <p class="text-lg text-slate-600 leading-relaxed">Automatize pagamento integrando Salesforce e Monday.com com N8N. Marketing automation e segmentação.</p>
+                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Salesforce para Monday.com | Automação de Pagamento com n8n</h1>
+                        <p class="text-lg text-slate-600 leading-relaxed">Integre Salesforce com Monday.com para automatizar pagamento processado de forma inteligente e confiável</p>
                     </header>
 
                     <!-- Visão Geral -->
@@ -148,14 +148,14 @@
                             </div>
                             <div class="p-3 bg-white rounded-lg border border-slate-200">
                                 <span class="block text-slate-400 text-xs uppercase font-bold mb-1">Evento</span>
-                                <strong class="text-slate-800">Pagamento</strong>
+                                <strong class="text-slate-800">pagamento</strong>
                             </div>
                         </div>
                     </div>
 
                     <!-- Conteúdo Gerado -->
                     <h2>Quando usar esta automação?</h2>
-                    <p>Marketing automation e segmentação</p>
+                    <p>pagamento processado</p>
                     <p>Esta integração é ideal para times que desejam ganhar produtividade eliminando processos manuais repetitivos entre o <strong>Salesforce</strong> e o <strong>Monday.com</strong>. Com o N8N, você tem total controle sobre os dados transacionados.</p>
 
                     <h2>Pré-requisitos</h2>
@@ -169,7 +169,11 @@
                     <h2>Passo a Passo no N8N</h2>
                     <p>Siga este roteiro para configurar o workflow:</p>
                     <ol class="steps-list">
-                        <li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">1</span><span>Conectar Trigger Salesforce</span></li><li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">2</span><span>Validar dados</span></li><li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">3</span><span>Formatar para Monday.com</span></li><li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">4</span><span>Enviar/Criar no Monday.com</span></li><li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">5</span><span>Registrar resultado</span></li>
+                        <li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">1</span><span>1. Conectar Salesforce
+2. Configurar gatilho de pagamento
+3. Mapear dados
+4. Sincronizar com Monday.com
+5. Testar workflow</span></li>
                     </ol>
 
                     <!-- Variações -->
@@ -195,7 +199,7 @@
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Baixar Template</h3>
                         <p class="text-slate-500 text-sm mb-6">Obtenha o arquivo JSON deste workflow pronto para importar.</p>
                         
-                        <a href="https://n8n.io/workflows/2870" target="_blank" rel="nofollow noopener" class="flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-md mb-3 group">
+                        <a href="https://n8n.io/workflows/salesforce-para-monday.com-n8n-pagamento" target="_blank" rel="nofollow noopener" class="flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-md mb-3 group">
                             <svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                             Download JSON
                         </a>
@@ -206,7 +210,7 @@
                     <div class="bg-slate-900 rounded-2xl shadow-md p-6 text-white text-center">
                         <h3 class="font-bold text-lg mb-2">Precisa de ajuda?</h3>
                         <p class="text-slate-300 text-sm mb-4">Posso adaptar este fluxo para o seu negócio ou criar automações sob medida.</p>
-                        <a href="https://wa.me/5511999999999?text=Tenho interesse no fluxo: Como integrar Salesforce com Monday.com para pagamento usando N8N" target="_blank" class="block w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+                        <a href="https://wa.me/5511999999999?text=Tenho interesse no fluxo: Salesforce para Monday.com | Automação de Pagamento com n8n" target="_blank" class="block w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
                             Falar com Especialista
                         </a>
                     </div>
@@ -215,7 +219,7 @@
                     <div class="pt-4 border-t border-slate-200">
                         <p class="text-xs font-bold text-slate-400 uppercase mb-3">Tags Relacionadas</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">performance</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">payment</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">security</span>
+                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">ecommerce</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">comunicação</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">produtividade</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">pagamento</span>
                         </div>
                     </div>
 
