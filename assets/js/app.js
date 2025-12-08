@@ -227,12 +227,10 @@ document.addEventListener('DOMContentLoaded', () => {
           card.innerHTML = `
           <h3 class=\"font-semibold text-slate-900 mb-2\">${s.title}</h3>
           <p class=\"text-sm text-slate-600 mb-3\">${s.desc}</p>
-          <pre><code>${s.code}</code></pre>
+          <pre><code class=\"language-javascript\">${s.code}</code></pre>
           `;
           grid.appendChild(card);
       });
-      // Re-aplicar highlight
-      document.querySelectorAll('pre code').forEach((block) => { hljs.highlightElement(block); });
       
       // Renderizar filtros se ainda não existem
       const filtersContainer = el('academy-filters');
@@ -246,6 +244,13 @@ document.addEventListener('DOMContentLoaded', () => {
               filtersContainer.appendChild(btn);
           });
       }
+      
+      // Aplicar highlight após um pequeno delay
+      setTimeout(() => {
+          document.querySelectorAll('pre code').forEach((block) => { 
+              if(window.hljs) hljs.highlightElement(block); 
+          });
+      }, 100);
   }
 
   function filterAcademy(type, btnElement) {
