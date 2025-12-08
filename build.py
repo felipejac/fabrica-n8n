@@ -49,7 +49,7 @@ def generate_index_page(templates):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diretório de Integrações N8N | N8N Factory</title>
+        <title>Diretório de Integrações N8N | AI Factory</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-slate-50 text-slate-800">
@@ -57,7 +57,7 @@ def generate_index_page(templates):
             <div class="max-w-6xl mx-auto flex justify-between items-center">
                 <a href="../index.html" class="font-bold text-xl text-indigo-600 flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
-                    N8N Factory
+                    AI Factory
                 </a>
                 <h1 class="text-lg text-slate-500">Diretório de Integrações</h1>
             </div>
@@ -81,7 +81,7 @@ def generate_index_page(templates):
             </div>
         </main>
         <footer class="bg-white border-t border-slate-200 mt-auto py-8 text-center text-sm text-slate-500">
-            <p>© 2024 N8N Factory.</p>
+            <p>© 2024 AI Factory.</p>
         </footer>
     </body>
     </html>

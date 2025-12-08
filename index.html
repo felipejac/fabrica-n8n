@@ -1,5 +1,5 @@
 <!-- 
-    N8N Factory Ultimate - Suite Completa de Automação
+    AI Templates Factory - Automação Inteligente com IA
     Versão: 3.5.0 (Homepage Otimizada para Conversão)
     Recursos: Homepage, Gerador CSV, Biblioteca Massiva, Toolbox IA, Debugger IA, Academia de Código e Guia de Integrações.
 -->
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Principal -->
-    <title>N8N Factory | Acelerador de Automação com IA</title>
+    <title>AI Factory | Automação e Templates com IA</title>
     <meta name="description" content="Sua central de comando para n8n: Templates, Geradores de Código, Debugger com IA e Documentação. Aumente sua produtividade em automação.">
     
     <!-- Favicon -->
@@ -59,14 +59,14 @@
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-slate-900 tracking-tight">N8N Factory</h1>
+                        <h1 class="text-xl font-bold text-slate-900 tracking-tight">AI Factory</h1>
                         <p class="text-[10px] uppercase tracking-wider text-indigo-600 font-bold">Automação Inteligente</p>
                     </div>
                 </div>
 
                 <!-- Menu de Navegação -->
                 <nav class="flex w-full md:w-auto items-center gap-1 bg-slate-100/50 p-1 rounded-lg overflow-x-auto scrollbar-hide">
-                    <button onclick="switchView('home')" id="nav-home" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🏠 Início</button>
+                    <button onclick="switchView('home')" id="nav-home" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🏠 Home</button>
                     <button onclick="switchView('generator')" id="nav-generator" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🏭 Gerador</button>
                     <button onclick="switchView('library')" id="nav-library" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">📚 Templates</button>
                     <button onclick="switchView('integrations')" id="nav-integrations" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🔌 Integrações</button>
@@ -445,9 +445,9 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <h3 class="font-bold text-slate-900 mb-4">Sobre o N8N Factory</h3>
+                    <h3 class="font-bold text-slate-900 mb-4">Sobre o AI Factory</h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        O N8N Factory é uma suite open-source projetada para acelerar o desenvolvimento de automações. 
+                        O AI Factory é uma suite open-source projetada para acelerar o desenvolvimento de automações. 
                         Oferecemos geradores de código, bibliotecas de templates e assistentes de IA para tornar o trabalho 
                         com n8n, workflows e integrações mais rápido e eficiente.
                     </p>
@@ -474,7 +474,7 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
                 </div>
             </div>
             <div class="border-t border-slate-100 pt-8 text-center text-sm text-slate-500">
-                <p>&copy; 2024 N8N Factory. Projeto Open Source.</p>
+                <p>&copy; 2024 AI Factory. Projeto Open Source.</p>
             </div>
         </div>
     </footer>
@@ -971,7 +971,7 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
         
         function downloadTemplate(id) {
             const t = templateLibrary.find(i => i.id === id);
-            const json = JSON.stringify({ name: t.title, nodes: [], connections: {}, meta: { creator: t.creator, generated_by: "N8N Factory" } }, null, 2);
+            const json = JSON.stringify({ name: t.title, nodes: [], connections: {}, meta: { creator: t.creator, generated_by: "AI Factory" } }, null, 2);
             const blob = new Blob([json], {type: "application/json;charset=utf-8"});
             saveAs(blob, `n8n-workflow-${t.id}.json`);
         }

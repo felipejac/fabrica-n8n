@@ -1,8 +1,8 @@
-🏭 N8N Factory Ultimate
+🏭 AI Factory Ultimate
 
 A Suite Definitiva para Desenvolvedores n8n. > Automação Inteligente, Documentação e Produtividade em um único lugar.
 
-A N8N Factory é uma aplicação web estática (Client-Side) projetada para superalimentar a produtividade de quem trabalha com n8n. Ela combina geradores de conteúdo em massa, bibliotecas vastas de recursos e assistentes de IA para resolver problemas complexos em segundos.
+A AI Factory é uma aplicação web estática (Client-Side) projetada para superalimentar a produtividade de quem trabalha com n8n. Ela combina geradores de conteúdo em massa, bibliotecas vastas de recursos e assistentes de IA para resolver problemas complexos em segundos.
 
 🚀 Novas Funcionalidades (v3.5.0)
 

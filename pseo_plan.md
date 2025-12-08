@@ -1,6 +1,6 @@
-Plano de Implementação: N8N Factory pSEO & Growth
+Plano de Implementação: AI Factory pSEO & Growth
 
-Este documento descreve a arquitetura para transformar o N8N Factory em um diretório de integrações escalável, focado em capturar tráfego de cauda longa (ex: "como integrar x com y").
+Este documento descreve a arquitetura para transformar o AI Factory em um diretório de integrações escalável, focado em capturar tráfego de cauda longa (ex: "como integrar x com y").
 
 1. Estrutura de URLs (Silo Architecture)
 
