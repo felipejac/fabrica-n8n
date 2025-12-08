@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO -->
-    <title>Guias Completos de Integrações N8N | 21+ Tutoriais Passo a Passo | AI Factory</title>
-    <meta name="description" content="21+ guias passo a passo sobre como integrar WordPress, Shopify, Stripe, RD Station, Typeform, Telegram, e muito mais com N8N. Tutoriais com exemplos práticos e templates JSON.">
-    <meta name="keywords" content="n8n, integrações, wordpress, shopify, stripe, automação, workflow, tutorial, guia">
+    <title>Guias Completos de Integrações N8N | 69+ Tutoriais Passo a Passo | AI Factory</title>
+    <meta name="description" content="69+ guias passo a passo sobre como integrar ferramentas populares com N8N. Tutoriais com exemplos práticos e templates JSON.">
+    <meta name="keywords" content="n8n, integrações, automação, workflow, tutorial, guia">
     <meta name="author" content="AI Factory">
     <link rel="canonical" href="https://felipejac.github.io/fabrica-n8n/integracoes/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Guias Completos de Integrações N8N">
-    <meta property="og:description" content="21+ guias passo a passo sobre como integrar ferramentas populares com N8N.">
+    <meta property="og:description" content="69+ guias passo a passo sobre como integrar ferramentas populares com N8N.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://felipejac.github.io/fabrica-n8n/integracoes/">
-    <meta property="og:site_name" content="AI Factory">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +23,8 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .integration-card { transition: all 0.3s ease; }
+        .integration-card:hover { transform: translateY(-4px); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -39,9 +39,9 @@
                     AI Factory
                 </a>
                 <nav class="flex items-center gap-4">
-                    <a href="../index.html#integrations" class="text-sm text-slate-600 hover:text-indigo-600 transition-colors">Voltar ao início</a>
+                    <a href="../index.html" class="text-sm text-slate-600 hover:text-indigo-600 transition-colors">← Voltar</a>
                     <span class="text-slate-300">|</span>
-                    <span class="text-sm font-medium text-indigo-600">Integrações</span>
+                    <span class="text-sm font-medium text-indigo-600">Integrações (69)</span>
                 </nav>
             </div>
         </div>
@@ -51,11 +51,11 @@
     <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-bold mb-4">Guias de Integrações N8N</h1>
-            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
-                21+ tutoriais passo a passo para conectar suas ferramentas favoritas e automatizar fluxos de trabalho poderosos.
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-6">
+                69+ tutoriais passo a passo para conectar suas ferramentas favoritas.
             </p>
-            <div class="mt-6 flex items-center justify-center gap-4 text-sm">
-                <span class="bg-indigo-600/20 text-indigo-200 px-3 py-1 rounded-full">📚 21+ Guias</span>
+            <div class="flex items-center justify-center gap-4 text-sm">
+                <span class="bg-indigo-600/20 text-indigo-200 px-3 py-1 rounded-full">📚 69+ Guias</span>
                 <span class="bg-green-600/20 text-green-200 px-3 py-1 rounded-full">✅ 100% Gratuito</span>
                 <span class="bg-purple-600/20 text-purple-200 px-3 py-1 rounded-full">🎯 Passo a Passo</span>
             </div>
@@ -64,7 +64,7 @@
 
     <!-- Buscador -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="max-w-md mx-auto mb-12">
+        <div class="max-w-md mx-auto">
             <input 
                 type="text" 
                 id="searchInput" 
@@ -78,126 +78,351 @@
     <!-- Grid de Integrações -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="integrationsGrid">
-    
-        <a href="facebook-ads-para-whatsapp-chatwoot-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📱 Facebook Ads → WhatsApp</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Enviar leads do Facebook Ads para WhatsApp</h2>
-            <p class="text-sm text-slate-600">Capture leads e inicie conversas no WhatsApp via Chatwoot automaticamente.</p>
-        </a>
-        
-        <a href="facebook-ads-para-google-sheets-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📊 Facebook Ads → Google Sheets</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Salvar leads do Facebook em planilha</h2>
-            <p class="text-sm text-slate-600">Registre cada novo lead automaticamente no Google Sheets.</p>
-        </a>
-        
-        <a href="typeform-para-google-sheets-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📋 Typeform → Google Sheets</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Sincronizar formulários com planilha</h2>
-            <p class="text-sm text-slate-600">Envie respostas do Typeform direto para o Google Sheets.</p>
-        </a>
-        
-        <a href="typeform-para-rd-station-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🎯 Typeform → RD Station</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Enviar leads para funil de vendas</h2>
-            <p class="text-sm text-slate-600">Integre formulários ao RD Station para qualificação automática.</p>
-        </a>
-        
-        <a href="google-forms-para-whatsapp-kommo-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📱 Google Forms → WhatsApp</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Notificações WhatsApp de formulários</h2>
-            <p class="text-sm text-slate-600">Receba alertas no WhatsApp quando formulários forem preenchidos.</p>
-        </a>
-        
-        <a href="shopify-para-google-sheets-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🛍️ Shopify → Google Sheets</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Registrar pedidos em planilha</h2>
-            <p class="text-sm text-slate-600">Exporte cada venda da Shopify para controle financeiro.</p>
-        </a>
-        
-        <a href="shopify-para-slack-novas-vendas-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🛒 Shopify → Slack</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Alertas de novas vendas no Slack</h2>
-            <p class="text-sm text-slate-600">Notifique seu time no Slack a cada novo pedido.</p>
-        </a>
-        
-        <a href="rd-station-para-slack-leads-qualificados-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🎯 RD Station → Slack</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Alertas de leads qualificados</h2>
-            <p class="text-sm text-slate-600">Avise vendedores quando leads atingirem qualificação.</p>
-        </a>
-        
-        <a href="rd-station-para-pipedrive-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🏆 RD Station → Pipedrive</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Criar deals automaticamente</h2>
-            <p class="text-sm text-slate-600">Passe leads do RD para oportunidades no Pipedrive.</p>
-        </a>
-        
-        <a href="webhook-para-notion-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔗 Webhook → Notion</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Sistema de logs no Notion</h2>
-            <p class="text-sm text-slate-600">Envie eventos via Webhook para banco de dados Notion.</p>
-        </a>
-        
-        <a href="stripe-para-gmail-pagamento-falho-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💳 Stripe → Gmail</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Emails para pagamentos falhados</h2>
-            <p class="text-sm text-slate-600">Recupere receita com emails automáticos de retry.</p>
-        </a>
-        
-        <a href="woocommerce-para-trello-gestao-pedidos-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🛒 WooCommerce → Trello</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Cards para gestão de pedidos</h2>
-            <p class="text-sm text-slate-600">Crie cards no Trello automaticamente para cada venda.</p>
-        </a>
-        
-        <a href="calendly-para-zoom-reunioes-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📅 Calendly → Zoom</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Reuniões automáticas no Zoom</h2>
-            <p class="text-sm text-slate-600">Crie salas Zoom quando alguém agendar no Calendly.</p>
-        </a>
-        
-        <a href="gmail-para-openai-classificacao-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📧 Gmail → OpenAI</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Classificar emails com IA</h2>
-            <p class="text-sm text-slate-600">Use GPT para classificar e etiquetar emails automaticamente.</p>
-        </a>
-        
-        <a href="mercado-livre-para-bling-nfe-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🏪 Mercado Livre → Bling</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Pedidos e NF-e automáticas</h2>
-            <p class="text-sm text-slate-600">Integre pedidos e gere notas fiscais automaticamente.</p>
-        </a>
-        
-        <a href="jira-para-slack-bugs-criticos-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🐛 Jira → Slack</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Alertas de bugs críticos</h2>
-            <p class="text-sm text-slate-600">Notifique time sobre tickets de alta prioridade.</p>
-        </a>
-        
-        <a href="hubspot-para-postgresql-backup-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📦 HubSpot → PostgreSQL</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Sincronizar contatos em banco SQL</h2>
-            <p class="text-sm text-slate-600">Mantenha data warehouse atualizado com HubSpot.</p>
-        </a>
-        
-        <a href="instagram-para-chatgpt-bot-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📸 Instagram → ChatGPT</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Bot de IA para DMs</h2>
-            <p class="text-sm text-slate-600">Responda mensagens Instagram com ChatGPT 24/7.</p>
-        </a>
-        
-        <a href="telegram-para-google-drive-backup-midia-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💾 Telegram → Google Drive</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Backup automático de mídia</h2>
-            <p class="text-sm text-slate-600">Salve fotos e vídeos do Telegram no Drive automaticamente.</p>
-        </a>
-        
-        <a href="wordpress-para-twitter-auto-post-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
-            <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📝 WordPress → Twitter</div>
-            <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Auto-post de artigos no Twitter</h2>
-            <p class="text-sm text-slate-600">Tuite novos posts automaticamente ao publicar no blog.</p>
-        </a>
+            <a href="facebook-ads-para-whatsapp-chatwoot-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📢 Facebook Lead Ads → WhatsApp (Chatwoot)</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como enviar leads do Facebook Ads para o WhatsApp (Chatwoot) usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Aprenda a capturar leads do Facebook e iniciar conversas no WhatsApp via Chatwoot em tempo real.</p>
+            </a>
+            <a href="facebook-ads-para-google-sheets-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📢 Facebook Lead Ads → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como salvar leads do Facebook Ads no Google Sheets automaticamente com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize o registro de cada novo lead do Facebook em uma planilha mestre do Google Sheets.</p>
+            </a>
+            <a href="typeform-para-google-sheets-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📊 Typeform → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Typeform com Google Sheets usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize respostas do Typeform com o Google Sheets para análise de dados rápida e eficiente.</p>
+            </a>
+            <a href="typeform-para-rd-station-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📢 Typeform → RD Station</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como enviar leads do Typeform para o RD Station com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Conecte formulários avançados do Typeform diretamente ao funil de vendas do RD Station.</p>
+            </a>
+            <a href="google-forms-para-whatsapp-kommo-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🎯 Google Forms → WhatsApp (Kommo)</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como receber notificações no WhatsApp via Kommo para respostas do Google Forms</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Seja avisado no WhatsApp sempre que um formulário importante for preenchido no Google Forms.</p>
+            </a>
+            <a href="shopify-para-google-sheets-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💰 Shopify → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como registrar pedidos da Shopify em uma planilha do Google Sheets com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha seu financeiro em dia exportando cada venda da Shopify para uma linha no Excel/Sheets.</p>
+            </a>
+            <a href="shopify-para-slack-novas-vendas-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔗 Shopify → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como receber alertas no Slack a cada nova venda na Shopify usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Motive seu time enviando um alerta no canal #vendas do Slack a cada novo pedido na loja.</p>
+            </a>
+            <a href="rd-station-para-slack-leads-qualificados-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💼 RD Station → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como enviar leads qualificados do RD Station para o Slack usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Avise os vendedores instantaneamente no Slack quando um lead atingir o score de qualificação no RD.</p>
+            </a>
+            <a href="rd-station-para-pipedrive-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💼 RD Station → Pipedrive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como criar negócios no Pipedrive a partir de leads do RD Station com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Garanta que nenhuma oportunidade se perca: crie Deals no Pipedrive assim que o lead converter no RD.</p>
+            </a>
+            <a href="webhook-para-notion-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔗 Webhook Genérico → Notion</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como enviar eventos via Webhook para um banco de dados do Notion usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Crie um sistema de logs flexível enviando qualquer JSON via Webhook para uma tabela do Notion.</p>
+            </a>
+            <a href="stripe-para-gmail-pagamento-falho-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💰 Stripe → Gmail</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como enviar email automático para pagamentos falhos no Stripe com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize a recuperação de receita enviando emails personalizados quando um cartão é recusado no Stripe.</p>
+            </a>
+            <a href="woocommerce-para-trello-gestao-pedidos-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔗 WooCommerce → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como criar cards no Trello para novos pedidos do WooCommerce via N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Organize sua expedição criando cards no Trello automaticamente para cada venda no WooCommerce.</p>
+            </a>
+            <a href="calendly-para-zoom-reunioes-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔗 Calendly → Zoom</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como criar reuniões no Zoom automaticamente a partir do Calendly com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integração robusta para gerar links únicos do Zoom quando alguém agenda no Calendly.</p>
+            </a>
+            <a href="gmail-para-openai-classificacao-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🤖 Gmail → OpenAI</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como classificar emails recebidos no Gmail usando Inteligência Artificial e N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Use o GPT para ler seus emails, classificar como 'Fatura', 'Suporte' ou 'Spam' e aplicar etiquetas.</p>
+            </a>
+            <a href="mercado-livre-para-bling-nfe-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔗 Mercado Livre → Bling</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar pedidos do Mercado Livre ao Bling para NF-e usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Conecte as APIs do Mercado Livre e Bling para automatizar a criação de pedidos e notas fiscais.</p>
+            </a>
+            <a href="jira-para-slack-bugs-criticos-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔗 Jira → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como alertar canal do Slack sobre tickets críticos criados no Jira com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha o time de engenharia alerta enviando notificações urgentes para bugs de alta prioridade.</p>
+            </a>
+            <a href="hubspot-para-postgresql-backup-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📊 HubSpot → PostgreSQL</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como sincronizar contatos do HubSpot com banco PostgreSQL via N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha um data warehouse atualizado sincronizando seus contatos do HubSpot com um banco SQL.</p>
+            </a>
+            <a href="instagram-para-chatgpt-bot-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🤖 Instagram → ChatGPT</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como criar um bot de Instagram Direct com ChatGPT usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Responda dúvidas frequentes no Instagram 24/7 usando a inteligência do ChatGPT conectada ao N8N.</p>
+            </a>
+            <a href="telegram-para-google-drive-backup-midia-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💾 Telegram → Google Drive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como salvar fotos e vídeos do Telegram no Google Drive com N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Crie um bot pessoal que salva qualquer foto ou documento que você envia para ele direto no Drive.</p>
+            </a>
+            <a href="wordpress-para-twitter-auto-post-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📢 WordPress → Twitter (X)</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como tuitar novos posts do WordPress automaticamente usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Aumente o tráfego do seu blog postando automaticamente no Twitter sempre que um artigo for publicado.</p>
+            </a>
+            <a href="facebook-ads-para-whatsapp-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💼 Facebook Ads → WhatsApp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com WhatsApp usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e WhatsApp. Sincronização de dados sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-slack-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📊 Facebook Ads → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Slack usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Slack. Alertas em tempo real sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-typeform-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🎯 Facebook Ads → Typeform</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Typeform usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Typeform. Backup automático sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-rd-station-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">⚙️ Facebook Ads → RD Station</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com RD Station usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e RD Station. Integração CRM sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-shopify-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💬 Facebook Ads → Shopify</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Shopify usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Shopify. Coleta de respostas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-stripe-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📧 Facebook Ads → Stripe</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Stripe usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Stripe. Gestão de vendas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-gmail-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔔 Facebook Ads → Gmail</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Gmail usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Gmail. Notificações personalizadas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-telegram-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🤖 Facebook Ads → Telegram</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Telegram usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Telegram. Processamento com IA sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-twitter-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💰 Facebook Ads → Twitter</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Twitter usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Twitter. Consolidação de dados sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-instagram-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🛒 Facebook Ads → Instagram</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Instagram usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Instagram. Automação de leads sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-linkedin-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📝 Facebook Ads → LinkedIn</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com LinkedIn usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e LinkedIn. Sincronização de dados sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-tiktok-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📱 Facebook Ads → TikTok</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com TikTok usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e TikTok. Alertas em tempo real sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-discord-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💾 Facebook Ads → Discord</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Discord usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Discord. Backup automático sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-notion-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔌 Facebook Ads → Notion</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Notion usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Notion. Integração CRM sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-airtable-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📢 Facebook Ads → Airtable</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Airtable usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Airtable. Coleta de respostas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-zapier-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💼 Facebook Ads → Zapier</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Zapier usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Zapier. Gestão de vendas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-pipedrive-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📊 Facebook Ads → Pipedrive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Pipedrive usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Pipedrive. Notificações personalizadas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-hubspot-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🎯 Facebook Ads → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com HubSpot usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e HubSpot. Processamento com IA sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-trello-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">⚙️ Facebook Ads → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Trello usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Trello. Consolidação de dados sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-jira-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💬 Facebook Ads → Jira</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Jira usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Jira. Automação de leads sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-github-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📧 Facebook Ads → GitHub</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com GitHub usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e GitHub. Sincronização de dados sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-gitlab-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔔 Facebook Ads → GitLab</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com GitLab usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e GitLab. Alertas em tempo real sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-twilio-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🤖 Facebook Ads → Twilio</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Twilio usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Twilio. Backup automático sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-sendgrid-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💰 Facebook Ads → SendGrid</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com SendGrid usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e SendGrid. Integração CRM sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-mailchimp-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🛒 Facebook Ads → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Mailchimp usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Mailchimp. Coleta de respostas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-woocommerce-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📝 Facebook Ads → WooCommerce</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com WooCommerce usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e WooCommerce. Gestão de vendas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-wix-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📱 Facebook Ads → Wix</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Wix usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Wix. Notificações personalizadas sem limites.</p>
+            </a>
+            <a href="facebook-ads-para-webflow-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💾 Facebook Ads → Webflow</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Facebook Ads com Webflow usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Facebook Ads e Webflow. Processamento com IA sem limites.</p>
+            </a>
+            <a href="google-sheets-para-whatsapp-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔌 Google Sheets → WhatsApp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com WhatsApp usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e WhatsApp. Consolidação de dados sem limites.</p>
+            </a>
+            <a href="google-sheets-para-slack-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📢 Google Sheets → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Slack usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Slack. Automação de leads sem limites.</p>
+            </a>
+            <a href="google-sheets-para-typeform-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💼 Google Sheets → Typeform</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Typeform usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Typeform. Sincronização de dados sem limites.</p>
+            </a>
+            <a href="google-sheets-para-rd-station-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📊 Google Sheets → RD Station</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com RD Station usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e RD Station. Alertas em tempo real sem limites.</p>
+            </a>
+            <a href="google-sheets-para-shopify-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🎯 Google Sheets → Shopify</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Shopify usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Shopify. Backup automático sem limites.</p>
+            </a>
+            <a href="google-sheets-para-stripe-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">⚙️ Google Sheets → Stripe</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Stripe usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Stripe. Integração CRM sem limites.</p>
+            </a>
+            <a href="google-sheets-para-gmail-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💬 Google Sheets → Gmail</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Gmail usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Gmail. Coleta de respostas sem limites.</p>
+            </a>
+            <a href="google-sheets-para-telegram-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📧 Google Sheets → Telegram</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Telegram usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Telegram. Gestão de vendas sem limites.</p>
+            </a>
+            <a href="google-sheets-para-twitter-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔔 Google Sheets → Twitter</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Twitter usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Twitter. Notificações personalizadas sem limites.</p>
+            </a>
+            <a href="google-sheets-para-instagram-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🤖 Google Sheets → Instagram</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Instagram usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Instagram. Processamento com IA sem limites.</p>
+            </a>
+            <a href="google-sheets-para-linkedin-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💰 Google Sheets → LinkedIn</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com LinkedIn usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e LinkedIn. Consolidação de dados sem limites.</p>
+            </a>
+            <a href="google-sheets-para-tiktok-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🛒 Google Sheets → TikTok</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com TikTok usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e TikTok. Automação de leads sem limites.</p>
+            </a>
+            <a href="google-sheets-para-discord-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📝 Google Sheets → Discord</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Discord usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Discord. Sincronização de dados sem limites.</p>
+            </a>
+            <a href="google-sheets-para-notion-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📱 Google Sheets → Notion</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Notion usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Notion. Alertas em tempo real sem limites.</p>
+            </a>
+            <a href="google-sheets-para-airtable-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💾 Google Sheets → Airtable</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Airtable usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Airtable. Backup automático sem limites.</p>
+            </a>
+            <a href="google-sheets-para-zapier-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🔌 Google Sheets → Zapier</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Zapier usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Zapier. Integração CRM sem limites.</p>
+            </a>
+            <a href="google-sheets-para-pipedrive-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📢 Google Sheets → Pipedrive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Pipedrive usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Pipedrive. Coleta de respostas sem limites.</p>
+            </a>
+            <a href="google-sheets-para-hubspot-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">💼 Google Sheets → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com HubSpot usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e HubSpot. Gestão de vendas sem limites.</p>
+            </a>
+            <a href="google-sheets-para-trello-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">📊 Google Sheets → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Trello usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Trello. Notificações personalizadas sem limites.</p>
+            </a>
+            <a href="google-sheets-para-jira-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">🎯 Google Sheets → Jira</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com Jira usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e Jira. Processamento com IA sem limites.</p>
+            </a>
+            <a href="google-sheets-para-github-n8n.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-indigo-600 mb-2">⚙️ Google Sheets → GitHub</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">Como integrar Google Sheets com GitHub usando N8N</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automação completa entre Google Sheets e GitHub. Consolidação de dados sem limites.</p>
+            </a>
         </div>
 
         <div id="noResults" class="hidden text-center py-12">
@@ -208,116 +433,358 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-600">
-            <p class="mb-2">© 2024 <strong>AI Factory</strong> - Recursos para automação com N8N</p>
-            <p>
-                <a href="../index.html" class="text-indigo-600 hover:text-indigo-700 font-medium">← Voltar ao AI Factory</a>
-            </p>
+            <p class="mb-2">© 2024 <strong>AI Factory</strong></p>
+            <p><a href="../index.html" class="text-indigo-600 hover:text-indigo-700 font-medium">← Voltar ao AI Factory</a></p>
         </div>
     </footer>
 
     <script>
-        // Dados das integrações
-        const integrations = [
-            {
-                name: 'Facebook Ads → WhatsApp',
-                file: 'facebook-ads-para-whatsapp-chatwoot-n8n.html',
-                keywords: ['facebook', 'whatsapp', 'leads', 'chatwoot', 'chat']
-            },
-            {
-                name: 'Facebook Ads → Google Sheets',
-                file: 'facebook-ads-para-google-sheets-n8n.html',
-                keywords: ['facebook', 'sheets', 'leads', 'planilha', 'dados']
-            },
-            {
-                name: 'Typeform → Google Sheets',
-                file: 'typeform-para-google-sheets-n8n.html',
-                keywords: ['typeform', 'sheets', 'formulário', 'planilha', 'respostas']
-            },
-            {
-                name: 'Typeform → RD Station',
-                file: 'typeform-para-rd-station-n8n.html',
-                keywords: ['typeform', 'rd station', 'leads', 'crm', 'formulário']
-            },
-            {
-                name: 'Google Forms → WhatsApp',
-                file: 'google-forms-para-whatsapp-kommo-n8n.html',
-                keywords: ['google forms', 'whatsapp', 'kommo', 'notificação', 'formulário']
-            },
-            {
-                name: 'Shopify → Google Sheets',
-                file: 'shopify-para-google-sheets-n8n.html',
-                keywords: ['shopify', 'sheets', 'vendas', 'pedidos', 'e-commerce']
-            },
-            {
-                name: 'Shopify → Slack',
-                file: 'shopify-para-slack-novas-vendas-n8n.html',
-                keywords: ['shopify', 'slack', 'vendas', 'alertas', 'e-commerce']
-            },
-            {
-                name: 'RD Station → Slack',
-                file: 'rd-station-para-slack-leads-qualificados-n8n.html',
-                keywords: ['rd station', 'slack', 'leads', 'qualificado', 'notificação']
-            },
-            {
-                name: 'RD Station → Pipedrive',
-                file: 'rd-station-para-pipedrive-n8n.html',
-                keywords: ['rd station', 'pipedrive', 'leads', 'crm', 'deals']
-            },
-            {
-                name: 'Webhook → Notion',
-                file: 'webhook-para-notion-n8n.html',
-                keywords: ['webhook', 'notion', 'logs', 'banco de dados', 'api']
-            },
-            {
-                name: 'Stripe → Gmail',
-                file: 'stripe-para-gmail-pagamento-falho-n8n.html',
-                keywords: ['stripe', 'gmail', 'pagamento', 'email', 'falha']
-            },
-            {
-                name: 'WooCommerce → Trello',
-                file: 'woocommerce-para-trello-gestao-pedidos-n8n.html',
-                keywords: ['woocommerce', 'trello', 'pedidos', 'gestão', 'e-commerce']
-            },
-            {
-                name: 'Calendly → Zoom',
-                file: 'calendly-para-zoom-reunioes-n8n.html',
-                keywords: ['calendly', 'zoom', 'reuniões', 'agendamento', 'videochamada']
-            },
-            {
-                name: 'Gmail → OpenAI',
-                file: 'gmail-para-openai-classificacao-n8n.html',
-                keywords: ['gmail', 'openai', 'ia', 'classificação', 'email']
-            },
-            {
-                name: 'Mercado Livre → Bling',
-                file: 'mercado-livre-para-bling-nfe-n8n.html',
-                keywords: ['mercado livre', 'bling', 'nfe', 'pedidos', 'e-commerce']
-            },
-            {
-                name: 'Jira → Slack',
-                file: 'jira-para-slack-bugs-criticos-n8n.html',
-                keywords: ['jira', 'slack', 'bugs', 'tickets', 'notificação']
-            },
-            {
-                name: 'HubSpot → PostgreSQL',
-                file: 'hubspot-para-postgresql-backup-n8n.html',
-                keywords: ['hubspot', 'postgresql', 'crm', 'banco de dados', 'sincronizar']
-            },
-            {
-                name: 'Instagram → ChatGPT',
-                file: 'instagram-para-chatgpt-bot-n8n.html',
-                keywords: ['instagram', 'chatgpt', 'bot', 'ia', 'direct']
-            },
-            {
-                name: 'Telegram → Google Drive',
-                file: 'telegram-para-google-drive-backup-midia-n8n.html',
-                keywords: ['telegram', 'google drive', 'backup', 'mídia', 'fotos']
-            },
-            {
-                name: 'WordPress → Twitter',
-                file: 'wordpress-para-twitter-auto-post-n8n.html',
-                keywords: ['wordpress', 'twitter', 'blog', 'auto-post', 'artigos']
-            }
+        // Dados das integrações para filtro
+        const integrations = {
+            name: 'Como enviar leads do Facebook Ads para o WhatsApp (Chatwoot) usando N8N',
+            file: 'facebook-ads-para-whatsapp-chatwoot-n8n.html',
+            keywords: ['marketing','vendas','chatwoot','facebook lead ads','whatsapp (chatwoot)']
+        },
+{
+            name: 'Como salvar leads do Facebook Ads no Google Sheets automaticamente com N8N',
+            file: 'facebook-ads-para-google-sheets-n8n.html',
+            keywords: ['marketing','dados','sheets','facebook lead ads','google sheets']
+        },
+{
+            name: 'Como integrar Typeform com Google Sheets usando N8N',
+            file: 'typeform-para-google-sheets-n8n.html',
+            keywords: ['formularios','dados','typeform','google sheets']
+        },
+{
+            name: 'Como enviar leads do Typeform para o RD Station com N8N',
+            file: 'typeform-para-rd-station-n8n.html',
+            keywords: ['marketing','crm','rd-station','typeform','rd station']
+        },
+{
+            name: 'Como receber notificações no WhatsApp via Kommo para respostas do Google Forms',
+            file: 'google-forms-para-whatsapp-kommo-n8n.html',
+            keywords: ['notificacao','crm','kommo','google forms','whatsapp (kommo)']
+        },
+{
+            name: 'Como registrar pedidos da Shopify em uma planilha do Google Sheets com N8N',
+            file: 'shopify-para-google-sheets-n8n.html',
+            keywords: ['ecommerce','financeiro','shopify','google sheets']
+        },
+{
+            name: 'Como receber alertas no Slack a cada nova venda na Shopify usando N8N',
+            file: 'shopify-para-slack-novas-vendas-n8n.html',
+            keywords: ['ecommerce','notificacao','cultura','shopify','slack']
+        },
+{
+            name: 'Como enviar leads qualificados do RD Station para o Slack usando N8N',
+            file: 'rd-station-para-slack-leads-qualificados-n8n.html',
+            keywords: ['vendas','marketing','b2b','rd station','slack']
+        },
+{
+            name: 'Como criar negócios no Pipedrive a partir de leads do RD Station com N8N',
+            file: 'rd-station-para-pipedrive-n8n.html',
+            keywords: ['vendas','crm','pipedrive','rd station','pipedrive']
+        },
+{
+            name: 'Como enviar eventos via Webhook para um banco de dados do Notion usando N8N',
+            file: 'webhook-para-notion-n8n.html',
+            keywords: ['dev','notion','logs','webhook genérico','notion']
+        },
+{
+            name: 'Como enviar email automático para pagamentos falhos no Stripe com N8N',
+            file: 'stripe-para-gmail-pagamento-falho-n8n.html',
+            keywords: ['financeiro','saas','churn','stripe','gmail']
+        },
+{
+            name: 'Como criar cards no Trello para novos pedidos do WooCommerce via N8N',
+            file: 'woocommerce-para-trello-gestao-pedidos-n8n.html',
+            keywords: ['ecommerce','logistica','trello','woocommerce','trello']
+        },
+{
+            name: 'Como criar reuniões no Zoom automaticamente a partir do Calendly com N8N',
+            file: 'calendly-para-zoom-reunioes-n8n.html',
+            keywords: ['produtividade','agenda','calendly','zoom']
+        },
+{
+            name: 'Como classificar emails recebidos no Gmail usando Inteligência Artificial e N8N',
+            file: 'gmail-para-openai-classificacao-n8n.html',
+            keywords: ['ia','produtividade','email','gmail','openai']
+        },
+{
+            name: 'Como integrar pedidos do Mercado Livre ao Bling para NF-e usando N8N',
+            file: 'mercado-livre-para-bling-nfe-n8n.html',
+            keywords: ['ecommerce','brasil','fiscal','mercado livre','bling']
+        },
+{
+            name: 'Como alertar canal do Slack sobre tickets críticos criados no Jira com N8N',
+            file: 'jira-para-slack-bugs-criticos-n8n.html',
+            keywords: ['dev','agile','bugs','jira','slack']
+        },
+{
+            name: 'Como sincronizar contatos do HubSpot com banco PostgreSQL via N8N',
+            file: 'hubspot-para-postgresql-backup-n8n.html',
+            keywords: ['dados','bi','crm','hubspot','postgresql']
+        },
+{
+            name: 'Como criar um bot de Instagram Direct com ChatGPT usando N8N',
+            file: 'instagram-para-chatgpt-bot-n8n.html',
+            keywords: ['social','ia','chatbot','instagram','chatgpt']
+        },
+{
+            name: 'Como salvar fotos e vídeos do Telegram no Google Drive com N8N',
+            file: 'telegram-para-google-drive-backup-midia-n8n.html',
+            keywords: ['pessoal','arquivos','backup','telegram','google drive']
+        },
+{
+            name: 'Como tuitar novos posts do WordPress automaticamente usando N8N',
+            file: 'wordpress-para-twitter-auto-post-n8n.html',
+            keywords: ['marketing','conteudo','seo','wordpress','twitter (x)']
+        },
+{
+            name: 'Como integrar Facebook Ads com WhatsApp usando N8N',
+            file: 'facebook-ads-para-whatsapp-n8n.html',
+            keywords: ['vendas','dados','facebook ads','whatsapp']
+        },
+{
+            name: 'Como integrar Facebook Ads com Slack usando N8N',
+            file: 'facebook-ads-para-slack-n8n.html',
+            keywords: ['dados','crm','facebook ads','slack']
+        },
+{
+            name: 'Como integrar Facebook Ads com Typeform usando N8N',
+            file: 'facebook-ads-para-typeform-n8n.html',
+            keywords: ['crm','automação','facebook ads','typeform']
+        },
+{
+            name: 'Como integrar Facebook Ads com RD Station usando N8N',
+            file: 'facebook-ads-para-rd-station-n8n.html',
+            keywords: ['automação','chat','facebook ads','rd station']
+        },
+{
+            name: 'Como integrar Facebook Ads com Shopify usando N8N',
+            file: 'facebook-ads-para-shopify-n8n.html',
+            keywords: ['chat','email','facebook ads','shopify']
+        },
+{
+            name: 'Como integrar Facebook Ads com Stripe usando N8N',
+            file: 'facebook-ads-para-stripe-n8n.html',
+            keywords: ['email','notificação','facebook ads','stripe']
+        },
+{
+            name: 'Como integrar Facebook Ads com Gmail usando N8N',
+            file: 'facebook-ads-para-gmail-n8n.html',
+            keywords: ['notificação','ia','facebook ads','gmail']
+        },
+{
+            name: 'Como integrar Facebook Ads com Telegram usando N8N',
+            file: 'facebook-ads-para-telegram-n8n.html',
+            keywords: ['ia','financeiro','facebook ads','telegram']
+        },
+{
+            name: 'Como integrar Facebook Ads com Twitter usando N8N',
+            file: 'facebook-ads-para-twitter-n8n.html',
+            keywords: ['financeiro','e-commerce','facebook ads','twitter']
+        },
+{
+            name: 'Como integrar Facebook Ads com Instagram usando N8N',
+            file: 'facebook-ads-para-instagram-n8n.html',
+            keywords: ['e-commerce','blog','facebook ads','instagram']
+        },
+{
+            name: 'Como integrar Facebook Ads com LinkedIn usando N8N',
+            file: 'facebook-ads-para-linkedin-n8n.html',
+            keywords: ['blog','redes sociais','facebook ads','linkedin']
+        },
+{
+            name: 'Como integrar Facebook Ads com TikTok usando N8N',
+            file: 'facebook-ads-para-tiktok-n8n.html',
+            keywords: ['redes sociais','backup','facebook ads','tiktok']
+        },
+{
+            name: 'Como integrar Facebook Ads com Discord usando N8N',
+            file: 'facebook-ads-para-discord-n8n.html',
+            keywords: ['backup','api','facebook ads','discord']
+        },
+{
+            name: 'Como integrar Facebook Ads com Notion usando N8N',
+            file: 'facebook-ads-para-notion-n8n.html',
+            keywords: ['api','marketing','facebook ads','notion']
+        },
+{
+            name: 'Como integrar Facebook Ads com Airtable usando N8N',
+            file: 'facebook-ads-para-airtable-n8n.html',
+            keywords: ['marketing','vendas','facebook ads','airtable']
+        },
+{
+            name: 'Como integrar Facebook Ads com Zapier usando N8N',
+            file: 'facebook-ads-para-zapier-n8n.html',
+            keywords: ['vendas','dados','facebook ads','zapier']
+        },
+{
+            name: 'Como integrar Facebook Ads com Pipedrive usando N8N',
+            file: 'facebook-ads-para-pipedrive-n8n.html',
+            keywords: ['dados','crm','facebook ads','pipedrive']
+        },
+{
+            name: 'Como integrar Facebook Ads com HubSpot usando N8N',
+            file: 'facebook-ads-para-hubspot-n8n.html',
+            keywords: ['crm','automação','facebook ads','hubspot']
+        },
+{
+            name: 'Como integrar Facebook Ads com Trello usando N8N',
+            file: 'facebook-ads-para-trello-n8n.html',
+            keywords: ['automação','chat','facebook ads','trello']
+        },
+{
+            name: 'Como integrar Facebook Ads com Jira usando N8N',
+            file: 'facebook-ads-para-jira-n8n.html',
+            keywords: ['chat','email','facebook ads','jira']
+        },
+{
+            name: 'Como integrar Facebook Ads com GitHub usando N8N',
+            file: 'facebook-ads-para-github-n8n.html',
+            keywords: ['email','notificação','facebook ads','github']
+        },
+{
+            name: 'Como integrar Facebook Ads com GitLab usando N8N',
+            file: 'facebook-ads-para-gitlab-n8n.html',
+            keywords: ['notificação','ia','facebook ads','gitlab']
+        },
+{
+            name: 'Como integrar Facebook Ads com Twilio usando N8N',
+            file: 'facebook-ads-para-twilio-n8n.html',
+            keywords: ['ia','financeiro','facebook ads','twilio']
+        },
+{
+            name: 'Como integrar Facebook Ads com SendGrid usando N8N',
+            file: 'facebook-ads-para-sendgrid-n8n.html',
+            keywords: ['financeiro','e-commerce','facebook ads','sendgrid']
+        },
+{
+            name: 'Como integrar Facebook Ads com Mailchimp usando N8N',
+            file: 'facebook-ads-para-mailchimp-n8n.html',
+            keywords: ['e-commerce','blog','facebook ads','mailchimp']
+        },
+{
+            name: 'Como integrar Facebook Ads com WooCommerce usando N8N',
+            file: 'facebook-ads-para-woocommerce-n8n.html',
+            keywords: ['blog','redes sociais','facebook ads','woocommerce']
+        },
+{
+            name: 'Como integrar Facebook Ads com Wix usando N8N',
+            file: 'facebook-ads-para-wix-n8n.html',
+            keywords: ['redes sociais','backup','facebook ads','wix']
+        },
+{
+            name: 'Como integrar Facebook Ads com Webflow usando N8N',
+            file: 'facebook-ads-para-webflow-n8n.html',
+            keywords: ['backup','api','facebook ads','webflow']
+        },
+{
+            name: 'Como integrar Google Sheets com WhatsApp usando N8N',
+            file: 'google-sheets-para-whatsapp-n8n.html',
+            keywords: ['api','marketing','google sheets','whatsapp']
+        },
+{
+            name: 'Como integrar Google Sheets com Slack usando N8N',
+            file: 'google-sheets-para-slack-n8n.html',
+            keywords: ['marketing','vendas','google sheets','slack']
+        },
+{
+            name: 'Como integrar Google Sheets com Typeform usando N8N',
+            file: 'google-sheets-para-typeform-n8n.html',
+            keywords: ['vendas','dados','google sheets','typeform']
+        },
+{
+            name: 'Como integrar Google Sheets com RD Station usando N8N',
+            file: 'google-sheets-para-rd-station-n8n.html',
+            keywords: ['dados','crm','google sheets','rd station']
+        },
+{
+            name: 'Como integrar Google Sheets com Shopify usando N8N',
+            file: 'google-sheets-para-shopify-n8n.html',
+            keywords: ['crm','automação','google sheets','shopify']
+        },
+{
+            name: 'Como integrar Google Sheets com Stripe usando N8N',
+            file: 'google-sheets-para-stripe-n8n.html',
+            keywords: ['automação','chat','google sheets','stripe']
+        },
+{
+            name: 'Como integrar Google Sheets com Gmail usando N8N',
+            file: 'google-sheets-para-gmail-n8n.html',
+            keywords: ['chat','email','google sheets','gmail']
+        },
+{
+            name: 'Como integrar Google Sheets com Telegram usando N8N',
+            file: 'google-sheets-para-telegram-n8n.html',
+            keywords: ['email','notificação','google sheets','telegram']
+        },
+{
+            name: 'Como integrar Google Sheets com Twitter usando N8N',
+            file: 'google-sheets-para-twitter-n8n.html',
+            keywords: ['notificação','ia','google sheets','twitter']
+        },
+{
+            name: 'Como integrar Google Sheets com Instagram usando N8N',
+            file: 'google-sheets-para-instagram-n8n.html',
+            keywords: ['ia','financeiro','google sheets','instagram']
+        },
+{
+            name: 'Como integrar Google Sheets com LinkedIn usando N8N',
+            file: 'google-sheets-para-linkedin-n8n.html',
+            keywords: ['financeiro','e-commerce','google sheets','linkedin']
+        },
+{
+            name: 'Como integrar Google Sheets com TikTok usando N8N',
+            file: 'google-sheets-para-tiktok-n8n.html',
+            keywords: ['e-commerce','blog','google sheets','tiktok']
+        },
+{
+            name: 'Como integrar Google Sheets com Discord usando N8N',
+            file: 'google-sheets-para-discord-n8n.html',
+            keywords: ['blog','redes sociais','google sheets','discord']
+        },
+{
+            name: 'Como integrar Google Sheets com Notion usando N8N',
+            file: 'google-sheets-para-notion-n8n.html',
+            keywords: ['redes sociais','backup','google sheets','notion']
+        },
+{
+            name: 'Como integrar Google Sheets com Airtable usando N8N',
+            file: 'google-sheets-para-airtable-n8n.html',
+            keywords: ['backup','api','google sheets','airtable']
+        },
+{
+            name: 'Como integrar Google Sheets com Zapier usando N8N',
+            file: 'google-sheets-para-zapier-n8n.html',
+            keywords: ['api','marketing','google sheets','zapier']
+        },
+{
+            name: 'Como integrar Google Sheets com Pipedrive usando N8N',
+            file: 'google-sheets-para-pipedrive-n8n.html',
+            keywords: ['marketing','vendas','google sheets','pipedrive']
+        },
+{
+            name: 'Como integrar Google Sheets com HubSpot usando N8N',
+            file: 'google-sheets-para-hubspot-n8n.html',
+            keywords: ['vendas','dados','google sheets','hubspot']
+        },
+{
+            name: 'Como integrar Google Sheets com Trello usando N8N',
+            file: 'google-sheets-para-trello-n8n.html',
+            keywords: ['dados','crm','google sheets','trello']
+        },
+{
+            name: 'Como integrar Google Sheets com Jira usando N8N',
+            file: 'google-sheets-para-jira-n8n.html',
+            keywords: ['crm','automação','google sheets','jira']
+        },
+{
+            name: 'Como integrar Google Sheets com GitHub usando N8N',
+            file: 'google-sheets-para-github-n8n.html',
+            keywords: ['automação','chat','google sheets','github']
+        },
         ];
 
         // Função de filtro
@@ -342,7 +809,6 @@
             document.getElementById('noResults').classList.toggle('hidden', visibleCount > 0);
         }
 
-        // Tornar filterCards global
         window.filterCards = filterCards;
     </script>
 </body>
