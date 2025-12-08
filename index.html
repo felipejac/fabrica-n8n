@@ -630,8 +630,8 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
             }
         }
 
-        // Execute generation
-        generateMassiveIntegrations();
+        // Defer heavy generation until view is opened to improve startup performance
+        let integrationsGenerated = false;
 
         // Rendering Logic (With Pagination)
         let visibleIntegrations = 50;
@@ -639,6 +639,12 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
         function renderIntegrations(filterText = "") {
             const grid = document.getElementById('integrations-grid');
             if(!grid) return;
+
+            // Gera massivamente as integrações apenas quando a view for renderizada pela primeira vez
+            if (!integrationsGenerated) {
+                generateMassiveIntegrations();
+                integrationsGenerated = true;
+            }
             
             grid.innerHTML = '';
             const countEl = document.getElementById('integrations-count');
@@ -891,6 +897,7 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
 
         // --- LIBRARY LOGIC (Massiva) ---
         let templateLibrary = [];
+        let libraryGenerated = false;
         
         // Simulação de Biblioteca Grande (Procedural)
         function generateLibrary() {
@@ -921,13 +928,19 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
             return base;
         }
 
-        templateLibrary = generateLibrary();
+        // Nota: não geramos a biblioteca imediatamente — faremos sob demanda na renderização.
 
         function renderLibrary(filterText = "") {
             const grid = document.getElementById('template-grid');
             if(!grid) return; // Guard clause
             const noResults = document.getElementById('no-results');
             grid.innerHTML = '';
+
+            // Gerar biblioteca grande apenas sob demanda (melhora tempo de carregamento inicial)
+            if (!libraryGenerated) {
+                templateLibrary = generateLibrary();
+                libraryGenerated = true;
+            }
             
             const filtered = filterText 
                 ? templateLibrary.filter(t => t.title.toLowerCase().includes(filterText.toLowerCase()) || t.tags.some(tag => tag.toLowerCase().includes(filterText.toLowerCase())))
