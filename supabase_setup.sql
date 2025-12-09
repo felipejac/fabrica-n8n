@@ -20,11 +20,11 @@ CREATE INDEX IF NOT EXISTS idx_leads_source ON leads(source);
 -- Habilitar RLS (Row Level Security)
 ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
 
--- Política para permitir INSERT público (apenas criação de leads)
+-- Política para permitir INSERT público (qualquer pessoa pode inserir)
 CREATE POLICY "Permitir insert público de leads"
 ON leads
 FOR INSERT
-TO anon
+TO public
 WITH CHECK (true);
 
 -- Política para permitir leitura apenas para usuários autenticados

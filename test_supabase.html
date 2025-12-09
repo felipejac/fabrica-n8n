@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Supabase - Automations Cookbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .test-container {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        button {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #059669;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.2);
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .success { background: rgba(16,185,129,0.3); }
+        .error { background: rgba(239,68,68,0.3); }
+        h1 { margin-top: 0; }
+        .info { font-size: 14px; opacity: 0.9; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Teste Supabase</h1>
+        <p class="info">Teste a integração do formulário com o Supabase</p>
+        
+        <button onclick="testInsert()">📝 Inserir Lead de Teste</button>
+        <button onclick="testRead()">📊 Ler Últimos Leads</button>
+        <button onclick="testConnection()">🔌 Testar Conexão</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://jhcraclhgkqcqojsorst.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoY3JhY2xoZ2txY3FvanNvcnN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUyODczMzgsImV4cCI6MjA4MDg2MzMzOH0.avgX3wul_gV25IRfDIDX2bgc2JlmHlz6W8R7VZqe8gM';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+        
+        const resultDiv = document.getElementById('result');
+        
+        function showResult(message, type = 'success') {
+            resultDiv.textContent = message;
+            resultDiv.className = type;
+        }
+        
+        async function testConnection() {
+            showResult('⏳ Testando conexão...', '');
+            try {
+                const { data, error } = await supabase
+                    .from('leads')
+                    .select('count');
+                
+                if (error) throw error;
+                
+                showResult(`✅ CONEXÃO OK!\n\nSupabase está acessível e a tabela 'leads' existe.`, 'success');
+            } catch (error) {
+                showResult(`❌ ERRO DE CONEXÃO:\n\n${error.message}\n\nDetalhes: ${JSON.stringify(error, null, 2)}`, 'error');
+            }
+        }
+        
+        async function testInsert() {
+            showResult('⏳ Inserindo lead de teste...', '');
+            
+            const testLead = {
+                full_name: 'Teste Automático ' + new Date().getTime(),
+                phone: '+5511999999999',
+                email: 'teste@automationscookbook.com',
+                message: 'Lead de teste gerado automaticamente para validar integração',
+                optin: true,
+                source: 'Teste Manual - test_supabase.html',
+                user_agent: navigator.userAgent,
+                page_url: window.location.href,
+                created_at: new Date().toISOString()
+            };
+            
+            try {
+                const { data, error } = await supabase
+                    .from('leads')
+                    .insert([testLead])
+                    .select();
+                
+                if (error) throw error;
+                
+                showResult(`✅ LEAD INSERIDO COM SUCESSO!\n\nID: ${data[0].id}\nNome: ${data[0].full_name}\nEmail: ${data[0].email}\nPhone: ${data[0].phone}\nMensagem: ${data[0].message}\nData: ${data[0].created_at}\n\n✨ Integração funcionando perfeitamente!`, 'success');
+            } catch (error) {
+                showResult(`❌ ERRO AO INSERIR:\n\n${error.message}\n\nDetalhes: ${JSON.stringify(error, null, 2)}`, 'error');
+            }
+        }
+        
+        async function testRead() {
+            showResult('⏳ Buscando últimos leads...', '');
+            try {
+                const { data, error } = await supabase
+                    .from('leads')
+                    .select('*')
+                    .order('created_at', { ascending: false })
+                    .limit(5);
+                
+                if (error) throw error;
+                
+                if (data.length === 0) {
+                    showResult('📭 Nenhum lead encontrado ainda.\n\nClique em "Inserir Lead de Teste" para criar um.', 'success');
+                } else {
+                    let result = `✅ ÚLTIMOS ${data.length} LEADS:\n\n`;
+                    data.forEach((lead, i) => {
+                        result += `${i + 1}. ${lead.full_name}\n`;
+                        result += `   Email: ${lead.email}\n`;
+                        result += `   Phone: ${lead.phone}\n`;
+                        result += `   Mensagem: ${lead.message}\n`;
+                        result += `   Data: ${new Date(lead.created_at).toLocaleString('pt-BR')}\n\n`;
+                    });
+                    showResult(result, 'success');
+                }
+            } catch (error) {
+                showResult(`❌ ERRO AO LER:\n\n${error.message}\n\nNOTA: Leitura requer autenticação. Use o insert para testar.`, 'error');
+            }
+        }
+        
+        // Teste automático ao carregar
+        window.onload = () => {
+            testConnection();
+        };
+    </script>
+</body>
+</html>
