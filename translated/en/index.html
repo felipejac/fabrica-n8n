@@ -1,0 +1,522 @@
+<!-- 
+    AI Templates Factory - Automação Inteligente com IA
+    Versão: 3.5.0 (Homepage Otimizada para Conversão)
+    Recursos: Homepage, Gerador CSV, Biblioteca Massiva, Toolbox IA, Debugger IA, Academia de Código e Guia de Integrações.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR" itemscope itemtype="http://schema.org/WebApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Principal -->
+    <title>AI Factory | Automation and Templates with AI</title>
+    <meta name="description" content="Sua central de comando para n8n: Templates, Geradores de Código, Debugger com IA e Documentação. Aumente sua produtividade em automação.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏭</text></svg>">
+    
+    <!-- Bibliotecas Externas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Gradiente Animado para o Hero */
+        .hero-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800 flex flex-col">
+
+    <!-- Header / Navegação -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm/50 backdrop-blur-md bg-white/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between h-auto md:h-16 py-2 md:py-0 gap-2 md:gap-0">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 cursor-pointer w-full md:w-auto hover:opacity-80 transition-opacity" onclick="switchView('home')">
+                    <div class="bg-indigo-600 text-white p-2 rounded-lg shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-900 tracking-tight">AI Factory</h1>
+                        <p class="text-[10px] uppercase tracking-wider text-indigo-600 font-bold">Automação Inteligente</p>
+                    </div>
+                </div>
+
+                <!-- Menu de Navegação -->
+                <nav class="flex w-full md:w-auto items-center gap-1 bg-slate-100/50 p-1 rounded-lg overflow-x-auto scrollbar-hide">
+                    <button onclick="switchView('home')" id="nav-home" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🏠 Home</button>
+                    <button onclick="switchView('generator')" id="nav-generator" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🏭 Generator</button>
+                    <button onclick="switchView('library')" id="nav-library" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">📚 Templates</button>
+                    <!-- INTEGRATIONS_COUNT: 20 -->
+                <!-- INTEGRATIONS_COUNT: 69 -->
+                <!-- INTEGRATIONS_COUNT: 3269 -->
+                <!-- INTEGRATIONS_COUNT: 13269 -->
+                <button onclick="switchView('integrations')" id="nav-integrations" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🔌 Integrations</button>
+                    <button onclick="switchView('toolbox')" id="nav-toolbox" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🧰 Toolbox</button>
+                    <button onclick="switchView('academy')" id="nav-academy" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🎓 Academy</button>
+                    <button onclick="switchView('debugger')" id="nav-debugger" class="nav-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap">🚑 Doctor</button>
+                    
+                    <div class="w-px h-5 bg-slate-300 mx-1"></div>
+                    
+                    <button onclick="openSettings()" class="px-2 py-1.5 rounded-md text-slate-500 hover:text-indigo-600 transition-colors" title="Configurações">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow w-full" id="main-content">
+
+        <!-- ========================================== -->
+        <!-- VIEW: HOMEPAGE (NOVA)                     -->
+        <!-- ========================================== -->
+        <section id="home-view" class="fade-in">
+            
+            <!-- Hero Section -->
+            <div class="relative bg-slate-900 overflow-hidden">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/90 to-purple-900/90"></div>
+                
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+                    <span class="inline-block py-1 px-3 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-semibold tracking-wider mb-6 animate-pulse">Powered by AI</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">Automação Inteligente<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">com IA</span>
+                    </h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-300">Crie, documente, corrija e descubra workflows em segundos. 
+                        A ferramenta essencial para quem quer escalar operações sem perder tempo.</p>
+                    <div class="mt-10 flex justify-center gap-4">
+                        <button onclick="switchView('library')" class="px-8 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-500/30 transition-all transform hover:-translate-y-1">Explore Templates</button>
+                        <button onclick="switchView('generator')" class="px-8 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium transition-all">Gerar Documentação</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-slate-50">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900">Tudo o que você precisa em um só lugar</h2>
+                    <p class="mt-4 text-slate-600">Escolha a ferramenta ideal para o seu momento.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1: Templates -->
+                    <div onclick="switchView('library')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200 p-8 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Template Library</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Acesso a mais de<strong>3.200 fluxos prontos</strong>. Pesquise por caso de uso e baixe o JSON instantaneamente.</p>
+                        <span class="text-blue-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Acessar Biblioteca<span aria-hidden="true">&rarr;</span></span>
+                    </div>
+
+                    <!-- Card 2: Gerador -->
+                    <div onclick="switchView('generator')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200 p-8 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-50 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-6 relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Fábrica de Conteúdo</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Transforme planilhas CSV em centenas de páginas de documentação Markdown em segundos.</p>
+                        <span class="text-emerald-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Gerar Conteúdo<span aria-hidden="true">&rarr;</span></span>
+                    </div>
+
+                    <!-- Card 3: Doctor -->
+                    <div onclick="switchView('debugger')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200 p-8 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-6 relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">N8N Doctor</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Seu workflow quebrou? Cole o erro e receba um diagnóstico preciso com solução via IA.</p>
+                        <span class="text-red-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Diagnosticar Erro<span aria-hidden="true">&rarr;</span></span>
+                    </div>
+
+                    <!-- Card 4: Toolbox -->
+                    <div onclick="switchView('toolbox')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200 p-8 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-purple-50 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6 relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Toolbox de IA</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Geradores de<strong>Cron</strong>, <strong>Regex</strong>, <strong>cURL</strong>e scripts JavaScript complexos usando linguagem natural.</p>
+                        <span class="text-purple-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Abrir Ferramentas<span aria-hidden="true">&rarr;</span></span>
+                    </div>
+
+                    <!-- Card 5: Academia -->
+                    <div onclick="switchView('academy')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200 p-8 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 mb-6 relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Academia de Código</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Snippets de JavaScript prontos para o node 'Code'. Datas, arrays, strings e mais.</p>
+                        <span class="text-amber-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Ver Snippets<span aria-hidden="true">&rarr;</span></span>
+                    </div>
+
+                    <!-- Card 6: Integrações -->
+                    <div onclick="switchView('integrations')" class="group cursor-pointer bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200 p-8 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-50 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6 relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Guia de Integrações</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Catálogo de 800+ nodes com exemplos de uso, gatilhos e ações.</p>
+                        <span class="text-indigo-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Explorar Nodes<span aria-hidden="true">&rarr;</span></span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- ... [VIEW: GERADOR MANTIDA IGUAL] ... -->
+        <section id="generator-view" class="hidden fade-in" aria-labelledby="generator-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
+                    <!-- Inputs -->
+                    <div class="flex flex-col gap-6">
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-slate-50 px-4 py-3 border-b border-slate-200 flex justify-between items-center">
+                                <h3 class="font-semibold text-slate-700">1. Dados (CSV)</h3>
+                                <button onclick="enrichCSV()" id="enrichBtn" class="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded flex items-center gap-1 transition-colors">✨ Enriquecer com IA</button>
+                            </div>
+                            <div class="p-4 relative">
+                                <textarea id="csvInput" class="w-full h-48 p-3 bg-slate-50 border border-slate-300 rounded-lg font-mono text-xs focus:ring-2 focus:ring-blue-500 outline-none resize-y transition-all" spellcheck="false" placeholder="Cole seu CSV aqui...">software_a,software_b,tipo_evento,caso_uso_resumido,titulo_pagina,slug_url,descricao_curta,json_n8n_url,passos_resumo,tags
+"Facebook Lead Ads","WhatsApp (Chatwoot)","lead","enviar novos leads para um número ou inbox de WhatsApp em tempo real","Como enviar leads do Facebook Ads para o WhatsApp (Chatwoot) usando N8N","facebook-ads-para-whatsapp-chatwoot-n8n","","https://seu-dominio.com/templates/facebook-ads-chatwoot-n8n.json","","marketing, leads, whatsapp, chatwoot"
+"Typeform","Google Sheets","formulario","registrar respostas de formulário em planilha","Como integrar Typeform com Google Sheets usando N8N","typeform-para-google-sheets-n8n","","https://seu-dominio.com/templates/typeform-google-sheets-n8n.json","","formularios, planilhas, marketing"</textarea>
+                                <div id="csvLoading" class="hidden absolute inset-0 bg-white/80 flex flex-col items-center justify-center z-10 rounded-lg backdrop-blur-sm">
+                                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mb-2"></div>
+                                    <span class="text-sm text-indigo-700 font-medium">A IA está escrevendo...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex-1 flex flex-col">
+                            <div class="bg-slate-50 px-4 py-3 border-b border-slate-200"><h3 class="font-semibold text-slate-700">2. Template Markdown</h3></div>
+                            <div class="p-4 flex-1 flex flex-col">
+                                <textarea id="templateInput" class="w-full flex-1 min-h-[12rem] p-3 bg-slate-50 border border-slate-300 rounded-lg font-mono text-xs focus:ring-2 focus:ring-blue-500 outline-none resize-y transition-all" spellcheck="false" placeholder="Cole seu template aqui...">---
+title: "{{ titulo_pagina }}"
+slug: "{{ slug_url }}"
+tags: "{{ tags }}"
+description: "{{ descricao_curta }}"
+---
+
+# {{ titulo_pagina }}
+
+{{ descricao_curta }}
+
+## Visão geral
+Origem: {{ software_a }} ->Destino: {{ software_b }}
+
+## Passo a passo
+{{ passos_resumo }}
+
+[Baixar JSON]({{ json_n8n_url }})</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Preview -->
+                    <div class="flex flex-col gap-6">
+                        <div class="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden flex flex-col h-full sticky top-20">
+                            <div class="bg-slate-900 text-white px-4 py-3 flex justify-between items-center">
+                                <h3 class="font-semibold flex items-center gap-2">Live Preview</h3>
+                                <span id="previewBadge" class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">Aguardando...</span>
+                            </div>
+                            <div class="flex-1 bg-slate-50 relative">
+                                <textarea id="previewOutput" readonly class="w-full h-full p-6 bg-slate-50 text-slate-700 font-mono text-sm resize-none focus:outline-none"></textarea>
+                            </div>
+                            <div class="p-6 bg-white border-t border-slate-200">
+                                <button onclick="generateFiles()" id="downloadBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2"><span>Gerar e Baixar ZIP</span></button>
+                                <p id="errorMsg" class="hidden mt-2 text-center text-xs text-red-600 font-medium"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW: LIBRARY -->
+        <section id="library-view" class="hidden fade-in" aria-labelledby="library-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 id="library-title" class="text-3xl font-bold text-slate-900">Biblioteca de Templates n8n</h2>
+                    <p class="mt-2 text-slate-600">Acesso gratuito a mais de<span class="font-bold text-blue-600">3.200</span>fluxos de automação. Baixe JSONs prontos para importar.</p>
+                    <div class="max-w-2xl mx-auto mt-6 flex gap-2">
+                        <div class="relative flex-grow">
+                            <input type="text" id="searchInput" onkeyup="filterLibrary()" placeholder="Buscar (ex: OpenAI, Slack, CRM)..." class="w-full pl-10 pr-4 py-3 rounded-l-full border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm" aria-label="Buscar templates">
+                            <svg class="w-5 h-5 text-slate-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <button onclick="openAICreator()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-r-full font-medium shadow-md transition-all flex items-center gap-2 whitespace-nowrap">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>Criar com IA</button>
+                    </div>
+                </div>
+                
+                <!-- Painel IA Creator -->
+                <div id="aiCreatorPanel" class="hidden max-w-2xl mx-auto mb-8 bg-indigo-50 border border-indigo-100 rounded-xl p-6 relative animate-in slide-in-from-top-4 shadow-lg">
+                    <button onclick="closeAICreator()" class="absolute top-2 right-2 text-indigo-400 hover:text-indigo-600"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="bg-indigo-100 p-1.5 rounded text-indigo-600"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                        <h3 class="text-lg font-bold text-indigo-900">Gerador de Workflow IA</h3>
+                    </div>
+                    <p class="text-sm text-indigo-700 mb-4">Descreva sua automação e a IA vai gerar o código JSON completo do workflow n8n.</p>
+                    <textarea id="aiPrompt" class="w-full p-3 rounded-lg border border-indigo-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm h-24 mb-4" placeholder="Ex: Monitorar o preço do Bitcoin a cada hora e enviar um alerta no Telegram se subir mais de 5%..."></textarea>
+                    <button onclick="generateWorkflowAI()" id="btnGenerateAI" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow flex justify-center items-center gap-2">✨ Gerar Workflow</button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="template-grid"></div>
+                <div id="no-results" class="hidden text-center py-12 text-slate-500"><p class="text-lg">Nenhum template encontrado.</p></div>
+            </div>
+        </section>
+
+        <!-- VIEW: INTEGRAÇÕES -->
+        <section id="integrations-view" class="hidden fade-in" aria-labelledby="int-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 id="int-title" class="text-3xl font-bold text-slate-900">Guia de Integrações n8n</h2>
+                    <p class="mt-2 text-slate-600">Catálogo com mais de<span class="font-bold text-indigo-600">800</span>nodes e integrações. Aprenda a conectar ferramentas.</p>
+                    
+                    <div class="max-w-md mx-auto mt-6 relative">
+                        <input type="text" id="integrationSearchInput" onkeyup="filterIntegrations()" placeholder="Buscar integração (ex: HubSpot, AWS)..." class="w-full pl-10 pr-4 py-3 rounded-full border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm" aria-label="Buscar integrações">
+                        <svg class="w-5 h-5 text-slate-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="integrations-grid">
+                    <!-- Cards serão injetados via JavaScript -->
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p id="integrations-count" class="text-sm text-slate-500 mb-4"></p>
+                    <button onclick="loadMoreIntegrations()" id="load-more-btn" class="hidden px-6 py-2 bg-slate-100 text-slate-600 rounded-full hover:bg-slate-200 transition-colors font-medium text-sm">Carregar Mais</button>
+                </div>
+
+                <div class="text-center mt-12 pt-8 border-t border-slate-200">
+                    <p class="text-slate-600 mb-4">💡 <strong>Procurando tutoriais passo a passo?</strong></p>
+                    <a href="integracoes/index.html" class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">Ver Guias de Integrações Completos →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW: TOOLBOX -->
+        <section id="toolbox-view" class="hidden fade-in" aria-labelledby="toolbox-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 id="toolbox-title" class="text-3xl font-bold text-slate-900">Toolbox do Automatizador</h2>
+                    <p class="mt-2 text-slate-600">Ferramentas utilitárias com IA para acelerar a configuração de nodes n8n.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- CRON Helper -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-green-100 text-green-600 p-2 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                            <h3 class="text-xl font-bold text-slate-800">Assistente de Cron</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-4">Converta "toda sexta às 18h" em expressão Cron para o node Trigger.</p>
+                        <input type="text" id="cronPrompt" class="w-full p-3 border border-slate-300 rounded-lg mb-4 text-sm focus:ring-2 focus:ring-green-500 outline-none" placeholder="Ex: Toda última sexta-feira do mês às 17h...">
+                        <button onclick="askToolbox('cron')" id="btnCron" class="mt-auto w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg transition-colors">Gerar Expressão</button>
+                        <div id="cronResult" class="mt-4 p-3 bg-slate-50 rounded border border-slate-200 font-mono text-sm hidden"></div>
+                    </div>
+
+                    <!-- RegEx Helper -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-purple-100 text-purple-600 p-2 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg></div>
+                            <h3 class="text-xl font-bold text-slate-800">Gerador de RegEx</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-4">Crie expressões regulares para validação ou extração de dados no n8n.</p>
+                        <input type="text" id="regexPrompt" class="w-full p-3 border border-slate-300 rounded-lg mb-4 text-sm focus:ring-2 focus:ring-purple-500 outline-none" placeholder="Ex: Extrair todos os números de telefone brasileiros...">
+                        <button onclick="askToolbox('regex')" id="btnRegex" class="mt-auto w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded-lg transition-colors">Gerar RegEx</button>
+                        <div id="regexResult" class="mt-4 p-3 bg-slate-50 rounded border border-slate-200 font-mono text-sm hidden"></div>
+                    </div>
+
+                    <!-- cURL to HTTP -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></div>
+                            <h3 class="text-xl font-bold text-slate-800">cURL para Node HTTP</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-4">Cole um comando cURL e receba o JSON para configurar o node HTTP Request.</p>
+                        <textarea id="curlPrompt" class="w-full p-3 border border-slate-300 rounded-lg mb-4 text-sm font-mono h-24 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="curl -X POST https://api..."></textarea>
+                        <button onclick="askToolbox('curl')" id="btnCurl" class="mt-auto w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition-colors">Converter</button>
+                        <div id="curlResult" class="mt-4 p-3 bg-slate-50 rounded border border-slate-200 text-sm hidden overflow-x-auto"></div>
+                    </div>
+
+                    <!-- JS Generator -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col h-full">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-orange-100 text-orange-600 p-2 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg></div>
+                            <h3 class="text-xl font-bold text-slate-800">Gerador de JavaScript</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-4">Descreva a lógica e receba o código pronto para o node 'Code'.</p>
+                        <textarea id="jsPrompt" class="w-full p-3 border border-slate-300 rounded-lg mb-4 text-sm h-24 focus:ring-2 focus:ring-orange-500 outline-none" placeholder="Ex: Filtrar itens onde o preço é maior que 50 e formatar a data..."></textarea>
+                        <button onclick="askToolbox('js')" id="btnJs" class="mt-auto w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 rounded-lg transition-colors">Escrever Código</button>
+                        <div id="jsResult" class="mt-4 p-0 bg-slate-900 rounded border border-slate-800 text-sm hidden overflow-hidden relative group">
+                            <button onclick="copyElementText('jsCodeBlock')" class="absolute top-2 right-2 text-slate-400 hover:text-white opacity-0 group-hover:opacity-100 transition-opacity"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
+                            <pre><code class="language-javascript" id="jsCodeBlock"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW: ACADEMY -->
+        <section id="academy-view" class="hidden fade-in" aria-labelledby="academy-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 id="academy-title" class="text-3xl font-bold text-slate-900">N8N Academy</h2>
+                    <p class="mt-2 text-slate-600">JavaScript snippets ready to copy and paste.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-6" id="academy-filters">
+                        <!-- Filtros (Gerados via JS) -->
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="academy-grid">
+                    <!-- Snippets serão injetados aqui -->
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW: DEBUGGER -->
+        <section id="debugger-view" class="hidden fade-in" aria-labelledby="debugger-title">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 id="debugger-title" class="text-3xl font-bold text-slate-900">N8N Doctor</h2>
+                    <p class="mt-2 text-slate-600">AI-powered error diagnosis.</p>
+                </div>
+                <!-- Debugger Content -->
+                <div class="bg-white rounded-xl shadow-lg border border-red-100 overflow-hidden mb-8">
+                    <div class="bg-red-50 px-6 py-4 border-b border-red-100 flex items-center gap-2 text-red-800">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <span class="font-bold">Error Console</span>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-slate-500 mb-3">Cole o log de erro abaixo ou clique em um sintoma comum:</p>
+                        
+                        <!-- Sintomas Comuns -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button onclick="fillError('ERROR: JSON parameter need to be an valid JSON')" class="text-xs bg-red-50 text-red-600 px-3 py-1.5 rounded-full border border-red-100 hover:bg-red-100 transition-colors">JSON Inválido</button>
+                            <button onclick="fillError('JavaScript heap out of memory')" class="text-xs bg-red-50 text-red-600 px-3 py-1.5 rounded-full border border-red-100 hover:bg-red-100 transition-colors">Memória Excedida</button>
+                            <button onclick="fillError('429 Too Many Requests')" class="text-xs bg-red-50 text-red-600 px-3 py-1.5 rounded-full border border-red-100 hover:bg-red-100 transition-colors">Erro 429 (Rate Limit)</button>
+                            <button onclick="fillError('No binary data property')" class="text-xs bg-red-50 text-red-600 px-3 py-1.5 rounded-full border border-red-100 hover:bg-red-100 transition-colors">Erro Binário</button>
+                            <button onclick="fillError('Connection refused')" class="text-xs bg-red-50 text-red-600 px-3 py-1.5 rounded-full border border-red-100 hover:bg-red-100 transition-colors">Conexão Recusada</button>
+                        </div>
+
+                        <textarea id="debugInput" class="w-full h-32 p-4 bg-slate-50 border border-slate-300 rounded-lg font-mono text-xs focus:ring-2 focus:ring-red-500 outline-none resize-y mb-4" placeholder="Cole o log de erro completo aqui..."></textarea>
+                        
+                        <button onclick="diagnoseError()" id="btnDiagnose" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all flex justify-center items-center gap-2">
+                            <span>Diagnose with AI</span>
+                        </button>
+                    </div>
+                    <div id="debugResult" class="hidden border-t border-slate-200 bg-slate-50 p-6">
+                        <h4 class="font-bold text-slate-800 mb-2">Diagnóstico:</h4>
+                        <div id="debugContent" class="prose prose-sm text-slate-600 max-w-none bg-white p-4 rounded border border-slate-200"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="hidden fixed inset-0 bg-black/50 z-[60] flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 transform transition-all scale-100">
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Settings</h3>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-md">
+                <div class="flex">
+                    <div class="ml-3">
+                        <p class="text-xs text-blue-700"><strong>Segurança (BYOK):</strong>Chave salva apenas no Local Storage do seu navegador.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-slate-700 mb-2">Google Gemini API Key</label>
+                <input type="password" id="apiKeyInput" class="w-full p-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="Cole sua chave aqui...">
+            </div>
+            <div class="flex justify-end gap-2">
+                <button onclick="closeSettings()" class="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded text-sm">Cancel</button>
+                <button onclick="saveSettings()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer SEO -->
+    <footer class="bg-white border-t border-slate-200 mt-auto py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">About AI Factory</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">O AI Factory é uma suite open-source projetada para acelerar o desenvolvimento de automações. 
+                        Oferecemos geradores de código, bibliotecas de templates e assistentes de IA para tornar o trabalho 
+                        com n8n, workflows e integrações mais rápido e eficiente.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Popular Resources</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li><a href="#" onclick="switchView('library')" class="hover:text-blue-600">Templates de Automação</a></li>
+                        <li><a href="#" onclick="switchView('academy')" class="hover:text-blue-600">Snippets de Código JavaScript</a></li>
+                        <li><a href="#" onclick="switchView('toolbox')" class="hover:text-blue-600">Gerador de Expressões Cron</a></li>
+                        <li><a href="#" onclick="switchView('integrations')" class="hover:text-blue-600">Guia de Integrações n8n</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Tags</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">n8n</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">workflow</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">automação</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">low-code</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">javascript</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">api</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-8 text-center text-sm text-slate-500">
+                <p>&copy; 2024 AI Factory. Projeto Open Source.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="hidden fixed inset-0 bg-black/50 z-[60] flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 transform transition-all scale-100">
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Settings</h3>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-md">
+                <div class="flex"><div class="ml-3"><p class="text-xs text-blue-700"><strong>Segurança (BYOK):</strong>Chave salva apenas no Local Storage do seu navegador.</p></div></div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-slate-700 mb-2">Google Gemini API Key</label>
+                <input type="password" id="apiKeyInput" class="w-full p-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="Cole sua chave aqui...">
+            </div>
+            <div class="flex justify-end gap-2">
+                <button onclick="closeSettings()" class="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded text-sm">Cancel</button>
+                <button onclick="saveSettings()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "generated": "2025-12-09T00:23:33.802838",
+  "version": "1.0.0",
+  "languages": {
+    "pt": {
+      "name": "Portuguese",
+      "native_name": "Português",
+      "direction": "ltr",
+      "regions": [
+        "BR",
+        "PT"
+      ]
+    },
+    "en": {
+      "name": "English",
+      "native_name": "English",
+      "direction": "ltr",
+      "regions": [
+        "US",
+        "GB",
+        "AU",
+        "CA"
+      ]
+    },
+    "es": {
+      "name": "Spanish",
+      "native_name": "Español",
+      "direction": "ltr",
+      "regions": [
+        "ES",
+        "MX",
+        "AR",
+        "CO"
+      ]
+    },
+    "fr": {
+      "name": "French",
+      "native_name": "Français",
+      "direction": "ltr",
+      "regions": [
+        "FR",
+        "CA",
+        "BE",
+        "CH"
+      ]
+    }
+  },
+  "statistics": {
+    "files_processed": 12543,
+    "files_translated": 12543,
+    "total_translations": 0
+  }
+}
