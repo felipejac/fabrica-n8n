@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Blog Tech Insights | Automations Cookbook - Análises e Tendências em Automação e IA</title>
+    <meta name="title" content="Blog Tech Insights | Automations Cookbook - Análises e Tendências em Automação e IA">
+    <meta name="description" content="Análises profundas sobre o mercado de automação, IA, n8n, Zapier, Make e tendências de iPaaS. Insights exclusivos sobre Agentes de IA, valuations e transformação digital.">
+    <meta name="keywords" content="blog automação, tech insights, n8n, Zapier, Make, IA, Agentes de IA, iPaaS, análise de mercado, tendências tecnologia">
+    <meta name="author" content="Felipe Lourenzo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.automationscookbook.com/blog">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.automationscookbook.com/blog">
+    <meta property="og:title" content="Blog Tech Insights | Automations Cookbook">
+    <meta property="og:description" content="Análises profundas sobre automação, IA e tendências do mercado de iPaaS. Insights exclusivos sobre n8n, Zapier, Make e Agentes de IA.">
+    <meta property="og:image" content="https://www.automationscookbook.com/assets/images/blog-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.automationscookbook.com/blog">
+    <meta property="twitter:title" content="Blog Tech Insights | Automations Cookbook">
+    <meta property="twitter:description" content="Análises profundas sobre automação, IA e tendências do mercado de iPaaS">
+    <meta property="twitter:image" content="https://www.automationscookbook.com/assets/images/blog-og.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Schema.org Blog Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Tech Insights Blog - Automations Cookbook",
+      "description": "Análises profundas sobre automação, IA, n8n, Zapier e tendências do mercado de iPaaS",
+      "url": "https://www.automationscookbook.com/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Automations Cookbook",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.automationscookbook.com/logo.png"
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felipe Lourenzo",
+        "jobTitle": "AI Researcher and AI Automation Specialist"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "O Grande Reset da Automação: Como a IA Quebrou a Hegemonia do Zapier em 2025",
+          "url": "https://www.automationscookbook.com/blog/zapier-hegemonia-2025",
+          "datePublished": "2025-12-09",
+          "image": "https://www.automationscookbook.com/assets/images/blog/zapier-hegemonia-2025.jpg"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .featured-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    🍳 Automations Cookbook
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/integracoes/" class="text-gray-700 hover:text-blue-600 transition">N8N Templates</a>
+                    <a href="/integracoes-zapier/" class="text-gray-700 hover:text-blue-600 transition">Zapier Templates</a>
+                    <a href="/casos-de-uso" class="text-gray-700 hover:text-blue-600 transition">Casos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 opacity-10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                    <span class="gradient-text">Tech Insights</span> Blog
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                    Análises profundas sobre <strong>automação</strong>, <strong>IA</strong>, <strong>n8n</strong>, <strong>Zapier</strong> e tendências do mercado de <strong>iPaaS</strong>
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">📊 Análises de Mercado</span>
+                    <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">🤖 Agentes de IA</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-semibold">💡 Insights Técnicos</span>
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">🚀 Tendências</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Article -->
+    <section class="container mx-auto px-4 py-12 max-w-7xl">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+            <span class="text-4xl">⭐</span>
+            Artigo em Destaque
+        </h2>
+        
+        <article class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+            <div class="grid md:grid-cols-2 gap-0">
+                <div class="relative h-64 md:h-auto">
+                    <img 
+                        src="/assets/images/blog/zapier-hegemonia-2025.jpg" 
+                        alt="O Grande Reset da Automação" 
+                        class="w-full h-full object-cover"
+                        loading="eager"
+                    >
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            📊 ANÁLISE DE MERCADO
+                        </span>
+                    </div>
+                </div>
+                <div class="p-8 md:p-10 flex flex-col justify-center">
+                    <div class="text-sm text-gray-500 mb-3 flex items-center gap-3">
+                        <time datetime="2025-12-09">09 de Dezembro de 2025</time>
+                        <span>•</span>
+                        <span>8 min de leitura</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                        O Grande Reset da Automação: Como a IA Quebrou a Hegemonia do Zapier em 2025
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Enquanto a Workday adquire o Pipedream e o Zapier luta para proteger suas margens, o n8n surge como a infraestrutura padrão para a nova economia de Agentes de IA, avaliado em <strong>US$ 2,5 bilhões</strong>.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full">#Zapier</span>
+                        <span class="bg-purple-50 text-purple-700 text-xs px-3 py-1 rounded-full">#n8n</span>
+                        <span class="bg-indigo-50 text-indigo-700 text-xs px-3 py-1 rounded-full">#IA</span>
+                        <span class="bg-green-50 text-green-700 text-xs px-3 py-1 rounded-full">#Valuation</span>
+                    </div>
+                    <a href="/blog/zapier-hegemonia-2025.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition">
+                        Ler Artigo Completo
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    
+    <!-- All Articles Grid -->
+    <section class="container mx-auto px-4 py-12 max-w-7xl">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-900">Todos os Artigos</h2>
+            <div class="flex gap-2">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold text-sm">Todos</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition">Análise</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition">Tutorial</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition">Tendências</button>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Article Card 1 (Published) -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-purple-500 via-indigo-600 to-blue-600 relative">
+                    <img 
+                        src="/assets/images/blog/zapier-hegemonia-2025.jpg" 
+                        alt="Artigo sobre Zapier" 
+                        class="w-full h-full object-cover opacity-90"
+                    >
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">NOVO</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-semibold">Análise de Mercado</span>
+                        <span>•</span>
+                        <time datetime="2025-12-09">09 Dez 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/zapier-hegemonia-2025.html">
+                            O Grande Reset da Automação: Como a IA Quebrou a Hegemonia do Zapier em 2025
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Análise completa do mercado de iPaaS: n8n atinge US$ 2,5 bi, Workday adquire Pipedream e o Zapier enfrenta novos desafios.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">8 min</span>
+                        <a href="/blog/zapier-hegemonia-2025.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Article Card 2 (Coming Soon) -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-75">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <svg class="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        <p class="font-bold text-lg">Em Breve</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-green-100 text-green-700 px-2 py-1 rounded font-semibold">Tutorial</span>
+                        <span>•</span>
+                        <span>Em breve</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        Guia Completo: Como Criar Agentes de IA com n8n
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Tutorial passo a passo para construir Agentes de IA autônomos usando n8n, LangChain e modelos de linguagem.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <span class="text-gray-400 text-sm font-semibold">Em produção</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Article Card 3 (Coming Soon) -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-75">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-pink-600 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <svg class="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                        <p class="font-bold text-lg">Em Breve</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded font-semibold">Dados</span>
+                        <span>•</span>
+                        <span>Em breve</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        Benchmark: Zapier vs Make vs n8n - Performance e Custos
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Comparação técnica detalhada de performance, custos e capacidades das três principais plataformas de automação.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <span class="text-gray-400 text-sm font-semibold">Em produção</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Article Card 4 (Coming Soon) -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-75">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <svg class="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <p class="font-bold text-lg">Em Breve</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">Tendência</span>
+                        <span>•</span>
+                        <span>Em breve</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        2026: O Ano dos Agentes de IA Autônomos
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Previsões e tendências para o futuro da automação com IA: o que esperar do mercado em 2026.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">7 min</span>
+                        <span class="text-gray-400 text-sm font-semibold">Em produção</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Article Card 5 (Coming Soon) -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-75">
+                <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <svg class="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <p class="font-bold text-lg">Em Breve</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-semibold">Negócios</span>
+                        <span>•</span>
+                        <span>Em breve</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        ROI de Automação: Como Calcular o Retorno Real
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Framework completo para medir o retorno sobre investimento em automação e IA para sua empresa.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">9 min</span>
+                        <span class="text-gray-400 text-sm font-semibold">Em produção</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Article Card 6 (Coming Soon) -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover opacity-75">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <svg class="w-16 h-16 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                        <p class="font-bold text-lg">Em Breve</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded font-semibold">Case Study</span>
+                        <span>•</span>
+                        <span>Em breve</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        Case: Como uma Startup Economizou US$ 50k/ano com n8n
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        História real de migração do Zapier para n8n e os resultados financeiros alcançados.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">11 min</span>
+                        <span class="text-gray-400 text-sm font-semibold">Em produção</span>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Receba Insights Exclusivos
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Análises semanais sobre automação, IA e tendências de mercado direto no seu email
+            </p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input 
+                    type="email" 
+                    placeholder="seu@email.com" 
+                    class="flex-1 px-6 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                    required
+                >
+                <button type="submit" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                    Inscrever
+                </button>
+            </form>
+            <p class="text-sm text-blue-100 mt-4">
+                ✨ Sem spam. Cancele quando quiser.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Popular Tags -->
+    <section class="container mx-auto px-4 py-12 max-w-7xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Tópicos Populares</h2>
+        <div class="tag-cloud">
+            <a href="/blog?tag=zapier" class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">#Zapier</a>
+            <a href="/blog?tag=n8n" class="bg-purple-50 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-100 transition">#n8n</a>
+            <a href="/blog?tag=make" class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-indigo-100 transition">#Make</a>
+            <a href="/blog?tag=ia" class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-100 transition">#IA</a>
+            <a href="/blog?tag=automacao" class="bg-orange-50 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-100 transition">#Automação</a>
+            <a href="/blog?tag=ipaas" class="bg-pink-50 text-pink-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-pink-100 transition">#iPaaS</a>
+            <a href="/blog?tag=agentes" class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-100 transition">#Agentes de IA</a>
+            <a href="/blog?tag=low-code" class="bg-teal-50 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-teal-100 transition">#Low-Code</a>
+            <a href="/blog?tag=valuation" class="bg-yellow-50 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-yellow-100 transition">#Valuation</a>
+            <a href="/blog?tag=mercado" class="bg-red-50 text-red-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-100 transition">#Análise de Mercado</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🍳 Automations Cookbook</h3>
+                    <p class="text-gray-400">
+                        Biblioteca open-source com mais de 13.400 templates de automação.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Plataformas</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/integracoes/" class="hover:text-white transition">N8N Templates</a></li>
+                        <li><a href="/integracoes-zapier/" class="hover:text-white transition">Zapier Templates</a></li>
+                        <li><a href="/llm" class="hover:text-white transition">API para LLMs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Recursos Populares</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/guia-automacoes-n8n" class="hover:text-white transition">Guia de Integrações n8n</a></li>
+                        <li><a href="/blog" class="hover:text-white transition">Blog Tech Insights</a></li>
+                        <li><a href="/casos-de-uso" class="hover:text-white transition">Casos de Uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Conecte-se</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://github.com/felipejac/fabrica-n8n" target="_blank" class="hover:text-white transition">GitHub</a></li>
+                        <li><a href="https://twitter.com" target="_blank" class="hover:text-white transition">Twitter</a></li>
+                        <li><a href="https://linkedin.com" target="_blank" class="hover:text-white transition">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Automations Cookbook. Open-source sob licença MIT.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        
+        // Track blog home view
+        gtag('event', 'page_view', {
+            'page_title': 'Blog Home',
+            'page_location': window.location.href
+        });
+    </script>
+    
+</body>
+</html>
