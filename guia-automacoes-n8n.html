@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo de Automações N8N | Como Automatizar Processos com N8N</title>
+    <meta name="description" content="Aprenda a criar automações com N8N neste guia completo. Tutoriais, exemplos práticos, melhores práticas e 13.269+ templates prontos para usar. Do básico ao avançado.">
+    <meta name="keywords" content="n8n, automação, workflow, tutorial n8n, guia n8n, low-code, no-code, integração">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Automations Cookbook">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Guia Completo de Automações N8N">
+    <meta property="og:description" content="Aprenda a criar automações com N8N. Tutoriais, exemplos práticos e 13.269+ templates prontos.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.automationscookbook.com/guia-automacoes-n8n">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Guia Completo de Automações N8N",
+      "description": "Aprenda a criar automações com N8N do básico ao avançado",
+      "author": {
+        "@type": "Organization",
+        "name": "Automations Cookbook"
+      },
+      "datePublished": "2025-12-09",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Instalar N8N",
+          "text": "Escolha entre instalação Docker, NPM ou cloud"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Criar primeiro workflow",
+          "text": "Configure trigger, nodes de integração e ações"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Testar e ativar",
+          "text": "Execute testes e ative automação em produção"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #764ba2;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .guide-section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .guide-section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .guide-section h3 {
+            color: #764ba2;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .guide-section p {
+            margin-bottom: 1rem;
+            color: #555;
+            font-size: 1.05rem;
+        }
+        
+        .guide-section ul, .guide-section ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .guide-section li {
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+        
+        .code-block {
+            background: #f4f4f6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #667eea;
+            overflow-x: auto;
+        }
+        
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+        
+        .tip-box {
+            background: #e0e7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .tip-box strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .warning-box strong {
+            color: #f59e0b;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-box a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-box a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .use-case-card {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        
+        .use-case-card:hover {
+            border-color: #667eea;
+            transform: translateY(-4px);
+        }
+        
+        .use-case-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .guide-section {
+                padding: 1.5rem;
+            }
+            
+            .use-case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📘 Guia Completo de Automações N8N</h1>
+        <p>Aprenda a criar automações profissionais com N8N: do básico ao avançado, com exemplos práticos e 13.269+ templates prontos para usar</p>
+    </header>
+    
+    <nav>
+        <a href="/">← Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/integracoes/">Templates</a>
+        <a href="/llm">Para Desenvolvedores</a>
+    </nav>
+    
+    <div class="container">
+        
+        <!-- Introdução -->
+        <section class="guide-section">
+            <h2>🚀 O que é N8N e Por Que Automatizar?</h2>
+            <p><strong>N8N</strong> é uma plataforma de automação de workflows <strong>open-source</strong> que permite conectar diferentes aplicações e serviços sem precisar escrever código complexo. É como um Zapier ou Make.com, mas com total controle e transparência.</p>
+            
+            <h3>Por que escolher N8N?</h3>
+            <ul>
+                <li><strong>✅ Open Source:</strong> Código aberto, sem vendor lock-in</li>
+                <li><strong>✅ Self-hosted:</strong> Controle total dos seus dados</li>
+                <li><strong>✅ 400+ Integrações:</strong> Conecte qualquer ferramenta</li>
+                <li><strong>✅ Customizável:</strong> Adicione código JavaScript quando precisar</li>
+                <li><strong>✅ Gratuito:</strong> Versão completa sem limitações</li>
+                <li><strong>✅ Interface Visual:</strong> Drag-and-drop intuitivo</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 Dica:</strong>
+                N8N é ideal para times que querem autonomia e não dependem de quotas mensais. Você pode processar milhões de execuções sem pagar nada a mais.
+            </div>
+        </section>
+        
+        <!-- Instalação -->
+        <section class="guide-section">
+            <h2>⚙️ Como Instalar N8N</h2>
+            
+            <h3>Opção 1: Docker (Recomendado para Produção)</h3>
+            <div class="code-block">
+                <code>
+docker run -d \<br>
+  --name n8n \<br>
+  -p 5678:5678 \<br>
+  -v ~/.n8n:/home/node/.n8n \<br>
+  n8nio/n8n
+                </code>
+            </div>
+            <p>Acesse: <code>http://localhost:5678</code></p>
+            
+            <h3>Opção 2: NPM (Desenvolvimento Local)</h3>
+            <div class="code-block">
+                <code>
+npm install n8n -g<br>
+n8n start
+                </code>
+            </div>
+            
+            <h3>Opção 3: N8N Cloud (Mais Rápido)</h3>
+            <p>Crie conta gratuita em <a href="https://n8n.io/cloud" target="_blank" style="color: #667eea;">n8n.io/cloud</a> - sem instalação, pronto em 2 minutos.</p>
+            
+            <div class="warning-box">
+                <strong>⚠️ Importante:</strong>
+                Para produção, configure variáveis de ambiente como <code>N8N_BASIC_AUTH_ACTIVE=true</code> e use HTTPS com reverse proxy (Nginx/Traefik).
+            </div>
+        </section>
+        
+        <!-- Conceitos Básicos -->
+        <section class="guide-section">
+            <h2>🧩 Conceitos Fundamentais</h2>
+            
+            <h3>Workflow (Fluxo de Trabalho)</h3>
+            <p>Um workflow é uma sequência de ações automatizadas. Exemplo: "Quando receber email no Gmail → Salvar anexos no Google Drive → Notificar no Slack"</p>
+            
+            <h3>Nodes (Nós)</h3>
+            <p>Cada caixa no editor visual é um "node" que representa uma ação:</p>
+            <ul>
+                <li><strong>Trigger Nodes:</strong> Iniciam o workflow (webhook, schedule, email recebido)</li>
+                <li><strong>Action Nodes:</strong> Executam ações (enviar email, criar tarefa, consultar API)</li>
+                <li><strong>Logic Nodes:</strong> Controlam fluxo (IF, Switch, Loop)</li>
+                <li><strong>Function Nodes:</strong> Processam dados com JavaScript</li>
+            </ul>
+            
+            <h3>Executions (Execuções)</h3>
+            <p>Cada vez que o workflow roda, é uma "execution". Você pode ver logs, dados de entrada/saída e debugar erros.</p>
+            
+            <div class="tip-box">
+                <strong>💡 Conceito-Chave:</strong>
+                Workflows em N8N seguem o padrão <strong>ETL</strong> (Extract → Transform → Load): extrair dados de uma fonte, transformar conforme necessário, e carregar no destino.
+            </div>
+        </section>
+        
+        <!-- Primeiro Workflow -->
+        <section class="guide-section">
+            <h2>🎯 Seu Primeiro Workflow: Webhook → Google Sheets</h2>
+            
+            <h3>Passo 1: Criar Workflow</h3>
+            <ol>
+                <li>Clique em "New Workflow" no N8N</li>
+                <li>Adicione node "Webhook" (trigger)</li>
+                <li>Configure método HTTP: <code>POST</code></li>
+                <li>Copie a URL do webhook</li>
+            </ol>
+            
+            <h3>Passo 2: Adicionar Google Sheets</h3>
+            <ol>
+                <li>Adicione node "Google Sheets"</li>
+                <li>Conecte sua conta Google</li>
+                <li>Escolha operação: "Append Row"</li>
+                <li>Selecione planilha e aba</li>
+                <li>Mapeie campos: <code>{{ $json.nome }}</code>, <code>{{ $json.email }}</code></li>
+            </ol>
+            
+            <h3>Passo 3: Testar</h3>
+            <div class="code-block">
+                <code>
+curl -X POST https://seu-n8n.com/webhook/abc123 \<br>
+  -H "Content-Type: application/json" \<br>
+  -d '{"nome": "João", "email": "joao@example.com"}'
+                </code>
+            </div>
+            
+            <p><strong>✅ Resultado:</strong> Dados salvos automaticamente na planilha!</p>
+        </section>
+        
+        <!-- Casos de Uso -->
+        <section class="guide-section">
+            <h2>💼 Casos de Uso Populares</h2>
+            
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <h4>📊 Marketing</h4>
+                    <p>Leads do Facebook Ads → CRM (HubSpot/RD Station) → Notificação Slack</p>
+                </div>
+                
+                <div class="use-case-card">
+                    <h4>🛒 E-commerce</h4>
+                    <p>Venda no Shopify → Criar pedido no ERP → Enviar NF-e → Atualizar estoque</p>
+                </div>
+                
+                <div class="use-case-card">
+                    <h4>📧 Atendimento</h4>
+                    <p>Email recebido → Análise IA (ChatGPT) → Resposta automática → Ticket Zendesk</p>
+                </div>
+                
+                <div class="use-case-card">
+                    <h4>📈 Relatórios</h4>
+                    <p>Dados Salesforce → Google Sheets → Dashboard Looker Studio → Email diário</p>
+                </div>
+                
+                <div class="use-case-card">
+                    <h4>🎫 Suporte</h4>
+                    <p>Bug no Jira (crítico) → Notificação SMS → Criar incidente PagerDuty</p>
+                </div>
+                
+                <div class="use-case-card">
+                    <h4>📱 Social Media</h4>
+                    <p>Post WordPress → Auto-publicar Twitter/LinkedIn → Salvar analytics</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Melhores Práticas -->
+        <section class="guide-section">
+            <h2>⭐ Melhores Práticas</h2>
+            
+            <h3>1. Gestão de Erros</h3>
+            <ul>
+                <li>Use node "Error Trigger" para capturar falhas</li>
+                <li>Configure retry automático (3x com backoff)</li>
+                <li>Envie notificações de erro (Slack/Email)</li>
+                <li>Salve logs em banco de dados</li>
+            </ul>
+            
+            <h3>2. Performance</h3>
+            <ul>
+                <li>Evite loops infinitos - sempre use limite</li>
+                <li>Use "Split in Batches" para grandes volumes (>1000 itens)</li>
+                <li>Configure timeout adequado (padrão: 2 minutos)</li>
+                <li>Cache dados quando possível (Function node)</li>
+            </ul>
+            
+            <h3>3. Segurança</h3>
+            <ul>
+                <li>Nunca exponha credenciais - use Credentials do N8N</li>
+                <li>Valide dados de entrada no webhook</li>
+                <li>Use autenticação (Basic Auth, JWT, API Key)</li>
+                <li>Configure rate limiting</li>
+            </ul>
+            
+            <h3>4. Organização</h3>
+            <ul>
+                <li>Nomeie workflows claramente: "[Processo] - Origem → Destino"</li>
+                <li>Use tags para categorizar (Marketing, Vendas, TI)</li>
+                <li>Adicione comentários com "Sticky Note"</li>
+                <li>Versione workflows críticos (export JSON)</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ Cuidado com Rate Limits:</strong>
+                APIs têm limites de requisições (ex: Google Sheets = 100 req/100s). Use "Wait" node entre chamadas e implemente retry com backoff exponencial.
+            </div>
+        </section>
+        
+        <!-- Integrações Avançadas -->
+        <section class="guide-section">
+            <h2>🔥 Técnicas Avançadas</h2>
+            
+            <h3>JavaScript no Function Node</h3>
+            <div class="code-block">
+                <code>
+// Processar array de itens<br>
+const items = $input.all();<br>
+<br>
+return items.map(item => {<br>
+  return {<br>
+    json: {<br>
+      nome: item.json.nome.toUpperCase(),<br>
+      total: item.json.valor * 1.1, // +10%<br>
+      data: new Date().toISOString()<br>
+    }<br>
+  };<br>
+});
+                </code>
+            </div>
+            
+            <h3>Expressões</h3>
+            <p>Use <code>{{ }}</code> para dados dinâmicos:</p>
+            <ul>
+                <li><code>{{ $json.campo }}</code> - Acessar dados</li>
+                <li><code>{{ $now.format('YYYY-MM-DD') }}</code> - Data atual</li>
+                <li><code>{{ $json.valor > 100 ? 'Alto' : 'Baixo' }}</code> - Condicionais</li>
+                <li><code>{{ $json.lista.length }}</code> - Tamanho de arrays</li>
+            </ul>
+            
+            <h3>Webhooks com Resposta Personalizada</h3>
+            <p>Use "Respond to Webhook" para retornar dados customizados:</p>
+            <div class="code-block">
+                <code>
+{<br>
+  "status": "success",<br>
+  "message": "Dados processados",<br>
+  "id": "{{ $json.id }}",<br>
+  "timestamp": "{{ $now }}"<br>
+}
+                </code>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <div class="cta-box">
+            <h3>🎁 Acelere Seu Aprendizado</h3>
+            <p>Explore nossa biblioteca com <strong>13.269+ templates prontos</strong> para você copiar, modificar e usar imediatamente.</p>
+            <a href="/integracoes/">Explorar Templates →</a>
+        </div>
+        
+        <!-- Recursos -->
+        <section class="guide-section">
+            <h2>📚 Recursos Adicionais</h2>
+            
+            <h3>Documentação Oficial</h3>
+            <ul>
+                <li><a href="https://docs.n8n.io" target="_blank" style="color: #667eea;">N8N Documentation</a> - Referência completa</li>
+                <li><a href="https://community.n8n.io" target="_blank" style="color: #667eea;">N8N Community Forum</a> - Tire dúvidas</li>
+                <li><a href="https://www.youtube.com/c/n8n-io" target="_blank" style="color: #667eea;">Canal YouTube Oficial</a> - Video tutoriais</li>
+            </ul>
+            
+            <h3>Integrações Mais Usadas</h3>
+            <p>Nossas 10 integrações mais populares:</p>
+            <ol>
+                <li>Google Sheets - Planilhas e dados tabulares</li>
+                <li>Webhook - Receber/enviar HTTP requests</li>
+                <li>Slack - Notificações e bots</li>
+                <li>Gmail - Automação de emails</li>
+                <li>OpenAI (ChatGPT) - IA e processamento linguagem</li>
+                <li>Google Drive - Arquivos e documentos</li>
+                <li>Notion - Base de conhecimento</li>
+                <li>Airtable - Bancos de dados flexíveis</li>
+                <li>Telegram - Bots e mensagens</li>
+                <li>PostgreSQL - Banco de dados relacional</li>
+            </ol>
+            
+            <div class="tip-box">
+                <strong>💡 Para Desenvolvedores:</strong>
+                Confira nossa <a href="/llm" style="color: #667eea; font-weight: 600;">documentação para LLMs e APIs</a> - ideal para criar assistentes de automação e copilots.
+            </div>
+        </section>
+        
+        <!-- FAQ -->
+        <section class="guide-section">
+            <h2>❓ Perguntas Frequentes</h2>
+            
+            <h3>N8N é grátis mesmo?</h3>
+            <p>Sim, 100% grátis se você fizer self-hosting. A versão cloud tem plano gratuito com 5.000 execuções/mês.</p>
+            
+            <h3>Preciso saber programar?</h3>
+            <p>Não é obrigatório. 90% dos workflows podem ser criados visualmente. JavaScript é opcional para casos avançados.</p>
+            
+            <h3>N8N vs Zapier vs Make.com?</h3>
+            <p>N8N é open-source e self-hosted (mais controle, sem limites). Zapier/Make são SaaS (mais fácil começar, mas pagos).</p>
+            
+            <h3>Como hospedar em produção?</h3>
+            <p>Use Docker + banco de dados (PostgreSQL/MySQL) + Nginx como reverse proxy. Recomendamos: DigitalOcean, AWS, Railway ou Render.</p>
+            
+            <h3>Quanto custa hospedar?</h3>
+            <p>Servidor básico VPS: $5-10/mês. Para 100k+ execuções/mês, considere $20-50/mês dependendo do volume.</p>
+            
+            <h3>N8N funciona com IA (ChatGPT)?</h3>
+            <p>Sim! Temos nodes nativos para OpenAI, Anthropic (Claude), Google Gemini, Cohere e outras APIs de IA.</p>
+        </section>
+        
+        <!-- Conclusão -->
+        <section class="guide-section">
+            <h2>🎓 Próximos Passos</h2>
+            
+            <p>Agora que você conhece os fundamentos, recomendamos:</p>
+            
+            <ol>
+                <li><strong>Pratique com templates prontos</strong> - Explore nossa <a href="/integracoes/" style="color: #667eea; font-weight: 600;">biblioteca de 13.269+ workflows</a></li>
+                <li><strong>Comece simples</strong> - Crie um workflow de teste com webhook + Google Sheets</li>
+                <li><strong>Estude casos de uso reais</strong> - Veja como outras empresas usam automação</li>
+                <li><strong>Entre na comunidade</strong> - Participe do fórum oficial do N8N</li>
+                <li><strong>Evolua gradualmente</strong> - Adicione complexidade conforme domina o básico</li>
+            </ol>
+            
+            <div class="tip-box">
+                <strong>💡 Dica Final:</strong>
+                Comece automatizando tarefas que você faz manualmente toda semana. O ROI de tempo economizado é imediato!
+            </div>
+        </section>
+        
+    </div>
+    
+    <footer>
+        <p><strong>Automations Cookbook</strong> - Biblioteca open-source com 13.269+ templates de automação</p>
+        <p>
+            <a href="/">Início</a> | 
+            <a href="/sobre">Sobre</a> | 
+            <a href="/integracoes/">Templates</a> | 
+            <a href="/llm">Para Desenvolvedores</a> | 
+            <a href="https://github.com/felipejac/fabrica-n8n" target="_blank">GitHub</a>
+        </p>
+        <p style="margin-top: 1rem; opacity: 0.7;">© 2025 Automations Cookbook | MIT License</p>
+    </footer>
+</body>
+</html>
