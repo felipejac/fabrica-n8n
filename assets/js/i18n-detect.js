@@ -400,6 +400,12 @@
 
         console.log('🌍 AI Factory i18n inicializado');
         
+        // DEBUG: Verificar elementos
+        console.log('🔍 DEBUG - Elementos encontrados:');
+        console.log('  - language-selector-container:', !!document.getElementById('language-selector-container'));
+        console.log('  - language-toggle:', !!document.getElementById('language-toggle'));
+        console.log('  - language-menu:', !!document.getElementById('language-menu'));
+        
         // Injeta estilos
         injectStyles();
         
