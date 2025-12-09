@@ -555,45 +555,5 @@ Origem: {{ software_a }} ->Destino: {{ software_b }}
 
     <script src="assets/js/language-switcher.js"></script>
     <script src="assets/js/app.js"></script>
-    
-    <!-- Debug: Diagnosticar problemas de i18n -->
-    <script>
-        window.addEventListener('load', function() {
-            // Aguardar um pouco para garantir que i18n foi inicializado
-            setTimeout(function() {
-                const diagnosis = {
-                    timestamp: new Date().toISOString(),
-                    url: window.location.href,
-                    html: {
-                        container: !!document.getElementById('language-selector-container'),
-                        toggle: !!document.getElementById('language-toggle'),
-                        menu: !!document.getElementById('language-menu')
-                    },
-                    functions: {
-                        toggleLanguageMenu: typeof window.toggleLanguageMenu,
-                        changeLanguage: typeof window.changeLanguage
-                    },
-                    duplicates: document.querySelectorAll('[id="language-selector-container"]').length,
-                    storage: {
-                        cookie: document.cookie.split('ai_factory_language=')[1]?.split(';')[0] || 'not set',
-                        session: sessionStorage.getItem('manual_language_choice') || 'not set'
-                    }
-                };
-                
-                if (document.querySelectorAll('[id="language-selector-container"]').length > 1) {
-                    console.error('⚠️ PROBLEMA ENCONTRADO: Duplicação de seletor de idioma!');
-                    console.error('Elementos duplicados:', diagnosis.duplicates);
-                }
-                
-                if (!diagnosis.html.container) {
-                    console.error('⚠️ PROBLEMA ENCONTRADO: Seletor de idioma não encontrado no DOM');
-                } else if (!diagnosis.functions.toggleLanguageMenu || diagnosis.functions.toggleLanguageMenu !== 'function') {
-                    console.error('⚠️ PROBLEMA ENCONTRADO: Função toggleLanguageMenu não carregada');
-                }
-                
-                console.log('📊 Diagnóstico de i18n:', diagnosis);
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
