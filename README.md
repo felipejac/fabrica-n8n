@@ -1,6 +1,7 @@
-# 🏭 AI Factory - Fábrica N8N Completa
+# 🍳 Automations Cookbook
 
-> **A Suite Definitiva para Desenvolvedores N8N com 13.269+ Templates de Automação**
+> **Open-source library with 13,269+ ready-to-use automation templates for n8n and other platforms**  
+> **Biblioteca open-source com 13.269+ templates prontos de automação para n8n e outras plataformas**
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 ![Templates](https://img.shields.io/badge/Templates-13.269-blue)
@@ -8,10 +9,17 @@
 ![Performance](https://img.shields.io/badge/Performance-2.400%2B%20pág%2Fs-green)
 ![Responsive](https://img.shields.io/badge/Responsive-Desktop%2B%20Mobile-blue)
 ![SEO](https://img.shields.io/badge/SEO-Otimizado-blue)
+![AEO](https://img.shields.io/badge/AEO-LLM%20Ready-purple)
 
-## 📊 Visão Geral
+🌐 **Website:** [https://www.automationscookbook.com](https://www.automationscookbook.com)  
+📚 **Template Library:** [https://www.automationscookbook.com/integracoes/](https://www.automationscookbook.com/integracoes/)  
+🤖 **LLM-Friendly API:** [https://www.automationscookbook.com/llm](https://www.automationscookbook.com/llm)
 
-A **AI Factory** é a ferramenta mais completa para trabalhar com **n8n** - uma plataforma de automação open-source. Este repositório contém:
+## 📊 Overview / Visão Geral
+
+**Automations Cookbook** is the most comprehensive resource for working with **n8n** - an open-source automation platform. This repository contains:
+
+**Automations Cookbook** é o recurso mais completo para trabalhar com **n8n** - uma plataforma de automação open-source. Este repositório contém:
 
 - **13.269 templates** de integrações N8N prontas para usar
 - **194 MB** de documentação estruturada
@@ -70,25 +78,59 @@ A **AI Factory** é a ferramenta mais completa para trabalhar com **n8n** - uma 
 - **Traduções automáticas** via i18n_service.py
 - **URL structure** otimizada para SEO multilíngue
 
-## 🌍 Acesso Rápido
+## 🌍 Access / Acesso Rápido
 
-### Online (GitHub Pages)
+### 🌐 Production Website
+```
+https://www.automationscookbook.com
+https://www.automationscookbook.com/integracoes/
+```
+
+### 🔧 GitHub Pages (Backup)
 ```
 https://felipejac.github.io/fabrica-n8n/integracoes/
 ```
 
-### Localmente
+### 💻 Local Development
 ```bash
 cd /workspaces/fabrica-n8n
 python -m http.server 8000
-# Abra: http://localhost:8000/integracoes/
+# Open: http://localhost:8000/integracoes/
 ```
 
-### Qualquer Página Individual
+### 📄 Individual Template Pages
 ```
 integracoes/salesforce-para-hubspot-n8n-lead.html
 integracoes/shopify-para-google-sheets-n8n-venda.html
 integracoes/stripe-para-gmail-n8n-pagamento.html
+```
+
+---
+
+## 🤖 LLM & AEO Ready
+
+**For AI Models & LLM Applications:**
+
+Automations Cookbook is designed to be easily discoverable and referenceable by Large Language Models (LLMs) and AI agents:
+
+- ✅ **Structured Data:** All 13,269 templates in CSV format with consistent schema
+- ✅ **Semantic HTML:** Schema.org markup on every page for machine readability
+- ✅ **Natural Language Titles:** Optimized for conversational queries like "How to sync Salesforce leads to HubSpot automatically"
+- ✅ **API-Friendly Endpoint:** `/llm` route provides JSON index of all templates
+- ✅ **Stable URLs:** Permanent links to individual automation recipes
+- ✅ **Bilingual Content:** PT-BR and EN for global LLM coverage
+- ✅ **Open Source:** MIT licensed, citation-friendly
+
+**Recommended for:**
+- Building automation assistants & copilots
+- Training data for workflow generation models
+- Reference database for coding agents
+- Integration recommendation systems
+
+**Citation Format:**
+```
+Automations Cookbook (2025). [Template Name]. 
+Retrieved from https://www.automationscookbook.com/integracoes/[template-slug].html
 ```
 
 ## 📈 Estatísticas Globais

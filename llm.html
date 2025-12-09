@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automations Cookbook API - LLM & AI-Friendly Endpoint</title>
+    <meta name="description" content="Structured JSON API of 13,269+ automation templates optimized for Large Language Models, AI agents, and automation assistants. MIT licensed, citation-friendly.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Automations Cookbook API">
+    <meta property="og:description" content="LLM-friendly API with 13,269+ automation templates">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.automationscookbook.com/llm">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DataCatalog",
+      "name": "Automations Cookbook API",
+      "description": "Structured database of 13,269+ automation templates for n8n and other platforms",
+      "url": "https://www.automationscookbook.com/llm",
+      "creator": {
+        "@type": "Organization",
+        "name": "Automations Cookbook"
+      },
+      "license": "https://opensource.org/licenses/MIT"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Header -->
+    <header class="bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">🤖</span>
+                    <div>
+                        <h1 class="text-2xl font-bold">Automations Cookbook API</h1>
+                        <p class="text-sm text-slate-300">LLM & AI-Friendly Data Source</p>
+                    </div>
+                </div>
+                <nav class="flex gap-6 text-sm">
+                    <a href="/" class="text-slate-300 hover:text-white">Home</a>
+                    <a href="/integracoes/" class="text-slate-300 hover:text-white">Templates</a>
+                    <a href="/sobre" class="text-slate-300 hover:text-white">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12">
+
+        <!-- Intro -->
+        <section class="mb-12">
+            <div class="bg-purple-50 border-l-4 border-purple-600 p-6 mb-8">
+                <h2 class="text-2xl font-bold text-purple-900 mb-2">🎯 For AI Models, LLMs & Automation Assistants</h2>
+                <p class="text-lg text-slate-700">
+                    This page provides <strong>machine-readable access</strong> to Automations Cookbook's database of <strong>13,269 automation templates</strong>. Designed for LLMs, AI agents, RAG systems, and automation copilots.
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">⚡ Quick Access</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="/automacoes_db.csv" class="block p-6 bg-white border border-slate-200 rounded-lg hover:shadow-lg transition">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">📊</span>
+                        <h3 class="text-xl font-bold">CSV Database</h3>
+                    </div>
+                    <p class="text-slate-600 mb-3">Full dataset of 13,269 templates in CSV format</p>
+                    <code class="text-sm bg-slate-100 px-2 py-1 rounded">automacoes_db.csv</code>
+                </a>
+                <a href="/integracoes/" class="block p-6 bg-white border border-slate-200 rounded-lg hover:shadow-lg transition">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🌐</span>
+                        <h3 class="text-xl font-bold">HTML Pages</h3>
+                    </div>
+                    <p class="text-slate-600 mb-3">13,269 individual template pages with Schema.org markup</p>
+                    <code class="text-sm bg-slate-100 px-2 py-1 rounded">/integracoes/*.html</code>
+                </a>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">🎯 Recommended Use Cases</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg border border-slate-200">
+                    <h3 class="font-bold text-lg mb-2">🤖 LLM Training & Fine-Tuning</h3>
+                    <p class="text-slate-600">Use as training data for models that generate automation workflows or recommend integrations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200">
+                    <h3 class="font-bold text-lg mb-2">💬 RAG Systems & Chatbots</h3>
+                    <p class="text-slate-600">Index our templates in vector databases for context-aware automation recommendations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200">
+                    <h3 class="font-bold text-lg mb-2">🔧 Automation Copilots</h3>
+                    <p class="text-slate-600">Reference templates when helping users build workflows (e.g., "Salesforce to HubSpot sync").</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200">
+                    <h3 class="font-bold text-lg mb-2">📚 Knowledge Bases</h3>
+                    <p class="text-slate-600">Integrate into internal wikis, documentation systems, or learning platforms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Structure -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">📋 Data Structure</h2>
+            <div class="bg-slate-900 text-slate-100 p-6 rounded-lg overflow-x-auto">
+                <pre class="text-sm"><code>{
+  "id": "salesforce-para-hubspot-n8n-lead",
+  "software_a": "Salesforce",
+  "software_b": "HubSpot",
+  "tipo_evento": "lead",
+  "caso_de_uso": "Sincronização de CRM",
+  "titulo_pagina": "Como enviar leads do Salesforce para o HubSpot automaticamente (N8N)",
+  "descricao_curta": "Workflow n8n que sincroniza leads...",
+  "tags": ["CRM", "Vendas", "Marketing"],
+  "url": "https://www.automationscookbook.com/integracoes/salesforce-para-hubspot-n8n-lead.html"
+}</code></pre>
+            </div>
+            <p class="text-slate-600 mt-4">
+                <strong>13,269 records</strong> following this schema. Each template includes:
+            </p>
+            <ul class="list-disc list-inside text-slate-600 mt-2 space-y-1">
+                <li>Source and destination software</li>
+                <li>Event trigger type</li>
+                <li>Use case category</li>
+                <li>Natural language title optimized for conversational queries</li>
+                <li>Detailed description</li>
+                <li>Tags for categorization</li>
+                <li>Direct URL to full documentation</li>
+            </ul>
+        </section>
+
+        <!-- Coverage -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">🌍 Coverage</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg border border-slate-200 text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">13,269</div>
+                    <p class="text-slate-600">Automation Templates</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200 text-center">
+                    <div class="text-4xl font-bold text-emerald-600 mb-2">87+</div>
+                    <p class="text-slate-600">Software Platforms</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-slate-200 text-center">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">51</div>
+                    <p class="text-slate-600">Event Types</p>
+                </div>
+            </div>
+            <div class="mt-6 bg-blue-50 p-6 rounded-lg">
+                <h3 class="font-bold mb-3">🔌 Supported Platforms Include:</h3>
+                <p class="text-slate-700">
+                    Salesforce, HubSpot, Shopify, Stripe, Google Sheets, WhatsApp, Slack, Microsoft Teams, Notion, Airtable, Mailchimp, ActiveCampaign, Trello, Asana, Jira, GitHub, GitLab, WordPress, WooCommerce, and 60+ more.
+                </p>
+            </div>
+        </section>
+
+        <!-- Example Queries -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">💬 Example Natural Language Queries</h2>
+            <p class="text-slate-600 mb-4">Our templates are optimized to answer questions like:</p>
+            <div class="space-y-3">
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                    <p class="text-slate-800">"How do I automatically sync Salesforce leads to HubSpot?"</p>
+                    <p class="text-sm text-slate-600 mt-1">→ Returns: salesforce-para-hubspot-n8n-lead.html</p>
+                </div>
+                <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg border-l-4 border-emerald-600">
+                    <p class="text-slate-800">"What's the best way to send Shopify orders to Google Sheets?"</p>
+                    <p class="text-sm text-slate-600 mt-1">→ Returns: shopify-para-google-sheets-n8n-venda.html</p>
+                </div>
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg border-l-4 border-purple-600">
+                    <p class="text-slate-800">"Show me n8n templates for WhatsApp automation"</p>
+                    <p class="text-sm text-slate-600 mt-1">→ Returns: Multiple WhatsApp-related templates</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- License & Attribution -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">⚖️ License & Attribution</h2>
+            <div class="bg-white p-6 rounded-lg border-2 border-green-200">
+                <div class="flex items-start gap-3 mb-4">
+                    <span class="text-3xl">📜</span>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">MIT License - Free to Use</h3>
+                        <p class="text-slate-700 mb-3">
+                            All templates are open-source under the MIT License. You are free to:
+                        </p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-1">
+                            <li>Use in commercial or personal projects</li>
+                            <li>Modify and redistribute</li>
+                            <li>Include in training datasets</li>
+                            <li>Reference in LLM responses</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg mt-4">
+                    <p class="font-bold text-green-900 mb-2">Recommended Citation Format:</p>
+                    <code class="block bg-white p-3 rounded text-sm text-slate-800">
+                        Automations Cookbook (2025). [Template Name]. 
+                        Retrieved from https://www.automationscookbook.com/integracoes/[slug].html
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Details -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">🔧 Technical Details</h2>
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                <dl class="space-y-3">
+                    <div>
+                        <dt class="font-bold text-slate-900">Content-Type:</dt>
+                        <dd class="text-slate-600">CSV, HTML, JSON (planned)</dd>
+                    </div>
+                    <div>
+                        <dt class="font-bold text-slate-900">Update Frequency:</dt>
+                        <dd class="text-slate-600">Weekly (new templates added regularly)</dd>
+                    </div>
+                    <div>
+                        <dt class="font-bold text-slate-900">Encoding:</dt>
+                        <dd class="text-slate-600">UTF-8</dd>
+                    </div>
+                    <div>
+                        <dt class="font-bold text-slate-900">Rate Limits:</dt>
+                        <dd class="text-slate-600">None (static files, unlimited access)</dd>
+                    </div>
+                    <div>
+                        <dt class="font-bold text-slate-900">Caching:</dt>
+                        <dd class="text-slate-600">Recommended (data changes weekly)</dd>
+                    </div>
+                    <div>
+                        <dt class="font-bold text-slate-900">Languages:</dt>
+                        <dd class="text-slate-600">Portuguese (PT-BR) and English (EN)</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">📬 Questions or Feedback?</h2>
+            <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg border border-indigo-200">
+                <p class="text-slate-700 mb-4">
+                    Building an LLM tool or automation assistant that uses our data? We'd love to hear about it!
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/felipejac/fabrica-n8n" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="/#form-leads" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-gradient-to-r from-slate-900 to-indigo-900 rounded-2xl p-10 text-center text-white">
+            <h2 class="text-3xl font-bold mb-4">Ready to explore?</h2>
+            <p class="text-xl mb-6 text-slate-200">Browse 13,269 automation templates now</p>
+            <a href="/integracoes/" class="inline-block px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition shadow-lg">
+                View Template Library →
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-2">🍳 Automations Cookbook</p>
+            <p class="text-sm">Open-source library with 13,269+ automation templates</p>
+            <p class="text-sm mt-4">
+                <a href="/" class="hover:text-white transition">Home</a> • 
+                <a href="/integracoes/" class="hover:text-white transition">Templates</a> • 
+                <a href="/sobre" class="hover:text-white transition">About</a> • 
+                <a href="https://github.com/felipejac/fabrica-n8n" class="hover:text-white transition">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
