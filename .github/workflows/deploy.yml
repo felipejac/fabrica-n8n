@@ -35,11 +35,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install flask
 
+      - name: Otimizar títulos e descriptions (AEO)
+        run: |
+          python improve_titles.py
+          mv automacoes_db.csv automacoes_db_original.csv
+          mv automacoes_db_improved.csv automacoes_db.csv
+
       - name: Rodar Gerador (build.py)
         run: python build.py
 
       - name: Gerar traduções i18n
         run: python i18n_service.py --all --languages en
+      
+      - name: Gerar sitemap.xml
+        run: python generate_sitemap.py
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
