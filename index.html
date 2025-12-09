@@ -84,7 +84,6 @@
                     <div class="relative" id="language-selector-container">
                         <button 
                             id="language-toggle"
-                            onclick="toggleLanguageMenu()"
                             class="flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all text-slate-600 hover:bg-white whitespace-nowrap group"
                             title="Mudar idioma"
                         >
@@ -101,7 +100,6 @@
                             class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50"
                         >
                             <button 
-                                onclick="changeLanguage('pt')"
                                 data-lang="pt"
                                 class="language-option flex items-center gap-3 w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
                             >
@@ -109,7 +107,6 @@
                                 <span class="font-medium">Português</span>
                             </button>
                             <button 
-                                onclick="changeLanguage('en')"
                                 data-lang="en"
                                 class="language-option flex items-center gap-3 w-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
                             >
@@ -570,7 +567,7 @@ Origem: {{ software_a }} -> Destino: {{ software_b }}
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/i18n-detect.js"></script>
+    <script src="assets/js/language-switcher.js"></script>
     <script src="assets/js/app.js"></script>
     
     <!-- Debug: Diagnosticar problemas de i18n -->
