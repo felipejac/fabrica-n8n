@@ -1,0 +1,22 @@
+{
+  "name": "automations-cookbook-html-updater",
+  "version": "1.0.0",
+  "description": "Script em massa para atualizar 13k+ páginas HTML com nova marca Automations Cookbook",
+  "main": "update-html.js",
+  "scripts": {
+    "update": "node update-html.js",
+    "test": "node update-html.js --dry-run"
+  },
+  "keywords": [
+    "html",
+    "seo",
+    "automation",
+    "bulk-update"
+  ],
+  "author": "Automations Cookbook",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "glob": "^10.3.10"
+  }
+}
