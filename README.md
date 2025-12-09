@@ -614,7 +614,7 @@ We'll add you to our "Featured In" section and promote your content to our commu
 
 - **Issues**: [GitHub Issues](https://github.com/felipejac/fabrica-n8n/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/felipejac/fabrica-n8n/discussions)
-- **Email**: felipe@example.com
+- **Email**: felipe@automationscookbook.com
 
 ## 📄 Licença
 
