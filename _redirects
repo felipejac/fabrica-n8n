@@ -1,0 +1,11 @@
+# 🌍 GitHub Pages com i18n
+
+# Redirecionamentos automáticos
+/*    /index.html   200
+
+# Rotas de idiomas
+/en/*  /translated/en/:splat  200
+/pt/*  /:splat  200
+
+# Fallback para páginas não encontradas
+/404.html  404
