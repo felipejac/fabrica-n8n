@@ -5,15 +5,45 @@
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 ![Templates](https://img.shields.io/badge/Templates-13.269-blue)
-![Pages](https://img.shields.io/badge/Pages%20HTML-13.269-blue)
-![Performance](https://img.shields.io/badge/Performance-2.400%2B%20pág%2Fs-green)
+![Pages](https://img.shields.io/badge/Pages%20HTML-13.276-blue)
+![Sitemap](https://img.shields.io/badge/Sitemap%20URLs-13.276-blue)
+![Performance](https://img.shields.io/badge/Build-2.400%2B%20pages%2Fs-green)
 ![Responsive](https://img.shields.io/badge/Responsive-Desktop%2B%20Mobile-blue)
-![SEO](https://img.shields.io/badge/SEO-Otimizado-blue)
+![SEO](https://img.shields.io/badge/SEO-Optimized-success)
 ![AEO](https://img.shields.io/badge/AEO-LLM%20Ready-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 🌐 **Website:** [https://www.automationscookbook.com](https://www.automationscookbook.com)  
 📚 **Template Library:** [https://www.automationscookbook.com/integracoes/](https://www.automationscookbook.com/integracoes/)  
-🤖 **LLM-Friendly API:** [https://www.automationscookbook.com/llm](https://www.automationscookbook.com/llm)
+📘 **Complete Guide:** [https://www.automationscookbook.com/guia-automacoes-n8n](https://www.automationscookbook.com/guia-automacoes-n8n)  
+💼 **Use Cases:** [https://www.automationscookbook.com/casos-de-uso](https://www.automationscookbook.com/casos-de-uso)  
+🤖 **LLM-Friendly API:** [https://www.automationscookbook.com/llm](https://www.automationscookbook.com/llm)  
+🗺️ **Sitemap:** [https://www.automationscookbook.com/sitemap.xml](https://www.automationscookbook.com/sitemap.xml) (13,276 URLs)
+
+---
+
+## 📊 Project Stats / Estatísticas do Projeto
+
+| Metric | Value | Description |
+|--------|-------|-------------|
+| 📄 **Templates** | 13,269 | Ready-to-use automation workflows |
+| 🌐 **HTML Pages** | 13,276 | Including templates + pillar pages |
+| 🔗 **Sitemap URLs** | 13,276 | All pages indexed for search engines |
+| 🏢 **Integrations** | 87+ | Different software platforms supported |
+| 🎯 **Event Types** | 51 | Trigger types (leads, sales, webhooks...) |
+| 💼 **Use Cases** | 20+ | Real-world examples by industry |
+| 🌍 **Languages** | 2 | Portuguese (PT-BR) + English (EN) |
+| ⚡ **Build Speed** | 2,400+ pages/s | Generation performance |
+| 📦 **File Size** | ~15 KB/page | Optimized HTML |
+| 🎨 **Design System** | Tailwind CSS | Responsive mobile-first |
+| 🔍 **SEO Score** | 100% | Schema.org + Open Graph |
+| 🤖 **AEO Ready** | ✅ | LLM-friendly documentation |
+| 📱 **Mobile Score** | 100% | Fully responsive |
+| 🚀 **Deploy Time** | ~2 min | Automated CI/CD |
+| 📊 **CSV Database** | 7.3 MB | Source data |
+| 🗺️ **Sitemap Size** | 2.9 MB | XML sitemap |
+
+---
 
 ## 📊 Overview / Visão Geral
 
@@ -30,12 +60,37 @@
 
 ## 🚀 Capacidades Principais
 
-### 🆕 Novidades Recentes (Dezembro 2025)
-- **📧 Formulário de Captação de Leads** - Integração direta com Supabase
-- **🌍 Detecção Automática de Idioma** - Baseada no país do visitante
-- **🎯 SEO Aprimorado** - Meta tags e internal linking otimizados
-- **📱 UX Mobile** - Responsividade total em todos os dispositivos
-- **⚡ Deploy Automático** - CI/CD via GitHub Actions
+### 🆕 Latest Updates (December 2025)
+
+**🎯 AEO Strategy Implementation (Complete)**
+- ✅ **4 Pillar Pages Created:**
+  - `/sobre` - About page with project overview
+  - `/llm` - LLM-friendly API documentation  
+  - `/guia-automacoes-n8n` - Complete N8N guide (installation to advanced)
+  - `/casos-de-uso` - 20+ real-world use cases by industry sector
+- ✅ **13,276 URLs Sitemap** - All pages indexed with proper priorities
+- ✅ **26,436 Title/Description Optimizations** - Natural language queries
+- ✅ **Schema.org Markup** - AboutPage, DataCatalog, HowTo, CollectionPage
+- ✅ **Robots.txt Optimized** - LLM crawlers allowed (GPTBot, Claude-Web, etc.)
+- ✅ **CI/CD Pipeline** - Automated optimization + sitemap generation
+
+**📧 Lead Capture System**
+- ✅ Direct Supabase integration
+- ✅ Real-time field validation
+- ✅ Animated success confirmation
+- ✅ Secure database storage with RLS policies
+
+**🌍 Automatic Internationalization**
+- ✅ IP-based geolocation detection
+- ✅ Native PT-BR and EN support
+- ✅ Automatic translations via i18n_service.py
+- ✅ SEO-optimized multilingual URL structure
+
+**📱 UX & Mobile Improvements**
+- ✅ Responsive design across all pages
+- ✅ Enhanced internal linking
+- ✅ Learning resources section on homepage
+- ✅ Improved meta tags and Open Graph
 
 ### 1. 📚 Biblioteca Massiva de Templates
 - **13.269 templates** de automação N8N
