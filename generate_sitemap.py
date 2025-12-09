@@ -44,6 +44,7 @@ def generate_sitemap(
         ('/sobre', 'main_pages', today),
         ('/llm', 'main_pages', today),
         ('/guia-automacoes-n8n', 'main_pages', today),
+        ('/casos-de-uso', 'main_pages', today),
         ('/integracoes/', 'integrations_index', today),
         ('/integracoes/index.html', 'integrations_index', today),
     ]

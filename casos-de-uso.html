@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20+ Casos de Uso de Automação com N8N | Exemplos Práticos por Setor</title>
+    <meta name="description" content="Descubra 20+ casos de uso reais de automação com N8N por setor: Marketing, Vendas, E-commerce, RH, TI, Atendimento. Templates prontos e exemplos práticos.">
+    <meta name="keywords" content="casos de uso n8n, exemplos automação, workflow automation, use cases, automação marketing, automação vendas">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Casos de Uso de Automação com N8N",
+      "description": "Coleção de casos de uso reais de automação organizados por setor",
+      "hasPart": [
+        {
+          "@type": "Article",
+          "name": "Automação de Marketing",
+          "description": "Casos de uso para automação de campanhas, leads e análise"
+        },
+        {
+          "@type": "Article",
+          "name": "Automação de Vendas",
+          "description": "Casos de uso para CRM, follow-ups e relatórios"
+        },
+        {
+          "@type": "Article",
+          "name": "Automação de E-commerce",
+          "description": "Casos de uso para pedidos, estoque e atendimento"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #764ba2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .sector {
+            margin-bottom: 4rem;
+        }
+        
+        .sector-header {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px 12px 0 0;
+            border-left: 5px solid #667eea;
+        }
+        
+        .sector-header h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .sector-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .use-case {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+        
+        .use-case:hover {
+            border-color: #667eea;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.1);
+        }
+        
+        .use-case-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .use-case h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+        
+        .use-case-flow {
+            background: #e0e7ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #4338ca;
+        }
+        
+        .use-case-benefits {
+            margin-top: 1rem;
+        }
+        
+        .use-case-benefits li {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        
+        .use-case-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tool-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .complexity {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        .easy {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .medium {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .advanced {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-section a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .use-cases {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>💼 Casos de Uso de Automação</h1>
+        <p>20+ exemplos práticos de automação com N8N organizados por setor. Workflows prontos para copiar e adaptar ao seu negócio.</p>
+    </header>
+    
+    <nav>
+        <a href="/">← Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/guia-automacoes-n8n">Guia N8N</a>
+        <a href="/integracoes/">Templates</a>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="intro">
+            <h2>🎯 Por Que Automatizar?</h2>
+            <p>Empresas que implementam automação economizam <strong>até 20 horas/semana</strong> em tarefas repetitivas e reduzem erros em <strong>90%</strong>. Explore casos de uso reais organizados por setor e comece a automatizar hoje.</p>
+        </div>
+        
+        <!-- Marketing -->
+        <div class="sector">
+            <div class="sector-header">
+                <h2>📊 Marketing & Growth</h2>
+                <p>Automações para captura de leads, nutrição e análise de campanhas</p>
+            </div>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">📥</div>
+                    <h3>Leads do Facebook Ads para CRM</h3>
+                    <div class="use-case-flow">Facebook Lead Ad → HubSpot/RD Station → Slack (notificação)</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Resposta imediata ao lead</li>
+                        <li>✅ Time comercial notificado em tempo real</li>
+                        <li>✅ Zero leads perdidos</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Facebook</span>
+                        <span class="tool-tag">HubSpot</span>
+                        <span class="tool-tag">Slack</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📧</div>
+                    <h3>Campanha de Email Drip Automática</h3>
+                    <div class="use-case-flow">Novo contato → Aguardar 1 dia → Email 1 → Aguardar 3 dias → Email 2 → ...</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Nutrição automática de leads</li>
+                        <li>✅ Personalização por segmento</li>
+                        <li>✅ Tracking de abertura/clique</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Gmail</span>
+                        <span class="tool-tag">SendGrid</span>
+                        <span class="tool-tag">Google Sheets</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📈</div>
+                    <h3>Dashboard de Performance Diário</h3>
+                    <div class="use-case-flow">Google Analytics → Facebook Ads → Google Sheets → Email com relatório</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Métricas consolidadas em 1 lugar</li>
+                        <li>✅ Relatório automático todo dia 9h</li>
+                        <li>✅ Decisões baseadas em dados</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Google Analytics</span>
+                        <span class="tool-tag">Facebook Ads</span>
+                        <span class="tool-tag">Sheets</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🤖</div>
+                    <h3>Análise de Sentimento com IA</h3>
+                    <div class="use-case-flow">Menção na rede social → ChatGPT (análise) → Slack (alerta se negativo)</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Identificar crises rapidamente</li>
+                        <li>✅ Responder menções negativas em minutos</li>
+                        <li>✅ Análise de tendências</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Twitter</span>
+                        <span class="tool-tag">OpenAI</span>
+                        <span class="tool-tag">Slack</span>
+                    </div>
+                    <span class="complexity advanced">Avançado</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vendas -->
+        <div class="sector">
+            <div class="sector-header">
+                <h2>💰 Vendas & CRM</h2>
+                <p>Automações para gestão de pipeline, follow-ups e relatórios de vendas</p>
+            </div>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🔔</div>
+                    <h3>Follow-up Automático de Leads Frios</h3>
+                    <div class="use-case-flow">Lead sem interação 7 dias → Email automático → Se responder → Mover para "Quente"</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Reativar leads esquecidos</li>
+                        <li>✅ Aumento de 30% em conversão</li>
+                        <li>✅ Vendedores focam em leads quentes</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Salesforce</span>
+                        <span class="tool-tag">Gmail</span>
+                        <span class="tool-tag">Pipedrive</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📞</div>
+                    <h3>Distribuição Inteligente de Leads</h3>
+                    <div class="use-case-flow">Novo lead → Analisar região/segmento → Atribuir ao vendedor certo → Notificar</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Round-robin balanceado</li>
+                        <li>✅ Especialização por segmento</li>
+                        <li>✅ Redução de 50% no tempo de resposta</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">HubSpot</span>
+                        <span class="tool-tag">Slack</span>
+                        <span class="tool-tag">Google Sheets</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📊</div>
+                    <h3>Relatório Semanal de Pipeline</h3>
+                    <div class="use-case-flow">Segunda 8h → Extrair dados CRM → Calcular métricas → Email para gerência</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Visibilidade total do funil</li>
+                        <li>✅ Identificar gargalos rapidamente</li>
+                        <li>✅ Previsão de fechamento</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Pipedrive</span>
+                        <span class="tool-tag">Google Sheets</span>
+                        <span class="tool-tag">Looker</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- E-commerce -->
+        <div class="sector">
+            <div class="sector-header">
+                <h2>🛒 E-commerce & Retail</h2>
+                <p>Automações para gestão de pedidos, estoque e pós-venda</p>
+            </div>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">📦</div>
+                    <h3>Pedido Novo → Fluxo Completo</h3>
+                    <div class="use-case-flow">Shopify → ERP (criar pedido) → Emitir NF-e → Atualizar estoque → Email cliente</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Processamento em 2 minutos</li>
+                        <li>✅ Zero erro manual</li>
+                        <li>✅ Cliente informado em tempo real</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Shopify</span>
+                        <span class="tool-tag">Bling</span>
+                        <span class="tool-tag">Gmail</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">⚠️</div>
+                    <h3>Alerta de Estoque Baixo</h3>
+                    <div class="use-case-flow">A cada hora → Verificar estoque → Se < 10 unidades → Notificar compras</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Evitar ruptura de estoque</li>
+                        <li>✅ Reposição proativa</li>
+                        <li>✅ Otimização de capital de giro</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">WooCommerce</span>
+                        <span class="tool-tag">Slack</span>
+                        <span class="tool-tag">SMS</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">⭐</div>
+                    <h3>Pedir Review Automaticamente</h3>
+                    <div class="use-case-flow">Pedido entregue → Aguardar 3 dias → Email pedindo review → Se responder → Salvar</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Aumento de 5x em reviews</li>
+                        <li>✅ Timing perfeito (pós-entrega)</li>
+                        <li>✅ Social proof automático</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Shopify</span>
+                        <span class="tool-tag">Trustpilot</span>
+                        <span class="tool-tag">Gmail</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🔄</div>
+                    <h3>Recuperar Carrinho Abandonado</h3>
+                    <div class="use-case-flow">Carrinho abandonado → Aguardar 1h → Email 1 → Aguardar 24h → Email 2 (cupom 10%)</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Recuperar até 15% dos carrinhos</li>
+                        <li>✅ Aumento direto em receita</li>
+                        <li>✅ Segmentação por valor do carrinho</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Shopify</span>
+                        <span class="tool-tag">Klaviyo</span>
+                        <span class="tool-tag">Stripe</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Atendimento -->
+        <div class="sector">
+            <div class="sector-header">
+                <h2>💬 Atendimento & Suporte</h2>
+                <p>Automações para tickets, chatbots e gestão de demandas</p>
+            </div>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🎫</div>
+                    <h3>Email → Ticket Automático</h3>
+                    <div class="use-case-flow">Email recebido → Extrair assunto → Criar ticket Zendesk → Atribuir ao time certo</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Zero email perdido</li>
+                        <li>✅ Categorização automática</li>
+                        <li>✅ SLA desde o início</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Gmail</span>
+                        <span class="tool-tag">Zendesk</span>
+                        <span class="tool-tag">Slack</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🤖</div>
+                    <h3>Chatbot com IA (ChatGPT)</h3>
+                    <div class="use-case-flow">Mensagem WhatsApp → ChatGPT (resposta) → Se resolver → Fechar | Senão → Escalar humano</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Resolver 70% das dúvidas automaticamente</li>
+                        <li>✅ Atendimento 24/7</li>
+                        <li>✅ Redução de custo operacional</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">WhatsApp</span>
+                        <span class="tool-tag">OpenAI</span>
+                        <span class="tool-tag">Chatwoot</span>
+                    </div>
+                    <span class="complexity advanced">Avançado</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📞</div>
+                    <h3>Feedback Pós-Atendimento</h3>
+                    <div class="use-case-flow">Ticket fechado → Aguardar 1h → Enviar pesquisa NPS → Salvar resposta → Se NPS < 7 → Alertar gerente</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Medir qualidade do atendimento</li>
+                        <li>✅ Identificar problemas rapidamente</li>
+                        <li>✅ Melhorar continuamente</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Zendesk</span>
+                        <span class="tool-tag">Typeform</span>
+                        <span class="tool-tag">Google Sheets</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RH -->
+        <div class="sector">
+            <div class="sector-header">
+                <h2>👥 RH & People Ops</h2>
+                <p>Automações para onboarding, gestão de colaboradores e recrutamento</p>
+            </div>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🎉</div>
+                    <h3>Onboarding Automático</h3>
+                    <div class="use-case-flow">Novo contrato → Criar email → Adicionar ao Slack → Enviar boas-vindas → Criar tarefas no Trello</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Experiência consistente</li>
+                        <li>✅ Zero esquecimento de etapas</li>
+                        <li>✅ Redução de 80% em tempo manual</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Google Workspace</span>
+                        <span class="tool-tag">Slack</span>
+                        <span class="tool-tag">Trello</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📝</div>
+                    <h3>Triagem de Currículos com IA</h3>
+                    <div class="use-case-flow">Candidato aplica → ChatGPT analisa → Se match > 80% → Agendar entrevista | Senão → Email de rejeição</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Processar 100+ CVs em minutos</li>
+                        <li>✅ Reduzir viés inconsciente</li>
+                        <li>✅ Focar em candidatos qualificados</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Gmail</span>
+                        <span class="tool-tag">OpenAI</span>
+                        <span class="tool-tag">Google Calendar</span>
+                    </div>
+                    <span class="complexity advanced">Avançado</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🎂</div>
+                    <h3>Aniversários e Celebrações</h3>
+                    <div class="use-case-flow">Todo dia 8h → Verificar aniversários → Enviar mensagem no Slack → Criar cartão virtual</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Cultura de reconhecimento</li>
+                        <li>✅ Engajamento do time</li>
+                        <li>✅ Zero aniversário esquecido</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Google Sheets</span>
+                        <span class="tool-tag">Slack</span>
+                        <span class="tool-tag">Canva API</span>
+                    </div>
+                    <span class="complexity easy">Fácil</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TI & DevOps -->
+        <div class="sector">
+            <div class="sector-header">
+                <h2>💻 TI & DevOps</h2>
+                <p>Automações para monitoramento, incidentes e deploys</p>
+            </div>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🚨</div>
+                    <h3>Alerta de Bug Crítico</h3>
+                    <div class="use-case-flow">Jira (bug critical) → Notificar Slack → SMS para on-call → Criar incidente PagerDuty</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Resposta em < 5 minutos</li>
+                        <li>✅ Escalonamento automático</li>
+                        <li>✅ Redução de downtime</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Jira</span>
+                        <span class="tool-tag">Slack</span>
+                        <span class="tool-tag">PagerDuty</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📊</div>
+                    <h3>Backup Automático Diário</h3>
+                    <div class="use-case-flow">Todo dia 3h → Backup PostgreSQL → Compactar → Upload Google Drive → Slack confirmação</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Proteção de dados garantida</li>
+                        <li>✅ Histórico de 30 dias</li>
+                        <li>✅ Alertas se falhar</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">PostgreSQL</span>
+                        <span class="tool-tag">Google Drive</span>
+                        <span class="tool-tag">Slack</span>
+                    </div>
+                    <span class="complexity medium">Médio</span>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🔧</div>
+                    <h3>Monitoramento de Uptime</h3>
+                    <div class="use-case-flow">A cada 5 min → Ping no servidor → Se offline > 2 min → Alertar equipe + tentar restart</div>
+                    <ul class="use-case-benefits">
+                        <li>✅ Detectar problemas antes do cliente</li>
+                        <li>✅ Auto-healing quando possível</li>
+                        <li>✅ 99.9% de uptime</li>
+                    </ul>
+                    <div class="use-case-tools">
+                        <span class="tool-tag">Webhook</span>
+                        <span class="tool-tag">AWS</span>
+                        <span class="tool-tag">Telegram</span>
+                    </div>
+                    <span class="complexity advanced">Avançado</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>🚀 Pronto para Implementar?</h2>
+            <p>Acesse nossa biblioteca com <strong>13.269+ templates prontos</strong> baseados nestes casos de uso. Copie, personalize e ative em minutos.</p>
+            <a href="/integracoes/">Explorar Templates →</a>
+        </div>
+        
+    </div>
+    
+    <footer>
+        <p><strong>Automations Cookbook</strong> - 13.269+ templates de automação open-source</p>
+        <p>
+            <a href="/">Início</a> | 
+            <a href="/sobre">Sobre</a> | 
+            <a href="/guia-automacoes-n8n">Guia N8N</a> | 
+            <a href="/integracoes/">Templates</a> | 
+            <a href="/llm">Para Desenvolvedores</a>
+        </p>
+        <p style="margin-top: 1rem; opacity: 0.7;">© 2025 Automations Cookbook | MIT License</p>
+    </footer>
+</body>
+</html>
