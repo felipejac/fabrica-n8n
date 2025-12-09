@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "enabled": true,
+  "tests": [
+    {
+      "test_id": "cta_button_text",
+      "name": "CTA Button Text Optimization",
+      "description": "Testar qual texto de CTA gera mais cliques",
+      "enabled": true,
+      "allocation": {
+        "variant_a": 33,
+        "variant_b": 33,
+        "variant_c": 34
+      },
+      "variants": {
+        "variant_a": {
+          "name": "Ação Direta",
+          "cta_text": "⚡ Abrir no Zapier",
+          "cta_subtext": "Configure em 2 minutos"
+        },
+        "variant_b": {
+          "name": "Propriedade",
+          "cta_text": "⚡ Usar este Zap",
+          "cta_subtext": "Começar automação"
+        },
+        "variant_c": {
+          "name": "Urgência",
+          "cta_text": "⚡ Começar Agora",
+          "cta_subtext": "Economize tempo hoje"
+        }
+      },
+      "metrics": {
+        "primary": "cta_click_rate",
+        "secondary": [
+          "time_on_page",
+          "bounce_rate"
+        ]
+      },
+      "duration_days": 14,
+      "min_sample_size": 1000
+    },
+    {
+      "test_id": "platform_comparison",
+      "name": "Platform Comparison Visibility",
+      "description": "Testar visibilidade de links para N8N",
+      "enabled": true,
+      "allocation": {
+        "variant_a": 33,
+        "variant_b": 33,
+        "variant_c": 34
+      },
+      "variants": {
+        "variant_a": {
+          "name": "Proeminente",
+          "n8n_link_position": "top",
+          "n8n_banner": true,
+          "banner_text": "💡 Prefere código aberto? Veja a versão N8N",
+          "banner_color": "#FEF3C7"
+        },
+        "variant_b": {
+          "name": "Sutil",
+          "n8n_link_position": "footer",
+          "n8n_banner": false,
+          "footer_text": "Versão N8N disponível"
+        },
+        "variant_c": {
+          "name": "Sem Cross-Link",
+          "n8n_link_position": null,
+          "n8n_banner": false
+        }
+      },
+      "metrics": {
+        "primary": "cta_click_rate",
+        "secondary": [
+          "n8n_link_clicks",
+          "conversion_rate"
+        ]
+      },
+      "duration_days": 21,
+      "min_sample_size": 2000
+    },
+    {
+      "test_id": "guide_layout",
+      "name": "Guide Page Layout",
+      "description": "Testar estrutura da página guia Zapier",
+      "enabled": false,
+      "allocation": {
+        "variant_a": 50,
+        "variant_b": 50
+      },
+      "variants": {
+        "variant_a": {
+          "name": "Current Layout",
+          "structure": [
+            "intro",
+            "comparison_table",
+            "benefits",
+            "use_cases",
+            "faq"
+          ]
+        },
+        "variant_b": {
+          "name": "Benefits First",
+          "structure": [
+            "intro",
+            "benefits",
+            "use_cases",
+            "comparison_table",
+            "faq"
+          ]
+        }
+      },
+      "metrics": {
+        "primary": "time_on_page",
+        "secondary": [
+          "scroll_depth",
+          "cta_clicks"
+        ]
+      },
+      "duration_days": 30,
+      "min_sample_size": 500
+    }
+  ],
+  "tracking": {
+    "analytics_property": "G-XXXXXXXXXX",
+    "events": {
+      "cta_click": "zapier_cta_click",
+      "n8n_link_click": "n8n_comparison_click",
+      "page_view": "zapier_template_view"
+    },
+    "custom_dimensions": {
+      "test_id": "dimension1",
+      "variant": "dimension2",
+      "template_slug": "dimension3",
+      "platform": "dimension4"
+    }
+  },
+  "implementation": {
+    "method": "javascript_client_side",
+    "cookie_name": "ab_test_variant",
+    "cookie_duration_days": 30,
+    "exclude_bots": true
+  }
+}
