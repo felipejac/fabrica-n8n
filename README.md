@@ -1,15 +1,15 @@
 # 🍳 Automations Cookbook
 
-> **Open-source library with 13,371+ ready-to-use automation templates for N8N and Zapier**  
-> **Biblioteca open-source com 13.371+ templates prontos de automação para N8N e Zapier**
+> **Open-source library with 13,431+ ready-to-use automation templates for N8N and Zapier**  
+> **Biblioteca open-source com 13.431+ templates prontos de automação para N8N e Zapier**
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
-![Templates](https://img.shields.io/badge/Templates-13.371-blue)
+![Templates](https://img.shields.io/badge/Templates-13.431-blue)
 ![N8N](https://img.shields.io/badge/N8N-13.269-indigo)
-![Zapier](https://img.shields.io/badge/Zapier-102-orange)
-![Pages](https://img.shields.io/badge/Pages%20HTML-13.388-blue)
-![Sitemap](https://img.shields.io/badge/Sitemap%20URLs-13.386-blue)
-![Performance](https://img.shields.io/badge/Build-800%2B%20pages%2Fs-green)
+![Zapier](https://img.shields.io/badge/Zapier-162-orange)
+![Pages](https://img.shields.io/badge/Pages%20HTML-13.448-blue)
+![Sitemap](https://img.shields.io/badge/Sitemap%20URLs-13.446-blue)
+![Performance](https://img.shields.io/badge/Build-2700%2B%20pages%2Fs-green)
 ![Responsive](https://img.shields.io/badge/Responsive-Desktop%2B%20Mobile-blue)
 ![SEO](https://img.shields.io/badge/SEO-Optimized-success)
 ![AEO](https://img.shields.io/badge/AEO-LLM%20Ready-purple)
@@ -22,7 +22,7 @@
 📙 **Zapier Guide:** [https://www.automationscookbook.com/guia-automacoes-zapier](https://www.automationscookbook.com/guia-automacoes-zapier)  
 💼 **Use Cases:** [https://www.automationscookbook.com/casos-de-uso](https://www.automationscookbook.com/casos-de-uso)  
 🤖 **LLM-Friendly API:** [https://www.automationscookbook.com/llm](https://www.automationscookbook.com/llm)  
-🗺️ **Sitemap:** [https://www.automationscookbook.com/sitemap.xml](https://www.automationscookbook.com/sitemap.xml) (13,386 URLs)
+🗺️ **Sitemap:** [https://www.automationscookbook.com/sitemap.xml](https://www.automationscookbook.com/sitemap.xml) (13,446 URLs)
 
 ---
 
@@ -30,24 +30,24 @@
 
 | Metric | Value | Description |
 |--------|-------|-------------|
-| 📄 **Total Templates** | 13,371 | Ready-to-use automation workflows |
+| 📄 **Total Templates** | 13,431 | Ready-to-use automation workflows |
 | 🔷 **N8N Templates** | 13,269 | Open-source workflows |
-| ⚡ **Zapier Templates** | 102 | Cloud-based Zaps |
-| 🌐 **HTML Pages** | 13,388 | Including templates + guides + indexes |
-| 🔗 **Sitemap URLs** | 13,386 | All pages indexed for search engines |
-| 🏢 **Integrations** | 87+ | Different software platforms supported |
-| 🎯 **Event Types** | 51+ | Trigger types (leads, sales, webhooks...) |
-| 💼 **Use Cases** | 20+ | Real-world examples by industry |
+| ⚡ **Zapier Templates** | 162 | Cloud-based Zaps (+60 enterprise tools) |
+| 🌐 **HTML Pages** | 13,448 | Including templates + guides + indexes |
+| 🔗 **Sitemap URLs** | 13,446 | All pages indexed for search engines |
+| 🏢 **Integrations** | 95+ | Different software platforms supported |
+| 🎯 **Event Types** | 55+ | Trigger types (leads, sales, webhooks...) |
+| 💼 **Use Cases** | 26+ | Real-world examples by industry |
 | 🌍 **Languages** | 2 | Portuguese (PT-BR) + English (EN) |
-| ⚡ **Build Speed** | 800+ pages/s | Generation performance |
+| ⚡ **Build Speed** | 2700+ pages/s | Generation performance (Zapier) |
 | 📦 **File Size** | ~15 KB/page | Optimized HTML |
 | 🎨 **Design System** | Tailwind CSS | Responsive mobile-first |
 | 🔍 **SEO Score** | 100% | Schema.org + Open Graph |
 | 🤖 **AEO Ready** | ✅ | LLM-friendly documentation |
 | 📱 **Mobile Score** | 100% | Fully responsive |
 | 🚀 **Deploy Time** | ~2 min | Automated CI/CD |
-| 📊 **CSV Database** | 7.4 MB | Source data (N8N + Zapier) |
-| 🗺️ **Sitemap Size** | 2.9 MB | XML sitemap |
+| 📊 **CSV Database** | 7.5 MB | Source data (N8N + Zapier) |
+| 🗺️ **Sitemap Size** | 3.0 MB | XML sitemap |
 
 ---
 
