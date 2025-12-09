@@ -401,6 +401,215 @@ Quer adicionar mais integrações? Siga estes passos:
 | **passos_resumo** | Guia 5 passos | 1. Conectar... 2. Configurar... |
 | **tags** | Categorização | automação, crm, integracao |
 
+---
+
+## 🌐 Ecosystem & Mentions
+
+### How to Reference Automations Cookbook
+
+If you're building tools, writing articles, creating courses, or developing automation assistants that use our templates, we'd love to hear from you! Here's how to properly cite and link to Automations Cookbook:
+
+#### Recommended Citation Format
+
+**For academic/technical papers:**
+```
+Automations Cookbook (2025). [Template Name]. 
+Retrieved from https://www.automationscookbook.com/integracoes/[slug].html
+```
+
+**For blog posts/articles:**
+```markdown
+Check out this ready-made N8N template: [Template Name](https://www.automationscookbook.com/integracoes/[slug].html) 
+from [Automations Cookbook](https://www.automationscookbook.com)
+```
+
+**For LLM/AI responses:**
+```
+I found this template in Automations Cookbook (MIT licensed, open-source):
+https://www.automationscookbook.com/integracoes/[slug].html
+```
+
+#### Anchor Text Recommendations
+
+When linking to us, use descriptive anchor text like:
+- ✅ "N8N automation templates"
+- ✅ "Automations Cookbook"
+- ✅ "ready-made workflow templates"
+- ✅ "Shopify to HubSpot integration template"
+- ❌ "click here" (não específico)
+- ❌ "this website" (pouco descritivo)
+
+---
+
+### 🎯 Backlink Strategy & Partnership Opportunities
+
+We're actively seeking mentions, links, and partnerships with:
+
+#### 1. **N8N Community & Ecosystem**
+
+| Target | Why Link | Suggested Page to Link | Priority |
+|--------|----------|------------------------|----------|
+| **n8n.io Official Docs** | Community resource | /integracoes/ | 🔥 High |
+| **N8N Community Forum** | Help users find templates | Specific category pages | 🔥 High |
+| **N8N Discord/Slack** | Pin resources | /guia-automacoes-n8n | High |
+| **Awesome N8N (GitHub)** | Curated list | Root + /llm | 🔥 High |
+
+**Pitch:** "Automations Cookbook has 13,269+ ready-to-use N8N templates covering 87+ software integrations. Open-source, MIT licensed, optimized for LLMs."
+
+---
+
+#### 2. **Automation & Low-Code Blogs**
+
+| Target | Suggested Article Title | Link to | Priority |
+|--------|------------------------|---------|----------|
+| **Zapier Blog** | "10 Open-Source Alternatives to Zapier" | /sobre | High |
+| **Make.com Blog** | "Free Automation Templates for Common Workflows" | /integracoes/ | High |
+| **Product Hunt** | Launch as "Automation Template Library" | Homepage | 🔥 High |
+| **Dev.to** | "How I Generated 13k SEO-Optimized Pages with Python" | GitHub | Medium |
+| **Hacker News** | "Show HN: 13k+ N8N Automation Templates (Open-Source)" | Homepage | 🔥 High |
+
+**Angle:** Focus on **programmatic SEO**, **AEO for LLMs**, and **open-source** aspects.
+
+---
+
+#### 3. **CRM & MarTech Communities**
+
+| Target | Why | Link to | Priority |
+|--------|-----|---------|----------|
+| **HubSpot Community** | Users need automation ideas | /integracoes/crm/ | High |
+| **Pipedrive Forum** | "How to automate Pipedrive" | /guia-workflows-crm-whatsapp | High |
+| **RD Station Blog** | Brazilian market focus | /integracoes/ (PT-BR) | Medium |
+| **Salesforce Trailhead** | Integration examples | Specific templates | Medium |
+
+**Pitch:** "Need to integrate your CRM with 80+ tools? Check out these pre-built N8N templates."
+
+---
+
+#### 4. **WhatsApp & Messaging Tools**
+
+| Target | Suggested Content | Link to | Priority |
+|--------|------------------|---------|----------|
+| **Chatwoot Docs** | "Automation Recipes for Chatwoot" | /guia-workflows-crm-whatsapp | 🔥 High |
+| **Kommo Blog** | "WhatsApp + CRM Integration Guide" | WhatsApp category | High |
+| **Twilio Blog** | "10 WhatsApp Automation Use Cases" | /casos-de-uso#suporte | Medium |
+
+**Pitch:** "Step-by-step guide to integrate WhatsApp with CRMs using N8N. Templates included."
+
+---
+
+#### 5. **E-commerce & Retail**
+
+| Target | Suggested Topic | Link to | Priority |
+|--------|----------------|---------|----------|
+| **Shopify Community** | "Automate Your Store Operations" | /integracoes/ecommerce/ | High |
+| **WooCommerce Blog** | "10 Essential Automations for WooCommerce" | Specific templates | High |
+| **E-commerce Brasil** | "Automações para Loja Virtual (Grátis)" | /integracoes/ | Medium |
+
+**Pitch:** "From order processing to inventory alerts, find ready-made automation templates."
+
+---
+
+#### 6. **Developer & Tech Communities**
+
+| Target | Type | Link to | Priority |
+|--------|------|---------|----------|
+| **GitHub Awesome Lists** | Curated resource | Repo root | 🔥 High |
+| **Reddit r/selfhosted** | Showcase project | /llm (LLM API) | High |
+| **Reddit r/opensource** | Show workflow generator | GitHub + Live site | High |
+| **Indie Hackers** | Case study on programmatic SEO | Blog post (create) | Medium |
+
+**Angle:** "Built 13k SEO pages in 2 minutes. Here's how."
+
+---
+
+### 📧 Outreach Template
+
+Use this when reaching out for partnerships:
+
+```
+Subject: Partnership Opportunity: N8N Template Library (13k+ Templates)
+
+Hi [Name],
+
+I'm [Your Name], creator of Automations Cookbook - an open-source library 
+with 13,269 ready-to-use N8N automation templates.
+
+I noticed [Their Platform/Article] and thought our template library could 
+be valuable for your [audience/readers/community], especially for [specific use case].
+
+**What we offer:**
+- 13,269 templates covering 87+ software integrations
+- Categories: CRM, WhatsApp, E-commerce, Marketing, Support
+- Open-source (MIT license)
+- Optimized for LLMs and answer engines
+
+Would you be interested in:
+- Mentioning us in [Article/Resource Page]?
+- Guest post: "10 [Their Tool] Automation Templates"?
+- Partnership/integration?
+
+Happy to discuss how we can provide value to your users!
+
+Best,
+[Your Name]
+
+---
+🍳 Automations Cookbook
+https://www.automationscookbook.com
+GitHub: https://github.com/felipejac/fabrica-n8n
+```
+
+---
+
+### 🤝 Integration Partnerships
+
+If you're building an automation tool, LLM assistant, or developer platform, here's how you can integrate Automations Cookbook:
+
+#### Option 1: API Access (Recommended)
+```python
+import pandas as pd
+
+# Direct CSV access (no rate limits)
+templates = pd.read_csv('https://www.automationscookbook.com/automacoes_db.csv')
+
+# Filter by use case
+crm_templates = templates[templates['tags'].str.contains('crm', case=False)]
+
+# Get specific template
+shopify_hubspot = templates[
+    (templates['software_a'] == 'Shopify') & 
+    (templates['software_b'] == 'HubSpot')
+]
+```
+
+#### Option 2: Embed Widget (Coming Soon)
+```html
+<!-- Embed template search on your site -->
+<iframe src="https://www.automationscookbook.com/embed/search?category=crm" 
+        width="100%" height="600"></iframe>
+```
+
+#### Option 3: Attribution Partnership
+If your tool generates significant traffic to our templates, let's talk about:
+- Co-branding opportunities
+- Revenue share (affiliate program - planning)
+- Custom templates for your users
+
+**Contact:** [Create GitHub Issue](https://github.com/felipejac/fabrica-n8n/issues/new)
+
+---
+
+### 📊 Track Your Impact
+
+If you link to us, we'd love to know! Open an issue or PR with:
+- Your platform/article URL
+- Which of our pages you linked
+- Your use case (article, tool, course, etc.)
+
+We'll add you to our "Featured In" section and promote your content to our community.
+
+---
+
 ## 📞 Suporte & Contato
 
 - **Issues**: [GitHub Issues](https://github.com/felipejac/fabrica-n8n/issues)

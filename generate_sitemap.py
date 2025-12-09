@@ -34,6 +34,7 @@ def generate_sitemap(
     priority_map = {
         'homepage': ('1.0', 'weekly'),
         'main_pages': ('0.9', 'weekly'),
+        'category_pages': ('0.85', 'weekly'),
         'integrations_index': ('0.8', 'daily'),
         'templates': ('0.7', 'monthly'),
     }
@@ -45,8 +46,14 @@ def generate_sitemap(
         ('/llm', 'main_pages', today),
         ('/guia-automacoes-n8n', 'main_pages', today),
         ('/casos-de-uso', 'main_pages', today),
+        ('/guia-workflows-crm-whatsapp', 'main_pages', today),
         ('/integracoes/', 'integrations_index', today),
         ('/integracoes/index.html', 'integrations_index', today),
+        ('/integracoes/crm/', 'category_pages', today),
+        ('/integracoes/whatsapp/', 'category_pages', today),
+        ('/integracoes/ecommerce/', 'category_pages', today),
+        ('/integracoes/marketing/', 'category_pages', today),
+        ('/integracoes/suporte/', 'category_pages', today),
     ]
     
     print(f"📄 Adicionando páginas principais...")

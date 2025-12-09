@@ -184,6 +184,140 @@
                     <p class="text-slate-800">"Show me n8n templates for WhatsApp automation"</p>
                     <p class="text-sm text-slate-600 mt-1">→ Returns: Multiple WhatsApp-related templates</p>
                 </div>
+                <div class="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-lg border-l-4 border-orange-600">
+                    <p class="text-slate-800">"How to integrate CRM with WhatsApp Business?"</p>
+                    <p class="text-sm text-slate-600 mt-1">→ Returns: /integracoes/whatsapp/ category + specific templates</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Examples for LLMs -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">💻 Code Examples for Integration</h2>
+            
+            <!-- Python Example -->
+            <div class="mb-6">
+                <h3 class="font-bold text-lg mb-3 text-indigo-600">🐍 Python - Search Templates</h3>
+                <div class="bg-slate-900 text-slate-100 p-6 rounded-lg overflow-x-auto">
+                    <pre class="text-sm"><code>import pandas as pd
+import requests
+
+# Method 1: Direct CSV access
+df = pd.read_csv('https://www.automationscookbook.com/automacoes_db.csv')
+
+# Search by software
+crm_templates = df[
+    (df['software_a'].str.contains('HubSpot', case=False)) | 
+    (df['software_b'].str.contains('HubSpot', case=False))
+]
+
+# Search by use case
+marketing_templates = df[df['tags'].str.contains('marketing', case=False)]
+
+# Get specific template info
+def get_template_by_software(software_a, software_b):
+    results = df[
+        (df['software_a'].str.contains(software_a, case=False)) &
+        (df['software_b'].str.contains(software_b, case=False))
+    ]
+    return results[['titulo_pagina', 'descricao_curta', 'slug_url']].to_dict('records')
+
+# Example usage
+templates = get_template_by_software('Shopify', 'Google Sheets')
+for t in templates:
+    print(f"Title: {t['titulo_pagina']}")
+    print(f"URL: https://www.automationscookbook.com/integracoes/{t['slug_url']}.html")
+    print()</code></pre>
+                </div>
+            </div>
+
+            <!-- JavaScript Example -->
+            <div class="mb-6">
+                <h3 class="font-bold text-lg mb-3 text-yellow-600">🟨 JavaScript/Node.js - Fetch & Parse</h3>
+                <div class="bg-slate-900 text-slate-100 p-6 rounded-lg overflow-x-auto">
+                    <pre class="text-sm"><code>const axios = require('axios');
+const Papa = require('papaparse');
+
+// Fetch CSV database
+async function fetchTemplates() {
+  const response = await axios.get(
+    'https://www.automationscookbook.com/automacoes_db.csv'
+  );
+  
+  const parsed = Papa.parse(response.data, { 
+    header: true,
+    skipEmptyLines: true 
+  });
+  
+  return parsed.data;
+}
+
+// Search function
+async function searchTemplates(query) {
+  const templates = await fetchTemplates();
+  
+  return templates.filter(t => {
+    const searchText = `${t.software_a} ${t.software_b} ${t.tags} ${t.caso_uso_resumido}`.toLowerCase();
+    return searchText.includes(query.toLowerCase());
+  });
+}
+
+// Example: Find WhatsApp + CRM integrations
+searchTemplates('whatsapp crm').then(results => {
+  console.log(`Found ${results.length} templates`);
+  results.slice(0, 5).forEach(t => {
+    console.log(`- ${t.software_a} → ${t.software_b}`);
+    console.log(`  ${t.descricao_curta}`);
+  });
+});</code></pre>
+                </div>
+            </div>
+
+            <!-- LLM Prompt Example -->
+            <div class="mb-6">
+                <h3 class="font-bold text-lg mb-3 text-purple-600">🤖 LLM Prompt Template</h3>
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border-2 border-purple-200">
+                    <p class="font-bold text-purple-900 mb-3">Example system prompt for automation assistant:</p>
+                    <div class="bg-white p-4 rounded text-sm text-slate-800 border border-purple-300">
+                        <pre>You are an automation expert assistant with access to the Automations Cookbook database.
+
+**Knowledge Base:**
+- 13,269 automation templates for n8n and other platforms
+- 87+ software integrations (CRMs, e-commerce, marketing, support)
+- Database: https://www.automationscookbook.com/automacoes_db.csv
+- Categories: /integracoes/crm/, /integracoes/whatsapp/, /integracoes/ecommerce/
+
+**When user asks about automation:**
+1. Search the database for relevant templates
+2. Recommend 2-3 best matches with URLs
+3. Explain the workflow briefly
+4. Suggest customizations
+
+**Example:**
+User: "How can I sync my Shopify sales to Google Sheets?"
+Assistant: "I found 3 ready-made templates:
+1. shopify-para-google-sheets-n8n.html - Real-time order sync
+2. shopify-para-slack-novas-vendas-n8n.html - Also notify your team
+3. [...]
+
+These templates use n8n. Would you like help customizing one?"</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cURL Example -->
+            <div>
+                <h3 class="font-bold text-lg mb-3 text-green-600">🌐 cURL - Direct Access</h3>
+                <div class="bg-slate-900 text-slate-100 p-6 rounded-lg overflow-x-auto">
+                    <pre class="text-sm"><code># Download full CSV database
+curl https://www.automationscookbook.com/automacoes_db.csv -o templates.csv
+
+# Get specific category page
+curl https://www.automationscookbook.com/integracoes/crm/ -o crm_templates.html
+
+# Search templates with grep (after download)
+cat templates.csv | grep -i "whatsapp" | grep -i "crm" | head -5</code></pre>
+                </div>
             </div>
         </section>
 
