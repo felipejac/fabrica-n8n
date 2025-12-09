@@ -5,7 +5,8 @@
   "main": "update-html.js",
   "scripts": {
     "update": "node update-html.js",
-    "test": "node update-html.js --dry-run"
+    "test": "node update-html.js --dry-run",
+    "validate": "node validate-pages.js"
   },
   "keywords": [
     "html",
