@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="pt-BR" itemscope itemtype="http://schema.org/CollectionPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Templates de Automação Zapier | 102+ Zaps Prontos | Automations Cookbook</title>
+    <meta name="description" content="102+ templates prontos de automação Zapier. Conecte suas ferramentas favoritas em minutos com Zaps pré-configurados. Guias passo a passo gratuitos.">
+    <meta name="keywords" content="zapier, automação, zaps, templates, integração, workflow, tutorial">
+    <meta name="author" content="Automations Cookbook">
+    <link rel="canonical" href="https://www.automationscookbook.com/integracoes-zapier/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Templates de Automação Zapier | 102+ Zaps Prontos">
+    <meta property="og:description" content="102+ templates prontos de automação Zapier. Conecte suas ferramentas favoritas em minutos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.automationscookbook.com/integracoes-zapier/">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .integration-card { transition: all 0.3s ease; }
+        .integration-card:hover { transform: translateY(-4px); }
+    </style>
+
+    <!-- Schema.org CollectionPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Templates de Automação Zapier",
+        "description": "102+ templates prontos de automação Zapier com guias passo a passo",
+        "url": "https://www.automationscookbook.com/integracoes-zapier/",
+        "numberOfItems": 102,
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "Zapier",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web"
+        }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- Header / Navegação -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="../index.html" class="font-bold text-xl text-orange-600 flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Automations Cookbook
+                </a>
+                <nav class="flex items-center gap-4">
+                    <a href="../integracoes/" class="text-sm text-slate-600 hover:text-indigo-600 transition-colors">N8N Templates</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="../index.html" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">← Início</a>
+                    <span class="text-slate-300">|</span>
+                    <span class="text-sm font-medium text-orange-600">Zapier (102)</span>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">⚡ Templates de Automação Zapier</h1>
+            <p class="text-lg text-orange-100 max-w-2xl mx-auto mb-6">
+                102+ Zaps prontos para conectar suas ferramentas favoritas em minutos. Sem código, 100% visual.
+            </p>
+            <div class="flex items-center justify-center gap-4 text-sm flex-wrap">
+                <span class="bg-white/20 text-white px-3 py-1 rounded-full">⚡ 102+ Zaps</span>
+                <span class="bg-white/20 text-white px-3 py-1 rounded-full">✅ Sem Código</span>
+                <span class="bg-white/20 text-white px-3 py-1 rounded-full">🎯 Prontos para Usar</span>
+                <span class="bg-white/20 text-white px-3 py-1 rounded-full">📚 Guias Detalhados</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buscador -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="max-w-md mx-auto">
+            <input 
+                type="text" 
+                id="searchInput" 
+                onkeyup="filterCards()" 
+                placeholder="Buscar Zap (ex: Shopify, Gmail, Slack)..." 
+                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:outline-none shadow-sm"
+            >
+        </div>
+    </div>
+
+    <!-- Grid de Integrações -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="integrationsGrid">
+            <a href="facebook-ads-para-whatsapp-business-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 Facebook Lead Ads → WhatsApp Business</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar automaticamente leads do Facebook Ads para WhatsApp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Capture leads do Facebook e envie para WhatsApp Business automaticamente. Workflow pronto em minutos com Zapier. Ideal para vendas.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="typeform-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📝 Typeform → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como salvar respostas do Typeform no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize automaticamente todas as respostas do Typeform com Google Sheets usando Zapier. Backup em tempo real.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="typeform-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 Typeform → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar leads do Typeform para HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Conecte formulários do Typeform ao CRM HubSpot automaticamente. Qualifique e nutra leads com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="typeform-para-pipedrive-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Typeform → Pipedrive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar deals no Pipedrive a partir do Typeform usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme respostas do Typeform em negócios no Pipedrive automaticamente com Zapier. Acelere vendas.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="typeform-para-rd-station-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 Typeform → RD Station</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar leads do Typeform para RD Station usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integre formulários Typeform com RD Station via Zapier. Automatize captura e nutrição de leads.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="google-forms-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📝 Google Forms → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como salvar respostas do Google Forms no Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize o backup de respostas do Google Forms para Sheets com Zapier. Análise de dados facilitada.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="google-forms-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 Google Forms → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar respostas do Google Forms para HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Conecte Google Forms ao HubSpot com Zapier. Capture leads sem fricção e qualifique automaticamente.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="google-forms-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Google Forms → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar equipe no Slack sobre Google Forms usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para cada nova resposta do Google Forms. Agilize atendimento com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="google-forms-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📋 Google Forms → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards no Trello a partir do Google Forms usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme respostas do Google Forms em cards do Trello automaticamente. Organize demandas com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="jotform-para-salesforce-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Jotform → Salesforce</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar leads do Jotform para Salesforce usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integre Jotform com Salesforce via Zapier. Capture e qualifique leads automaticamente no CRM líder.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="jotform-para-mailchimp-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 Jotform → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como adicionar contatos do Jotform no Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize formulários Jotform com listas do Mailchimp automaticamente. Cresça sua base com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="shopify-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 Shopify → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como salvar pedidos do Shopify no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize registro de vendas do Shopify em planilhas com Zapier. Análise de dados facilitada.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="shopify-para-slack-novas-vendas-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 Shopify → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar vendas do Shopify no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para cada venda do Shopify. Comemore resultados com seu time via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="shopify-para-mailchimp-pos-compra-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 Shopify → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar emails pós-compra Shopify via Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize follow-up de clientes Shopify com Mailchimp e Zapier. Aumente retenção e vendas recorrentes.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="shopify-para-hubspot-clientes-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 Shopify → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar clientes Shopify com HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integre Shopify com HubSpot via Zapier. Unifique dados de e-commerce e CRM para marketing eficaz.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="shopify-para-trello-gestao-pedidos-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 Shopify → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards no Trello para pedidos Shopify usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme pedidos do Shopify em cards do Trello automaticamente. Organize fulfillment com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="woocommerce-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 WooCommerce → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar vendas WooCommerce no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize relatórios de vendas WooCommerce em Sheets com Zapier. Dashboard em tempo real.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="woocommerce-para-slack-vendas-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 WooCommerce → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar vendas WooCommerce no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para vendas WooCommerce. Acompanhe resultados em tempo real com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="woocommerce-para-mailchimp-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 WooCommerce → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar emails WooCommerce via Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize campanhas pós-venda WooCommerce com Mailchimp e Zapier. Maximize lifetime value.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="woocommerce-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 WooCommerce → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como gerenciar pedidos WooCommerce no Trello usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Crie cards no Trello para cada pedido WooCommerce. Organize fulfillment visualmente com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="woocommerce-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🛒 WooCommerce → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar clientes WooCommerce com HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integre WooCommerce com HubSpot via Zapier. Unifique e-commerce e CRM para estratégias personalizadas.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="stripe-para-gmail-pagamento-falho-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💳 Stripe → Gmail</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar email via Gmail para pagamentos Stripe falhados usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize alertas de pagamentos falhados no Stripe via Gmail com Zapier. Recupere receita rapidamente.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="stripe-para-slack-pagamentos-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💳 Stripe → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar pagamentos Stripe no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para eventos de pagamento Stripe. Monitore receita em tempo real com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="stripe-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💳 Stripe → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar pagamentos Stripe no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize relatórios financeiros com dados Stripe em Sheets. Análise de receita facilitada via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="stripe-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💳 Stripe → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como atualizar deals HubSpot com pagamentos Stripe usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize pagamentos Stripe com deals HubSpot via Zapier. Unifique vendas e financeiro automaticamente.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="stripe-para-mailchimp-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💳 Stripe → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como segmentar clientes Stripe no Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Adicione clientes Stripe em segmentos Mailchimp automaticamente. Personalize campanhas via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="gmail-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Gmail → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards Trello a partir de emails Gmail usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme emails Gmail em cards Trello automaticamente. Organize demandas por email com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="gmail-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Gmail → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como encaminhar emails Gmail para Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para emails importantes do Gmail. Centralize comunicação com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="gmail-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Gmail → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar emails Gmail no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize log de emails Gmail em planilhas com Zapier. Análise de comunicação facilitada.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="gmail-para-hubspot-email-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Gmail → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar emails Gmail no HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize emails Gmail com timeline HubSpot via Zapier. Histórico completo de comunicação no CRM.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="calendly-para-zoom-reunioes-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📅 Calendly → Zoom</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar reuniões Zoom para agendamentos Calendly usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize criação de links Zoom para eventos Calendly. Integração perfeita via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="calendly-para-google-calendar-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📅 Calendly → Google Calendar</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Calendly com Google Calendar usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha Calendly e Google Calendar sincronizados automaticamente com Zapier. Evite conflitos de horário.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="calendly-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📅 Calendly → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar agendamentos Calendly no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para novos agendamentos Calendly. Prepare-se para reuniões com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="calendly-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📅 Calendly → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar reuniões Calendly no HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize agendamentos Calendly com CRM HubSpot via Zapier. Timeline completa de interações.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="calendly-para-salesforce-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📅 Calendly → Salesforce</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar eventos Calendly no Salesforce usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize registro de reuniões Calendly no Salesforce. Histórico completo no CRM líder via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="slack-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Slack → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards Trello a partir de reações Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme mensagens Slack em cards Trello com reação emoji. Organize demandas com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="slack-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Slack → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar mensagens Slack no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize backup de mensagens importantes do Slack em Sheets. Auditoria facilitada via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="slack-para-gmail-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Slack → Gmail</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar mensagens Slack via Gmail usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Encaminhe mensagens importantes do Slack por email automaticamente. Alcance quem não usa Slack com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="slack-para-hubspot-tickets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Slack → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar tickets HubSpot a partir do Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme mensagens Slack em tickets HubSpot automaticamente. Suporte organizado via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="jira-para-slack-bugs-criticos-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💻 Jira → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar bugs críticos Jira no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para bugs críticos do Jira. Resposta rápida via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="jira-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💻 Jira → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar issues Jira com Trello usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha Jira e Trello sincronizados automaticamente. Gestão unificada via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="jira-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💻 Jira → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar issues Jira no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize relatórios de bugs Jira em planilhas. Análise de qualidade facilitada via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="trello-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📋 Trello → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar atualizações Trello no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para mudanças em cards Trello. Transparência total via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="trello-para-google-calendar-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📋 Trello → Google Calendar</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar cards Trello com Google Calendar usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Adicione prazos de cards Trello ao Google Calendar automaticamente. Nunca perca deadlines via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="trello-para-gmail-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📋 Trello → Gmail</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar emails sobre cards Trello usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Notifique stakeholders sobre atualizações Trello via email. Alcance todos com Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="asana-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📋 Asana → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar tarefas Asana no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para tarefas Asana. Mantenha equipe alinhada via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="asana-para-google-calendar-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📋 Asana → Google Calendar</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Asana com Google Calendar usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Adicione tarefas Asana ao Google Calendar automaticamente. Visão completa de compromissos via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="asana-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📋 Asana → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Asana com Trello usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha Asana e Trello sincronizados bidirecionalmente. Trabalhe com qualquer ferramenta via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="hubspot-para-slack-deals-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 HubSpot → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar negócios HubSpot no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para deals fechados no HubSpot. Comemore vitórias em equipe via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="hubspot-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 HubSpot → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como fazer backup de contatos HubSpot no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize backup de CRM HubSpot em planilhas. Segurança de dados via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="hubspot-para-mailchimp-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 HubSpot → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar contatos HubSpot com Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha HubSpot e Mailchimp sincronizados automaticamente. Marketing unificado via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="hubspot-para-salesforce-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 HubSpot → Salesforce</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar HubSpot com Salesforce usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integre HubSpot e Salesforce bidirecionalmente. Dados unificados entre CRMs via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="pipedrive-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Pipedrive → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar deals Pipedrive no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para mudanças em deals Pipedrive. Transparência de vendas via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="pipedrive-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Pipedrive → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar deals Pipedrive no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize relatórios de pipeline Pipedrive em planilhas. Dashboard customizado via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="pipedrive-para-mailchimp-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Pipedrive → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como adicionar contatos Pipedrive no Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize contatos Pipedrive com listas Mailchimp automaticamente. Nutra leads via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="salesforce-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Salesforce → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar oportunidades Salesforce no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para atualizações de oportunidades Salesforce. Agilidade em vendas via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="salesforce-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Salesforce → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como fazer backup de leads Salesforce no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize backup de leads Salesforce em planilhas. Segurança e análise via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="salesforce-para-mailchimp-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Salesforce → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Salesforce com Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integre Salesforce e Mailchimp automaticamente. Marketing e vendas alinhados via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="rd-station-para-slack-leads-qualificados-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 RD Station → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar leads RD Station no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para leads qualificados no RD Station. Vendas ágeis via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="rd-station-para-pipedrive-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 RD Station → Pipedrive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar leads RD Station para Pipedrive usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize passagem de leads qualificados RD Station para Pipedrive. Funil completo via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="rd-station-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📢 RD Station → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar leads RD Station no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize relatórios de leads RD Station em planilhas. Análise de marketing via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="mailchimp-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📧 Mailchimp → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar envios Mailchimp no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack quando campanhas Mailchimp forem enviadas. Acompanhe performance via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="mailchimp-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📧 Mailchimp → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como fazer backup de assinantes Mailchimp no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize backup de listas Mailchimp em planilhas. Segurança de dados via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="mailchimp-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📧 Mailchimp → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Mailchimp com HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha Mailchimp e HubSpot sincronizados bidirecionalmente. Marketing unificado via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="google-drive-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📁 Google Drive → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar uploads Google Drive no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para novos arquivos no Google Drive. Colaboração ágil via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="google-drive-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📁 Google Drive → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards Trello com arquivos Google Drive usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme arquivos Drive em cards Trello automaticamente. Organize projetos via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="dropbox-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📁 Dropbox → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar uploads Dropbox no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para novos arquivos Dropbox. Transparência de documentos via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="dropbox-para-google-drive-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📁 Dropbox → Google Drive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como fazer backup Dropbox no Google Drive usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize backup de arquivos Dropbox para Google Drive. Redundância via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="airtable-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Airtable → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar novos registros Airtable no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para novos registros Airtable. Dados em tempo real via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="airtable-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📊 Airtable → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Airtable com Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha Airtable e Sheets sincronizados automaticamente. Análise facilitada via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="airtable-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Airtable → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards Trello a partir de Airtable usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme registros Airtable em cards Trello automaticamente. Gestão visual via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="notion-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Notion → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar novas páginas Notion no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para atualizações Notion. Conhecimento compartilhado via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="notion-para-google-calendar-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Notion → Google Calendar</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar banco Notion com Google Calendar usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Adicione itens Notion ao Google Calendar automaticamente. Calendário editorial via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="notion-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Notion → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Notion com Trello usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha databases Notion e boards Trello sincronizados. Flexibilidade total via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="telegram-para-google-drive-backup-midia-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Telegram → Google Drive</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como fazer backup de mídia Telegram no Google Drive usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize backup de fotos e vídeos Telegram para Drive. Segurança de conteúdo via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="telegram-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Telegram → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards Trello via Telegram usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme mensagens Telegram em cards Trello com comando. Gestão mobile via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="telegram-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Telegram → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como conectar Telegram e Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Sincronize conversas entre Telegram e Slack bidirecionalmente. Comunicação unificada via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="discord-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Discord → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards Trello de mensagens Discord usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme mensagens Discord em tasks Trello. Organize feedback de comunidade via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="discord-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">💬 Discord → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Discord com Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Conecte servidores Discord e workspaces Slack bidirecionalmente. Comunicação sem barreiras via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="twitter-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📱 Twitter → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar menções Twitter no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para menções da marca no Twitter. Social listening via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="twitter-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📱 Twitter → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar tweets no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize coleta de métricas Twitter em planilhas. Análise de social media via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="linkedin-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📱 LinkedIn → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar posts LinkedIn no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para novos posts LinkedIn da empresa. Social media management via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="instagram-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📱 Instagram → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar posts Instagram no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para novos posts Instagram. Gestão de social media via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="youtube-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📱 YouTube → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar uploads YouTube no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack quando vídeos forem publicados no YouTube. Content tracking via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="youtube-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📱 YouTube → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar vídeos YouTube no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize coleta de métricas YouTube em planilhas. Dashboard de analytics via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="wordpress-para-twitter-auto-post-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📱 WordPress → Twitter</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como publicar posts WordPress no Twitter automaticamente usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize divulgação de posts WordPress no Twitter. Aumente alcance via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="wordpress-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ WordPress → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar posts WordPress no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack quando posts WordPress forem publicados. Coordenação editorial via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="wordpress-para-mailchimp-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📧 WordPress → Mailchimp</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar posts WordPress via Mailchimp usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize envio de newsletters com novos posts WordPress. Engajamento de audiência via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="webflow-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Webflow → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar submissões Webflow no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para formulários Webflow submetidos. Resposta rápida via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="webflow-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">📊 Webflow → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar leads Webflow no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize backup de formulários Webflow em planilhas. Análise de conversão via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="webflow-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Webflow → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como enviar leads Webflow para HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Integre formulários Webflow com CRM HubSpot automaticamente. Qualificação de leads via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="zoom-para-google-calendar-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Zoom → Google Calendar</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Zoom com Google Calendar usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Adicione reuniões Zoom ao Google Calendar automaticamente. Nunca perca compromissos via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="zoom-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Zoom → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar reuniões Zoom no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba lembretes no Slack antes de reuniões Zoom. Pontualidade garantida via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="zoom-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎯 Zoom → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar reuniões Zoom no HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize registro de meetings Zoom na timeline HubSpot. Histórico completo via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="google-meet-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">⚡ Google Meet → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar reuniões Google Meet no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba lembretes no Slack para reuniões Google Meet. Time sincronizado via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="zendesk-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎧 Zendesk → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar tickets Zendesk no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para novos tickets Zendesk. Suporte ágil via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="zendesk-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎧 Zendesk → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como criar cards Trello para tickets Zendesk usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Transforme tickets Zendesk em cards Trello automaticamente. Kanban de suporte via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="zendesk-para-google-sheets-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎧 Zendesk → Google Sheets</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como registrar tickets Zendesk no Google Sheets usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Automatize relatórios de suporte Zendesk em planilhas. Análise de SLA via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="intercom-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎧 Intercom → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar conversas Intercom no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba alertas no Slack para novas conversas Intercom. Suporte distribuído via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="intercom-para-hubspot-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎧 Intercom → HubSpot</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como sincronizar Intercom com HubSpot usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Mantenha Intercom e HubSpot sincronizados bidirecionalmente. Contexto completo de cliente via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="freshdesk-para-slack-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎧 Freshdesk → Slack</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como notificar tickets Freshdesk no Slack usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Receba notificações no Slack para tickets Freshdesk urgentes. Resposta rápida via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+            <a href="freshdesk-para-trello-zapier.html" class="integration-card block bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <div class="text-xs uppercase font-bold text-orange-600 mb-2">🎧 Freshdesk → Trello</div>
+                <h2 class="font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Como gerenciar tickets Freshdesk no Trello usando Zapier</h2>
+                <p class="text-sm text-slate-600 line-clamp-2">Visualize tickets Freshdesk em boards Trello automaticamente. Gestão visual via Zapier.</p>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-orange-600 font-medium">⚡ Zapier</span>
+                </div>
+            </a>
+        </div>
+
+        <div id="noResults" class="hidden text-center py-12">
+            <p class="text-slate-500 text-lg">Nenhum Zap encontrado para sua busca.</p>
+            <p class="text-slate-400 text-sm mt-2">Tente outros termos ou <a href="../integracoes/" class="text-indigo-600 hover:underline">veja os templates N8N</a>.</p>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-orange-50 to-orange-100 py-12 mt-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Prefere automação open-source?</h2>
+            <p class="text-slate-600 mb-6">Explore nossos <strong>{len(templates)}+ templates N8N</strong> gratuitos com controle total e sem limites.</p>
+            <a href="../integracoes/" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md">
+                Ver Templates N8N →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-600">
+            <p class="mb-2">© 2024 <strong>Automations Cookbook</strong></p>
+            <p class="space-x-4">
+                <a href="../index.html" class="text-orange-600 hover:text-orange-700 font-medium">← Início</a>
+                <span class="text-slate-300">|</span>
+                <a href="../integracoes/" class="text-indigo-600 hover:text-indigo-700 font-medium">Templates N8N</a>
+                <span class="text-slate-300">|</span>
+                <a href="../llm.html" class="text-slate-600 hover:text-slate-900">API para LLMs</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Dados das integrações para filtro
+        const integrations = [
+            {
+                name: 'Como enviar automaticamente leads do Facebook Ads para WhatsApp usando Zapier',
+                file: 'facebook-ads-para-whatsapp-business-zapier.html',
+                keywords: ['marketing','vendas','whatsapp','zapier','facebook lead ads','whatsapp business']
+            },
+            {
+                name: 'Como salvar respostas do Typeform no Google Sheets usando Zapier',
+                file: 'typeform-para-google-sheets-zapier.html',
+                keywords: ['formularios','dados','zapier','typeform','google sheets']
+            },
+            {
+                name: 'Como enviar leads do Typeform para HubSpot usando Zapier',
+                file: 'typeform-para-hubspot-zapier.html',
+                keywords: ['marketing','crm','hubspot','zapier','typeform','hubspot']
+            },
+            {
+                name: 'Como criar deals no Pipedrive a partir do Typeform usando Zapier',
+                file: 'typeform-para-pipedrive-zapier.html',
+                keywords: ['crm','vendas','pipedrive','zapier','typeform','pipedrive']
+            },
+            {
+                name: 'Como enviar leads do Typeform para RD Station usando Zapier',
+                file: 'typeform-para-rd-station-zapier.html',
+                keywords: ['marketing','crm','rd-station','zapier','typeform','rd station']
+            },
+            {
+                name: 'Como salvar respostas do Google Forms no Sheets usando Zapier',
+                file: 'google-forms-para-google-sheets-zapier.html',
+                keywords: ['formularios','dados','google','zapier','google forms','google sheets']
+            },
+            {
+                name: 'Como enviar respostas do Google Forms para HubSpot usando Zapier',
+                file: 'google-forms-para-hubspot-zapier.html',
+                keywords: ['marketing','crm','hubspot','google','zapier','google forms','hubspot']
+            },
+            {
+                name: 'Como notificar equipe no Slack sobre Google Forms usando Zapier',
+                file: 'google-forms-para-slack-zapier.html',
+                keywords: ['comunicacao','formularios','slack','zapier','google forms','slack']
+            },
+            {
+                name: 'Como criar cards no Trello a partir do Google Forms usando Zapier',
+                file: 'google-forms-para-trello-zapier.html',
+                keywords: ['gestao','formularios','trello','zapier','google forms','trello']
+            },
+            {
+                name: 'Como enviar leads do Jotform para Salesforce usando Zapier',
+                file: 'jotform-para-salesforce-zapier.html',
+                keywords: ['crm','vendas','salesforce','zapier','jotform','salesforce']
+            },
+            {
+                name: 'Como adicionar contatos do Jotform no Mailchimp usando Zapier',
+                file: 'jotform-para-mailchimp-zapier.html',
+                keywords: ['marketing','email','mailchimp','zapier','jotform','mailchimp']
+            },
+            {
+                name: 'Como salvar pedidos do Shopify no Google Sheets usando Zapier',
+                file: 'shopify-para-google-sheets-zapier.html',
+                keywords: ['ecommerce','shopify','dados','zapier','shopify','google sheets']
+            },
+            {
+                name: 'Como notificar vendas do Shopify no Slack usando Zapier',
+                file: 'shopify-para-slack-novas-vendas-zapier.html',
+                keywords: ['ecommerce','shopify','slack','zapier','shopify','slack']
+            },
+            {
+                name: 'Como enviar emails pós-compra Shopify via Mailchimp usando Zapier',
+                file: 'shopify-para-mailchimp-pos-compra-zapier.html',
+                keywords: ['ecommerce','shopify','email','zapier','shopify','mailchimp']
+            },
+            {
+                name: 'Como sincronizar clientes Shopify com HubSpot usando Zapier',
+                file: 'shopify-para-hubspot-clientes-zapier.html',
+                keywords: ['ecommerce','shopify','crm','hubspot','zapier','shopify','hubspot']
+            },
+            {
+                name: 'Como criar cards no Trello para pedidos Shopify usando Zapier',
+                file: 'shopify-para-trello-gestao-pedidos-zapier.html',
+                keywords: ['ecommerce','shopify','gestao','trello','zapier','shopify','trello']
+            },
+            {
+                name: 'Como registrar vendas WooCommerce no Google Sheets usando Zapier',
+                file: 'woocommerce-para-google-sheets-zapier.html',
+                keywords: ['ecommerce','woocommerce','dados','zapier','woocommerce','google sheets']
+            },
+            {
+                name: 'Como notificar vendas WooCommerce no Slack usando Zapier',
+                file: 'woocommerce-para-slack-vendas-zapier.html',
+                keywords: ['ecommerce','woocommerce','slack','zapier','woocommerce','slack']
+            },
+            {
+                name: 'Como enviar emails WooCommerce via Mailchimp usando Zapier',
+                file: 'woocommerce-para-mailchimp-zapier.html',
+                keywords: ['ecommerce','woocommerce','email','zapier','woocommerce','mailchimp']
+            },
+            {
+                name: 'Como gerenciar pedidos WooCommerce no Trello usando Zapier',
+                file: 'woocommerce-para-trello-zapier.html',
+                keywords: ['ecommerce','woocommerce','gestao','trello','zapier','woocommerce','trello']
+            },
+            {
+                name: 'Como sincronizar clientes WooCommerce com HubSpot usando Zapier',
+                file: 'woocommerce-para-hubspot-zapier.html',
+                keywords: ['ecommerce','woocommerce','crm','hubspot','zapier','woocommerce','hubspot']
+            },
+            {
+                name: 'Como enviar email via Gmail para pagamentos Stripe falhados usando Zapier',
+                file: 'stripe-para-gmail-pagamento-falho-zapier.html',
+                keywords: ['pagamentos','stripe','email','zapier','stripe','gmail']
+            },
+            {
+                name: 'Como notificar pagamentos Stripe no Slack usando Zapier',
+                file: 'stripe-para-slack-pagamentos-zapier.html',
+                keywords: ['pagamentos','stripe','slack','zapier','stripe','slack']
+            },
+            {
+                name: 'Como registrar pagamentos Stripe no Google Sheets usando Zapier',
+                file: 'stripe-para-google-sheets-zapier.html',
+                keywords: ['pagamentos','stripe','dados','zapier','stripe','google sheets']
+            },
+            {
+                name: 'Como atualizar deals HubSpot com pagamentos Stripe usando Zapier',
+                file: 'stripe-para-hubspot-zapier.html',
+                keywords: ['pagamentos','stripe','crm','hubspot','zapier','stripe','hubspot']
+            },
+            {
+                name: 'Como segmentar clientes Stripe no Mailchimp usando Zapier',
+                file: 'stripe-para-mailchimp-zapier.html',
+                keywords: ['pagamentos','stripe','email','mailchimp','zapier','stripe','mailchimp']
+            },
+            {
+                name: 'Como criar cards Trello a partir de emails Gmail usando Zapier',
+                file: 'gmail-para-trello-zapier.html',
+                keywords: ['comunicacao','email','trello','zapier','gmail','trello']
+            },
+            {
+                name: 'Como encaminhar emails Gmail para Slack usando Zapier',
+                file: 'gmail-para-slack-zapier.html',
+                keywords: ['comunicacao','email','slack','zapier','gmail','slack']
+            },
+            {
+                name: 'Como registrar emails Gmail no Google Sheets usando Zapier',
+                file: 'gmail-para-google-sheets-zapier.html',
+                keywords: ['comunicacao','email','dados','zapier','gmail','google sheets']
+            },
+            {
+                name: 'Como registrar emails Gmail no HubSpot usando Zapier',
+                file: 'gmail-para-hubspot-email-zapier.html',
+                keywords: ['comunicacao','email','crm','hubspot','zapier','gmail','hubspot']
+            },
+            {
+                name: 'Como criar reuniões Zoom para agendamentos Calendly usando Zapier',
+                file: 'calendly-para-zoom-reunioes-zapier.html',
+                keywords: ['agendamento','zoom','calendly','zapier','calendly','zoom']
+            },
+            {
+                name: 'Como sincronizar Calendly com Google Calendar usando Zapier',
+                file: 'calendly-para-google-calendar-zapier.html',
+                keywords: ['agendamento','calendario','google','zapier','calendly','google calendar']
+            },
+            {
+                name: 'Como notificar agendamentos Calendly no Slack usando Zapier',
+                file: 'calendly-para-slack-zapier.html',
+                keywords: ['agendamento','slack','calendly','zapier','calendly','slack']
+            },
+            {
+                name: 'Como registrar reuniões Calendly no HubSpot usando Zapier',
+                file: 'calendly-para-hubspot-zapier.html',
+                keywords: ['agendamento','crm','hubspot','calendly','zapier','calendly','hubspot']
+            },
+            {
+                name: 'Como registrar eventos Calendly no Salesforce usando Zapier',
+                file: 'calendly-para-salesforce-zapier.html',
+                keywords: ['agendamento','crm','salesforce','calendly','zapier','calendly','salesforce']
+            },
+            {
+                name: 'Como criar cards Trello a partir de reações Slack usando Zapier',
+                file: 'slack-para-trello-zapier.html',
+                keywords: ['comunicacao','slack','gestao','trello','zapier','slack','trello']
+            },
+            {
+                name: 'Como registrar mensagens Slack no Google Sheets usando Zapier',
+                file: 'slack-para-google-sheets-zapier.html',
+                keywords: ['comunicacao','slack','dados','zapier','slack','google sheets']
+            },
+            {
+                name: 'Como enviar mensagens Slack via Gmail usando Zapier',
+                file: 'slack-para-gmail-zapier.html',
+                keywords: ['comunicacao','slack','email','zapier','slack','gmail']
+            },
+            {
+                name: 'Como criar tickets HubSpot a partir do Slack usando Zapier',
+                file: 'slack-para-hubspot-tickets-zapier.html',
+                keywords: ['comunicacao','slack','suporte','hubspot','zapier','slack','hubspot']
+            },
+            {
+                name: 'Como notificar bugs críticos Jira no Slack usando Zapier',
+                file: 'jira-para-slack-bugs-criticos-zapier.html',
+                keywords: ['desenvolvimento','jira','slack','zapier','jira','slack']
+            },
+            {
+                name: 'Como sincronizar issues Jira com Trello usando Zapier',
+                file: 'jira-para-trello-zapier.html',
+                keywords: ['desenvolvimento','jira','trello','zapier','jira','trello']
+            },
+            {
+                name: 'Como registrar issues Jira no Google Sheets usando Zapier',
+                file: 'jira-para-google-sheets-zapier.html',
+                keywords: ['desenvolvimento','jira','dados','zapier','jira','google sheets']
+            },
+            {
+                name: 'Como notificar atualizações Trello no Slack usando Zapier',
+                file: 'trello-para-slack-zapier.html',
+                keywords: ['gestao','trello','slack','zapier','trello','slack']
+            },
+            {
+                name: 'Como sincronizar cards Trello com Google Calendar usando Zapier',
+                file: 'trello-para-google-calendar-zapier.html',
+                keywords: ['gestao','trello','calendario','zapier','trello','google calendar']
+            },
+            {
+                name: 'Como enviar emails sobre cards Trello usando Zapier',
+                file: 'trello-para-gmail-zapier.html',
+                keywords: ['gestao','trello','email','zapier','trello','gmail']
+            },
+            {
+                name: 'Como notificar tarefas Asana no Slack usando Zapier',
+                file: 'asana-para-slack-zapier.html',
+                keywords: ['gestao','asana','slack','zapier','asana','slack']
+            },
+            {
+                name: 'Como sincronizar Asana com Google Calendar usando Zapier',
+                file: 'asana-para-google-calendar-zapier.html',
+                keywords: ['gestao','asana','calendario','zapier','asana','google calendar']
+            },
+            {
+                name: 'Como sincronizar Asana com Trello usando Zapier',
+                file: 'asana-para-trello-zapier.html',
+                keywords: ['gestao','asana','trello','zapier','asana','trello']
+            },
+            {
+                name: 'Como notificar negócios HubSpot no Slack usando Zapier',
+                file: 'hubspot-para-slack-deals-zapier.html',
+                keywords: ['crm','hubspot','slack','zapier','hubspot','slack']
+            },
+            {
+                name: 'Como fazer backup de contatos HubSpot no Google Sheets usando Zapier',
+                file: 'hubspot-para-google-sheets-zapier.html',
+                keywords: ['crm','hubspot','dados','zapier','hubspot','google sheets']
+            },
+            {
+                name: 'Como sincronizar contatos HubSpot com Mailchimp usando Zapier',
+                file: 'hubspot-para-mailchimp-zapier.html',
+                keywords: ['crm','hubspot','email','mailchimp','zapier','hubspot','mailchimp']
+            },
+            {
+                name: 'Como sincronizar HubSpot com Salesforce usando Zapier',
+                file: 'hubspot-para-salesforce-zapier.html',
+                keywords: ['crm','hubspot','salesforce','zapier','hubspot','salesforce']
+            },
+            {
+                name: 'Como notificar deals Pipedrive no Slack usando Zapier',
+                file: 'pipedrive-para-slack-zapier.html',
+                keywords: ['crm','pipedrive','slack','zapier','pipedrive','slack']
+            },
+            {
+                name: 'Como registrar deals Pipedrive no Google Sheets usando Zapier',
+                file: 'pipedrive-para-google-sheets-zapier.html',
+                keywords: ['crm','pipedrive','dados','zapier','pipedrive','google sheets']
+            },
+            {
+                name: 'Como adicionar contatos Pipedrive no Mailchimp usando Zapier',
+                file: 'pipedrive-para-mailchimp-zapier.html',
+                keywords: ['crm','pipedrive','email','mailchimp','zapier','pipedrive','mailchimp']
+            },
+            {
+                name: 'Como notificar oportunidades Salesforce no Slack usando Zapier',
+                file: 'salesforce-para-slack-zapier.html',
+                keywords: ['crm','salesforce','slack','zapier','salesforce','slack']
+            },
+            {
+                name: 'Como fazer backup de leads Salesforce no Google Sheets usando Zapier',
+                file: 'salesforce-para-google-sheets-zapier.html',
+                keywords: ['crm','salesforce','dados','zapier','salesforce','google sheets']
+            },
+            {
+                name: 'Como sincronizar Salesforce com Mailchimp usando Zapier',
+                file: 'salesforce-para-mailchimp-zapier.html',
+                keywords: ['crm','salesforce','email','mailchimp','zapier','salesforce','mailchimp']
+            },
+            {
+                name: 'Como notificar leads RD Station no Slack usando Zapier',
+                file: 'rd-station-para-slack-leads-qualificados-zapier.html',
+                keywords: ['marketing','crm','rd-station','slack','zapier','rd station','slack']
+            },
+            {
+                name: 'Como enviar leads RD Station para Pipedrive usando Zapier',
+                file: 'rd-station-para-pipedrive-zapier.html',
+                keywords: ['marketing','crm','rd-station','pipedrive','zapier','rd station','pipedrive']
+            },
+            {
+                name: 'Como registrar leads RD Station no Google Sheets usando Zapier',
+                file: 'rd-station-para-google-sheets-zapier.html',
+                keywords: ['marketing','crm','rd-station','dados','zapier','rd station','google sheets']
+            },
+            {
+                name: 'Como notificar envios Mailchimp no Slack usando Zapier',
+                file: 'mailchimp-para-slack-zapier.html',
+                keywords: ['email','mailchimp','slack','zapier','mailchimp','slack']
+            },
+            {
+                name: 'Como fazer backup de assinantes Mailchimp no Google Sheets usando Zapier',
+                file: 'mailchimp-para-google-sheets-zapier.html',
+                keywords: ['email','mailchimp','dados','zapier','mailchimp','google sheets']
+            },
+            {
+                name: 'Como sincronizar Mailchimp com HubSpot usando Zapier',
+                file: 'mailchimp-para-hubspot-zapier.html',
+                keywords: ['email','mailchimp','crm','hubspot','zapier','mailchimp','hubspot']
+            },
+            {
+                name: 'Como notificar uploads Google Drive no Slack usando Zapier',
+                file: 'google-drive-para-slack-zapier.html',
+                keywords: ['arquivos','google','slack','zapier','google drive','slack']
+            },
+            {
+                name: 'Como criar cards Trello com arquivos Google Drive usando Zapier',
+                file: 'google-drive-para-trello-zapier.html',
+                keywords: ['arquivos','google','trello','zapier','google drive','trello']
+            },
+            {
+                name: 'Como notificar uploads Dropbox no Slack usando Zapier',
+                file: 'dropbox-para-slack-zapier.html',
+                keywords: ['arquivos','dropbox','slack','zapier','dropbox','slack']
+            },
+            {
+                name: 'Como fazer backup Dropbox no Google Drive usando Zapier',
+                file: 'dropbox-para-google-drive-zapier.html',
+                keywords: ['arquivos','dropbox','google','zapier','dropbox','google drive']
+            },
+            {
+                name: 'Como notificar novos registros Airtable no Slack usando Zapier',
+                file: 'airtable-para-slack-zapier.html',
+                keywords: ['banco-dados','airtable','slack','zapier','airtable','slack']
+            },
+            {
+                name: 'Como sincronizar Airtable com Google Sheets usando Zapier',
+                file: 'airtable-para-google-sheets-zapier.html',
+                keywords: ['banco-dados','airtable','dados','zapier','airtable','google sheets']
+            },
+            {
+                name: 'Como criar cards Trello a partir de Airtable usando Zapier',
+                file: 'airtable-para-trello-zapier.html',
+                keywords: ['banco-dados','airtable','trello','zapier','airtable','trello']
+            },
+            {
+                name: 'Como notificar novas páginas Notion no Slack usando Zapier',
+                file: 'notion-para-slack-zapier.html',
+                keywords: ['documentacao','notion','slack','zapier','notion','slack']
+            },
+            {
+                name: 'Como sincronizar banco Notion com Google Calendar usando Zapier',
+                file: 'notion-para-google-calendar-zapier.html',
+                keywords: ['documentacao','notion','calendario','zapier','notion','google calendar']
+            },
+            {
+                name: 'Como sincronizar Notion com Trello usando Zapier',
+                file: 'notion-para-trello-zapier.html',
+                keywords: ['documentacao','notion','trello','zapier','notion','trello']
+            },
+            {
+                name: 'Como fazer backup de mídia Telegram no Google Drive usando Zapier',
+                file: 'telegram-para-google-drive-backup-midia-zapier.html',
+                keywords: ['comunicacao','telegram','arquivos','zapier','telegram','google drive']
+            },
+            {
+                name: 'Como criar cards Trello via Telegram usando Zapier',
+                file: 'telegram-para-trello-zapier.html',
+                keywords: ['comunicacao','telegram','trello','zapier','telegram','trello']
+            },
+            {
+                name: 'Como conectar Telegram e Slack usando Zapier',
+                file: 'telegram-para-slack-zapier.html',
+                keywords: ['comunicacao','telegram','slack','zapier','telegram','slack']
+            },
+            {
+                name: 'Como criar cards Trello de mensagens Discord usando Zapier',
+                file: 'discord-para-trello-zapier.html',
+                keywords: ['comunicacao','discord','trello','zapier','discord','trello']
+            },
+            {
+                name: 'Como sincronizar Discord com Slack usando Zapier',
+                file: 'discord-para-slack-zapier.html',
+                keywords: ['comunicacao','discord','slack','zapier','discord','slack']
+            },
+            {
+                name: 'Como notificar menções Twitter no Slack usando Zapier',
+                file: 'twitter-para-slack-zapier.html',
+                keywords: ['social-media','twitter','slack','zapier','twitter','slack']
+            },
+            {
+                name: 'Como registrar tweets no Google Sheets usando Zapier',
+                file: 'twitter-para-google-sheets-zapier.html',
+                keywords: ['social-media','twitter','dados','zapier','twitter','google sheets']
+            },
+            {
+                name: 'Como notificar posts LinkedIn no Slack usando Zapier',
+                file: 'linkedin-para-slack-zapier.html',
+                keywords: ['social-media','linkedin','slack','zapier','linkedin','slack']
+            },
+            {
+                name: 'Como notificar posts Instagram no Slack usando Zapier',
+                file: 'instagram-para-slack-zapier.html',
+                keywords: ['social-media','instagram','slack','zapier','instagram','slack']
+            },
+            {
+                name: 'Como notificar uploads YouTube no Slack usando Zapier',
+                file: 'youtube-para-slack-zapier.html',
+                keywords: ['social-media','youtube','slack','zapier','youtube','slack']
+            },
+            {
+                name: 'Como registrar vídeos YouTube no Google Sheets usando Zapier',
+                file: 'youtube-para-google-sheets-zapier.html',
+                keywords: ['social-media','youtube','dados','zapier','youtube','google sheets']
+            },
+            {
+                name: 'Como publicar posts WordPress no Twitter automaticamente usando Zapier',
+                file: 'wordpress-para-twitter-auto-post-zapier.html',
+                keywords: ['cms','wordpress','social-media','zapier','wordpress','twitter']
+            },
+            {
+                name: 'Como notificar posts WordPress no Slack usando Zapier',
+                file: 'wordpress-para-slack-zapier.html',
+                keywords: ['cms','wordpress','slack','zapier','wordpress','slack']
+            },
+            {
+                name: 'Como enviar posts WordPress via Mailchimp usando Zapier',
+                file: 'wordpress-para-mailchimp-zapier.html',
+                keywords: ['cms','wordpress','email','mailchimp','zapier','wordpress','mailchimp']
+            },
+            {
+                name: 'Como notificar submissões Webflow no Slack usando Zapier',
+                file: 'webflow-para-slack-zapier.html',
+                keywords: ['cms','webflow','slack','zapier','webflow','slack']
+            },
+            {
+                name: 'Como registrar leads Webflow no Google Sheets usando Zapier',
+                file: 'webflow-para-google-sheets-zapier.html',
+                keywords: ['cms','webflow','dados','zapier','webflow','google sheets']
+            },
+            {
+                name: 'Como enviar leads Webflow para HubSpot usando Zapier',
+                file: 'webflow-para-hubspot-zapier.html',
+                keywords: ['cms','webflow','crm','hubspot','zapier','webflow','hubspot']
+            },
+            {
+                name: 'Como sincronizar Zoom com Google Calendar usando Zapier',
+                file: 'zoom-para-google-calendar-zapier.html',
+                keywords: ['videoconferencia','zoom','calendario','zapier','zoom','google calendar']
+            },
+            {
+                name: 'Como notificar reuniões Zoom no Slack usando Zapier',
+                file: 'zoom-para-slack-zapier.html',
+                keywords: ['videoconferencia','zoom','slack','zapier','zoom','slack']
+            },
+            {
+                name: 'Como registrar reuniões Zoom no HubSpot usando Zapier',
+                file: 'zoom-para-hubspot-zapier.html',
+                keywords: ['videoconferencia','zoom','crm','hubspot','zapier','zoom','hubspot']
+            },
+            {
+                name: 'Como notificar reuniões Google Meet no Slack usando Zapier',
+                file: 'google-meet-para-slack-zapier.html',
+                keywords: ['videoconferencia','google','slack','zapier','google meet','slack']
+            },
+            {
+                name: 'Como notificar tickets Zendesk no Slack usando Zapier',
+                file: 'zendesk-para-slack-zapier.html',
+                keywords: ['suporte','zendesk','slack','zapier','zendesk','slack']
+            },
+            {
+                name: 'Como criar cards Trello para tickets Zendesk usando Zapier',
+                file: 'zendesk-para-trello-zapier.html',
+                keywords: ['suporte','zendesk','trello','zapier','zendesk','trello']
+            },
+            {
+                name: 'Como registrar tickets Zendesk no Google Sheets usando Zapier',
+                file: 'zendesk-para-google-sheets-zapier.html',
+                keywords: ['suporte','zendesk','dados','zapier','zendesk','google sheets']
+            },
+            {
+                name: 'Como notificar conversas Intercom no Slack usando Zapier',
+                file: 'intercom-para-slack-zapier.html',
+                keywords: ['suporte','intercom','slack','zapier','intercom','slack']
+            },
+            {
+                name: 'Como sincronizar Intercom com HubSpot usando Zapier',
+                file: 'intercom-para-hubspot-zapier.html',
+                keywords: ['suporte','intercom','crm','hubspot','zapier','intercom','hubspot']
+            },
+            {
+                name: 'Como notificar tickets Freshdesk no Slack usando Zapier',
+                file: 'freshdesk-para-slack-zapier.html',
+                keywords: ['suporte','freshdesk','slack','zapier','freshdesk','slack']
+            },
+            {
+                name: 'Como gerenciar tickets Freshdesk no Trello usando Zapier',
+                file: 'freshdesk-para-trello-zapier.html',
+                keywords: ['suporte','freshdesk','trello','zapier','freshdesk','trello']
+            },
+        ];
+
+        // Função de filtro
+        function filterCards() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.integration-card');
+            let visibleCount = 0;
+
+            cards.forEach((card, index) => {
+                const integration = integrations[index];
+                const matchesSearch = integration.name.toLowerCase().includes(searchTerm) ||
+                    integration.keywords.some(kw => kw.includes(searchTerm));
+
+                if (matchesSearch || searchTerm === '') {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').classList.toggle('hidden', visibleCount > 0);
+        }
+
+        window.filterCards = filterCards;
+    </script>
+</body>
+</html>

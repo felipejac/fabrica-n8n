@@ -39,6 +39,7 @@ Crawl-delay: 0
 
 # Allow all integrations
 Allow: /integracoes/
+Allow: /integracoes-zapier/
 
 # Allow API documentation
 Allow: /llm
@@ -46,3 +47,4 @@ Allow: /sobre
 
 # Allow CSV data
 Allow: /automacoes_db.csv
+Allow: /automacoes_zapier_db.csv

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR" itemscope itemtype="http://schema.org/HowTo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Como enviar leads RD Station para Pipedrive usando Zapier | Automations Cookbook</title>
+    <meta name="description" content="Automatize passagem de leads qualificados RD Station para Pipedrive. Funil completo via Zapier.">
+    <meta name="keywords" content="zapier,automação,RD Station,Pipedrive,marketing,crm,rd-station,pipedrive,zapier">
+    <link rel="canonical" href="https://www.automationscookbook.com/integracoes-zapier/rd-station-para-pipedrive-zapier.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Como enviar leads RD Station para Pipedrive usando Zapier">
+    <meta property="og:description" content="Automatize passagem de leads qualificados RD Station para Pipedrive. Funil completo via Zapier.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.automationscookbook.com/integracoes-zapier/rd-station-para-pipedrive-zapier.html">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+
+    <!-- Schema.org HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Como enviar leads RD Station para Pipedrive usando Zapier",
+        "description": "Automatize passagem de leads qualificados RD Station para Pipedrive. Funil completo via Zapier.",
+        "tool": ["Zapier", "RD Station", "Pipedrive"],
+        "step": [
+            {"@type": "HowToStep", "text": "Lead Qualified"},
+{"@type": "HowToStep", "text": "Create Person"},
+{"@type": "HowToStep", "text": "Create Deal"},
+{"@type": "HowToStep", "text": "Assign to Rep"}
+        ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="../index.html" class="font-bold text-xl text-orange-600 flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Automations Cookbook
+                </a>
+                <nav class="flex items-center gap-3 text-sm">
+                    <a href="index.html" class="text-slate-600 hover:text-orange-600 transition-colors">← Todos os Zaps</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-slate-500 mb-6">
+            <a href="../index.html" class="hover:text-orange-600">Início</a> / 
+            <a href="index.html" class="hover:text-orange-600">Zapier</a> / 
+            <span class="text-slate-700">RD Station para Pipedrive</span>
+        </nav>
+
+        <!-- Hero -->
+        <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl p-8 mb-8">
+            <div class="flex items-center gap-2 mb-3">
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">⚡ Zapier</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Lead</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Como enviar leads RD Station para Pipedrive usando Zapier</h1>
+            <p class="text-lg text-orange-100">Automatize passagem de leads qualificados RD Station para Pipedrive. Funil completo via Zapier.</p>
+        </div>
+
+        <!-- Info Box -->
+        <div class="bg-white rounded-xl border border-slate-200 p-6 mb-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div>
+                    <div class="text-xs uppercase text-slate-500 font-semibold mb-1">Trigger</div>
+                    <div class="font-bold text-slate-900">RD Station</div>
+                </div>
+                <div>
+                    <div class="text-xs uppercase text-slate-500 font-semibold mb-1">Action</div>
+                    <div class="font-bold text-slate-900">Pipedrive</div>
+                </div>
+                <div>
+                    <div class="text-xs uppercase text-slate-500 font-semibold mb-1">Caso de Uso</div>
+                    <div class="font-bold text-slate-900">Passagem de bastão marketing-vendas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Passos -->
+        <section class="bg-white rounded-xl border border-slate-200 p-8 mb-8">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">📋 Passo a Passo</h2>
+            <ol class="space-y-3 list-none">
+                <li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-orange-100 text-orange-700 text-sm font-bold">1</span><span>Lead Qualified</span></li><li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-orange-100 text-orange-700 text-sm font-bold">2</span><span>Create Person</span></li><li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-orange-100 text-orange-700 text-sm font-bold">3</span><span>Create Deal</span></li><li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-orange-100 text-orange-700 text-sm font-bold">4</span><span>Assign to Rep</span></li>
+            </ol>
+        </section>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs rounded-full font-medium hover:bg-orange-100 transition-colors">marketing</span><span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs rounded-full font-medium hover:bg-orange-100 transition-colors">crm</span><span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs rounded-full font-medium hover:bg-orange-100 transition-colors">rd-station</span><span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs rounded-full font-medium hover:bg-orange-100 transition-colors">pipedrive</span>
+        </div>
+
+        <!-- CTA -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center">
+            <h3 class="font-bold text-xl text-slate-900 mb-2">Pronto para Automatizar?</h3>
+            <p class="text-slate-600 mb-4">Use este template no Zapier ou adapte para Zapier (open-source).</p>
+            <div class="flex gap-3 justify-center flex-wrap">
+                <a href="https://zapier.com/apps/rd-station/integrations/pipedrive" target="_blank" rel="noopener" class="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors shadow-md">
+                    ⚡ Abrir no Zapier
+                </a>
+                <a href="../integracoes/" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md">
+                    Ver versão Zapier
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-600">
+            <p class="mb-2">© 2024 <strong>Automations Cookbook</strong></p>
+            <p class="space-x-4">
+                <a href="../index.html" class="text-orange-600 hover:text-orange-700 font-medium">Início</a>
+                <span class="text-slate-300">|</span>
+                <a href="index.html" class="text-orange-600 hover:text-orange-700 font-medium">Todos os Zaps</a>
+                <span class="text-slate-300">|</span>
+                <a href="../integracoes/" class="text-indigo-600 hover:text-indigo-700 font-medium">Templates Zapier</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

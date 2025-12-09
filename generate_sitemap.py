@@ -45,9 +45,11 @@ def generate_sitemap(
         ('/sobre', 'main_pages', today),
         ('/llm', 'main_pages', today),
         ('/guia-automacoes-n8n', 'main_pages', today),
+        ('/guia-automacoes-zapier', 'main_pages', today),
         ('/casos-de-uso', 'main_pages', today),
         ('/guia-workflows-crm-whatsapp', 'main_pages', today),
         ('/integracoes/', 'integrations_index', today),
+        ('/integracoes-zapier/', 'integrations_index', today),
         ('/integracoes/index.html', 'integrations_index', today),
         ('/integracoes/crm/', 'category_pages', today),
         ('/integracoes/whatsapp/', 'category_pages', today),
@@ -65,7 +67,7 @@ def generate_sitemap(
         SubElement(url, 'priority').text = priority_map[page_type][0]
     
     # Add template pages from CSV
-    print(f"📚 Adicionando templates do CSV...")
+    print(f"📚 Adicionando templates N8N do CSV...")
     
     with open(csv_file, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
@@ -84,9 +86,38 @@ def generate_sitemap(
             count += 1
             
             if count % 1000 == 0:
-                print(f"   {count} templates adicionados...")
+                print(f"   {count} templates N8N adicionados...")
     
-    print(f"✅ Total: {count + len(main_pages)} URLs")
+    n8n_count = count
+    print(f"✅ N8N: {n8n_count} templates")
+    
+    # Add Zapier template pages from CSV
+    zapier_csv = 'automacoes_zapier_db.csv'
+    if os.path.exists(zapier_csv):
+        print(f"⚡ Adicionando templates Zapier do CSV...")
+        
+        with open(zapier_csv, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            zapier_count = 0
+            
+            for row in reader:
+                slug = row['slug_url']
+                url_path = f"/integracoes-zapier/{slug}.html"
+                
+                url = SubElement(urlset, 'url')
+                SubElement(url, 'loc').text = f"{base_url}{url_path}"
+                SubElement(url, 'lastmod').text = today
+                SubElement(url, 'changefreq').text = priority_map['templates'][1]
+                SubElement(url, 'priority').text = priority_map['templates'][0]
+                
+                zapier_count += 1
+        
+        print(f"✅ Zapier: {zapier_count} templates")
+        count = n8n_count + zapier_count
+    else:
+        print(f"⚠️  {zapier_csv} não encontrado, pulando templates Zapier")
+    
+    print(f"✅ TOTAL: {count + len(main_pages)} URLs")
     
     # Pretty print XML
     xml_str = minidom.parseString(tostring(urlset)).toprettyxml(indent="  ")
@@ -163,6 +194,7 @@ Crawl-delay: 0
 
 # Allow all integrations
 Allow: /integracoes/
+Allow: /integracoes-zapier/
 
 # Allow API documentation
 Allow: /llm
@@ -170,6 +202,7 @@ Allow: /sobre
 
 # Allow CSV data
 Allow: /automacoes_db.csv
+Allow: /automacoes_zapier_db.csv
 """
     
     with open(output_file, 'w', encoding='utf-8') as f:

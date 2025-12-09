@@ -1,24 +1,28 @@
 # 🍳 Automations Cookbook
 
-> **Open-source library with 13,269+ ready-to-use automation templates for n8n and other platforms**  
-> **Biblioteca open-source com 13.269+ templates prontos de automação para n8n e outras plataformas**
+> **Open-source library with 13,371+ ready-to-use automation templates for N8N and Zapier**  
+> **Biblioteca open-source com 13.371+ templates prontos de automação para N8N e Zapier**
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
-![Templates](https://img.shields.io/badge/Templates-13.269-blue)
-![Pages](https://img.shields.io/badge/Pages%20HTML-13.276-blue)
-![Sitemap](https://img.shields.io/badge/Sitemap%20URLs-13.276-blue)
-![Performance](https://img.shields.io/badge/Build-2.400%2B%20pages%2Fs-green)
+![Templates](https://img.shields.io/badge/Templates-13.371-blue)
+![N8N](https://img.shields.io/badge/N8N-13.269-indigo)
+![Zapier](https://img.shields.io/badge/Zapier-102-orange)
+![Pages](https://img.shields.io/badge/Pages%20HTML-13.388-blue)
+![Sitemap](https://img.shields.io/badge/Sitemap%20URLs-13.386-blue)
+![Performance](https://img.shields.io/badge/Build-800%2B%20pages%2Fs-green)
 ![Responsive](https://img.shields.io/badge/Responsive-Desktop%2B%20Mobile-blue)
 ![SEO](https://img.shields.io/badge/SEO-Optimized-success)
 ![AEO](https://img.shields.io/badge/AEO-LLM%20Ready-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 🌐 **Website:** [https://www.automationscookbook.com](https://www.automationscookbook.com)  
-📚 **Template Library:** [https://www.automationscookbook.com/integracoes/](https://www.automationscookbook.com/integracoes/)  
-📘 **Complete Guide:** [https://www.automationscookbook.com/guia-automacoes-n8n](https://www.automationscookbook.com/guia-automacoes-n8n)  
+📚 **N8N Templates:** [https://www.automationscookbook.com/integracoes/](https://www.automationscookbook.com/integracoes/)  
+⚡ **Zapier Templates:** [https://www.automationscookbook.com/integracoes-zapier/](https://www.automationscookbook.com/integracoes-zapier/)  
+📘 **N8N Guide:** [https://www.automationscookbook.com/guia-automacoes-n8n](https://www.automationscookbook.com/guia-automacoes-n8n)  
+📙 **Zapier Guide:** [https://www.automationscookbook.com/guia-automacoes-zapier](https://www.automationscookbook.com/guia-automacoes-zapier)  
 💼 **Use Cases:** [https://www.automationscookbook.com/casos-de-uso](https://www.automationscookbook.com/casos-de-uso)  
 🤖 **LLM-Friendly API:** [https://www.automationscookbook.com/llm](https://www.automationscookbook.com/llm)  
-🗺️ **Sitemap:** [https://www.automationscookbook.com/sitemap.xml](https://www.automationscookbook.com/sitemap.xml) (13,276 URLs)
+🗺️ **Sitemap:** [https://www.automationscookbook.com/sitemap.xml](https://www.automationscookbook.com/sitemap.xml) (13,386 URLs)
 
 ---
 
@@ -26,50 +30,64 @@
 
 | Metric | Value | Description |
 |--------|-------|-------------|
-| 📄 **Templates** | 13,269 | Ready-to-use automation workflows |
-| 🌐 **HTML Pages** | 13,276 | Including templates + pillar pages |
-| 🔗 **Sitemap URLs** | 13,276 | All pages indexed for search engines |
+| 📄 **Total Templates** | 13,371 | Ready-to-use automation workflows |
+| 🔷 **N8N Templates** | 13,269 | Open-source workflows |
+| ⚡ **Zapier Templates** | 102 | Cloud-based Zaps |
+| 🌐 **HTML Pages** | 13,388 | Including templates + guides + indexes |
+| 🔗 **Sitemap URLs** | 13,386 | All pages indexed for search engines |
 | 🏢 **Integrations** | 87+ | Different software platforms supported |
-| 🎯 **Event Types** | 51 | Trigger types (leads, sales, webhooks...) |
+| 🎯 **Event Types** | 51+ | Trigger types (leads, sales, webhooks...) |
 | 💼 **Use Cases** | 20+ | Real-world examples by industry |
 | 🌍 **Languages** | 2 | Portuguese (PT-BR) + English (EN) |
-| ⚡ **Build Speed** | 2,400+ pages/s | Generation performance |
+| ⚡ **Build Speed** | 800+ pages/s | Generation performance |
 | 📦 **File Size** | ~15 KB/page | Optimized HTML |
 | 🎨 **Design System** | Tailwind CSS | Responsive mobile-first |
 | 🔍 **SEO Score** | 100% | Schema.org + Open Graph |
 | 🤖 **AEO Ready** | ✅ | LLM-friendly documentation |
 | 📱 **Mobile Score** | 100% | Fully responsive |
 | 🚀 **Deploy Time** | ~2 min | Automated CI/CD |
-| 📊 **CSV Database** | 7.3 MB | Source data |
+| 📊 **CSV Database** | 7.4 MB | Source data (N8N + Zapier) |
 | 🗺️ **Sitemap Size** | 2.9 MB | XML sitemap |
 
 ---
 
 ## 📊 Overview / Visão Geral
 
-**Automations Cookbook** is the most comprehensive resource for working with **n8n** - an open-source automation platform. This repository contains:
+**Automations Cookbook** is the most comprehensive resource for automation platforms - **N8N** (open-source) and **Zapier** (cloud-based). This repository contains:
 
-**Automations Cookbook** é o recurso mais completo para trabalhar com **n8n** - uma plataforma de automação open-source. Este repositório contém:
+**Automations Cookbook** é o recurso mais completo para automação com **N8N** (open-source) e **Zapier** (cloud). Este repositório contém:
 
-- **13.269 templates** de integrações N8N prontas para usar
-- **194 MB** de documentação estruturada
+- **13,269 templates N8N** de integrações prontas para usar
+- **102 templates Zapier** para automações cloud
+- **13,388 páginas HTML** geradas automaticamente
 - **100% responsivo** (mobile + desktop)
 - **100% SEO otimizado** (Schema.org + Open Graph)
-- **Gerado automaticamente** em menos de 10 segundos
+- **Gerado automaticamente** em menos de 1 minuto
 - **Escalável** para 50.000+ páginas
 
 ## 🚀 Capacidades Principais
 
-### 🆕 Latest Updates (December 2025)
+### 🆕 Latest Updates (January 2025)
+
+**⚡ Zapier Platform Integration (NEW - Complete)**
+- ✅ **102 Zapier Templates** - High-value integrations (CRM, E-commerce, Forms, Support)
+- ✅ **Separate URL Structure** - `/integracoes-zapier/` with platform-specific branding
+- ✅ **Zapier-Optimized SEO** - Titles with "usando Zapier", orange color scheme
+- ✅ **Complete Guide** - `/guia-automacoes-zapier` with best practices & comparison
+- ✅ **Platform Filtering** - LLM/AEO endpoints support `platform` field (n8n vs zapier)
+- ✅ **Dual CSV Databases** - `automacoes_db.csv` (N8N) + `automacoes_zapier_db.csv` (Zapier)
+- ✅ **Sitemap Updated** - 13,386 URLs including Zapier pages
+- ✅ **Cross-Platform Links** - Users can compare N8N vs Zapier solutions
 
 **🎯 AEO Strategy Implementation (Complete)**
 - ✅ **4 Pillar Pages Created:**
   - `/sobre` - About page with project overview
-  - `/llm` - LLM-friendly API documentation  
+  - `/llm` - LLM-friendly API documentation (now with platform filtering)
   - `/guia-automacoes-n8n` - Complete N8N guide (installation to advanced)
+  - `/guia-automacoes-zapier` - Complete Zapier guide (NEW)
   - `/casos-de-uso` - 20+ real-world use cases by industry sector
-- ✅ **13,276 URLs Sitemap** - All pages indexed with proper priorities
-- ✅ **26,436 Title/Description Optimizations** - Natural language queries
+- ✅ **13,386 URLs Sitemap** - All pages indexed with proper priorities
+- ✅ **26,642+ Title/Description Optimizations** - Natural language queries (N8N + Zapier)
 - ✅ **Schema.org Markup** - AboutPage, DataCatalog, HowTo, CollectionPage
 - ✅ **Robots.txt Optimized** - LLM crawlers allowed (GPTBot, Claude-Web, etc.)
 - ✅ **CI/CD Pipeline** - Automated optimization + sitemap generation

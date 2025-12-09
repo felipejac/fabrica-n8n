@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo de Automações Zapier | Como Automatizar Processos com Zapier</title>
+    <meta name="description" content="Aprenda a criar automações com Zapier neste guia completo. Tutoriais, exemplos práticos, melhores práticas e 102+ templates prontos para usar. Do básico ao avançado.">
+    <meta name="keywords" content="zapier, automação, workflow, tutorial zapier, guia zapier, no-code, integração, zaps">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Automations Cookbook">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Guia Completo de Automações Zapier">
+    <meta property="og:description" content="Aprenda a criar automações com Zapier. Tutoriais, exemplos práticos e 102+ templates prontos.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.automationscookbook.com/guia-automacoes-zapier">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Guia Completo de Automações Zapier",
+      "description": "Aprenda a criar automações com Zapier do básico ao avançado",
+      "author": {
+        "@type": "Organization",
+        "name": "Automations Cookbook"
+      },
+      "datePublished": "2025-01-23",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Criar conta Zapier",
+          "text": "Cadastre-se gratuitamente no Zapier e escolha o plano adequado"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Criar primeiro Zap",
+          "text": "Configure trigger, action e mapeamento de dados"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Testar e ativar",
+          "text": "Execute testes e ative Zap em produção"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff4a00 0%, #ff7f50 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: #ff4a00;
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ff7f50;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #ff4a00;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #ff4a00;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8dd 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff4a00;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(255, 74, 0, 0.15);
+        }
+        
+        .card h4 {
+            color: #ff4a00;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .card p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .templates-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .template-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s;
+        }
+        
+        .template-item:hover {
+            background: #fff5f0;
+            border-color: #ff4a00;
+        }
+        
+        .template-item a {
+            color: #ff4a00;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #ff4a00 0%, #ff7f50 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-box a {
+            display: inline-block;
+            background: white;
+            color: #ff4a00;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .cta-box a:hover {
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background: #ff4a00;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚡ Guia Completo de Automações Zapier</h1>
+        <p>Aprenda a automatizar processos entre suas ferramentas favoritas usando Zapier. Do básico ao avançado, com 102+ templates prontos para usar.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← Início</a>
+        <a href="integracoes-zapier/index.html">Templates Zapier</a>
+        <a href="integracoes/index.html">Templates N8N</a>
+        <a href="llm.html">API para LLMs</a>
+    </nav>
+
+    <main>
+        <!-- Introdução -->
+        <section>
+            <h2>📖 O que é Zapier?</h2>
+            <p>Zapier é a plataforma de automação no-code líder de mercado, conectando mais de <strong>7.000+ aplicações</strong> sem necessidade de programação. Com Zapier, você cria "Zaps" (automações) que transferem dados e disparam ações entre suas ferramentas automaticamente.</p>
+            
+            <h3>✨ Principais Vantagens</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>🚀 Sem Código</h4>
+                    <p>Interface 100% visual. Configure automações em minutos usando drag-and-drop e formulários intuitivos.</p>
+                </div>
+                <div class="card">
+                    <h4>🔌 7.000+ Integrações</h4>
+                    <p>Conecte praticamente qualquer ferramenta: CRM, e-commerce, marketing, suporte, produtividade e muito mais.</p>
+                </div>
+                <div class="card">
+                    <h4>⚡ Rápida Implementação</h4>
+                    <p>De ideia a produção em minutos. Use templates prontos ou crie do zero com poucos cliques.</p>
+                </div>
+                <div class="card">
+                    <h4>☁️ Cloud-Native</h4>
+                    <p>Hospedado na nuvem, sem necessidade de infraestrutura. Escalável e disponível 24/7.</p>
+                </div>
+                <div class="card">
+                    <h4>📊 Monitoramento Integrado</h4>
+                    <p>Dashboards com histórico de execuções, logs detalhados e alertas automáticos para erros.</p>
+                </div>
+                <div class="card">
+                    <h4>🔐 Segurança Enterprise</h4>
+                    <p>SOC 2 Type II certificado, GDPR compliant, com criptografia end-to-end.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quando Usar -->
+        <section>
+            <h2>🎯 Quando Usar Zapier?</h2>
+            
+            <h3>✅ Ideal Para:</h3>
+            <ul>
+                <li><strong>Equipes não-técnicas:</strong> Marketing, vendas, suporte que precisam automatizar sem depender de TI</li>
+                <li><strong>Startups e PMEs:</strong> Implementação rápida sem investimento em infraestrutura</li>
+                <li><strong>Integrações entre SaaS:</strong> Conectar ferramentas cloud populares (Slack, HubSpot, Shopify, etc.)</li>
+                <li><strong>Automações simples a intermediárias:</strong> Transferência de dados, notificações, sincronizações</li>
+                <li><strong>Prototipagem rápida:</strong> Validar workflows antes de investir em soluções custom</li>
+            </ul>
+
+            <h3>⚠️ Considere Alternativas (N8N) Se:</h3>
+            <ul>
+                <li><strong>Alto volume de execuções:</strong> Zapier cobra por execução; N8N (self-hosted) tem custo fixo</li>
+                <li><strong>Dados sensíveis on-premise:</strong> N8N pode rodar localmente com controle total</li>
+                <li><strong>Automações complexas com lógica avançada:</strong> N8N oferece mais flexibilidade (JavaScript, SQL)</li>
+                <li><strong>Integrações customizadas:</strong> N8N permite criar nodes próprios</li>
+                <li><strong>Budget limitado:</strong> N8N open-source é gratuito (exceto hosting)</li>
+            </ul>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Critério</th>
+                        <th>⚡ Zapier</th>
+                        <th>🔷 N8N</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Complexidade Técnica</strong></td>
+                        <td>Muito baixa (no-code)</td>
+                        <td>Média (low-code)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tempo de Setup</strong></td>
+                        <td>Minutos</td>
+                        <td>Horas (self-hosted)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Custo (1.000 exec/mês)</strong></td>
+                        <td>$20-50/mês</td>
+                        <td>$0-10/mês (hosting)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integrações Nativas</strong></td>
+                        <td>7.000+</td>
+                        <td>400+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Personalização</strong></td>
+                        <td>Limitada</td>
+                        <td>Ilimitada</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Residency</strong></td>
+                        <td>Cloud (EUA/EU)</td>
+                        <td>Anywhere (self-hosted)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Primeiros Passos -->
+        <section>
+            <h2>🚀 Primeiros Passos com Zapier</h2>
+            
+            <h3>1. Criar Conta</h3>
+            <ol>
+                <li>Acesse <a href="https://zapier.com/sign-up" target="_blank" rel="noopener">zapier.com/sign-up</a></li>
+                <li>Cadastre-se com email ou Google/Microsoft</li>
+                <li>Escolha plano:
+                    <ul>
+                        <li><strong>Free:</strong> 100 tarefas/mês, 5 Zaps, integrações básicas</li>
+                        <li><strong>Starter ($19.99/mês):</strong> 750 tarefas, 20 Zaps, multi-step</li>
+                        <li><strong>Professional ($49/mês):</strong> 2.000 tarefas, ilimitados Zaps, apps premium</li>
+                        <li><strong>Team ($299/mês):</strong> 50.000 tarefas, colaboração, SSO</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>2. Criar Seu Primeiro Zap</h3>
+            <ol>
+                <li><strong>Escolher Trigger (Gatilho):</strong>
+                    <ul>
+                        <li>Ex: "New Email in Gmail", "New Form Submission in Typeform"</li>
+                        <li>Conectar conta da ferramenta (OAuth ou API key)</li>
+                        <li>Configurar filtros (ex: emails com label específica)</li>
+                    </ul>
+                </li>
+                <li><strong>Adicionar Action (Ação):</strong>
+                    <ul>
+                        <li>Ex: "Create Row in Google Sheets", "Send Message in Slack"</li>
+                        <li>Mapear campos do Trigger para Action</li>
+                        <li>Usar dados dinâmicos (merge tags)</li>
+                    </ul>
+                </li>
+                <li><strong>Testar Zap:</strong>
+                    <ul>
+                        <li>Zapier carrega dados reais do Trigger</li>
+                        <li>Execute teste para validar Action</li>
+                        <li>Verifique resultado na ferramenta de destino</li>
+                    </ul>
+                </li>
+                <li><strong>Ativar Zap:</strong>
+                    <ul>
+                        <li>Clique "Turn On Zap"</li>
+                        <li>Zapier monitorará o Trigger automaticamente (polling ou webhook)</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>3. Adicionar Lógica Avançada</h3>
+            <ul>
+                <li><strong>Filtros:</strong> Execute Actions apenas se condições forem atendidas (ex: "only continue if status = 'paid'")</li>
+                <li><strong>Paths:</strong> Crie ramificações condicionais (if/else) no workflow</li>
+                <li><strong>Formatters:</strong> Transforme dados (datas, textos, números) antes de enviar</li>
+                <li><strong>Delays:</strong> Aguarde tempo específico antes de próxima Action</li>
+                <li><strong>Loops:</strong> Processe arrays/listas item por item</li>
+            </ul>
+        </section>
+
+        <!-- Templates por Categoria -->
+        <section>
+            <h2>📚 Templates Zapier por Categoria</h2>
+            
+            <h3>💼 CRM & Vendas (24 templates)</h3>
+            <div class="templates-list">
+                <div class="template-item">
+                    <a href="integracoes-zapier/typeform-para-hubspot-zapier.html">Typeform → HubSpot</a>
+                    <p>Captura de leads qualificados</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/hubspot-para-slack-deals-zapier.html">HubSpot → Slack</a>
+                    <p>Notificação de vendas</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/pipedrive-para-google-sheets-zapier.html">Pipedrive → Google Sheets</a>
+                    <p>Relatório de pipeline</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/salesforce-para-mailchimp-zapier.html">Salesforce → Mailchimp</a>
+                    <p>Sincronização de marketing</p>
+                </div>
+            </div>
+
+            <h3>🛒 E-commerce (15 templates)</h3>
+            <div class="templates-list">
+                <div class="template-item">
+                    <a href="integracoes-zapier/shopify-para-slack-novas-vendas-zapier.html">Shopify → Slack</a>
+                    <p>Alertas de vendas</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/woocommerce-para-trello-zapier.html">WooCommerce → Trello</a>
+                    <p>Kanban de pedidos</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/stripe-para-hubspot-zapier.html">Stripe → HubSpot</a>
+                    <p>Atualização de deals</p>
+                </div>
+            </div>
+
+            <h3>📧 Email & Comunicação (17 templates)</h3>
+            <div class="templates-list">
+                <div class="template-item">
+                    <a href="integracoes-zapier/gmail-para-trello-zapier.html">Gmail → Trello</a>
+                    <p>Criação de cards por email</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/mailchimp-para-hubspot-zapier.html">Mailchimp → HubSpot</a>
+                    <p>Sincronização de contatos</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/slack-para-gmail-zapier.html">Slack → Gmail</a>
+                    <p>Encaminhamento por email</p>
+                </div>
+            </div>
+
+            <h3>📝 Formulários & Leads (10 templates)</h3>
+            <div class="templates-list">
+                <div class="template-item">
+                    <a href="integracoes-zapier/typeform-para-google-sheets-zapier.html">Typeform → Google Sheets</a>
+                    <p>Backup de respostas</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/google-forms-para-slack-zapier.html">Google Forms → Slack</a>
+                    <p>Alertas de submissões</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/webflow-para-hubspot-zapier.html">Webflow → HubSpot</a>
+                    <p>Captura de leads</p>
+                </div>
+            </div>
+
+            <h3>📅 Agendamento & Produtividade (20 templates)</h3>
+            <div class="templates-list">
+                <div class="template-item">
+                    <a href="integracoes-zapier/calendly-para-zoom-reunioes-zapier.html">Calendly → Zoom</a>
+                    <p>Criação automática de reuniões</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/trello-para-google-calendar-zapier.html">Trello → Google Calendar</a>
+                    <p>Sincronização de prazos</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/asana-para-slack-zapier.html">Asana → Slack</a>
+                    <p>Alertas de tarefas</p>
+                </div>
+            </div>
+
+            <h3>🎧 Suporte & Atendimento (10 templates)</h3>
+            <div class="templates-list">
+                <div class="template-item">
+                    <a href="integracoes-zapier/zendesk-para-slack-zapier.html">Zendesk → Slack</a>
+                    <p>Notificações de tickets</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/intercom-para-hubspot-zapier.html">Intercom → HubSpot</a>
+                    <p>Sincronização de usuários</p>
+                </div>
+                <div class="template-item">
+                    <a href="integracoes-zapier/freshdesk-para-trello-zapier.html">Freshdesk → Trello</a>
+                    <p>Kanban de atendimento</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem;">
+                <a href="integracoes-zapier/index.html" style="color: #ff4a00; font-weight: 600; font-size: 1.2rem;">
+                    Ver todos os 102 templates Zapier →
+                </a>
+            </p>
+        </section>
+
+        <!-- Melhores Práticas -->
+        <section>
+            <h2>💡 Melhores Práticas Zapier</h2>
+            
+            <h3>⚡ Performance</h3>
+            <ul>
+                <li><strong>Use Instant Triggers quando disponíveis:</strong> Webhooks são mais rápidos que polling (15 min)</li>
+                <li><strong>Evite Zaps em série:</strong> Se possível, consolide em um único multi-step Zap</li>
+                <li><strong>Use Filtros cedo:</strong> Evite executar Actions desnecessárias (economiza tarefas)</li>
+                <li><strong>Ative apenas Zaps em uso:</strong> Desative testes e protótipos para economizar quota</li>
+            </ul>
+
+            <h3>🔐 Segurança</h3>
+            <ul>
+                <li><strong>Revise permissões de apps:</strong> Conceda apenas acesso mínimo necessário (least privilege)</li>
+                <li><strong>Use Storage by Zapier com cuidado:</strong> Não armazene dados sensíveis (PII, senhas)</li>
+                <li><strong>Audite Zaps regularmente:</strong> Revise autorizações e remova conexões antigas</li>
+                <li><strong>Ative 2FA na conta Zapier:</strong> Proteja acesso ao painel de controle</li>
+            </ul>
+
+            <h3>🛠️ Manutenção</h3>
+            <ul>
+                <li><strong>Nomeie Zaps descritivamente:</strong> "Gmail → Trello - Emails Suporte" > "My Zap 1"</li>
+                <li><strong>Adicione descrições:</strong> Documente propósito e lógica de cada Zap</li>
+                <li><strong>Use Folders:</strong> Organize por departamento, projeto ou tipo</li>
+                <li><strong>Configure alertas de erro:</strong> Receba emails quando Zaps falharem</li>
+                <li><strong>Monitore Task History:</strong> Revise execuções semanalmente para identificar anomalias</li>
+            </ul>
+
+            <h3>💰 Otimização de Custos</h3>
+            <ul>
+                <li><strong>Consolide Zaps similares:</strong> Use Paths em vez de múltiplos Zaps paralelos</li>
+                <li><strong>Filtre no Trigger quando possível:</strong> Ex: Gmail - apenas emails com label "Important"</li>
+                <li><strong>Use Schedule by Zapier para batches:</strong> Processe dados em lotes (1x/dia) em vez de real-time</li>
+                <li><strong>Considere N8N para alto volume:</strong> Self-hosted = custo fixo vs. custo por execução</li>
+            </ul>
+        </section>
+
+        <!-- Comparação N8N vs Zapier -->
+        <section>
+            <h2>🔄 Zapier vs. N8N: Qual Escolher?</h2>
+            
+            <h3>Use Zapier Se:</h3>
+            <ul>
+                <li>Você não tem conhecimento técnico (equipes de marketing, vendas, suporte)</li>
+                <li>Precisa conectar ferramentas SaaS populares rapidamente</li>
+                <li>Quer zero manutenção e suporte 24/7 incluído</li>
+                <li>Seu volume de execuções cabe no plano Free ou Starter (&lt;750/mês)</li>
+                <li>Prefere pagar por conveniência e não quer gerenciar infraestrutura</li>
+            </ul>
+
+            <h3>Use N8N Se:</h3>
+            <ul>
+                <li>Você tem equipe técnica ou conhecimento básico de programação</li>
+                <li>Precisa processar grandes volumes (&gt;10.000 execuções/mês)</li>
+                <li>Requer controle total sobre dados (compliance, on-premise)</li>
+                <li>Quer automatizar com lógica complexa (JavaScript, SQL, APIs custom)</li>
+                <li>Budget limitado para ferramentas (N8N open-source é gratuito)</li>
+            </ul>
+
+            <h3>🎯 Estratégia Híbrida</h3>
+            <p>Muitas empresas usam ambos:</p>
+            <ul>
+                <li><strong>Zapier:</strong> Automações simples e rápidas para equipes não-técnicas</li>
+                <li><strong>N8N:</strong> Workflows complexos, alto volume e integrações customizadas (gerenciado por TI)</li>
+            </ul>
+            <p><em>Exemplo:</em> Marketing usa Zapier para conectar Mailchimp + Google Sheets. TI usa N8N para sincronizar banco de dados interno com Salesforce (1M registros/dia).</p>
+        </section>
+
+        <!-- CTA Final -->
+        <div class="cta-box">
+            <h3>⚡ Comece a Automatizar Agora</h3>
+            <p style="margin-bottom: 1.5rem;">Explore nossos 102 templates prontos ou compare com N8N</p>
+            <a href="integracoes-zapier/index.html">Ver Templates Zapier</a>
+            <a href="integracoes/index.html">Ver Templates N8N</a>
+            <a href="llm.html">API para LLMs</a>
+        </div>
+
+        <!-- Recursos Adicionais -->
+        <section>
+            <h2>📚 Recursos Externos</h2>
+            <ul>
+                <li><a href="https://zapier.com/learn" target="_blank" rel="noopener">Zapier Learn</a> - Cursos gratuitos</li>
+                <li><a href="https://zapier.com/app/explore" target="_blank" rel="noopener">Zapier Template Gallery</a> - Templates oficiais</li>
+                <li><a href="https://community.zapier.com" target="_blank" rel="noopener">Zapier Community</a> - Fórum de usuários</li>
+                <li><a href="https://zapier.com/blog" target="_blank" rel="noopener">Zapier Blog</a> - Dicas e casos de uso</li>
+                <li><a href="https://docs.n8n.io" target="_blank" rel="noopener">N8N Documentation</a> - Comparar alternativa open-source</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <strong>Automations Cookbook</strong></p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html" style="color: white; margin: 0 1rem;">Início</a>
+            <a href="integracoes-zapier/index.html" style="color: white; margin: 0 1rem;">Templates Zapier</a>
+            <a href="integracoes/index.html" style="color: white; margin: 0 1rem;">Templates N8N</a>
+            <a href="llm.html" style="color: white; margin: 0 1rem;">API para LLMs</a>
+        </p>
+    </footer>
+</body>
+</html>
