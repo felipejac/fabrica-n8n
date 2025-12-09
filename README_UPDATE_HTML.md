@@ -15,6 +15,13 @@ Script Node.js para atualizar **13.000+ páginas HTML** em massa com a nova marc
 
 ## ✨ Características
 
+### 🆕 Novas Features (Dezembro 2025)
+- **📧 Lead Capture Form** - Formulário integrado com Supabase
+- **🌍 Auto Language Detection** - Detecção automática por país
+- **🗑️ Manual Language Selector Removed** - Apenas detecção automática
+- **⚡ GitHub Actions Deploy** - CI/CD automático configurado
+- **📱 Mobile Optimization** - UX aprimorada para dispositivos móveis
+
 ### 🎨 Rebranding Completo
 - Substitui "AI Factory" e outras marcas antigas por "Automations Cookbook"
 - Atualiza domínio de `fabrica-n8n` para `automationscookbook.com`

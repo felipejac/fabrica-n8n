@@ -22,6 +22,13 @@ A **AI Factory** é a ferramenta mais completa para trabalhar com **n8n** - uma 
 
 ## 🚀 Capacidades Principais
 
+### 🆕 Novidades Recentes (Dezembro 2025)
+- **📧 Formulário de Captação de Leads** - Integração direta com Supabase
+- **🌍 Detecção Automática de Idioma** - Baseada no país do visitante
+- **🎯 SEO Aprimorado** - Meta tags e internal linking otimizados
+- **📱 UX Mobile** - Responsividade total em todos os dispositivos
+- **⚡ Deploy Automático** - CI/CD via GitHub Actions
+
 ### 1. 📚 Biblioteca Massiva de Templates
 - **13.269 templates** de automação N8N
 - **87+ softwares** de integração suportados
@@ -49,6 +56,19 @@ A **AI Factory** é a ferramenta mais completa para trabalhar com **n8n** - uma 
 - **Links internos contextuais**
 - **Grid responsivo** (1-3 colunas)
 - **Sem JavaScript obrigatório**
+
+### 5. 📧 Sistema de Captação de Leads
+- **Formulário integrado** com Supabase
+- **Validação em tempo real** de campos
+- **Confirmação visual** com ícone animado
+- **Armazenamento seguro** em banco de dados
+- **RLS policies** configuradas para segurança
+
+### 6. 🌍 Internacionalização Automática
+- **Detecção por geolocalização** via IP
+- **Suporte PT-BR e EN** nativos
+- **Traduções automáticas** via i18n_service.py
+- **URL structure** otimizada para SEO multilíngue
 
 ## 🌍 Acesso Rápido
 
@@ -130,12 +150,18 @@ fabrica-n8n/
 ├── 🐍 build.py                     # Gerador de HTML (2.400 pág/s)
 ├── 🐍 generate_templates_10k.py    # Gera 10.000 templates
 ├── 🐍 test_pages.py               # Validador de qualidade
+├── 🐍 i18n_service.py             # Serviço de internacionalização
 ├── 🌐 template_page.html          # Template base (Tailwind)
-├── 📑 index.html                   # Página inicial
+├── 📑 index.html                   # Página inicial com formulário de leads
 ├── 📁 integracoes/                # 13.269 páginas HTML
+├── 📁 translated/                 # Versões em outros idiomas
+│   └── 📁 en/                     # Versão em inglês
 ├── 📁 assets/
 │   └── 📁 js/
 │       └── app.js                  # JavaScript para busca
+├── 📁 .github/
+│   └── 📁 workflows/
+│       └── deploy.yml              # CI/CD automático
 └── 📁 docs/                       # Documentação adicional
 ```
 

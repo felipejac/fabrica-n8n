@@ -29,6 +29,14 @@
 
 ## 🎯 Funcionalidades Implementadas
 
+### 🆕 0. Sistema de Captação de Leads (Novo)
+- **Formulário integrado** na homepage
+- **Backend Supabase** para armazenamento
+- **Validação em tempo real** de todos os campos
+- **Mensagem de sucesso** com ícone SVG animado
+- **Campos:** Nome, Telefone, Email, Mensagem (140 chars), Opt-in
+- **Segurança:** RLS policies configuradas
+
 ### 1. Sistema de Navegação Bidirecional
 ```
 index.html ↔ integracoes/index.html ↔ guias-específicos
@@ -67,14 +75,17 @@ index.html ↔ integracoes/index.html ↔ guias-específicos
 
 | Métrica | Valor |
 |---------|-------|
-| **Integrações indexadas** | 21 |
-| **Páginas atualizadas** | 2 |
-| **Documentos criados** | 4 |
+| **Integrações indexadas** | 13.269 |
+| **Páginas atualizadas** | 13.269+ |
+| **Documentos criados** | 10+ |
 | **Links bidirecionales** | ✅ Sim |
 | **Sistema de busca** | ✅ Funcional |
 | **SEO score** | 📈 Alto |
 | **Mobile-friendly** | 📱 100% |
 | **Tempo carregamento** | ⚡ Rápido |
+| **Formulário de leads** | ✅ Ativo (Supabase) |
+| **Internacionalização** | ✅ Auto (PT/EN) |
+| **Deploy automático** | ✅ GitHub Actions |
 
 ---
 
