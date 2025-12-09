@@ -223,8 +223,10 @@
      * Muda idioma e redireciona
      */
     window.changeLanguage = function(lang) {
+        console.log('🟢 changeLanguage chamado com:', lang);
+        
         if (!CONFIG.supportedLanguages.includes(lang)) {
-            console.error('Idioma não suportado:', lang);
+            console.error('❌ Idioma não suportado:', lang);
             return;
         }
         
@@ -233,13 +235,19 @@
         
         // Salva no cookie
         setCookie(CONFIG.cookieName, lang, CONFIG.cookieExpiry);
+        console.log('💾 Cookie salvo:', lang);
         
         // Fecha menu
         const menu = document.getElementById('language-menu');
-        if (menu) menu.classList.add('hidden');
+        if (menu) {
+            menu.classList.add('hidden');
+            console.log('📋 Menu fechado');
+        }
         
         // Verifica se já está no idioma correto
         const currentLang = getCurrentLanguageFromURL();
+        console.log('🌐 Idioma atual URL:', currentLang, '| Solicitado:', lang);
+        
         if (currentLang === lang) {
             console.log('✅ Já está no idioma:', lang);
             updateLanguageUI(lang);
@@ -266,10 +274,17 @@
     window.toggleLanguageMenu = function(e) {
         if (e) e.stopPropagation();
         
-        const menu = document.getElementById('language-menu');
-        if (!menu) return;
+        console.log('🔵 toggleLanguageMenu chamado');
         
+        const menu = document.getElementById('language-menu');
+        if (!menu) {
+            console.error('❌ Menu não encontrado no DOM');
+            return;
+        }
+        
+        const wasHidden = menu.classList.contains('hidden');
         menu.classList.toggle('hidden');
+        console.log('📋 Menu toggle:', wasHidden ? 'abrindo' : 'fechando');
     };
 
     /**
@@ -394,28 +409,47 @@
     function init() {
         // Aguardar DOM carregar
         if (document.readyState === 'loading') {
+            console.log('📍 DOM ainda carregando, aguardando...');
             document.addEventListener('DOMContentLoaded', init);
             return;
         }
 
-        console.log('🌍 AI Factory i18n inicializado');
+        console.log('🌍 ========== AI Factory i18n INICIALIZADO ==========');
         
         // DEBUG: Verificar elementos
-        console.log('🔍 DEBUG - Elementos encontrados:');
-        console.log('  - language-selector-container:', !!document.getElementById('language-selector-container'));
-        console.log('  - language-toggle:', !!document.getElementById('language-toggle'));
-        console.log('  - language-menu:', !!document.getElementById('language-menu'));
+        console.log('🔍 Elementos encontrados:');
+        const container = document.getElementById('language-selector-container');
+        const toggle = document.getElementById('language-toggle');
+        const menu = document.getElementById('language-menu');
+        
+        console.log('  ✓ language-selector-container:', !!container);
+        console.log('  ✓ language-toggle:', !!toggle);
+        console.log('  ✓ language-menu:', !!menu);
+        
+        if (!container || !toggle || !menu) {
+            console.error('❌ ERRO: Elementos HTML faltando!');
+            return;
+        }
+        
+        // Verificar funções
+        console.log('🔍 Funções globais:');
+        console.log('  ✓ toggleLanguageMenu:', typeof window.toggleLanguageMenu);
+        console.log('  ✓ changeLanguage:', typeof window.changeLanguage);
         
         // Injeta estilos
         injectStyles();
+        console.log('✓ Estilos injetados');
         
         // Setup
         setupClickOutside();
+        console.log('✓ Click-outside setup completo');
         
         // Auto-detecção (com delay para não bloquear carregamento)
         setTimeout(() => {
             autoDetectAndRedirect();
         }, 500);
+        
+        console.log('🌍 ===================================================');
     }
 
     // Executar
