@@ -857,10 +857,6 @@ Origem: {{ software_a }} -&gt; Destino: {{ software_b }}
     }
     </style>
 
-    <!-- intl-tel-input Library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@20.2.2/build/css/intlTelInput.css">
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@20.2.2/build/js/intlTelInput.min.js"></script>
-
     <!-- Supabase Client -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -871,13 +867,6 @@ Origem: {{ software_a }} -&gt; Destino: {{ software_b }}
         const supabaseUrl = 'https://jhcraclhgkqcqojsorst.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoY3JhY2xoZ2txY3FvanNvcnN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUyODczMzgsImV4cCI6MjA4MDg2MzMzOH0.avgX3wul_gV25IRfDIDX2bgc2JlmHlz6W8R7VZqe8gM';
         const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-        
-        // Inicializa input internacional de telefone (Brasil por padrão)
-        const phoneInput = window.intlTelInput(document.getElementById('phone'), {
-            initialCountry: 'br',
-            preferredCountries: ['br', 'us', 'pt'],
-            utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@20.2.2/build/js/utils.js'
-        });
         
         // Contador de caracteres para o campo de mensagem
         const messageField = document.getElementById('message');
@@ -897,7 +886,7 @@ Origem: {{ software_a }} -&gt; Destino: {{ software_b }}
             // Validações
             const fullName = document.getElementById('fullName').value.trim();
             const email = document.getElementById('email').value.trim();
-            const phone = phoneInput.getNumber(); // Formato E.164 internacional
+            const phone = document.getElementById('phone').value.trim();
             const message = document.getElementById('message').value.trim();
             const optin = document.getElementById('optin').checked;
             
@@ -906,7 +895,9 @@ Origem: {{ software_a }} -&gt; Destino: {{ software_b }}
                 return;
             }
             
-            if (!phoneInput.isValidNumber()) {
+            // Validação simples de telefone
+            const phoneRegex = /^[\+]?[(]?[0-9]{2,3}[)]?[-\s\.]?[(]?[0-9]{2,3}[)]?[-\s\.]?[0-9]{4,6}$/;
+            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
                 showMessage('⚠️ Por favor, insira um número de telefone válido.', 'error');
                 return;
             }
@@ -923,8 +914,7 @@ Origem: {{ software_a }} -&gt; Destino: {{ software_b }}
                 optin: true,
                 source: 'Automations Cookbook - Homepage',
                 user_agent: navigator.userAgent,
-                page_url: window.location.href,
-                created_at: new Date().toISOString()
+                page_url: window.location.href
             };
             
             try {
@@ -939,7 +929,6 @@ Origem: {{ software_a }} -&gt; Destino: {{ software_b }}
                 
                 // Sucesso
                 form.reset();
-                phoneInput.setNumber('');
                 document.getElementById('charCount').textContent = '0';
                 showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
                 
