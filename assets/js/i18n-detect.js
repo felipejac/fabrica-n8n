@@ -223,68 +223,90 @@
      * Muda idioma e redireciona
      */
     window.changeLanguage = function(lang) {
-        console.log('🟢 changeLanguage chamado com:', lang);
-        
-        if (!CONFIG.supportedLanguages.includes(lang)) {
-            console.error('❌ Idioma não suportado:', lang);
-            return;
+        try {
+            console.log('🟢 changeLanguage chamado com:', lang);
+            
+            if (!CONFIG.supportedLanguages.includes(lang)) {
+                console.error('❌ Idioma não suportado:', lang);
+                return false;
+            }
+            
+            // Marca escolha manual
+            sessionStorage.setItem('manual_language_choice', 'true');
+            
+            // Salva no cookie
+            setCookie(CONFIG.cookieName, lang, CONFIG.cookieExpiry);
+            console.log('💾 Cookie salvo:', lang);
+            
+            // Fecha menu
+            const menu = document.getElementById('language-menu');
+            if (menu) {
+                menu.classList.add('hidden');
+                console.log('📋 Menu fechado');
+            }
+            
+            // Verifica se já está no idioma correto
+            const currentLang = getCurrentLanguageFromURL();
+            console.log('🌐 Idioma atual URL:', currentLang, '| Solicitado:', lang);
+            
+            if (currentLang === lang) {
+                console.log('✅ Já está no idioma:', lang);
+                updateLanguageUI(lang);
+                return false;
+            }
+            
+            // Redireciona
+            const newURL = buildLanguageURL(lang);
+            console.log('🔄 Redirecionando para:', newURL);
+            
+            // Adiciona feedback visual
+            const button = document.getElementById('language-toggle');
+            if (button) {
+                button.classList.add('opacity-50', 'pointer-events-none');
+                button.innerHTML = '<span>🔄</span><span class="hidden sm:inline">...</span>';
+            }
+            
+            // Redirecionar
+            window.location.href = newURL;
+            return false;
+        } catch (err) {
+            console.error('❌ ERRO em changeLanguage:', err);
+            return false;
         }
-        
-        // Marca escolha manual
-        sessionStorage.setItem('manual_language_choice', 'true');
-        
-        // Salva no cookie
-        setCookie(CONFIG.cookieName, lang, CONFIG.cookieExpiry);
-        console.log('💾 Cookie salvo:', lang);
-        
-        // Fecha menu
-        const menu = document.getElementById('language-menu');
-        if (menu) {
-            menu.classList.add('hidden');
-            console.log('📋 Menu fechado');
-        }
-        
-        // Verifica se já está no idioma correto
-        const currentLang = getCurrentLanguageFromURL();
-        console.log('🌐 Idioma atual URL:', currentLang, '| Solicitado:', lang);
-        
-        if (currentLang === lang) {
-            console.log('✅ Já está no idioma:', lang);
-            updateLanguageUI(lang);
-            return;
-        }
-        
-        // Redireciona
-        const newURL = buildLanguageURL(lang);
-        console.log('🔄 Redirecionando para:', newURL);
-        
-        // Adiciona feedback visual
-        const button = document.getElementById('language-toggle');
-        if (button) {
-            button.classList.add('opacity-50', 'pointer-events-none');
-            button.innerHTML = '<span>🔄</span><span class="hidden sm:inline">...</span>';
-        }
-        
-        window.location.href = newURL;
     };
 
     /**
-     * Toggle do menu de idiomas
+     * Toggle do menu de idiomas - VERSÃO SIMPLIFICADA
      */
     window.toggleLanguageMenu = function(e) {
-        if (e) e.stopPropagation();
-        
-        console.log('🔵 toggleLanguageMenu chamado');
-        
-        const menu = document.getElementById('language-menu');
-        if (!menu) {
-            console.error('❌ Menu não encontrado no DOM');
-            return;
+        try {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            console.log('🔵 toggleLanguageMenu chamado');
+            
+            const menu = document.getElementById('language-menu');
+            if (!menu) {
+                console.error('❌ Menu não encontrado no DOM');
+                return false;
+            }
+            
+            const wasHidden = menu.classList.contains('hidden');
+            if (wasHidden) {
+                menu.classList.remove('hidden');
+                console.log('📋 Menu ABERTO');
+            } else {
+                menu.classList.add('hidden');
+                console.log('📋 Menu FECHADO');
+            }
+            
+            return false; // Previne propagação
+        } catch (err) {
+            console.error('❌ ERRO em toggleLanguageMenu:', err);
+            return false;
         }
-        
-        const wasHidden = menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
-        console.log('📋 Menu toggle:', wasHidden ? 'abrindo' : 'fechando');
     };
 
     /**
