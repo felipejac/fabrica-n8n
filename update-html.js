@@ -442,6 +442,14 @@ function processHTMLFile(filepath) {
   try {
     console.log(`\n📄 Processando: ${path.relative(process.cwd(), filepath)}`);
     
+    // Skip homepage files (not integration pages)
+    const basename = path.basename(filepath);
+    if (basename === 'index.html' && !filepath.includes('integracoes/')) {
+      console.log('  ⏭️  Pulando homepage (não é página de integração)');
+      stats.filesProcessed++;
+      return;
+    }
+    
     // Ler arquivo
     let html = fs.readFileSync(filepath, 'utf-8');
     
