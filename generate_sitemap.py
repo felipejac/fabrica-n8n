@@ -51,6 +51,7 @@ def generate_sitemap(
         ('/blog', 'main_pages', today),
         ('/blog/index.html', 'main_pages', today),
         ('/blog/zapier-hegemonia-2025.html', 'main_pages', today),
+        ('/blog/fenomeno-zero-clique-ai-visibility-2025.html', 'main_pages', today),
         ('/integracoes/', 'integrations_index', today),
         ('/integracoes-zapier/', 'integrations_index', today),
         ('/integracoes/index.html', 'integrations_index', today),
