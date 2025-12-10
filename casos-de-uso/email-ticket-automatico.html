@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email → Ticket Automático | Automação N8N - Guia Completo</title>
+    <meta name="description" content="Converte e-mails recebidos em tickets no Zendesk e os atribui ao time responsável. Guia completo de implementação com N8N, ferramentas necessárias e casos de sucesso reais.">
+    <meta name="keywords" content="n8n, automação, email → ticket automático, gmail, zendesk, freshdesk, workflow automation">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.automationscookbook.com/casos-de-uso/email-ticket-automatico.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.automationscookbook.com/casos-de-uso/email-ticket-automatico.html">
+    <meta property="og:title" content="Email → Ticket Automático | Automação N8N">
+    <meta property="og:description" content="Converte e-mails recebidos em tickets no Zendesk e os atribui ao time responsável. Guia completo de implementação com N8N, ferramentas necessárias e casos de sucesso reais.">
+    <meta property="og:image" content="https://www.automationscookbook.com/assets/images/og-email-ticket-automatico.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.automationscookbook.com/casos-de-uso/email-ticket-automatico.html">
+    <meta property="twitter:title" content="Email → Ticket Automático | Automação N8N">
+    <meta property="twitter:description" content="Converte e-mails recebidos em tickets no Zendesk e os atribui ao time responsável. Guia completo de implementação com N8N, ferramentas necessárias e casos de sucesso reais.">
+    <meta property="twitter:image" content="https://www.automationscookbook.com/assets/images/og-email-ticket-automatico.jpg">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Email → Ticket Automático",
+      "description": "Converte e-mails recebidos em tickets no Zendesk e os atribui ao time responsável. Guia completo de implementação com N8N, ferramentas necessárias e casos de sucesso reais.",
+      "url": "https://www.automationscookbook.com/casos-de-uso/email-ticket-automatico.html",
+      "author": {
+        "@type": "Organization",
+        "name": "Automations Cookbook"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Automations Cookbook",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.automationscookbook.com/logo.png"
+        }
+      },
+      "datePublished": "2025-12-10",
+      "dateModified": "2025-12-10",
+      "keywords": "n8n, automação, email → ticket automático, gmail, zendesk, freshdesk, workflow automation",
+      "articleSection": "💬 Atendimento & Suporte",
+      "about": {
+        "@type": "Thing",
+        "name": "Automação de Processos",
+        "description": "Automação empresarial com N8N"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header-nav {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        
+        .header-nav a:hover {
+            opacity: 1;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+        
+        .complexity {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        .main-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .sidebar-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .sidebar-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .tool-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tool-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .workflow-diagram {
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .workflow-diagram h3 {
+            color: #4338ca;
+            margin-bottom: 1rem;
+        }
+        
+        .workflow-steps {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            color: #4338ca;
+            line-height: 2;
+        }
+        
+        .workflow-steps .arrow {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .benefits-section {
+            margin: 2.5rem 0;
+        }
+        
+        .benefits-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .benefit-card {
+            background: #f0f9ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0ea5e9;
+        }
+        
+        .benefit-card h4 {
+            color: #0c4a6e;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .benefit-card p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        
+        .implementation-section {
+            margin: 2.5rem 0;
+        }
+        
+        .implementation-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .step {
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .step h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight h4 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .related-cases {
+            margin-top: 3rem;
+        }
+        
+        .related-cases h3 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .related-card {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .related-card:hover {
+            border-color: #667eea;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.1);
+        }
+        
+        .related-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-nav">
+            <a href="/">← Início</a>
+            <span>|</span>
+            <a href="/casos-de-uso.html">← Casos de Uso</a>
+        </div>
+        <div class="header-content">
+            <div class="category-badge">🎫 💬 Atendimento & Suporte</div>
+            <h1>Email → Ticket Automático</h1>
+            <p class="subtitle">Converte e-mails recebidos em tickets no Zendesk e os atribui ao time responsável.</p>
+            <span class="complexity">Fácil</span>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content-grid">
+            <div class="main-content">
+                
+                <!-- Workflow Diagram -->
+                <div class="workflow-diagram">
+                    <h3>🔄 Fluxo do Workflow</h3>
+                    <div class="workflow-steps">
+                        Email recebido <span class="arrow">→</span> Extrair assunto + corpo <span class="arrow">→</span> Criar ticket Zendesk <span class="arrow">→</span> Categorizar (técnico/comercial/financeiro) <span class="arrow">→</span> Atribuir time
+                    </div>
+                </div>
+                
+                <!-- Benefits Section -->
+                <div class="benefits-section">
+                    <h2>✨ Benefícios da Automação</h2>
+                    <div class="benefits-grid">
+                                                <div class="benefit-card">
+                            <h4>Zero Email Perdido</h4>
+                            <p>100% das mensagens viram tickets rastreáveis</p>
+                        </div>
+                        <div class="benefit-card">
+                            <h4>Categorização Automática</h4>
+                            <p>IA identifica tipo de demanda e roteia corretamente</p>
+                        </div>
+                        <div class="benefit-card">
+                            <h4>SLA desde o Início</h4>
+                            <p>Contagem de tempo começa automaticamente</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Implementation Section -->
+                <div class="implementation-section">
+                    <h2>🛠️ Como Implementar na Sua Empresa</h2>
+                    
+                    <div class="step">
+                        <h3><span class="step-number">1</span> Configuração Inicial</h3>
+                        <p>Instale o N8N (self-hosted ou cloud) e crie um novo workflow. Conecte-se às APIs necessárias: Gmail, Zendesk. Teste as credenciais para garantir que a conexão está funcionando.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3><span class="step-number">2</span> Conexão das Ferramentas</h3>
+                        <p>Configure os nodes de integração no N8N para Gmail, Zendesk, Freshdesk, Slack. Defina os triggers (eventos que iniciam o workflow) e autentique cada serviço com suas credenciais.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3><span class="step-number">3</span> Configuração do Fluxo</h3>
+                        <p>Monte o fluxo seguindo a lógica: Email recebido → Extrair assunto + corpo → Criar ticket Zendesk → Categorizar (técnico/comercial/financeiro) → Atribuir time. Use nodes de função para transformar dados entre diferentes formatos quando necessário.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3><span class="step-number">4</span> Testes e Validação</h3>
+                        <p>Execute o workflow em modo de teste com dados fictícios. Verifique logs para identificar erros. Ajuste mapeamentos de campos e condições lógicas conforme necessário.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3><span class="step-number">5</span> Ativação e Monitoramento</h3>
+                        <p>Ative o workflow em produção. Configure alertas para falhas no N8N. Monitore execuções nas primeiras 48h para garantir estabilidade. Documente o processo para o time.</p>
+                    </div>
+                </div>
+                
+                <!-- Best Practices Highlight -->
+                <div class="highlight">
+                    <h4>💡 Dica de Especialista</h4>
+                    <p>Use palavras-chave no assunto para priorização: emails com 'URGENTE' ou 'BUG' vão para fila prioritária automaticamente.</p>
+                </div>
+                
+                <!-- Real Use Case -->
+                <div class="benefits-section">
+                    <h2>📊 Casos Reais de Sucesso</h2>
+                    <p>Uma empresa de SaaS reduziu tempo médio de primeira resposta de 6 horas para 45 minutos ao eliminar triagem manual.</p>
+                </div>
+                
+                <!-- CTA Box -->
+                <div class="cta-box">
+                    <h3>🚀 Pronto para Automatizar?</h3>
+                    <p>Acesse templates prontos de N8N baseados neste caso de uso. Copie, personalize e ative em minutos.</p>
+                    <a href="/integracoes/?q=email+ticket+automation" class="cta-button">Ver Templates Relacionados →</a>
+                </div>
+                
+                <!-- Related Cases -->
+                <div class="related-cases">
+                    <h3>📚 Casos de Uso Relacionados</h3>
+                    <div class="related-grid">
+                                                <a href="chatbot-com-ia-chatgpt.html" class="related-card">
+                            <h4>🤖 Chatbot com IA (ChatGPT)</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Gerencia conversas no WhatsApp via ChatGPT, resolvendo dúvidas automaticamente o...</p>
+                        </a>
+                        <a href="feedback-pos-atendimento-nps.html" class="related-card">
+                            <h4>📞 Feedback Pós-Atendimento (NPS)</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Envia pesquisa de satisfação após atendimento e alerta o gerente se a nota for b...</p>
+                        </a>
+
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                
+                <!-- Tools Card -->
+                <div class="sidebar-card">
+                    <h3>🔧 Ferramentas Necessárias</h3>
+                    <div class="tool-list">
+                                                <span class="tool-tag">Gmail</span>
+                        <span class="tool-tag">Zendesk</span>
+                        <span class="tool-tag">Freshdesk</span>
+                        <span class="tool-tag">Slack</span>
+
+                    </div>
+                </div>
+                
+                <!-- Complexity Card -->
+                <div class="sidebar-card">
+                    <h3>📊 Informações</h3>
+                    <p><strong>Complexidade:</strong> Fácil</p>
+                    <p><strong>Tempo de Setup:</strong> 30 minutos</p>
+                    <p><strong>ROI Esperado:</strong> 300% em organização</p>
+                    <p><strong>Categoria:</strong> 💬 Atendimento & Suporte</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="sidebar-card">
+                    <h3>🔗 Links Úteis</h3>
+                    <p><a href="/guia-automacoes-n8n.html">📖 Guia Completo N8N</a></p>
+                    <p><a href="/integracoes/">🎯 Biblioteca de Templates</a></p>
+                    <p><a href="/casos-de-uso.html">💼 Todos os Casos de Uso</a></p>
+                    <p><a href="/blog">📰 Blog Tech Insights</a></p>
+                </div>
+                
+                <!-- Support Card -->
+                <div class="sidebar-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <h3 style="color: white;">💬 Precisa de Ajuda?</h3>
+                    <p style="opacity: 0.95;">Nossa comunidade está pronta para ajudar você a implementar esta automação.</p>
+                    <a href="#contact" style="display: inline-block; background: white; color: #667eea; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; margin-top: 1rem; font-weight: 600;">Falar com Especialista</a>
+                </div>
+                
+            </aside>
+        </div>
+    </div>
+    
+    <footer>
+        <p><strong>Automations Cookbook</strong> - 13.269+ templates de automação open-source</p>
+        <p>
+            <a href="/">Início</a> | 
+            <a href="/sobre">Sobre</a> | 
+            <a href="/guia-automacoes-n8n">Guia N8N</a> | 
+            <a href="/integracoes/">Templates</a> | 
+            <a href="/casos-de-uso.html">Casos de Uso</a> | 
+            <a href="/blog">Blog</a>
+        </p>
+        <p style="margin-top: 1rem; opacity: 0.7;">© 2025 Automations Cookbook | MIT License</p>
+    </footer>
+</body>
+</html>
