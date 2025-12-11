@@ -1,0 +1,182 @@
+[
+  {
+    "title": "n8n + Softr: Como criar um app com backend de IA sem escrever backend",
+    "slug": "softr-backend-ia-n8n",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "Hyperautomation n8n: Combine RPA + IA em 2025",
+    "slug": "hyperautomation-rpa-ia-n8n",
+    "date": "2025-12-01",
+    "read_time": "15 min"
+  },
+  {
+    "title": "n8n + Tavily: Agentes com pesquisa web em tempo real",
+    "slug": "tavily-pesquisa-web-agentes-n8n",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "Physical AI no n8n: IoT + agentes para robótica",
+    "slug": "physical-ai-iot-robotica-n8n",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "n8n Queue Mode: Scale para 1000+ execuções paralelas",
+    "slug": "queue-mode-scale-n8n",
+    "date": "2025-12-01",
+    "read_time": "15 min"
+  },
+  {
+    "title": "LangGraph vs n8n: Frameworks para Agentic AI",
+    "slug": "langgraph-vs-n8n-frameworks",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "Top 10 workflows n8n para startups 2025 (Lead Gen + SEO)",
+    "slug": "workflows-startups-leadgen-seo-n8n",
+    "date": "2025-12-01",
+    "read_time": "14 min"
+  },
+  {
+    "title": "CrewAI vs n8n: Multi-agents open-source gratuitos",
+    "slug": "crewai-vs-n8n-multiagents",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "n8n + AutoGen: Microsoft Agents no no-code",
+    "slug": "autogen-microsoft-agents-n8n",
+    "date": "2025-12-01",
+    "read_time": "8 min"
+  },
+  {
+    "title": "Melhores 20 community nodes n8n 2025 (IA + scraping)",
+    "slug": "community-nodes-ia-scraping-n8n",
+    "date": "2025-12-01",
+    "read_time": "7 min"
+  },
+  {
+    "title": "n8n Docker prod: Secrets, Redis e scale horizontal",
+    "slug": "docker-prod-secrets-redis-n8n",
+    "date": "2025-12-01",
+    "read_time": "15 min"
+  },
+  {
+    "title": "AutoGPT no n8n: Goal-Driven Agents sem código",
+    "slug": "autogpt-goal-driven-agents-n8n",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "n8n + Mistral Agents: Modelos europeus GDPR",
+    "slug": "mistral-agents-gdpr-n8n",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "Haystack + n8n: RAG avançado para enterprise",
+    "slug": "haystack-rag-enterprise-n8n",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "Top 10 agências n8n 2025: Quem contratar?",
+    "slug": "agencias-n8n-contratar-2025",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "n8n Updates 2025: Novas features de IA",
+    "slug": "updates-features-ia-n8n-2025",
+    "date": "2025-12-01",
+    "read_time": "8 min"
+  },
+  {
+    "title": "LangChain Code Node n8n: Lógica avançada para devs",
+    "slug": "langchain-code-node-devs-n8n",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "n8n + Qwen-Agent: Agentes chineses de baixo custo",
+    "slug": "qwen-agent-baixo-custo-n8n",
+    "date": "2025-12-01",
+    "read_time": "8 min"
+  },
+  {
+    "title": "Content Repurposing n8n: Vídeo → Blog → Social",
+    "slug": "content-repurposing-video-blog-n8n",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "Support Triage AI: Classifique tickets com n8n",
+    "slug": "support-triage-ai-n8n",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "Social listening + outreach automatizado n8n",
+    "slug": "social-listening-outreach-n8n",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "12 Melhores Autonomous AI Agents em 2025 (e onde o n8n entra nisso)",
+    "slug": "autonomous-ai-agents-2025-n8n",
+    "date": "2025-12-01",
+    "read_time": "15 min"
+  },
+  {
+    "title": "n8n vs Zapier vs Make: Guia Definitivo de AI Workflow Tools em 2026",
+    "slug": "n8n-zapier-make-comparativo-2026",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "Top 10 AI Agent Frameworks 2025 (LangGraph, CrewAI, AutoGen, OpenAI Agents & cia.)",
+    "slug": "ai-agent-frameworks-2025",
+    "date": "2025-12-01",
+    "read_time": "14 min"
+  },
+  {
+    "title": "Automation Trends 2025: Agentic AI + Hyperautomation",
+    "slug": "automation-trends-agentic-ai-2025",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "n8n AI Agent Node: Tutorial Completo para Iniciantes",
+    "slug": "ai-agent-node-tutorial-iniciantes-n8n",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "OpenAI API Key Security no n8n: Best Practices 2025",
+    "slug": "openai-api-key-security-n8n",
+    "date": "2025-12-01",
+    "read_time": "10 min"
+  },
+  {
+    "title": "LangChain vs n8n em 2025: Code vs No-Code na Era dos Agentes de IA",
+    "slug": "langchain-vs-n8n-2025",
+    "date": "2025-12-01",
+    "read_time": "12 min"
+  },
+  {
+    "title": "Melhores 10 Apps n8n em 2025 (que você precisa conhecer)",
+    "slug": "melhores-apps-n8n-2025",
+    "date": "2025-12-01",
+    "read_time": "11 min"
+  },
+  {
+    "title": "Azure OpenAI + n8n: Setup Brasil com Foco em LGPD e Compliance",
+    "slug": "azure-openai-lgpd-compliance-n8n",
+    "date": "2025-12-01",
+    "read_time": "14 min"
+  }
+]

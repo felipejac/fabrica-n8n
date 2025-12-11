@@ -1,0 +1,779 @@
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🚀</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Tutorial</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">Tutorial</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="softr-backend-ia-n8n.html" class="hover:text-blue-600 transition">n8n + Softr: Como criar um app com backend de IA sem escrever backend</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Guia passo a passo com exemplos práticos e código pronto para usar.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="softr-backend-ia-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🤖</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Automação</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-semibold">Automação</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="hyperautomation-rpa-ia-n8n.html" class="hover:text-blue-600 transition">Hyperautomation n8n: Combine RPA + IA em 2025</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">15 min</span>
+                        <a href="hyperautomation-rpa-ia-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🔍</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Agentes</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-green-100 text-green-700 px-2 py-1 rounded font-semibold">Agentes</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="tavily-pesquisa-web-agentes-n8n.html" class="hover:text-blue-600 transition">n8n + Tavily: Agentes com pesquisa web em tempo real</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="tavily-pesquisa-web-agentes-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">��</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">IoT</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded font-semibold">IoT</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="physical-ai-iot-robotica-n8n.html" class="hover:text-blue-600 transition">Physical AI no n8n: IoT + agentes para robótica</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="physical-ai-iot-robotica-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">⚡</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">DevOps</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-teal-100 text-teal-700 px-2 py-1 rounded font-semibold">DevOps</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="queue-mode-scale-n8n.html" class="hover:text-blue-600 transition">n8n Queue Mode: Scale para 1000+ execuções paralelas</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">15 min</span>
+                        <a href="queue-mode-scale-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">📊</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Comparação</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded font-semibold">Comparação</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="langgraph-vs-n8n-frameworks.html" class="hover:text-blue-600 transition">LangGraph vs n8n: Frameworks para Agentic AI</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Análise comparativa detalhada para ajudar você a escolher a melhor solução.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="langgraph-vs-n8n-frameworks.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">📈</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Growth</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-pink-100 text-pink-700 px-2 py-1 rounded font-semibold">Growth</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="workflows-startups-leadgen-seo-n8n.html" class="hover:text-blue-600 transition">Top 10 workflows n8n para startups 2025 (Lead Gen + SEO)</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Lista curada das melhores opções e estratégias para seu projeto.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">14 min</span>
+                        <a href="workflows-startups-leadgen-seo-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🤝</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Comparação</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded font-semibold">Comparação</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="crewai-vs-n8n-multiagents.html" class="hover:text-blue-600 transition">CrewAI vs n8n: Multi-agents open-source gratuitos</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Análise comparativa detalhada para ajudar você a escolher a melhor solução.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="crewai-vs-n8n-multiagents.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🔗</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Integração</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">Integração</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="autogen-microsoft-agents-n8n.html" class="hover:text-blue-600 transition">n8n + AutoGen: Microsoft Agents no no-code</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">8 min</span>
+                        <a href="autogen-microsoft-agents-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🧩</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Plugins</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded font-semibold">Plugins</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="community-nodes-ia-scraping-n8n.html" class="hover:text-blue-600 transition">Melhores 20 community nodes n8n 2025 (IA + scraping)</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Lista curada das melhores opções e estratégias para seu projeto.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">7 min</span>
+                        <a href="community-nodes-ia-scraping-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">��</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">DevOps</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-teal-100 text-teal-700 px-2 py-1 rounded font-semibold">DevOps</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="docker-prod-secrets-redis-n8n.html" class="hover:text-blue-600 transition">n8n Docker prod: Secrets, Redis e scale horizontal</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">15 min</span>
+                        <a href="docker-prod-secrets-redis-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🎯</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Agentes</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-green-100 text-green-700 px-2 py-1 rounded font-semibold">Agentes</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="autogpt-goal-driven-agents-n8n.html" class="hover:text-blue-600 transition">AutoGPT no n8n: Goal-Driven Agents sem código</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="autogpt-goal-driven-agents-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🔐</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Compliance</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded font-semibold">Compliance</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="mistral-agents-gdpr-n8n.html" class="hover:text-blue-600 transition">n8n + Mistral Agents: Modelos europeus GDPR</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="mistral-agents-gdpr-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🏢</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Enterprise</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-semibold">Enterprise</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="haystack-rag-enterprise-n8n.html" class="hover:text-blue-600 transition">Haystack + n8n: RAG avançado para enterprise</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="haystack-rag-enterprise-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">💼</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Negócios</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-pink-100 text-pink-700 px-2 py-1 rounded font-semibold">Negócios</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="agencias-n8n-contratar-2025.html" class="hover:text-blue-600 transition">Top 10 agências n8n 2025: Quem contratar?</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Lista curada das melhores opções e estratégias para seu projeto.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="agencias-n8n-contratar-2025.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">✨</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Novidades</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">Novidades</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="updates-features-ia-n8n-2025.html" class="hover:text-blue-600 transition">n8n Updates 2025: Novas features de IA</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">8 min</span>
+                        <a href="updates-features-ia-n8n-2025.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">💻</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Desenvolvimento</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded font-semibold">Desenvolvimento</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="langchain-code-node-devs-n8n.html" class="hover:text-blue-600 transition">LangChain Code Node n8n: Lógica avançada para devs</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Análise comparativa detalhada para ajudar você a escolher a melhor solução.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="langchain-code-node-devs-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">💰</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Economia</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-green-100 text-green-700 px-2 py-1 rounded font-semibold">Economia</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="qwen-agent-baixo-custo-n8n.html" class="hover:text-blue-600 transition">n8n + Qwen-Agent: Agentes chineses de baixo custo</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">8 min</span>
+                        <a href="qwen-agent-baixo-custo-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">📹</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Marketing</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-pink-100 text-pink-700 px-2 py-1 rounded font-semibold">Marketing</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="content-repurposing-video-blog-n8n.html" class="hover:text-blue-600 transition">Content Repurposing n8n: Vídeo → Blog → Social</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="content-repurposing-video-blog-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🎫</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Suporte</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">Suporte</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="support-triage-ai-n8n.html" class="hover:text-blue-600 transition">Support Triage AI: Classifique tickets com n8n</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="support-triage-ai-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">👂</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Vendas</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded font-semibold">Vendas</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="social-listening-outreach-n8n.html" class="hover:text-blue-600 transition">Social listening + outreach automatizado n8n</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="social-listening-outreach-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🚀</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Tendências</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-semibold">Tendências</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="autonomous-ai-agents-2025-n8n.html" class="hover:text-blue-600 transition">12 Melhores Autonomous AI Agents em 2025 (e onde o n8n entra nisso)</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Lista curada das melhores opções e estratégias para seu projeto.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">15 min</span>
+                        <a href="autonomous-ai-agents-2025-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">⚖️</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Comparação</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded font-semibold">Comparação</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="n8n-zapier-make-comparativo-2026.html" class="hover:text-blue-600 transition">n8n vs Zapier vs Make: Guia Definitivo de AI Workflow Tools em 2026</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Análise comparativa detalhada para ajudar você a escolher a melhor solução.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="n8n-zapier-make-comparativo-2026.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">��️</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Frameworks</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded font-semibold">Frameworks</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="ai-agent-frameworks-2025.html" class="hover:text-blue-600 transition">Top 10 AI Agent Frameworks 2025 (LangGraph, CrewAI, AutoGen, OpenAI Agents & cia.)</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Lista curada das melhores opções e estratégias para seu projeto.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">14 min</span>
+                        <a href="ai-agent-frameworks-2025.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">📊</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Tendências</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-semibold">Tendências</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="automation-trends-agentic-ai-2025.html" class="hover:text-blue-600 transition">Automation Trends 2025: Agentic AI + Hyperautomation</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="automation-trends-agentic-ai-2025.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">📚</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Tutorial</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">Tutorial</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="ai-agent-node-tutorial-iniciantes-n8n.html" class="hover:text-blue-600 transition">n8n AI Agent Node: Tutorial Completo para Iniciantes</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Guia passo a passo com exemplos práticos e código pronto para usar.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="ai-agent-node-tutorial-iniciantes-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🔒</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Segurança</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded font-semibold">Segurança</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="openai-api-key-security-n8n.html" class="hover:text-blue-600 transition">OpenAI API Key Security no n8n: Best Practices 2025</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="openai-api-key-security-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🆚</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Comparação</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded font-semibold">Comparação</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="langchain-vs-n8n-2025.html" class="hover:text-blue-600 transition">LangChain vs n8n em 2025: Code vs No-Code na Era dos Agentes de IA</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Análise comparativa detalhada para ajudar você a escolher a melhor solução.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="langchain-vs-n8n-2025.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">⭐</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Lista</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded font-semibold">Lista</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="melhores-apps-n8n-2025.html" class="hover:text-blue-600 transition">Melhores 10 Apps n8n em 2025 (que você precisa conhecer)</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Lista curada das melhores opções e estratégias para seu projeto.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">11 min</span>
+                        <a href="melhores-apps-n8n-2025.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <div class="text-5xl mb-2">🛡️</div>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Compliance</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded font-semibold">Compliance</span>
+                        <span>•</span>
+                        <span>01 Dez 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                        <a href="azure-openai-lgpd-compliance-n8n.html" class="hover:text-blue-600 transition">Azure OpenAI + n8n: Setup Brasil com Foco em LGPD e Compliance</a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">Estratégias práticas e comprovadas de automação com n8n e IA.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">14 min</span>
+                        <a href="azure-openai-lgpd-compliance-n8n.html" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                            Ler artigo →
+                        </a>
+                    </div>
+                </div>
+            </article>
