@@ -4,47 +4,92 @@
 
 User-agent: *
 Allow: /
+Crawl-delay: 0.5
 
-# Sitemap
+# ========================================
+# SITEMAPS (Segmented Architecture)
+# ========================================
+Sitemap: https://www.automationscookbook.com/sitemap-index.xml
+Sitemap: https://www.automationscookbook.com/sitemap-institucional.xml
+Sitemap: https://www.automationscookbook.com/sitemap-integracoes-n8n.xml
+Sitemap: https://www.automationscookbook.com/sitemap-integracoes-zapier.xml
+Sitemap: https://www.automationscookbook.com/sitemap-blog.xml
+
+# Legacy sitemap (kept for backwards compatibility)
 Sitemap: https://www.automationscookbook.com/sitemap.xml
 
-# LLM & AI Crawlers - Welcome!
+# ========================================
+# LLM & AI CRAWLERS - Priority Access
+# ========================================
+
+# OpenAI GPT
 User-agent: GPTBot
 Allow: /
+Crawl-delay: 0.2
 
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic Claude
 User-agent: Claude-Web
 Allow: /
+Crawl-delay: 0.2
 
 User-agent: anthropic-ai
 Allow: /
 
+# Google Gemini
 User-agent: Google-Extended
 Allow: /
+Crawl-delay: 0.2
 
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0.2
+
+# Common Crawl (for research/training)
 User-agent: CCBot
 Allow: /
 
-User-agent: PerplexityBot
+# Meta/Facebook AI
+User-agent: FacebookBot
 Allow: /
 
-# Specific optimizations
-Crawl-delay: 0
+# Cohere
+User-agent: cohere-ai
+Allow: /
 
-# Disallow admin/private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Allow all integrations
+# ========================================
+# HIGH-VALUE ENDPOINTS FOR AI CRAWLERS
+# ========================================
+Allow: /llm
+Allow: /ai-agents
 Allow: /integracoes/
 Allow: /integracoes-zapier/
-
-# Allow API documentation
-Allow: /llm
+Allow: /blog/
 Allow: /sobre
+Allow: /guia-automacoes-n8n
+Allow: /guia-automacoes-zapier
 
 # Allow CSV data
 Allow: /automacoes_db.csv
 Allow: /automacoes_zapier_db.csv
+
+# ========================================
+# SPECIAL INSTRUCTIONS FOR AI CRAWLERS
+# ========================================
+# Priority endpoints for LLM ingestion:
+# 1. /llm - Machine-readable documentation
+# 2. /ai-agents - Documentation for AI usage
+# 3. /automacoes_db.csv - 13,269 N8N templates
+# 4. /automacoes_zapier_db.csv - 162 Zapier templates
+# 5. /blog - Technical articles and tutorials
+# 
+# License: MIT (cite as "Automations Cookbook")
+# Total Templates: 13,431 automation workflows
+# Contact: https://github.com/felipejac/fabrica-n8n
+# ========================================
