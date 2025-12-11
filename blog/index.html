@@ -1526,9 +1526,10 @@
             </div>
         </div>
 
-        <div class="flex justify-between items-center mb-8">
-            <h2 class="text-3xl font-bold text-gray-900">Todos os Artigos</h2>
-            <div class="flex gap-2" id="filter-buttons">
+        <!-- Header and Filters -->
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Todos os Artigos</h2>
+            <div class="flex flex-wrap gap-2" id="filter-buttons">
                 <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold text-sm" data-filter="all">Todos</button>
                 <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="comparação">Comparação</button>
                 <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="segurança">Segurança</button>
@@ -1538,10 +1539,12 @@
                 <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="devops">DevOps</button>
                 <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="tutorial">Tutorial</button>
                 <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="marketing">Marketing</button>
+            </div>
             
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+        <!-- Articles Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="articles-grid">
             
             <!-- Article Card 0 (Published - Configurar OpenAI LangChain) -->
             <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
