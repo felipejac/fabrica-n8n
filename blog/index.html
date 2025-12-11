@@ -1514,10 +1514,15 @@
             <h2 class="text-3xl font-bold text-gray-900">Todos os Artigos</h2>
             <div class="flex gap-2" id="filter-buttons">
                 <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold text-sm" data-filter="all">Todos</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="comparação">Comparação</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="segurança">Segurança</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="ia">IA</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="desenvolvimento">Desenvolvimento</button>
                 <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="análise">Análise</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="devops">DevOps</button>
                 <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="tutorial">Tutorial</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="tendências">Tendências</button>
-            </div>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="marketing">Marketing</button>
+            
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
@@ -3495,11 +3500,14 @@
         });
     </script>
     
-    <!-- Filter Functionality -->
+        <!-- Filter Functionality -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const articles = document.querySelectorAll('article');
+            
+            // Mapeamento de filtros para categorias
+            const filterMap = {"comparação": ["comparação"], "devops": ["devops", "cloud"], "segurança": ["segurança", "compliance"], "tutorial": ["tutorial", "setup"], "automação": ["automação", "integração"], "ia": ["ia", "agentes", "rag", "local ai", "voice ai"], "desenvolvimento": ["desenvolvimento", "plugins", "frontend", "backend", "frameworks"], "marketing": ["marketing", "growth", "marketing digital", "conteúdo"], "análise": ["economia", "análise de mercado", "tendências", "negócios"], "ferramentas": ["scraping", "templates", "chatbots", "crm"]};
             
             filterButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -3514,35 +3522,31 @@
                     this.classList.add('bg-blue-600', 'text-white');
                     
                     // Filter articles
+                    let visibleCount = 0;
                     articles.forEach(article => {
                         if (filter === 'all') {
                             article.style.display = 'block';
+                            visibleCount++;
                         } else {
-                            // Check if article has the category badge with matching text
-                            const categoryBadge = article.querySelector('.bg-blue-100, .bg-purple-100, .bg-indigo-100, .bg-green-100, .bg-yellow-100, .bg-red-100, .bg-pink-100, .bg-orange-100, .bg-teal-100, .bg-cyan-100');
+                            const categoryBadge = article.querySelector('span[class*="bg-"][class*="px-2"]');
                             
                             if (categoryBadge) {
                                 const categoryText = categoryBadge.textContent.toLowerCase().trim();
+                                const keywords = filterMap[filter] || [];
                                 
-                                // Match based on filter
-                                let shouldShow = false;
-                                
-                                if (filter === 'análise' && (categoryText.includes('análise') || categoryText.includes('mercado') || categoryText.includes('benchmark'))) {
-                                    shouldShow = true;
-                                } else if (filter === 'tutorial' && (categoryText.includes('tutorial') || categoryText.includes('setup') || categoryText.includes('configuração') || categoryText.includes('guia'))) {
-                                    shouldShow = true;
-                                } else if (filter === 'tendências' && (categoryText.includes('tendência') || categoryText.includes('2025') || categoryText.includes('2026') || categoryText.includes('update'))) {
-                                    shouldShow = true;
-                                }
+                                const shouldShow = keywords.some(keyword => 
+                                    categoryText.includes(keyword.toLowerCase())
+                                );
                                 
                                 article.style.display = shouldShow ? 'block' : 'none';
+                                if (shouldShow) visibleCount++;
                             } else {
                                 article.style.display = 'none';
                             }
                         }
                     });
                     
-                    console.log(`🔍 Filtro aplicado: ${filter}`);
+                    console.log(`🔍 Filtro "${filter}": ${visibleCount} posts exibidos`);
                 });
             });
         });
