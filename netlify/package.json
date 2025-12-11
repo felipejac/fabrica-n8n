@@ -1,0 +1,8 @@
+{
+  "name": "fabrica-n8n-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Fabrica n8n",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  }
+}

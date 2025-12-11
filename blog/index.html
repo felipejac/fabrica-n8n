@@ -3386,17 +3386,19 @@
             <p class="text-xl text-blue-100 mb-8">
                 Análises semanais sobre automação, IA e tendências de mercado direto no seu email
             </p>
-            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                 <input 
                     type="email" 
+                    id="newsletter-email"
                     placeholder="seu@email.com" 
                     class="flex-1 px-6 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300"
                     required
                 >
-                <button type="submit" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                <button type="submit" id="newsletter-btn" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed">
                     Inscrever
                 </button>
             </form>
+            <div id="newsletter-message" class="mt-4 text-sm font-semibold hidden"></div>
             <p class="text-sm text-blue-100 mt-4">
                 ✨ Sem spam. Cancele quando quiser.
             </p>
@@ -3593,6 +3595,82 @@
                     applyFiltersAndSearch();
                 });
             });
+        });
+    </script>
+    
+    <!-- Newsletter Form Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('newsletter-form');
+            const emailInput = document.getElementById('newsletter-email');
+            const submitBtn = document.getElementById('newsletter-btn');
+            const messageDiv = document.getElementById('newsletter-message');
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const email = emailInput.value.trim();
+                
+                if (!email) {
+                    showMessage('Por favor, insira seu email.', 'error');
+                    return;
+                }
+                
+                // Disable form
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Inscrevendo...';
+                
+                try {
+                    // Call Netlify Function
+                    const response = await fetch('/.netlify/functions/newsletter-subscribe', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ email })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (response.ok && data.success) {
+                        showMessage(data.message || '✅ Inscrição realizada com sucesso! Verifique seu email. 🎉', 'success');
+                        emailInput.value = '';
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            submitBtn.textContent = 'Inscrever';
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    } else {
+                        showMessage(data.error || '❌ Erro ao processar inscrição. Tente novamente.', 'error');
+                        submitBtn.textContent = 'Inscrever';
+                        submitBtn.disabled = false;
+                    }
+                } catch (error) {
+                    console.error('Newsletter error:', error);
+                    showMessage('❌ Erro de conexão. Tente novamente.', 'error');
+                    submitBtn.textContent = 'Inscrever';
+                    submitBtn.disabled = false;
+                }
+            });
+            
+            function showMessage(message, type) {
+                messageDiv.textContent = message;
+                messageDiv.className = 'mt-4 text-sm font-semibold p-3 rounded-lg';
+                
+                if (type === 'success') {
+                    messageDiv.classList.add('bg-green-100', 'text-green-800');
+                } else {
+                    messageDiv.classList.add('bg-red-100', 'text-red-800');
+                }
+                
+                messageDiv.classList.remove('hidden');
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    messageDiv.classList.add('hidden');
+                }, 5000);
+            }
         });
     </script>
     
