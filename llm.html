@@ -13,19 +13,76 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.automationscookbook.com/llm">
     
-    <!-- Schema.org -->
+    <!-- Schema.org - Enhanced DataCatalog -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "DataCatalog",
       "name": "Automations Cookbook API",
-      "description": "Structured database of 13,431+ automation templates for n8n and other platforms",
+      "description": "Structured database of 13,431+ automation templates for n8n, Zapier and no-code platforms. Machine-readable CSV/JSON format optimized for LLMs, RAG systems and AI agents.",
       "url": "https://www.automationscookbook.com/llm",
+      "keywords": ["automation templates", "n8n workflows", "zapier integrations", "no-code", "low-code", "ai agents", "rag dataset", "llm api"],
       "creator": {
         "@type": "Organization",
-        "name": "Automations Cookbook"
+        "name": "Automations Cookbook",
+        "url": "https://www.automationscookbook.com"
       },
-      "license": "https://opensource.org/licenses/MIT"
+      "datePublished": "2024-01-01",
+      "dateModified": "2025-12-11",
+      "license": "https://opensource.org/licenses/MIT",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://www.automationscookbook.com/automacoes_db.csv",
+          "name": "N8N Templates Database",
+          "description": "13,269 n8n workflow templates in CSV format"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://www.automationscookbook.com/automacoes_zapier_db.csv",
+          "name": "Zapier Templates Database",
+          "description": "162 Zapier integration templates in CSV format"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "Dataset",
+          "name": "N8N Automation Templates",
+          "description": "Collection of 13,269 ready-to-use n8n workflow templates",
+          "url": "https://www.automationscookbook.com/automacoes_db.csv",
+          "distribution": {
+            "@type": "DataDownload",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://www.automationscookbook.com/automacoes_db.csv"
+          }
+        },
+        {
+          "@type": "Dataset",
+          "name": "Zapier Integration Templates",
+          "description": "Collection of 162 Zapier automation templates",
+          "url": "https://www.automationscookbook.com/automacoes_zapier_db.csv",
+          "distribution": {
+            "@type": "DataDownload",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://www.automationscookbook.com/automacoes_zapier_db.csv"
+          }
+        },
+        {
+          "@type": "Dataset",
+          "name": "Blog Articles & Tutorials",
+          "description": "68 technical articles about automation and AI",
+          "url": "https://www.automationscookbook.com/blog"
+        }
+      ],
+      "temporalCoverage": "2024/..",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "inLanguage": ["en", "pt-BR"],
+      "isAccessibleForFree": true
     }
     </script>
     
