@@ -1,0 +1,420 @@
+        {
+          "@type": "BlogPosting",
+          "headline": "Instalar Community Nodes n8n 2025: Top 10 para AI Agents",
+          "url": "https://fabrica-n8n.com/blog/instalar-community-nodes-n8n-2025.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-instalar-community-nodes-n8n-2025.jpg",
+          "description": "Instalar Community Nodes n8n 2025: Top 10 para AI Agents - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n + DeepSeek AI: Configuração Gratuita vs OpenAI",
+          "url": "https://fabrica-n8n.com/blog/deepseek-ai-config-gratuita-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-deepseek-ai-config-gratuita-n8n.jpg",
+          "description": "n8n + DeepSeek AI: Configuração Gratuita vs OpenAI - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Como Usar n8n MCP Nodes para Multi-Agent Workflows",
+          "url": "https://fabrica-n8n.com/blog/mcp-nodes-multi-agent-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-mcp-nodes-multi-agent-n8n.jpg",
+          "description": "Como Usar n8n MCP Nodes para Multi-Agent Workflows - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Tutorial: n8n + ElevenLabs Voice AI (Texto para Fala)",
+          "url": "https://fabrica-n8n.com/blog/elevenlabs-voice-ai-tts-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-elevenlabs-voice-ai-tts-n8n.jpg",
+          "description": "Tutorial: n8n + ElevenLabs Voice AI (Texto para Fala) - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n + Perplexity AI: Pesquisa Autônoma em Workflows",
+          "url": "https://fabrica-n8n.com/blog/perplexity-ai-pesquisa-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-perplexity-ai-pesquisa-n8n.jpg",
+          "description": "n8n + Perplexity AI: Pesquisa Autônoma em Workflows - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Configurar Obsidian REST API no n8n para Knowledge Base",
+          "url": "https://fabrica-n8n.com/blog/obsidian-rest-api-knowledge-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-obsidian-rest-api-knowledge-n8n.jpg",
+          "description": "Configurar Obsidian REST API no n8n para Knowledge Base - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n Nodes para GitHub Copilot: Automatize Code Review",
+          "url": "https://fabrica-n8n.com/blog/github-copilot-code-review-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-github-copilot-code-review-n8n.jpg",
+          "description": "n8n Nodes para GitHub Copilot: Automatize Code Review - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "BrightData Scraping + n8n: Extrair Dados Web com AI",
+          "url": "https://fabrica-n8n.com/blog/brightdata-scraping-web-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-brightdata-scraping-web-n8n.jpg",
+          "description": "BrightData Scraping + n8n: Extrair Dados Web com AI - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n + Flowise AI: Integração Low-Code para Chatbots",
+          "url": "https://fabrica-n8n.com/blog/flowise-ai-chatbots-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-flowise-ai-chatbots-n8n.jpg",
+          "description": "n8n + Flowise AI: Integração Low-Code para Chatbots - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Kommo CRM + n8n: Workflows para Leads e Tarefas",
+          "url": "https://fabrica-n8n.com/blog/kommo-crm-workflows-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-kommo-crm-workflows-n8n.jpg",
+          "description": "Kommo CRM + n8n: Workflows para Leads e Tarefas - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Top 10 n8n Templates Gratuitos 2025 para AI Automation",
+          "url": "https://fabrica-n8n.com/blog/templates-gratuitos-ai-n8n-2025.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-templates-gratuitos-ai-n8n-2025.jpg",
+          "description": "Top 10 n8n Templates Gratuitos 2025 para AI Automation - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n vs Langflow: Qual o Melhor para AI Workflows?",
+          "url": "https://fabrica-n8n.com/blog/n8n-vs-langflow-comparativo.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-n8n-vs-langflow-comparativo.jpg",
+          "description": "n8n vs Langflow: Qual o Melhor para AI Workflows? - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Google Trends + n8n + Gemini: Análise de Tendências 2025",
+          "url": "https://fabrica-n8n.com/blog/google-trends-gemini-analise-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-google-trends-gemini-analise-n8n.jpg",
+          "description": "Google Trends + n8n + Gemini: Análise de Tendências 2025 - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n + Ollama: Self-Hosted AI Gratuito (Sem API Keys)",
+          "url": "https://fabrica-n8n.com/blog/ollama-self-hosted-ai-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-ollama-self-hosted-ai-n8n.jpg",
+          "description": "n8n + Ollama: Self-Hosted AI Gratuito (Sem API Keys) - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Tutorial: RAG Completo n8n (Embeddings + Pinecone)",
+          "url": "https://fabrica-n8n.com/blog/rag-completo-embeddings-pinecone-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-rag-completo-embeddings-pinecone-n8n.jpg",
+          "description": "Tutorial: RAG Completo n8n (Embeddings + Pinecone) - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n Multi-Agent: Orchestrator + Sub-Agents JSON",
+          "url": "https://fabrica-n8n.com/blog/multi-agent-orchestrator-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-multi-agent-orchestrator-n8n.jpg",
+          "description": "n8n Multi-Agent: Orchestrator + Sub-Agents JSON - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Automação de YouTube Transcripts com n8n AI",
+          "url": "https://fabrica-n8n.com/blog/youtube-transcripts-automacao-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-youtube-transcripts-automacao-n8n.jpg",
+          "description": "Automação de YouTube Transcripts com n8n AI - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n + Vercel AI SDK: Deploy Agents em Edge Runtime",
+          "url": "https://fabrica-n8n.com/blog/vercel-ai-sdk-edge-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-vercel-ai-sdk-edge-n8n.jpg",
+          "description": "n8n + Vercel AI SDK: Deploy Agents em Edge Runtime - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Web Scraping AI com n8n + Parsera API",
+          "url": "https://fabrica-n8n.com/blog/parsera-scraping-ai-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-parsera-scraping-ai-n8n.jpg",
+          "description": "Web Scraping AI com n8n + Parsera API - Tutorial completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "n8n + Supabase: O Backend Ideal para AI Apps",
+          "url": "https://fabrica-n8n.com/blog/supabase-backend-ai-apps-n8n.html",
+          "datePublished": "2025-12-11",
+          "dateModified": "2025-12-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-supabase-backend-ai-apps-n8n.jpg",
+          "description": "n8n + Supabase: O Backend Ideal para AI Apps - Tutorial completo"
+        }

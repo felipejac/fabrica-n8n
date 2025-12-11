@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Instalar Community Nodes n8n 2025: Top 10 para AI Agents",
+    "slug": "instalar-community-nodes-n8n-2025",
+    "date": "2025-12-11",
+    "read_time": "12 min",
+    "category": "Plugins",
+    "color": "yellow",
+    "icon": "🧩"
+  },
+  {
+    "title": "n8n + DeepSeek AI: Configuração Gratuita vs OpenAI",
+    "slug": "deepseek-ai-config-gratuita-n8n",
+    "date": "2025-12-11",
+    "read_time": "10 min",
+    "category": "Economia",
+    "color": "green",
+    "icon": "💰"
+  },
+  {
+    "title": "Como Usar n8n MCP Nodes para Multi-Agent Workflows",
+    "slug": "mcp-nodes-multi-agent-n8n",
+    "date": "2025-12-11",
+    "read_time": "12 min",
+    "category": "Protocolos",
+    "color": "indigo",
+    "icon": "🔌"
+  },
+  {
+    "title": "Tutorial: n8n + ElevenLabs Voice AI (Texto para Fala)",
+    "slug": "elevenlabs-voice-ai-tts-n8n",
+    "date": "2025-12-11",
+    "read_time": "10 min",
+    "category": "Voice AI",
+    "color": "purple",
+    "icon": "🎤"
+  },
+  {
+    "title": "n8n + Perplexity AI: Pesquisa Autônoma em Workflows",
+    "slug": "perplexity-ai-pesquisa-n8n",
+    "date": "2025-12-11",
+    "read_time": "10 min",
+    "category": "Pesquisa",
+    "color": "blue",
+    "icon": "🔍"
+  },
+  {
+    "title": "Configurar Obsidian REST API no n8n para Knowledge Base",
+    "slug": "obsidian-rest-api-knowledge-n8n",
+    "date": "2025-12-11",
+    "read_time": "14 min",
+    "category": "PKM",
+    "color": "orange",
+    "icon": "📝"
+  },
+  {
+    "title": "n8n Nodes para GitHub Copilot: Automatize Code Review",
+    "slug": "github-copilot-code-review-n8n",
+    "date": "2025-12-11",
+    "read_time": "12 min",
+    "category": "DevOps",
+    "color": "teal",
+    "icon": "💻"
+  },
+  {
+    "title": "BrightData Scraping + n8n: Extrair Dados Web com AI",
+    "slug": "brightdata-scraping-web-n8n",
+    "date": "2025-12-11",
+    "read_time": "13 min",
+    "category": "Scraping",
+    "color": "red",
+    "icon": "🕷️"
+  },
+  {
+    "title": "n8n + Flowise AI: Integração Low-Code para Chatbots",
+    "slug": "flowise-ai-chatbots-n8n",
+    "date": "2025-12-11",
+    "read_time": "11 min",
+    "category": "Chatbots",
+    "color": "blue",
+    "icon": "💬"
+  },
+  {
+    "title": "Kommo CRM + n8n: Workflows para Leads e Tarefas",
+    "slug": "kommo-crm-workflows-n8n",
+    "date": "2025-12-11",
+    "read_time": "12 min",
+    "category": "CRM",
+    "color": "pink",
+    "icon": "📊"
+  },
+  {
+    "title": "Top 10 n8n Templates Gratuitos 2025 para AI Automation",
+    "slug": "templates-gratuitos-ai-n8n-2025",
+    "date": "2025-12-11",
+    "read_time": "9 min",
+    "category": "Templates",
+    "color": "yellow",
+    "icon": "⭐"
+  },
+  {
+    "title": "n8n vs Langflow: Qual o Melhor para AI Workflows?",
+    "slug": "n8n-vs-langflow-comparativo",
+    "date": "2025-12-11",
+    "read_time": "11 min",
+    "category": "Comparação",
+    "color": "orange",
+    "icon": "⚖️"
+  },
+  {
+    "title": "Google Trends + n8n + Gemini: Análise de Tendências 2025",
+    "slug": "google-trends-gemini-analise-n8n",
+    "date": "2025-12-11",
+    "read_time": "12 min",
+    "category": "Marketing",
+    "color": "pink",
+    "icon": "📈"
+  },
+  {
+    "title": "n8n + Ollama: Self-Hosted AI Gratuito (Sem API Keys)",
+    "slug": "ollama-self-hosted-ai-n8n",
+    "date": "2025-12-11",
+    "read_time": "10 min",
+    "category": "Local AI",
+    "color": "green",
+    "icon": "🏠"
+  },
+  {
+    "title": "Tutorial: RAG Completo n8n (Embeddings + Pinecone)",
+    "slug": "rag-completo-embeddings-pinecone-n8n",
+    "date": "2025-12-11",
+    "read_time": "15 min",
+    "category": "RAG",
+    "color": "purple",
+    "icon": "🧠"
+  },
+  {
+    "title": "n8n Multi-Agent: Orchestrator + Sub-Agents JSON",
+    "slug": "multi-agent-orchestrator-n8n",
+    "date": "2025-12-11",
+    "read_time": "13 min",
+    "category": "Arquitetura",
+    "color": "indigo",
+    "icon": "🎯"
+  },
+  {
+    "title": "Automação de YouTube Transcripts com n8n AI",
+    "slug": "youtube-transcripts-automacao-n8n",
+    "date": "2025-12-11",
+    "read_time": "11 min",
+    "category": "Conteúdo",
+    "color": "red",
+    "icon": "📹"
+  },
+  {
+    "title": "n8n + Vercel AI SDK: Deploy Agents em Edge Runtime",
+    "slug": "vercel-ai-sdk-edge-n8n",
+    "date": "2025-12-11",
+    "read_time": "12 min",
+    "category": "Frontend",
+    "color": "blue",
+    "icon": "⚡"
+  },
+  {
+    "title": "Web Scraping AI com n8n + Parsera API",
+    "slug": "parsera-scraping-ai-n8n",
+    "date": "2025-12-11",
+    "read_time": "10 min",
+    "category": "Scraping",
+    "color": "teal",
+    "icon": "🤖"
+  },
+  {
+    "title": "n8n + Supabase: O Backend Ideal para AI Apps",
+    "slug": "supabase-backend-ai-apps-n8n",
+    "date": "2025-12-11",
+    "read_time": "14 min",
+    "category": "Backend",
+    "color": "green",
+    "icon": "🗄️"
+  }
+]
