@@ -1417,9 +1417,14 @@
                 <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
                     <span class="gradient-text">Tech Insights</span> Blog
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                <p class="text-xl md:text-2xl text-gray-600 mb-4 leading-relaxed">
                     Análises profundas sobre <strong>automação</strong>, <strong>IA</strong>, <strong>n8n</strong>, <strong>Zapier</strong> e tendências do mercado de <strong>iPaaS</strong>
                 </p>
+                <div class="flex justify-center mb-8">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg">
+                        📚 <span id="post-count">0</span> artigos publicados
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-center gap-3">
                     <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">📊 Análises de Mercado</span>
                     <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">🤖 Agentes de IA</span>
@@ -3463,6 +3468,24 @@
         gtag('event', 'page_view', {
             'page_title': 'Blog Home',
             'page_location': window.location.href
+        });
+    </script>
+    
+    <!-- Auto Post Counter -->
+    <script>
+        // Conta automaticamente o número de cards de artigos publicados
+        document.addEventListener('DOMContentLoaded', function() {
+            // Seleciona todos os article cards (excluindo headers e outros elementos)
+            const articleCards = document.querySelectorAll('article .bg-white.rounded-xl.shadow-lg');
+            const postCount = articleCards.length;
+            
+            // Atualiza o contador no header
+            const counterElement = document.getElementById('post-count');
+            if (counterElement) {
+                counterElement.textContent = postCount;
+            }
+            
+            console.log(`📊 Total de posts no blog: ${postCount}`);
         });
     </script>
     
