@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Gerar e Armazenar API Key OpenAI Segura para n8n | Automations Cookbook</title>
+    <meta name="description" content="90% dos vazamentos acontecem por má storage. Aprenda a gerar e proteger API Keys OpenAI no n8n em 10 minutos com best practices de segurança.">
+    <meta name="keywords" content="api key openai segura, armazenar openai key n8n, best practices api key, n8n credentials security">
+    <link rel="canonical" content="https://www.automationscookbook.com/blog/gerar-api-key-openai-segura">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .step-box { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 1.5rem 0; border-radius: 8px; }
+        .code-box { background: #1f2937; color: #f3f4f6; padding: 1rem 1.5rem; border-radius: 8px; font-family: monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">🍳 Automations Cookbook</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/integracoes/" class="text-gray-700 hover:text-blue-600 transition">N8N Templates</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <article class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="mb-4"><span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-4 py-1 rounded-full">🔐 Segurança</span></div>
+        
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Como Gerar e Armazenar API Key OpenAI Segura para n8n</h1>
+        <p class="text-xl text-gray-600 mb-6">90% dos vazamentos acontecem por má storage. Este tutorial iniciante-friendly gera e protege sua key em 10 minutos.</p>
+        
+        <div class="flex gap-4 text-sm text-gray-600 mb-8 pb-6 border-b">
+            <time datetime="2025-11-25">25 de Novembro de 2025</time>
+            <span>10 min</span>
+        </div>
+        
+        <div class="prose max-w-none">
+            <h2>Passo 1: Gerar Key Nomeada (Never Screenshot!)</h2>
+            <div class="step-box">
+                <ol>
+                    <li>platform.openai.com/api-keys</li>
+                    <li>"Create new secret key"</li>
+                    <li>Name: "n8n-prod-2025-12"</li>
+                    <li>Copie sk-proj-... → 1Password/clipboard manager</li>
+                </ol>
+            </div>
+            
+            <h2>Passo 2: Credencial n8n Criptografada (Método #1 Recomendado)</h2>
+            <div class="code-box">
+n8n → Settings → Credentials → Add Credential → OpenAI
+API Key: [cole aqui]
+Save → ✅ Criptografado no DB
+            </div>
+            
+            <h2>Passo 3: .env Seguro Local (Desenvolvimento)</h2>
+            <div class="code-box">
+# docker-compose.yml
+services:
+  n8n:
+    environment:
+      - OPENAI_API_KEY=\${OPENAI_API_KEY}
+    volumes:
+      - .env:/docker-entrypoint-initdb.d/.env
+
+# .env (gitignore obrigatório)
+OPENAI_API_KEY=sk-proj-seu-token-aqui
+
+# .gitignore
+.env
+*.log
+n8n-secrets/
+            </div>
+            
+            <h2>Checklist Segurança 100%</h2>
+            <div class="step-box">
+                <ul>
+                    <li>✅ Key nomeada por ambiente</li>
+                    <li>✅ n8n Credentials (principal)</li>
+                    <li>✅ .env gitignored (dev)</li>
+                    <li>✅ AWS Secrets (prod)</li>
+                    <li>✅ Rotação trimestral</li>
+                    <li>❌ Nunca: Git commit, frontend, screenshots</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mt-12 pt-8 border-t">
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#n8n</span>
+                <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#OpenAI</span>
+                <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Segurança</span>
+                <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#APIKey</span>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

@@ -55,6 +55,66 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.automationscookbook.com/blog/permissoes-openai-n8n.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/gerar-api-key-openai-segura.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/setup-minimo-n8n-langchain.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/azure-openai-vs-openai-n8n.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/testar-conexao-openai-n8n.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/rotacionar-chaves-openai-automaticamente.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/aws-secrets-manager-n8n.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/limitar-permissoes-api-key-openai.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/auditar-uso-detectar-abuso-chave.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.automationscookbook.com/blog/variaveis-ambiente-producao-n8n.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.automationscookbook.com/blog/configurar-openai-langchain-n8n.html</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>

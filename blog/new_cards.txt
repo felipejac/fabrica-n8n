@@ -1,0 +1,301 @@
+
+            <!-- Article Card - Permissões OpenAI para n8n - Zero Erro -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">🔐</div>
+                        <div class="text-sm font-bold opacity-90">Segurança</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded font-semibold">Segurança</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/permissoes-openai-n8n.html">
+                            Permissões OpenAI para n8n - Zero Erro
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Resolva erro 401 e configure todas as permissões OpenAI para workflows n8n sem complicações.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="/blog/permissoes-openai-n8n.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Gerar e Armazenar API Key OpenAI Segura -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">🔑</div>
+                        <div class="text-sm font-bold opacity-90">Segurança</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-green-100 text-green-700 px-2 py-1 rounded font-semibold">Segurança</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/gerar-api-key-openai-segura.html">
+                            Gerar e Armazenar API Key OpenAI Segura
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        90% dos vazamentos por má storage. Aprenda best practices de segurança para API Keys.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="/blog/gerar-api-key-openai-segura.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Setup Mínimo n8n + LangChain em 15min -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">⚙️</div>
+                        <div class="text-sm font-bold opacity-90">Setup</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-semibold">Setup</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/setup-minimo-n8n-langchain.html">
+                            Setup Mínimo n8n + LangChain em 15min
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        LangChain nativo no n8n. AI Agent + RAG funcionando sem community nodes.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">15 min</span>
+                        <a href="/blog/setup-minimo-n8n-langchain.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Azure OpenAI vs OpenAI Padrão no n8n -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">📊</div>
+                        <div class="text-sm font-bold opacity-90">Comparação</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-semibold">Comparação</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/azure-openai-vs-openai-n8n.html">
+                            Azure OpenAI vs OpenAI Padrão no n8n
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Comparação side-by-side: credenciais, endpoints, quando usar cada um.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">8 min</span>
+                        <a href="/blog/azure-openai-vs-openai-n8n.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Testar Conexão OpenAI no n8n -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">🧪</div>
+                        <div class="text-sm font-bold opacity-90">Debug</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-green-100 text-green-700 px-2 py-1 rounded font-semibold">Debug</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/testar-conexao-openai-n8n.html">
+                            Testar Conexão OpenAI no n8n
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Workflow diagnóstico completo em 5 minutos com matriz de troubleshooting.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">5 min</span>
+                        <a href="/blog/testar-conexao-openai-n8n.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Rotação Automática API Key OpenAI -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">🔄</div>
+                        <div class="text-sm font-bold opacity-90">Automação</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded font-semibold">Automação</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/rotacionar-chaves-openai-automaticamente.html">
+                            Rotação Automática API Key OpenAI
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Workflow mensal com zero downtime. n8n API + AWS Lambda automation.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="/blog/rotacionar-chaves-openai-automaticamente.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - AWS Secrets Manager + n8n Production -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">☁️</div>
+                        <div class="text-sm font-bold opacity-90">Cloud</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded font-semibold">Cloud</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/aws-secrets-manager-n8n.html">
+                            AWS Secrets Manager + n8n Production
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        API Keys seguras em produção com IAM roles e Docker integration.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">15 min</span>
+                        <a href="/blog/aws-secrets-manager-n8n.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Limitar OpenAI API Key por Projeto -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">🔒</div>
+                        <div class="text-sm font-bold opacity-90">Segurança</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded font-semibold">Segurança</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/limitar-permissoes-api-key-openai.html">
+                            Limitar OpenAI API Key por Projeto
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Security por projeto com RPM, TPM limits e multi-credential segregation.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="/blog/limitar-permissoes-api-key-openai.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Auditoria OpenAI: Detecte Abuso em 24h -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">📊</div>
+                        <div class="text-sm font-bold opacity-90">Monitoramento</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded font-semibold">Monitoramento</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/auditar-uso-detectar-abuso-chave.html">
+                            Auditoria OpenAI: Detecte Abuso em 24h
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Usage API, alertas anormais e dashboard Google Sheets automático.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">10 min</span>
+                        <a href="/blog/auditar-uso-detectar-abuso-chave.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- Article Card - Variáveis Ambiente n8n Production -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700 relative flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-6xl mb-2">🌐</div>
+                        <div class="text-sm font-bold opacity-90">DevOps</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-teal-100 text-teal-700 px-2 py-1 rounded font-semibold">DevOps</span>
+                        <span>•</span>
+                        <time datetime="2025-11-25">25 Nov 2025</time>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-blue-600 transition">
+                        <a href="/blog/variaveis-ambiente-producao-n8n.html">
+                            Variáveis Ambiente n8n Production
+                        </a>
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        De dev para scale: .env, Docker Compose, Kubernetes secrets e cloud.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">12 min</span>
+                        <a href="/blog/variaveis-ambiente-producao-n8n.html" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                            Ler mais →
+                        </a>
+                    </div>
+                </div>
+            </article>

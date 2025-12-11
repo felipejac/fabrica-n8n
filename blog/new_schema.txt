@@ -1,0 +1,210 @@
+        {
+          "@type": "BlogPosting",
+          "headline": "Como Configurar Permissões OpenAI no n8n: Guia Completo",
+          "url": "https://fabrica-n8n.com/blog/permissoes-openai-n8n.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-permissoes-openai-n8n.jpg",
+          "description": "Tutorial completo sobre Como Configurar Permissões OpenAI no n8n: Guia Completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Como Gerar API Key da OpenAI de Forma Segura para n8n",
+          "url": "https://fabrica-n8n.com/blog/gerar-api-key-openai-segura.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-gerar-api-key-openai-segura.jpg",
+          "description": "Tutorial completo sobre Como Gerar API Key da OpenAI de Forma Segura para n8n"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Setup Mínimo n8n + LangChain: Tutorial Completo",
+          "url": "https://fabrica-n8n.com/blog/setup-minimo-n8n-langchain.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-setup-minimo-n8n-langchain.jpg",
+          "description": "Tutorial completo sobre Setup Mínimo n8n + LangChain: Tutorial Completo"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Azure OpenAI vs OpenAI Standard: Qual Usar no n8n?",
+          "url": "https://fabrica-n8n.com/blog/azure-openai-vs-openai-n8n.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-azure-openai-vs-openai-n8n.jpg",
+          "description": "Tutorial completo sobre Azure OpenAI vs OpenAI Standard: Qual Usar no n8n?"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Como Testar Conexão OpenAI no n8n em 3 Passos",
+          "url": "https://fabrica-n8n.com/blog/testar-conexao-openai-n8n.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-testar-conexao-openai-n8n.jpg",
+          "description": "Tutorial completo sobre Como Testar Conexão OpenAI no n8n em 3 Passos"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Como Rotacionar Chaves OpenAI Automaticamente no n8n",
+          "url": "https://fabrica-n8n.com/blog/rotacionar-chaves-openai-automaticamente.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-rotacionar-chaves-openai-automaticamente.jpg",
+          "description": "Tutorial completo sobre Como Rotacionar Chaves OpenAI Automaticamente no n8n"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "AWS Secrets Manager + n8n: Proteja suas Chaves OpenAI",
+          "url": "https://fabrica-n8n.com/blog/aws-secrets-manager-n8n.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-aws-secrets-manager-n8n.jpg",
+          "description": "Tutorial completo sobre AWS Secrets Manager + n8n: Proteja suas Chaves OpenAI"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Como Limitar Permissões da API Key OpenAI: Segurança no n8n",
+          "url": "https://fabrica-n8n.com/blog/limitar-permissoes-api-key-openai.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-limitar-permissoes-api-key-openai.jpg",
+          "description": "Tutorial completo sobre Como Limitar Permissões da API Key OpenAI: Segurança no n8n"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Como Auditar Uso e Detectar Abuso de Chave OpenAI no n8n",
+          "url": "https://fabrica-n8n.com/blog/auditar-uso-detectar-abuso-chave.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-auditar-uso-detectar-abuso-chave.jpg",
+          "description": "Tutorial completo sobre Como Auditar Uso e Detectar Abuso de Chave OpenAI no n8n"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Variáveis de Ambiente em Produção: n8n + OpenAI",
+          "url": "https://fabrica-n8n.com/blog/variaveis-ambiente-producao-n8n.html",
+          "datePublished": "2025-11-25",
+          "dateModified": "2025-11-25",
+          "author": {
+            "@type": "Organization",
+            "name": "Fábrica n8n"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Fábrica n8n",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fabrica-n8n.com/assets/logo.png"
+            }
+          },
+          "image": "https://fabrica-n8n.com/assets/og-variaveis-ambiente-producao-n8n.jpg",
+          "description": "Tutorial completo sobre Variáveis de Ambiente em Produção: n8n + OpenAI"
+        }
