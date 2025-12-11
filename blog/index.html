@@ -1512,15 +1512,15 @@
     <section class="container mx-auto px-4 py-12 max-w-7xl">
         <div class="flex justify-between items-center mb-8">
             <h2 class="text-3xl font-bold text-gray-900">Todos os Artigos</h2>
-            <div class="flex gap-2">
-                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold text-sm">Todos</button>
-                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition">Análise</button>
-                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition">Tutorial</button>
-                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition">Tendências</button>
+            <div class="flex gap-2" id="filter-buttons">
+                <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold text-sm" data-filter="all">Todos</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="análise">Análise</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="tutorial">Tutorial</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm hover:bg-gray-300 transition" data-filter="tendências">Tendências</button>
             </div>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
             
             <!-- Article Card 0 (Published - Configurar OpenAI LangChain) -->
             <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
@@ -3492,6 +3492,59 @@
                 
                 console.log(`📊 Total de posts no blog: ${postCount}`);
             }, 100);
+        });
+    </script>
+    
+    <!-- Filter Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const articles = document.querySelectorAll('article');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter').toLowerCase();
+                    
+                    // Update active button style
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-blue-600', 'text-white');
+                    
+                    // Filter articles
+                    articles.forEach(article => {
+                        if (filter === 'all') {
+                            article.style.display = 'block';
+                        } else {
+                            // Check if article has the category badge with matching text
+                            const categoryBadge = article.querySelector('.bg-blue-100, .bg-purple-100, .bg-indigo-100, .bg-green-100, .bg-yellow-100, .bg-red-100, .bg-pink-100, .bg-orange-100, .bg-teal-100, .bg-cyan-100');
+                            
+                            if (categoryBadge) {
+                                const categoryText = categoryBadge.textContent.toLowerCase().trim();
+                                
+                                // Match based on filter
+                                let shouldShow = false;
+                                
+                                if (filter === 'análise' && (categoryText.includes('análise') || categoryText.includes('mercado') || categoryText.includes('benchmark'))) {
+                                    shouldShow = true;
+                                } else if (filter === 'tutorial' && (categoryText.includes('tutorial') || categoryText.includes('setup') || categoryText.includes('configuração') || categoryText.includes('guia'))) {
+                                    shouldShow = true;
+                                } else if (filter === 'tendências' && (categoryText.includes('tendência') || categoryText.includes('2025') || categoryText.includes('2026') || categoryText.includes('update'))) {
+                                    shouldShow = true;
+                                }
+                                
+                                article.style.display = shouldShow ? 'block' : 'none';
+                            } else {
+                                article.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    console.log(`🔍 Filtro aplicado: ${filter}`);
+                });
+            });
         });
     </script>
     
