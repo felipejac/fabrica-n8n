@@ -50,6 +50,7 @@ def generate_sitemap(
         ('/guia-workflows-crm-whatsapp', 'main_pages', today),
         ('/blog', 'main_pages', today),
         ('/blog/index.html', 'main_pages', today),
+        ('/blog/configurar-openai-langchain-n8n.html', 'main_pages', today),
         ('/blog/guia-agentes-ia-n8n.html', 'main_pages', today),
         ('/blog/agentes-ia-autonomos-2026.html', 'main_pages', today),
         ('/blog/benchmark-zapier-make-n8n-2025.html', 'main_pages', today),
