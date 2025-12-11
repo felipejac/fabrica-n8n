@@ -3475,8 +3475,8 @@
     <script>
         // Conta automaticamente o número de cards de artigos publicados
         document.addEventListener('DOMContentLoaded', function() {
-            // Seleciona todos os article cards (excluindo headers e outros elementos)
-            const articleCards = document.querySelectorAll('article .bg-white.rounded-xl.shadow-lg');
+            // Seleciona todos os article cards
+            const articleCards = document.querySelectorAll('article.bg-white.rounded-xl.shadow-md');
             const postCount = articleCards.length;
             
             // Atualiza o contador no header
