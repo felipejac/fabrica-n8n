@@ -3475,17 +3475,23 @@
     <script>
         // Conta automaticamente o número de cards de artigos publicados
         document.addEventListener('DOMContentLoaded', function() {
-            // Seleciona todos os article cards
-            const articleCards = document.querySelectorAll('article.bg-white.rounded-xl.shadow-md');
-            const postCount = articleCards.length;
-            
-            // Atualiza o contador no header
-            const counterElement = document.getElementById('post-count');
-            if (counterElement) {
-                counterElement.textContent = postCount;
-            }
-            
-            console.log(`📊 Total de posts no blog: ${postCount}`);
+            // Aguardar um momento para garantir que todo DOM está carregado
+            setTimeout(function() {
+                // Seleciona todos os article tags na página
+                const articleCards = document.querySelectorAll('article');
+                const postCount = articleCards.length;
+                
+                // Atualiza o contador no header
+                const counterElement = document.getElementById('post-count');
+                if (counterElement) {
+                    counterElement.textContent = postCount;
+                    console.log(`✅ Contador atualizado: ${postCount} posts`);
+                } else {
+                    console.error('❌ Elemento #post-count não encontrado');
+                }
+                
+                console.log(`📊 Total de posts no blog: ${postCount}`);
+            }, 100);
         });
     </script>
     
