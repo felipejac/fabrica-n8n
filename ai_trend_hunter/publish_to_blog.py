@@ -45,6 +45,50 @@ def markdown_to_html(markdown_text):
     """Converte markdown simples para HTML"""
     html = markdown_text
     
+    # Tabelas Markdown (PROCESSAR ANTES DOS HEADERS)
+    def convert_table(match):
+        lines = match.group(0).strip().split('\n')
+        if len(lines) < 3:
+            return match.group(0)
+        
+        # Header
+        headers = [h.strip() for h in lines[0].split('|') if h.strip()]
+        
+        # Body (skip separator line)
+        rows = []
+        for line in lines[2:]:
+            cells = [c.strip() for c in line.split('|') if c.strip()]
+            if cells:
+                rows.append(cells)
+        
+        # Gerar HTML
+        table_html = '<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">'
+        table_html += '<thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr>'
+        for header in headers:
+            table_html += f'<th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">{header}</th>'
+        table_html += '</tr></thead><tbody class="divide-y divide-gray-100">'
+        
+        for i, row in enumerate(rows):
+            bg_class = 'bg-white hover:bg-gray-50' if i % 2 == 0 else 'bg-gray-50 hover:bg-gray-100'
+            table_html += f'<tr class="{bg_class} transition-colors">'
+            for cell in row:
+                # Processar formatação inline (bold, code, etc)
+                cell = re.sub(r'`([^`]+)`', r'<code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">\1</code>', cell)
+                cell = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', cell)
+                table_html += f'<td class="px-4 py-3 text-sm text-gray-700">{cell}</td>'
+            table_html += '</tr>'
+        
+        table_html += '</tbody></table></div>'
+        return table_html
+    
+    # Detectar e converter tabelas
+    html = re.sub(
+        r'(?:^|\n)(\|.+\|)\n(\|[\s\-:|]+\|)\n((?:\|.+\|\n?)+)',
+        convert_table,
+        html,
+        flags=re.MULTILINE
+    )
+    
     # Headers
     html = re.sub(r'^# (.*?)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
     html = re.sub(r'^## (.*?)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
@@ -66,13 +110,15 @@ def markdown_to_html(markdown_text):
     html = re.sub(r'```(\w+)?\n(.*?)\n```', r'<pre><code class="language-\1">\2</code></pre>', html, flags=re.DOTALL)
     html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
     
-    # Parágrafos
+    # Parágrafos (evitar parágrafos em divs de tabelas)
     paragraphs = html.split('\n\n')
     formatted_paragraphs = []
     for p in paragraphs:
         p = p.strip()
-        if p and not p.startswith('<'):
+        if p and not p.startswith('<') and not p.startswith('---'):
             formatted_paragraphs.append(f'<p>{p}</p>')
+        elif p.startswith('---'):
+            formatted_paragraphs.append('<hr class="my-8 border-t-2 border-gray-200">')
         else:
             formatted_paragraphs.append(p)
     
@@ -274,6 +320,37 @@ def generate_blog_html(frontmatter, content_html, slug):
         .prose strong {{
             color: #2d3748;
             font-weight: 600;
+        }}
+        .prose table {{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }}
+        .prose table th {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }}
+        .prose table td {{
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }}
+        .prose table tbody tr:hover {{
+            background: #f7fafc;
+        }}
+        .prose hr {{
+            margin: 2rem 0;
+            border: none;
+            border-top: 2px solid #e2e8f0;
+        }}
+        .overflow-x-auto {{
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }}
     </style>
 </head>

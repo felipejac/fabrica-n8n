@@ -157,6 +157,37 @@
             color: #2d3748;
             font-weight: 600;
         }
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .prose table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .prose table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .prose table tbody tr:hover {
+            background: #f7fafc;
+        }
+        .prose hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 2px solid #e2e8f0;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 via-white to-purple-50 min-h-screen">
@@ -253,24 +284,13 @@
 <h3>Interpretação:</h3>
 <ul><li><strong>Ratio > 10.000</strong>: Ferramenta de produção real (empresas usam sem divulgar)</li></ul>
 <ul><li><strong>Ratio < 100</strong>: Marketing forte, mas pouco uso prático</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>✅ FERRAMENTAS REAIS (Alto Downloads, Baixo Hype)</h2>
 <p>Modelos que empresas usam em produção mas não geram buzz nas redes sociais:</p>
-<p>| Posição | Modelo | Downloads | Likes | Hype Ratio | Tarefa |
-|---------|--------|-----------|-------|------------|--------|
-| 1 | <code>sentence-transformers/all-MiniLM-L6-v2</code> | 151,698,585 | 4,215 | 35990x | sentence-similarity |
-| 2 | <code>Falconsai/nsfw_image_detection</code> | 83,475,530 | 917 | 91031x | image-classification |
-| 3 | <code>google/electra-base-discriminator</code> | 66,225,022 | 71 | 932747x | None |
-| 4 | <code>google-bert/bert-base-uncased</code> | 59,962,448 | 2,508 | 23908x | fill-mask |
-| 5 | <code>dima806/fairface_age_image_detection</code> | 43,266,209 | 54 | 801226x | image-classification |
-| 6 | <code>sentence-transformers/all-mpnet-base-v2</code> | 24,821,704 | 1,205 | 20599x | sentence-similarity |
-| 7 | <code>timm/mobilenetv3_small_100.lamb_in1k</code> | 23,384,943 | 42 | 556784x | image-classification |
-| 8 | <code>openai/clip-vit-base-patch32</code> | 19,079,811 | 823 | 23183x | zero-shot-image-classification |
-| 9 | <code>pyannote/segmentation-3.0</code> | 17,612,491 | 689 | 25562x | voice-activity-detection |
-| 10 | <code>sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code> | 16,659,000 | 1,074 | 15511x | sentence-similarity |</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Posição</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modelo</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Downloads</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Likes</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Hype Ratio</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Tarefa</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">1</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/all-MiniLM-L6-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">151,698,585</td><td class="px-4 py-3 text-sm text-gray-700">4,215</td><td class="px-4 py-3 text-sm text-gray-700">35990x</td><td class="px-4 py-3 text-sm text-gray-700">sentence-similarity</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">2</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Falconsai/nsfw_image_detection</code></td><td class="px-4 py-3 text-sm text-gray-700">83,475,530</td><td class="px-4 py-3 text-sm text-gray-700">917</td><td class="px-4 py-3 text-sm text-gray-700">91031x</td><td class="px-4 py-3 text-sm text-gray-700">image-classification</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">3</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">google/electra-base-discriminator</code></td><td class="px-4 py-3 text-sm text-gray-700">66,225,022</td><td class="px-4 py-3 text-sm text-gray-700">71</td><td class="px-4 py-3 text-sm text-gray-700">932747x</td><td class="px-4 py-3 text-sm text-gray-700">None</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">4</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">google-bert/bert-base-uncased</code></td><td class="px-4 py-3 text-sm text-gray-700">59,962,448</td><td class="px-4 py-3 text-sm text-gray-700">2,508</td><td class="px-4 py-3 text-sm text-gray-700">23908x</td><td class="px-4 py-3 text-sm text-gray-700">fill-mask</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">5</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">dima806/fairface_age_image_detection</code></td><td class="px-4 py-3 text-sm text-gray-700">43,266,209</td><td class="px-4 py-3 text-sm text-gray-700">54</td><td class="px-4 py-3 text-sm text-gray-700">801226x</td><td class="px-4 py-3 text-sm text-gray-700">image-classification</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">6</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/all-mpnet-base-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">24,821,704</td><td class="px-4 py-3 text-sm text-gray-700">1,205</td><td class="px-4 py-3 text-sm text-gray-700">20599x</td><td class="px-4 py-3 text-sm text-gray-700">sentence-similarity</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">7</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">timm/mobilenetv3_small_100.lamb_in1k</code></td><td class="px-4 py-3 text-sm text-gray-700">23,384,943</td><td class="px-4 py-3 text-sm text-gray-700">42</td><td class="px-4 py-3 text-sm text-gray-700">556784x</td><td class="px-4 py-3 text-sm text-gray-700">image-classification</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">8</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">openai/clip-vit-base-patch32</code></td><td class="px-4 py-3 text-sm text-gray-700">19,079,811</td><td class="px-4 py-3 text-sm text-gray-700">823</td><td class="px-4 py-3 text-sm text-gray-700">23183x</td><td class="px-4 py-3 text-sm text-gray-700">zero-shot-image-classification</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">9</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">pyannote/segmentation-3.0</code></td><td class="px-4 py-3 text-sm text-gray-700">17,612,491</td><td class="px-4 py-3 text-sm text-gray-700">689</td><td class="px-4 py-3 text-sm text-gray-700">25562x</td><td class="px-4 py-3 text-sm text-gray-700">voice-activity-detection</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">10</td><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">16,659,000</td><td class="px-4 py-3 text-sm text-gray-700">1,074</td><td class="px-4 py-3 text-sm text-gray-700">15511x</td><td class="px-4 py-3 text-sm text-gray-700">sentence-similarity</td></tr></tbody></table></div>
 <h3>💡 Insight Principal</h3>
 <p>O modelo <strong>sentence-transformers/all-MiniLM-L6-v2</strong> lidera com <strong>151,698,585 downloads</strong> mas apenas <strong>4,215 likes</strong>, indicando uso corporativo massivo sem necessidade de marketing.</p>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>❌ MARKETING PURO (Alto Hype, Baixo Uso Real)</h2>
 <p>Modelos com forte presença em redes sociais mas poucos downloads de produção:</p>
 <p>| Posição | Modelo | Downloads | Likes | Hype Ratio | Tarefa |
@@ -280,7 +300,7 @@
 <ul><li>Projetos de demonstração (não prontos para produção)</li></ul>
 <ul><li>Marketing agressivo sem substância técnica</li></ul>
 <ul><li>Modelos experimentais sem casos de uso claros</li></ul></p>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🎯 Como Escolher um Modelo para Seu Projeto</h2>
 <h3>Checklist de Decisão:</h3>
 <p>1. <strong>Verifique o Hype Ratio</strong>
@@ -295,19 +315,19 @@
 <p>4. <strong>Teste com Dados Reais</strong>
    - Números de marketing ≠ Performance real
    - Sempre valide com seu caso de uso específico</p>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>📚 Metodologia Completa</h2>
 <strong>Fonte de Dados:</strong> Hugging Face Hub API  
 <strong>Data da Análise:</strong> 12/12/2025  
 <strong>Amostra:</strong> Top 200 modelos ordenados por downloads
 <strong>Cálculo do Hype Ratio:</strong>
 <pre><code class="language-python">hype_ratio = total_downloads / total_likes</code></pre>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🔗 Links Úteis</h2>
 <ul><li><a href="https://huggingface.co/models" target="_blank" rel="noopener">Hugging Face Hub</a></li></ul>
 <ul><li><a href="https://opensource.org/licenses" target="_blank" rel="noopener">Documentação de Licenças Open Source</a></li></ul>
 <ul><li><a href="https://huggingface.co/docs/hub/models-inference" target="_blank" rel="noopener">Guia de Deploy de Modelos</a></li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <strong>Tags:</strong> inteligência artificial, machine learning, modelos de IA, produção, hype, análise de mercado, data science
 
 <!-- Schema.org JSON-LD -->

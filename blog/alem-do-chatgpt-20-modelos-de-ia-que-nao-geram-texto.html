@@ -157,6 +157,37 @@
             color: #2d3748;
             font-weight: 600;
         }
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .prose table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .prose table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .prose table tbody tr:hover {
+            background: #f7fafc;
+        }
+        .prose hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 2px solid #e2e8f0;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 via-white to-purple-50 min-h-screen">
@@ -248,12 +279,8 @@
 <h2>📊 Resposta Direta</h2>
 <p>Existem <strong>20 modelos</strong> entre os top 200 do Hugging Face focados em <strong>visão computacional, áudio e multimodalidade</strong>, provando que IA vai muito além de chatbots de texto.</p>
 <h2>🎨 Categorias Exploradas</h2>
-<p>| Categoria | Modelos | Downloads Totais | Percentual |
-|-----------|---------|------------------|------------|
-| <strong>Outros</strong> | 13 | 378,386,032 | 65.1% |
-| <strong>Visão</strong> | 5 | 177,575,601 | 30.6% |
-| <strong>Áudio</strong> | 2 | 25,040,868 | 4.3% |</p>
-<p>---</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Categoria</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modelos</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Downloads Totais</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Percentual</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><strong>Outros</strong></td><td class="px-4 py-3 text-sm text-gray-700">13</td><td class="px-4 py-3 text-sm text-gray-700">378,386,032</td><td class="px-4 py-3 text-sm text-gray-700">65.1%</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><strong>Visão</strong></td><td class="px-4 py-3 text-sm text-gray-700">5</td><td class="px-4 py-3 text-sm text-gray-700">177,575,601</td><td class="px-4 py-3 text-sm text-gray-700">30.6%</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><strong>Áudio</strong></td><td class="px-4 py-3 text-sm text-gray-700">2</td><td class="px-4 py-3 text-sm text-gray-700">25,040,868</td><td class="px-4 py-3 text-sm text-gray-700">4.3%</td></tr></tbody></table></div>
+---
 <h2>🔧 Outros</h2>
 <strong>5 modelos destacados</strong>
 <h3>1. sentence-transformers/all-MiniLM-L6-v2</h3>
@@ -264,7 +291,7 @@
 <ul><li><strong>Link:</strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank" rel="noopener">Hugging Face</a></li></ul>
 <strong>Casos de Uso:</strong>
 <ul><li>Consulte documentação do modelo para casos de uso específicos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>3. google/electra-base-discriminator</h3>
 <ul><li><strong>Tarefa:</strong> None</li></ul>
 <ul><li><strong>Downloads:</strong> 66,225,022</li></ul>
@@ -273,7 +300,7 @@
 <ul><li><strong>Link:</strong> <a href="https://huggingface.co/google/electra-base-discriminator" target="_blank" rel="noopener">Hugging Face</a></li></ul>
 <strong>Casos de Uso:</strong>
 <ul><li>Consulte documentação do modelo para casos de uso específicos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>6. sentence-transformers/all-mpnet-base-v2</h3>
 <ul><li><strong>Tarefa:</strong> sentence-similarity</li></ul>
 <ul><li><strong>Downloads:</strong> 24,821,704</li></ul>
@@ -282,7 +309,7 @@
 <ul><li><strong>Link:</strong> <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2" target="_blank" rel="noopener">Hugging Face</a></li></ul>
 <strong>Casos de Uso:</strong>
 <ul><li>Consulte documentação do modelo para casos de uso específicos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>9. pyannote/segmentation-3.0</h3>
 <ul><li><strong>Tarefa:</strong> voice-activity-detection</li></ul>
 <ul><li><strong>Downloads:</strong> 17,612,491</li></ul>
@@ -291,7 +318,7 @@
 <ul><li><strong>Link:</strong> <a href="https://huggingface.co/pyannote/segmentation-3.0" target="_blank" rel="noopener">Hugging Face</a></li></ul>
 <strong>Casos de Uso:</strong>
 <ul><li>Consulte documentação do modelo para casos de uso específicos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>10. sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</h3>
 <ul><li><strong>Tarefa:</strong> sentence-similarity</li></ul>
 <ul><li><strong>Downloads:</strong> 16,659,000</li></ul>
@@ -300,7 +327,7 @@
 <ul><li><strong>Link:</strong> <a href="https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" target="_blank" rel="noopener">Hugging Face</a></li></ul>
 <strong>Casos de Uso:</strong>
 <ul><li>Consulte documentação do modelo para casos de uso específicos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>👁️ Visão</h2>
 <strong>5 modelos destacados</strong>
 <h3>2. Falconsai/nsfw_image_detection</h3>
@@ -313,7 +340,7 @@
 <ul><li>Controle de qualidade em produção</li></ul>
 <ul><li>Diagnóstico médico por imagem</li></ul>
 <ul><li>Moderação de conteúdo visual</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>5. dima806/fairface_age_image_detection</h3>
 <ul><li><strong>Tarefa:</strong> image-classification</li></ul>
 <ul><li><strong>Downloads:</strong> 43,266,209</li></ul>
@@ -324,7 +351,7 @@
 <ul><li>Controle de qualidade em produção</li></ul>
 <ul><li>Diagnóstico médico por imagem</li></ul>
 <ul><li>Moderação de conteúdo visual</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>7. timm/mobilenetv3_small_100.lamb_in1k</h3>
 <ul><li><strong>Tarefa:</strong> image-classification</li></ul>
 <ul><li><strong>Downloads:</strong> 23,384,943</li></ul>
@@ -335,7 +362,7 @@
 <ul><li>Controle de qualidade em produção</li></ul>
 <ul><li>Diagnóstico médico por imagem</li></ul>
 <ul><li>Moderação de conteúdo visual</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>8. openai/clip-vit-base-patch32</h3>
 <ul><li><strong>Tarefa:</strong> zero-shot-image-classification</li></ul>
 <ul><li><strong>Downloads:</strong> 19,079,811</li></ul>
@@ -344,7 +371,7 @@
 <ul><li><strong>Link:</strong> <a href="https://huggingface.co/openai/clip-vit-base-patch32" target="_blank" rel="noopener">Hugging Face</a></li></ul>
 <strong>Casos de Uso:</strong>
 <ul><li>Consulte documentação do modelo para casos de uso específicos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>26. openai/clip-vit-large-patch14</h3>
 <ul><li><strong>Tarefa:</strong> zero-shot-image-classification</li></ul>
 <ul><li><strong>Downloads:</strong> 8,369,108</li></ul>
@@ -353,7 +380,7 @@
 <ul><li><strong>Link:</strong> <a href="https://huggingface.co/openai/clip-vit-large-patch14" target="_blank" rel="noopener">Hugging Face</a></li></ul>
 <strong>Casos de Uso:</strong>
 <ul><li>Consulte documentação do modelo para casos de uso específicos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🎵 Áudio</h2>
 <strong>2 modelos destacados</strong>
 <h3>13. pyannote/speaker-diarization-3.1</h3>
@@ -366,7 +393,7 @@
 <ul><li>Transcrição de reuniões</li></ul>
 <ul><li>Legendas automáticas</li></ul>
 <ul><li>Assistentes de voz</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h3>23. jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn</h3>
 <ul><li><strong>Tarefa:</strong> automatic-speech-recognition</li></ul>
 <ul><li><strong>Downloads:</strong> 9,364,211</li></ul>
@@ -377,7 +404,7 @@
 <ul><li>Transcrição de reuniões</li></ul>
 <ul><li>Legendas automáticas</li></ul>
 <ul><li>Assistentes de voz</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 
 <h2>🚀 Tendências Emergentes</h2>
 <h3>1. Multimodalidade Está Explodindo</h3>
@@ -396,7 +423,7 @@
 <ul><li>Controle de qualidade em fábricas</li></ul>
 <ul><li>Diagnóstico médico por imagem</li></ul>
 <ul><li>Vigilância inteligente e segurança</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>💡 Como Escolher o Modelo Certo</h2>
 <h3>Checklist por Aplicação:</h3>
 <strong>Para Análise de Imagens:</strong>
@@ -410,7 +437,7 @@
 <strong>Para Documentos:</strong>
 1. <code>document-question-answering</code> → Extrair dados de contratos/notas fiscais
 2. <code>image-to-text</code> → OCR avançado
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>📚 Recursos para Começar</h2>
 <h3>Tutoriais Recomendados:</h3>
 <ul><li><a href="https://huggingface.co/docs/transformers" target="_blank" rel="noopener">Hugging Face Transformers Docs</a></li></ul>
@@ -420,7 +447,7 @@
 <ul><li><strong>Visão:</strong> ImageNet, COCO, Open Images</li></ul>
 <ul><li><strong>Áudio:</strong> LibriSpeech, Common Voice, AudioSet</li></ul>
 <ul><li><strong>Multimodal:</strong> Conceptual Captions, VQA v2</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <strong>Tags:</strong> visão computacional, processamento de áudio, multimodalidade, IA não-texto, machine learning, deep learning, computer vision
 
 <!-- Schema.org JSON-LD -->

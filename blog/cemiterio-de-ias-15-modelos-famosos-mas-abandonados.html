@@ -157,6 +157,37 @@
             color: #2d3748;
             font-weight: 600;
         }
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .prose table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .prose table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .prose table tbody tr:hover {
+            background: #f7fafc;
+        }
+        .prose hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 2px solid #e2e8f0;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 via-white to-purple-50 min-h-screen">
@@ -254,30 +285,14 @@
 3. <strong>Superado por Novos Modelos:</strong> Arquitetura ficou obsoleta
 4. <strong>Problemas de Licenciamento:</strong> Disputas jurídicas travaram desenvolvimento
 5. <strong>Burnout da Comunidade:</strong> Mantenedores principais saíram</p>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🪦 LISTA DOS MODELOS ABANDONADOS</h2>
-<p>| Modelo | Downloads | Última Atualização | Dias Parado | Licença | Tarefa |
-|--------|-----------|-------------------|-------------|---------|--------|
-| <code>sentence-transformers/all-MiniLM-L6-v2</code> | 151,698,585 | 06/03/2025 | 280 | Apache 2.0 | sentence-similarity |
-| <code>Falconsai/nsfw_image_detection</code> | 83,475,530 | 06/04/2025 | 249 | Apache 2.0 | image-classification |
-| <code>google/electra-base-discriminator</code> | 66,225,022 | 29/02/2024 | 651 | Apache 2.0 | None |
-| <code>google-bert/bert-base-uncased</code> | 59,962,448 | 19/02/2024 | 661 | Apache 2.0 | fill-mask |
-| <code>dima806/fairface_age_image_detection</code> | 43,266,209 | 15/12/2024 | 361 | Apache 2.0 | image-classification |
-| <code>openai/clip-vit-base-patch32</code> | 19,079,811 | 29/02/2024 | 651 | Unknown | zero-shot-image-classification |
-| <code>pyannote/segmentation-3.0</code> | 17,612,491 | 10/05/2024 | 580 | MIT | voice-activity-detection |
-| <code>sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code> | 16,659,000 | 06/03/2025 | 280 | Apache 2.0 | sentence-similarity |
-| <code>laion/clap-htsat-fused</code> | 16,159,466 | 28/03/2025 | 258 | Apache 2.0 | feature-extraction |
-| <code>pyannote/wespeaker-voxceleb-resnet34-LM</code> | 15,900,260 | 10/05/2024 | 580 | CC-BY | None |
-| <code>pyannote/speaker-diarization-3.1</code> | 15,676,657 | 10/05/2024 | 580 | MIT | automatic-speech-recognition |
-| <code>prajjwal1/bert-tiny</code> | 15,495,825 | 27/10/2021 | 1506 | MIT | None |
-| <code>FacebookAI/roberta-large</code> | 14,569,517 | 19/02/2024 | 661 | MIT | fill-mask |
-| <code>Bingsu/adetailer</code> | 13,391,323 | 21/11/2024 | 385 | Apache 2.0 | None |
-| <code>colbert-ir/colbertv2.0</code> | 11,950,050 | 05/04/2024 | 615 | MIT | None |</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modelo</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Downloads</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Última Atualização</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Dias Parado</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Licença</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Tarefa</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/all-MiniLM-L6-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">151,698,585</td><td class="px-4 py-3 text-sm text-gray-700">06/03/2025</td><td class="px-4 py-3 text-sm text-gray-700">280</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">sentence-similarity</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Falconsai/nsfw_image_detection</code></td><td class="px-4 py-3 text-sm text-gray-700">83,475,530</td><td class="px-4 py-3 text-sm text-gray-700">06/04/2025</td><td class="px-4 py-3 text-sm text-gray-700">249</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">image-classification</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">google/electra-base-discriminator</code></td><td class="px-4 py-3 text-sm text-gray-700">66,225,022</td><td class="px-4 py-3 text-sm text-gray-700">29/02/2024</td><td class="px-4 py-3 text-sm text-gray-700">651</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">None</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">google-bert/bert-base-uncased</code></td><td class="px-4 py-3 text-sm text-gray-700">59,962,448</td><td class="px-4 py-3 text-sm text-gray-700">19/02/2024</td><td class="px-4 py-3 text-sm text-gray-700">661</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">fill-mask</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">dima806/fairface_age_image_detection</code></td><td class="px-4 py-3 text-sm text-gray-700">43,266,209</td><td class="px-4 py-3 text-sm text-gray-700">15/12/2024</td><td class="px-4 py-3 text-sm text-gray-700">361</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">image-classification</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">openai/clip-vit-base-patch32</code></td><td class="px-4 py-3 text-sm text-gray-700">19,079,811</td><td class="px-4 py-3 text-sm text-gray-700">29/02/2024</td><td class="px-4 py-3 text-sm text-gray-700">651</td><td class="px-4 py-3 text-sm text-gray-700">Unknown</td><td class="px-4 py-3 text-sm text-gray-700">zero-shot-image-classification</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">pyannote/segmentation-3.0</code></td><td class="px-4 py-3 text-sm text-gray-700">17,612,491</td><td class="px-4 py-3 text-sm text-gray-700">10/05/2024</td><td class="px-4 py-3 text-sm text-gray-700">580</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">voice-activity-detection</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">16,659,000</td><td class="px-4 py-3 text-sm text-gray-700">06/03/2025</td><td class="px-4 py-3 text-sm text-gray-700">280</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">sentence-similarity</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">laion/clap-htsat-fused</code></td><td class="px-4 py-3 text-sm text-gray-700">16,159,466</td><td class="px-4 py-3 text-sm text-gray-700">28/03/2025</td><td class="px-4 py-3 text-sm text-gray-700">258</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">feature-extraction</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">pyannote/wespeaker-voxceleb-resnet34-LM</code></td><td class="px-4 py-3 text-sm text-gray-700">15,900,260</td><td class="px-4 py-3 text-sm text-gray-700">10/05/2024</td><td class="px-4 py-3 text-sm text-gray-700">580</td><td class="px-4 py-3 text-sm text-gray-700">CC-BY</td><td class="px-4 py-3 text-sm text-gray-700">None</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">pyannote/speaker-diarization-3.1</code></td><td class="px-4 py-3 text-sm text-gray-700">15,676,657</td><td class="px-4 py-3 text-sm text-gray-700">10/05/2024</td><td class="px-4 py-3 text-sm text-gray-700">580</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">automatic-speech-recognition</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">prajjwal1/bert-tiny</code></td><td class="px-4 py-3 text-sm text-gray-700">15,495,825</td><td class="px-4 py-3 text-sm text-gray-700">27/10/2021</td><td class="px-4 py-3 text-sm text-gray-700">1506</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">None</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">FacebookAI/roberta-large</code></td><td class="px-4 py-3 text-sm text-gray-700">14,569,517</td><td class="px-4 py-3 text-sm text-gray-700">19/02/2024</td><td class="px-4 py-3 text-sm text-gray-700">661</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">fill-mask</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Bingsu/adetailer</code></td><td class="px-4 py-3 text-sm text-gray-700">13,391,323</td><td class="px-4 py-3 text-sm text-gray-700">21/11/2024</td><td class="px-4 py-3 text-sm text-gray-700">385</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">None</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">colbert-ir/colbertv2.0</code></td><td class="px-4 py-3 text-sm text-gray-700">11,950,050</td><td class="px-4 py-3 text-sm text-gray-700">05/04/2024</td><td class="px-4 py-3 text-sm text-gray-700">615</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">None</td></tr></tbody></table></div>
 <h3>📉 Estatísticas do Abandono:</h3>
 <ul><li><strong>Tempo médio sem atualização:</strong> 553 dias</li></ul>
 <ul><li><strong>Projeto mais antigo:</strong> 1506 dias sem update</li></ul>
 <ul><li><strong>Downloads totais desperdiçados:</strong> 561,122,194</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🔍 Como Identificar Projetos em Risco</h2>
 <h3>Sinais de Alerta (Red Flags):</h3>
 <p>1. <strong>Última atualização > 90 dias</strong>
@@ -297,7 +312,7 @@
 <ul><li>✅ Releases versionadas (semantic versioning)</li></ul>
 <ul><li>✅ CI/CD configurado e passando</li></ul>
 <ul><li>✅ Múltiplos mantenedores ativos</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🚀 Alternativas Recomendadas</h2>
 <p>Para cada modelo abandonado, sugerimos alternativas mantidas:</p>
 <h3>Outros</h3>
@@ -325,7 +340,7 @@
 <ul><li>Busque por tag: <code>automatic-speech-recognition</code></li></ul>
 <ul><li>Priorize modelos com <code>lastModified < 30 dias</code></li></ul>
 
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🛡️ Como Proteger Seu Projeto</h2>
 <h3>Estratégias de Mitigação:</h3>
 <p>1. <strong>Fork Imediato</strong>
@@ -345,7 +360,7 @@
 <p>4. <strong>Plano B Documentado</strong>
    - Liste 2-3 alternativas viáveis
    - Documente processo de migração</p>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>📊 Análise de Tendências</h2>
 <h3>Categorias Mais Afetadas:</h3>
 <ul><li><strong>Outros:</strong> 9 modelos (60.0%)</li></ul>
@@ -357,7 +372,7 @@
 2. <strong>Projetos de pesquisa acadêmica têm maior risco de abandono</strong>
 3. <strong>Modelos corporativos (OpenAI, Anthropic) têm suporte contínuo</strong>
 4. <strong>Comunidade ativa > Downloads altos</strong></p>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <strong>Tags:</strong> projetos abandonados, manutenção de software, open source, sustentabilidade, dívida técnica, risco de dependência
 
 <!-- Schema.org JSON-LD -->

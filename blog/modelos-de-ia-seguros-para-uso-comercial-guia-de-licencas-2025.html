@@ -157,6 +157,37 @@
             color: #2d3748;
             font-weight: 600;
         }
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .prose table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .prose table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .prose table tbody tr:hover {
+            background: #f7fafc;
+        }
+        .prose hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 2px solid #e2e8f0;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 via-white to-purple-50 min-h-screen">
@@ -258,36 +289,17 @@
 <ul><li><strong>Apache 2.0:</strong> Proteção contra patentes + liberdade comercial</li></ul>
 <ul><li><strong>BSD:</strong> Semelhante ao MIT</li></ul>
 <ul><li><strong>Unlicense:</strong> Domínio público</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🏆 TOP 20 Modelos Safe for Commercial Use</h2>
 <h3>Outros</h3>
-<p>| Modelo | Downloads | Licença | Última Atualização | Status |
-|--------|-----------|---------|-------------------|--------|
-| <code>sentence-transformers/all-MiniLM-L6-v2</code> | 151,698,585 | Apache 2.0 | 280 dias | Estagnado |
-| <code>google/electra-base-discriminator</code> | 66,225,022 | Apache 2.0 | 651 dias | Abandonado |
-| <code>sentence-transformers/all-mpnet-base-v2</code> | 24,821,704 | Apache 2.0 | 114 dias | Moderado |
-| <code>pyannote/segmentation-3.0</code> | 17,612,491 | MIT | 580 dias | Abandonado |
-| <code>sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code> | 16,659,000 | Apache 2.0 | 280 dias | Estagnado |</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modelo</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Downloads</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Licença</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Última Atualização</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Status</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/all-MiniLM-L6-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">151,698,585</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">280 dias</td><td class="px-4 py-3 text-sm text-gray-700">Estagnado</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">google/electra-base-discriminator</code></td><td class="px-4 py-3 text-sm text-gray-700">66,225,022</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">651 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/all-mpnet-base-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">24,821,704</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">114 dias</td><td class="px-4 py-3 text-sm text-gray-700">Moderado</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">pyannote/segmentation-3.0</code></td><td class="px-4 py-3 text-sm text-gray-700">17,612,491</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">580 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code></td><td class="px-4 py-3 text-sm text-gray-700">16,659,000</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">280 dias</td><td class="px-4 py-3 text-sm text-gray-700">Estagnado</td></tr></tbody></table></div>
 <h3>Visão</h3>
-<p>| Modelo | Downloads | Licença | Última Atualização | Status |
-|--------|-----------|---------|-------------------|--------|
-| <code>Falconsai/nsfw_image_detection</code> | 83,475,530 | Apache 2.0 | 249 dias | Estagnado |
-| <code>dima806/fairface_age_image_detection</code> | 43,266,209 | Apache 2.0 | 361 dias | Estagnado |
-| <code>timm/mobilenetv3_small_100.lamb_in1k</code> | 23,384,943 | Apache 2.0 | 53 dias | Ativo |</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modelo</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Downloads</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Licença</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Última Atualização</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Status</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Falconsai/nsfw_image_detection</code></td><td class="px-4 py-3 text-sm text-gray-700">83,475,530</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">249 dias</td><td class="px-4 py-3 text-sm text-gray-700">Estagnado</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">dima806/fairface_age_image_detection</code></td><td class="px-4 py-3 text-sm text-gray-700">43,266,209</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">361 dias</td><td class="px-4 py-3 text-sm text-gray-700">Estagnado</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">timm/mobilenetv3_small_100.lamb_in1k</code></td><td class="px-4 py-3 text-sm text-gray-700">23,384,943</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">53 dias</td><td class="px-4 py-3 text-sm text-gray-700">Ativo</td></tr></tbody></table></div>
 <h3>Texto</h3>
-<p>| Modelo | Downloads | Licença | Última Atualização | Status |
-|--------|-----------|---------|-------------------|--------|
-| <code>google-bert/bert-base-uncased</code> | 59,962,448 | Apache 2.0 | 661 dias | Abandonado |
-| <code>FacebookAI/roberta-large</code> | 14,569,517 | MIT | 661 dias | Abandonado |
-| <code>distilbert/distilbert-base-uncased</code> | 10,436,259 | Apache 2.0 | 584 dias | Abandonado |
-| <code>FacebookAI/roberta-base</code> | 9,540,098 | MIT | 661 dias | Abandonado |
-| <code>openai-community/gpt2</code> | 9,494,594 | MIT | 661 dias | Abandonado |</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modelo</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Downloads</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Licença</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Última Atualização</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Status</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">google-bert/bert-base-uncased</code></td><td class="px-4 py-3 text-sm text-gray-700">59,962,448</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">661 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">FacebookAI/roberta-large</code></td><td class="px-4 py-3 text-sm text-gray-700">14,569,517</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">661 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">distilbert/distilbert-base-uncased</code></td><td class="px-4 py-3 text-sm text-gray-700">10,436,259</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">584 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">FacebookAI/roberta-base</code></td><td class="px-4 py-3 text-sm text-gray-700">9,540,098</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">661 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">openai-community/gpt2</code></td><td class="px-4 py-3 text-sm text-gray-700">9,494,594</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">661 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr></tbody></table></div>
 <h3>Áudio</h3>
-<p>| Modelo | Downloads | Licença | Última Atualização | Status |
-|--------|-----------|---------|-------------------|--------|
-| <code>pyannote/speaker-diarization-3.1</code> | 15,676,657 | MIT | 580 dias | Abandonado |
-| <code>jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn</code> | 9,364,211 | Apache 2.0 | 1093 dias | Abandonado |</p>
-<p>---</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modelo</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Downloads</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Licença</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Última Atualização</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Status</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">pyannote/speaker-diarization-3.1</code></td><td class="px-4 py-3 text-sm text-gray-700">15,676,657</td><td class="px-4 py-3 text-sm text-gray-700">MIT</td><td class="px-4 py-3 text-sm text-gray-700">580 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><code class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn</code></td><td class="px-4 py-3 text-sm text-gray-700">9,364,211</td><td class="px-4 py-3 text-sm text-gray-700">Apache 2.0</td><td class="px-4 py-3 text-sm text-gray-700">1093 dias</td><td class="px-4 py-3 text-sm text-gray-700">Abandonado</td></tr></tbody></table></div>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>🔍 Como Verificar a Licença de um Modelo</h2>
 <h3>Passo a Passo:</h3>
 <p>1. <strong>Acesse a Página do Modelo no Hugging Face</strong>
@@ -308,17 +320,10 @@
 <ul><li>Menção a "non-commercial use only"</li></ul>
 <ul><li>Restrições geográficas ou de aplicação</li></ul>
 <ul><li>Cláusulas de "copyleft" (GPL)</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>📋 Tabela Comparativa de Licenças</h2>
-<p>| Licença | Uso Comercial | Modificação | Distribuição | Patentes | Recomendação |
-|---------|---------------|-------------|--------------|----------|--------------|
-| <strong>MIT</strong> | ✅ Sim | ✅ Sim | ✅ Sim | ⚠️ Não cobre | ⭐⭐⭐⭐⭐ |
-| <strong>Apache 2.0</strong> | ✅ Sim | ✅ Sim | ✅ Sim | ✅ Protege | ⭐⭐⭐⭐⭐ |
-| <strong>BSD</strong> | ✅ Sim | ✅ Sim | ✅ Sim | ⚠️ Não cobre | ⭐⭐⭐⭐ |
-| GPL v3 | ⚠️ Com restrições | ✅ Sim | ✅ Sim (copyleft) | ✅ Protege | ⭐⭐ |
-| CC-BY-NC | ❌ Não | ✅ Sim | ✅ Sim | ❌ N/A | ⭐ |
-| OpenRAIL | ⚠️ Com restrições | ✅ Sim | ✅ Sim | ⚠️ Varia | ⭐⭐⭐ |</p>
-<p>---</p>
+<div class="overflow-x-auto my-8"><table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm"><thead class="bg-gradient-to-r from-indigo-50 to-purple-50"><tr><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Licença</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Uso Comercial</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Modificação</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Distribuição</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Patentes</th><th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-indigo-200">Recomendação</th></tr></thead><tbody class="divide-y divide-gray-100"><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><strong>MIT</strong></td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">⚠️ Não cobre</td><td class="px-4 py-3 text-sm text-gray-700">⭐⭐⭐⭐⭐</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><strong>Apache 2.0</strong></td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Protege</td><td class="px-4 py-3 text-sm text-gray-700">⭐⭐⭐⭐⭐</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700"><strong>BSD</strong></td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">⚠️ Não cobre</td><td class="px-4 py-3 text-sm text-gray-700">⭐⭐⭐⭐</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">GPL v3</td><td class="px-4 py-3 text-sm text-gray-700">⚠️ Com restrições</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim (copyleft)</td><td class="px-4 py-3 text-sm text-gray-700">✅ Protege</td><td class="px-4 py-3 text-sm text-gray-700">⭐⭐</td></tr><tr class="bg-white hover:bg-gray-50 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">CC-BY-NC</td><td class="px-4 py-3 text-sm text-gray-700">❌ Não</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">❌ N/A</td><td class="px-4 py-3 text-sm text-gray-700">⭐</td></tr><tr class="bg-gray-50 hover:bg-gray-100 transition-colors"><td class="px-4 py-3 text-sm text-gray-700">OpenRAIL</td><td class="px-4 py-3 text-sm text-gray-700">⚠️ Com restrições</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">✅ Sim</td><td class="px-4 py-3 text-sm text-gray-700">⚠️ Varia</td><td class="px-4 py-3 text-sm text-gray-700">⭐⭐⭐</td></tr></tbody></table></div>
+---
 <h2>🎯 Recomendações por Caso de Uso</h2>
 <h3>Startup / SaaS:</h3>
 <ul><li><strong>Priorize:</strong> MIT ou Apache 2.0</li></ul>
@@ -332,12 +337,12 @@
 <h3>Produtos Open Source:</h3>
 <ul><li><strong>GPL compatível:</strong> Pode usar GPL livremente</li></ul>
 <ul><li><strong>MIT/Apache:</strong> Mais flexibilidade para usuários</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <h2>📚 Recursos Adicionais</h2>
 <ul><li><a href="https://choosealicense.com/" target="_blank" rel="noopener">Choose a License</a> - Comparador de licenças</li></ul>
 <ul><li><a href="https://tldrlegal.com/" target="_blank" rel="noopener">TLDRLegal</a> - Licenças em linguagem simples</li></ul>
 <ul><li><a href="https://opensource.org/" target="_blank" rel="noopener">Open Source Initiative</a> - Definições oficiais</li></ul>
-<p>---</p>
+<hr class="my-8 border-t-2 border-gray-200">
 <strong>Tags:</strong> licenças open source, uso comercial, MIT, Apache 2.0, direito digital, compliance, modelos de IA
 
 <!-- Schema.org JSON-LD -->
