@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR" itemscope itemtype="http://schema.org/Article">
+
+<html itemscope="" itemtype="http://schema.org/Article" lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- SEO -->
-    <title>Salesforce para Google Sheets | Automação de Envio com n8n automaticamente | Automations Cookbook</title>
-    <meta name="description" content="Integre Salesforce com Google Sheets para automatizar envio em batch de forma inteligente e confiável Economize tempo automatizando este processo. Veja o passo a passo completo. Tutorial passo a passo e template JSON grátis.">
-    <meta name="keywords" content="n8n, Salesforce, Google Sheets, automação, integração, workflow">
-    <meta name="author" content="Automations Cookbook">
-    <meta name="theme-color" content="#4f46e5">
-    <link rel="canonical" href="https://felipejac.github.io/n8n-factory/integracoes/salesforce-para-google-sheets-n8n-envio.html">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Salesforce para Google Sheets | Automação de Envio com n8n automaticamente">
-    <meta property="og:description" content="Integre Salesforce com Google Sheets para automatizar envio em batch de forma inteligente e confiável Economize tempo automatizando este processo. Veja o passo a passo completo.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://felipejac.github.io/n8n-factory/integracoes/salesforce-para-google-sheets-n8n-envio.html">
-    <meta property="og:site_name" content="Automations Cookbook">
-    
-    <!-- Preconnect para performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!-- SEO -->
+<title>Salesforce para Google Sheets | Automação de Envio com n8n automaticamente | Automations Cookbook</title>
+<meta content="Integre Salesforce com Google Sheets para automatizar envio em batch de forma inteligente e confiável Economize tempo automatizando este processo. Veja o passo a passo completo. Tutorial passo a passo e template JSON grátis." name="description"/>
+<meta content="n8n, Salesforce, Google Sheets, automação, integração, workflow" name="keywords"/>
+<meta content="Automations Cookbook" name="author"/>
+<meta content="#4f46e5" name="theme-color"/>
+<link href="https://felipejac.github.io/n8n-factory/integracoes/salesforce-para-google-sheets-n8n-envio.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="Salesforce para Google Sheets | Automação de Envio com n8n automaticamente" property="og:title"/>
+<meta content="Integre Salesforce com Google Sheets para automatizar envio em batch de forma inteligente e confiável Economize tempo automatizando este processo. Veja o passo a passo completo." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://felipejac.github.io/n8n-factory/integracoes/salesforce-para-google-sheets-n8n-envio.html" property="og:url"/>
+<meta content="Automations Cookbook" property="og:site_name"/>
+<!-- Preconnect para performance -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://cdn.tailwindcss.com" rel="preconnect"/>
+<link href="https://cdn.tailwindcss.com" rel="dns-prefetch"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
         * { box-sizing: border-box; }
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -48,198 +45,293 @@
             .prose { font-size: 15px; }
         }
     </style>
+<!-- Schema.org Data -->
 
-    <!-- Schema.org Data -->
+
+    <comment> Enhanced Schema.org (HowTo + FAQPage + BreadcrumbList) </comment>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
+      "@id": "https://www.automationscookbook.com/integracoes/salesforce-para-google-sheets-n8n-envio.html#howto",
       "name": "Salesforce para Google Sheets | Automação de Envio com n8n automaticamente",
       "description": "Integre Salesforce com Google Sheets para automatizar envio em batch de forma inteligente e confiável Economize tempo automatizando este processo. Veja o passo a passo completo.",
-      "step": [
-        {"@type": "HowToStep", "text": "1. Conectar Salesforce
-2. Configurar gatilho de envio
-3. Mapear dados
-4. Sincronizar com Google Sheets
-5. Testar workflow"}
-      ],
+      "image": "https://www.automationscookbook.com/assets/integrations/salesforce-google sheets.png",
+      "totalTime": "PT15M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "BRL",
+        "value": "0"
+      },
       "tool": [
-        { "@type": "HowToTool", "name": "n8n" },
-        { "@type": "HowToTool", "name": "Salesforce" },
-        { "@type": "HowToTool", "name": "Google Sheets" }
+        {
+          "@type": "HowToTool",
+          "name": "n8n (self-hosted ou cloud)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Conta Salesforce com API"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Conta Google Sheets com API"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Credenciais de API do Salesforce"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "API key do Google Sheets"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "1. Conectar Salesforce\n2. Configurar gatilho de envio\n3. Mapear dados\n4. Sincronizar com Google Sheets\n5. Testar workflow",
+          "text": "No n8n, configure o node '1. Conectar Salesforce\n2. Configurar gatilho de envio\n3. Mapear dados\n4. Sincronizar com Google Sheets\n5. Testar workflow' seguindo as instruções da documentação oficial.",
+          "url": "https://www.automationscookbook.com/integracoes/salesforce-para-google-sheets-n8n-envio.html#step1"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.automationscookbook.com/integracoes/salesforce-para-google-sheets-n8n-envio.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva para configurar esta integração?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A configuração completa da integração entre Salesforce e Google Sheets no n8n leva aproximadamente 15 minutos, incluindo criação de credenciais de API e testes iniciais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais planos do Salesforce e Google Sheets são necessários?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você precisa de planos que permitam acesso à API em ambas as plataformas. Verifique a documentação oficial de Salesforce e Google Sheets para requisitos específicos de API."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este template é gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, todos os templates do Automations Cookbook são 100% gratuitos e open-source sob licença MIT. Você pode usar, modificar e distribuir livremente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso ter conhecimentos de programação?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não é necessário. O n8n é uma plataforma no-code/low-code. Este template já vem pronto para importar e usar. Conhecimentos básicos de APIs ajudam, mas não são obrigatórios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como faço para personalizar este workflow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Após importar o template JSON no n8n, você pode adicionar ou remover nodes, ajustar lógicas com nodes IF/Switch, e personalizar mensagens e dados usando expressões do n8n."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O workflow funciona em tempo real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Quando configurado com triggers (webhooks ou polling), o n8n processa dados em tempo real entre Salesforce e Google Sheets, geralmente em menos de 5 segundos."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.automationscookbook.com/integracoes/salesforce-para-google-sheets-n8n-envio.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.automationscookbook.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Integrações N8N",
+          "item": "https://www.automationscookbook.com/integracoes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Salesforce para Google Sheets | Automação de Envio com n8n automaticamente",
+          "item": "https://www.automationscookbook.com/integracoes/salesforce-para-google-sheets-n8n-envio.html"
+        }
       ]
     }
+  ]
+}
     </script>
-</head>
+    </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
-
-    <!-- Header -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="../index.html" class="flex items-center gap-2 group">
-                <div class="bg-indigo-600 text-white p-1.5 rounded-lg shadow-sm group-hover:bg-indigo-700 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                </div>
-                <span class="font-bold text-slate-900 tracking-tight">Automations Cookbook</span>
-            </a>
-            <nav class="hidden md:flex gap-6 text-sm font-medium">
-                <a href="../index.html" class="text-slate-600 hover:text-indigo-600">Voltar para App</a>
-                <a href="index.html" class="text-indigo-600">Diretório de Integrações</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
-        <!-- Breadcrumbs -->
-        <nav class="flex text-sm text-slate-500 mb-8" aria-label="Breadcrumb">
-            <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                <li class="inline-flex items-center">
-                    <a href="../index.html" class="hover:text-indigo-600">Home</a>
-                </li>
-                <li>
-                    <div class="flex items-center">
-                        <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
-                        <a href="index.html" class="ml-1 hover:text-indigo-600">Integrações</a>
-                    </div>
-                </li>
-                <li aria-current="page">
-                    <div class="flex items-center">
-                        <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
-                        <span class="ml-1 text-slate-800 font-medium">Salesforce + Google Sheets</span>
-                    </div>
-                </li>
-            </ol>
-        </nav>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
-            <!-- Conteúdo Principal (Left) -->
-            <div class="lg:col-span-2">
-                <article class="prose prose-slate max-w-none">
-                    
-                    <!-- Header Artigo -->
-                    <header class="not-prose mb-10">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider">Salesforce</span>
-                            <span class="text-slate-300">→</span>
-                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full uppercase tracking-wider">Google Sheets</span>
-                        </div>
-                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Salesforce para Google Sheets | Automação de Envio com n8n automaticamente</h1>
-                        <p class="text-lg text-slate-600 leading-relaxed">Integre Salesforce com Google Sheets para automatizar envio em batch de forma inteligente e confiável Economize tempo automatizando este processo. Veja o passo a passo completo.</p>
-                    </header>
-
-                    <!-- Visão Geral -->
-                    <div class="bg-slate-50 rounded-xl p-6 border border-slate-100 not-prose mb-10 shadow-sm">
-                        <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<!-- Header -->
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+<a class="flex items-center gap-2 group" href="../index.html">
+<div class="bg-indigo-600 text-white p-1.5 rounded-lg shadow-sm group-hover:bg-indigo-700 transition-colors">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="font-bold text-slate-900 tracking-tight">Automations Cookbook</span>
+</a>
+<nav class="hidden md:flex gap-6 text-sm font-medium">
+<a class="text-slate-600 hover:text-indigo-600" href="../index.html">Voltar para App</a>
+<a class="text-indigo-600" href="index.html">Diretório de Integrações</a>
+</nav>
+</div>
+</header>
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-sm text-slate-500 mb-8">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a class="hover:text-indigo-600" href="../index.html">Home</a>
+</li>
+<li>
+<div class="flex items-center">
+<svg aria-hidden="true" class="w-3 h-3 text-gray-400 mx-1" fill="none" viewbox="0 0 6 10" xmlns="http://www.w3.org/2000/svg"><path d="m1 9 4-4-4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<a class="ml-1 hover:text-indigo-600" href="index.html">Integrações</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<svg aria-hidden="true" class="w-3 h-3 text-gray-400 mx-1" fill="none" viewbox="0 0 6 10" xmlns="http://www.w3.org/2000/svg"><path d="m1 9 4-4-4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="ml-1 text-slate-800 font-medium">Salesforce + Google Sheets</span>
+</div>
+</li>
+</ol>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Conteúdo Principal (Left) -->
+<div class="lg:col-span-2">
+<article class="prose prose-slate max-w-none">
+<!-- Header Artigo -->
+<header class="not-prose mb-10">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider">Salesforce</span>
+<span class="text-slate-300">→</span>
+<span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full uppercase tracking-wider">Google Sheets</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Salesforce para Google Sheets | Automação de Envio com n8n automaticamente</h1>
+<p class="text-lg text-slate-600 leading-relaxed">Integre Salesforce com Google Sheets para automatizar envio em batch de forma inteligente e confiável Economize tempo automatizando este processo. Veja o passo a passo completo.</p>
+</header>
+<!-- Visão Geral -->
+<div class="bg-slate-50 rounded-xl p-6 border border-slate-100 not-prose mb-10 shadow-sm">
+<h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+<svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                             Resumo do Fluxo
                         </h2>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-                            <div class="p-3 bg-white rounded-lg border border-slate-200">
-                                <span class="block text-slate-400 text-xs uppercase font-bold mb-1">Gatilho (Trigger)</span>
-                                <strong class="text-slate-800">Salesforce</strong>
-                            </div>
-                            <div class="p-3 bg-white rounded-lg border border-slate-200">
-                                <span class="block text-slate-400 text-xs uppercase font-bold mb-1">Ação (Action)</span>
-                                <strong class="text-slate-800">Google Sheets</strong>
-                            </div>
-                            <div class="p-3 bg-white rounded-lg border border-slate-200">
-                                <span class="block text-slate-400 text-xs uppercase font-bold mb-1">Evento</span>
-                                <strong class="text-slate-800">envio</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Conteúdo Gerado -->
-                    <h2>Quando usar esta automação?</h2>
-                    <p>envio em batch</p>
-                    <p>Esta integração é ideal para times que desejam ganhar produtividade eliminando processos manuais repetitivos entre o <strong>Salesforce</strong> e o <strong>Google Sheets</strong>. Com o N8N, você tem total controle sobre os dados transacionados.</p>
-
-                    <h2>Pré-requisitos</h2>
-                    <ul>
-                        <li>Uma conta ativa no <strong>Salesforce</strong>.</li>
-                        <li>Uma conta ativa no <strong>Google Sheets</strong>.</li>
-                        <li>Uma instância do n8n (Self-hosted ou Cloud).</li>
-                        <li>Credenciais de API configuradas para ambos os serviços.</li>
-                    </ul>
-
-                    <h2>Passo a Passo no N8N</h2>
-                    <p>Siga este roteiro para configurar o workflow:</p>
-                    <ol class="steps-list">
-                        <li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">1</span><span>1. Conectar Salesforce
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+<div class="p-3 bg-white rounded-lg border border-slate-200">
+<span class="block text-slate-400 text-xs uppercase font-bold mb-1">Gatilho (Trigger)</span>
+<strong class="text-slate-800">Salesforce</strong>
+</div>
+<div class="p-3 bg-white rounded-lg border border-slate-200">
+<span class="block text-slate-400 text-xs uppercase font-bold mb-1">Ação (Action)</span>
+<strong class="text-slate-800">Google Sheets</strong>
+</div>
+<div class="p-3 bg-white rounded-lg border border-slate-200">
+<span class="block text-slate-400 text-xs uppercase font-bold mb-1">Evento</span>
+<strong class="text-slate-800">envio</strong>
+</div>
+</div>
+</div>
+<!-- Conteúdo Gerado -->
+<h2>Quando usar esta automação?</h2>
+<p>envio em batch</p>
+<p>Esta integração é ideal para times que desejam ganhar produtividade eliminando processos manuais repetitivos entre o <strong>Salesforce</strong> e o <strong>Google Sheets</strong>. Com o N8N, você tem total controle sobre os dados transacionados.</p>
+<h2>Pré-requisitos</h2>
+<ul>
+<li>Uma conta ativa no <strong>Salesforce</strong>.</li>
+<li>Uma conta ativa no <strong>Google Sheets</strong>.</li>
+<li>Uma instância do n8n (Self-hosted ou Cloud).</li>
+<li>Credenciais de API configuradas para ambos os serviços.</li>
+</ul>
+<h2>Passo a Passo no N8N</h2>
+<p>Siga este roteiro para configurar o workflow:</p>
+<ol class="steps-list">
+<li class="mb-3 flex gap-3"><span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">1</span><span>1. Conectar Salesforce
 2. Configurar gatilho de envio
 3. Mapear dados
 4. Sincronizar com Google Sheets
 5. Testar workflow</span></li>
-                    </ol>
-
-                    <!-- Variações -->
-                    <div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 my-8 rounded-r-lg not-prose">
-                        <h3 class="text-lg font-bold text-indigo-900 mb-2">Ideias Avançadas</h3>
-                        <ul class="space-y-2 text-indigo-800 text-sm">
-                            <li class="flex gap-2 items-start"><span class="text-indigo-500 font-bold">•</span> Adicione um node <strong>IF</strong> para filtrar dados antes de enviar.</li>
-                            <li class="flex gap-2 items-start"><span class="text-indigo-500 font-bold">•</span> Conecte o <strong>Slack</strong> para receber um alerta sempre que este fluxo rodar.</li>
-                            <li class="flex gap-2 items-start"><span class="text-indigo-500 font-bold">•</span> Use o node <strong>Crypto</strong> para anonimizar dados sensíveis.</li>
-                        </ul>
-                    </div>
-
-                </article>
-            </div>
-
-            <!-- Sidebar (Sticky) - Conversão -->
-            <div class="lg:col-span-1">
-                <div class="sticky top-24 space-y-6">
-                    
-                    <!-- CTA 1: Download -->
-                    <div class="bg-white rounded-2xl shadow-lg border border-indigo-100 p-6 text-center relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Baixar Template</h3>
-                        <p class="text-slate-500 text-sm mb-6">Obtenha o arquivo JSON deste workflow pronto para importar.</p>
-                        
-                        <a href="https://n8n.io/workflows/salesforce-para-google-sheets-n8n-envio" target="_blank" rel="nofollow noopener" class="flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-md mb-3 group">
-                            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+</ol>
+<!-- Variações -->
+<div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 my-8 rounded-r-lg not-prose">
+<h3 class="text-lg font-bold text-indigo-900 mb-2">Ideias Avançadas</h3>
+<ul class="space-y-2 text-indigo-800 text-sm">
+<li class="flex gap-2 items-start"><span class="text-indigo-500 font-bold">•</span> Adicione um node <strong>IF</strong> para filtrar dados antes de enviar.</li>
+<li class="flex gap-2 items-start"><span class="text-indigo-500 font-bold">•</span> Conecte o <strong>Slack</strong> para receber um alerta sempre que este fluxo rodar.</li>
+<li class="flex gap-2 items-start"><span class="text-indigo-500 font-bold">•</span> Use o node <strong>Crypto</strong> para anonimizar dados sensíveis.</li>
+</ul>
+</div>
+</article>
+</div>
+<!-- Sidebar (Sticky) - Conversão -->
+<div class="lg:col-span-1">
+<div class="sticky top-24 space-y-6">
+<!-- CTA 1: Download -->
+<div class="bg-white rounded-2xl shadow-lg border border-indigo-100 p-6 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Baixar Template</h3>
+<p class="text-slate-500 text-sm mb-6">Obtenha o arquivo JSON deste workflow pronto para importar.</p>
+<a class="flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-md mb-3 group" href="https://n8n.io/workflows/salesforce-para-google-sheets-n8n-envio" rel="nofollow noopener" target="_blank">
+<svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                             Download JSON
                         </a>
-                        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-semibold">100% Gratuito & Seguro</p>
-                    </div>
-
-                    <!-- CTA 2: Consultoria -->
-                    <div class="bg-slate-900 rounded-2xl shadow-md p-6 text-white text-center">
-                        <h3 class="font-bold text-lg mb-2">Precisa de ajuda?</h3>
-                        <p class="text-slate-300 text-sm mb-4">Posso adaptar este fluxo para o seu negócio ou criar automações sob medida.</p>
-                        <a href="https://wa.me/5511999999999?text=Tenho interesse no fluxo: Salesforce para Google Sheets | Automação de Envio com n8n automaticamente" target="_blank" class="block w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+<p class="text-[10px] text-slate-400 uppercase tracking-wide font-semibold">100% Gratuito &amp; Seguro</p>
+</div>
+<!-- CTA 2: Consultoria -->
+<div class="bg-slate-900 rounded-2xl shadow-md p-6 text-white text-center">
+<h3 class="font-bold text-lg mb-2">Precisa de ajuda?</h3>
+<p class="text-slate-300 text-sm mb-4">Posso adaptar este fluxo para o seu negócio ou criar automações sob medida.</p>
+<a class="block w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm" href="https://wa.me/5511999999999?text=Tenho interesse no fluxo: Salesforce para Google Sheets | Automação de Envio com n8n automaticamente" target="_blank">
                             Falar com Especialista
                         </a>
-                    </div>
-
-                    <!-- Tags Cloud -->
-                    <div class="pt-4 border-t border-slate-200">
-                        <p class="text-xs font-bold text-slate-400 uppercase mb-3">Tags Relacionadas</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">exportação</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">webhook</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">api</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">oauth2</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 mt-auto py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm text-slate-500">© 2024 Automations Cookbook. Este site não é afiliado oficial da n8n.io.</p>
-            <div class="mt-4 flex justify-center gap-4 text-sm text-slate-400">
-                <a href="../index.html" class="hover:text-indigo-600">Home</a>
-                <a href="index.html" class="hover:text-indigo-600">Templates</a>
-                <a href="#" class="hover:text-indigo-600">Contato</a>
-            </div>
-        </div>
-    </footer>
-
+</div>
+<!-- Tags Cloud -->
+<div class="pt-4 border-t border-slate-200">
+<p class="text-xs font-bold text-slate-400 uppercase mb-3">Tags Relacionadas</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">exportação</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">webhook</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">api</span><span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded-full font-medium hover:bg-indigo-100 transition-colors">oauth2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200 mt-auto py-8">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<p class="text-sm text-slate-500">© 2024 Automations Cookbook. Este site não é afiliado oficial da n8n.io.</p>
+<div class="mt-4 flex justify-center gap-4 text-sm text-slate-400">
+<a class="hover:text-indigo-600" href="../index.html">Home</a>
+<a class="hover:text-indigo-600" href="index.html">Templates</a>
+<a class="hover:text-indigo-600" href="#">Contato</a>
+</div>
+</div>
+</footer>
 </body>
 </html>
