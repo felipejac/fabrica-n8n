@@ -1,62 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>n8n + LangChain: Setup Mínimo 15min | Automations Cookbook</title>
-    <meta name="description" content="Sem community nodes. LangChain nativo no n8n v1+. AI Agent + RAG funcionando em 15 minutos.">
-    <meta name="keywords" content="n8n langchain setup, ai agent n8n tutorial, n8n embeddings configuração">
-    <link rel="canonical" href="https://www.automationscookbook.com/blog/setup-minimo-n8n-langchain">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>n8n + LangChain: Setup Mínimo 15min | Automations Cookbook</title>
+<meta content="Sem community nodes. LangChain nativo no n8n v1+. AI Agent + RAG funcionando em 15 minutos." name="description"/>
+<meta content="n8n langchain setup, ai agent n8n tutorial, n8n embeddings configuração" name="keywords"/>
+<link href="https://www.automationscookbook.com/blog/setup-minimo-n8n-langchain" rel="canonical"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         body { font-family: 'Inter', sans-serif; }
         .step-box { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 1.5rem 0; border-radius: 8px; }
         .code-box { background: #1f2937; color: #f3f4f6; padding: 1rem 1.5rem; border-radius: 8px; font-family: monospace; overflow-x: auto; margin: 1rem 0; }
     </style>
+
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CEYC26V1T3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // Configuração básica
+    gtag('config', 'G-CEYC26V1T3', {
+        'send_page_view': true,
+        'anonymize_ip': true,
+        'allow_google_signals': true,
+        'allow_ad_personalization_signals': false
+    });
+    
+    // Eventos personalizados para templates
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Track download de template (clique em botões de download)
+        const downloadButtons = document.querySelectorAll('a[href*=".json"], button[class*="download"], a[class*="download"]');
+        downloadButtons.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                gtag('event', 'template_download', {
+                    'event_category': 'engagement',
+                    'event_label': window.location.pathname,
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track scroll depth (75% da página)
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            if (scrollTracked) return;
+            
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            if (scrollPercent >= 75) {
+                gtag('event', 'scroll', {
+                    'event_category': 'engagement',
+                    'event_label': '75_percent',
+                    'value': 75
+                });
+                scrollTracked = true;
+            }
+        });
+        
+        // Track tempo na página (2+ minutos = engajamento alto)
+        setTimeout(function() {
+            gtag('event', 'time_on_page', {
+                'event_category': 'engagement',
+                'event_label': '2_minutes',
+                'value': 120
+            });
+        }, 120000); // 2 minutos
+        
+        // Track clique em links internos (navegação)
+        const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+        internalLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                gtag('event', 'internal_navigation', {
+                    'event_category': 'navigation',
+                    'event_label': this.getAttribute('href'),
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track expansão de FAQ (se existir)
+        const faqItems = document.querySelectorAll('details.faq-item');
+        faqItems.forEach(function(item, index) {
+            item.addEventListener('toggle', function() {
+                if (this.open) {
+                    gtag('event', 'faq_expansion', {
+                        'event_category': 'engagement',
+                        'event_label': 'faq_item_' + (index + 1),
+                        'value': 1
+                    });
+                }
+            });
+        });
+        
+        // Track copy de prompt LLM (se existir)
+        const llmSection = document.querySelector('.llm-friendly');
+        if (llmSection) {
+            const promptBox = llmSection.querySelector('div[style*="monospace"]');
+            if (promptBox) {
+                promptBox.addEventListener('click', function() {
+                    gtag('event', 'llm_prompt_interaction', {
+                        'event_category': 'engagement',
+                        'event_label': 'prompt_clicked',
+                        'value': 1
+                    });
+                });
+            }
+        }
+    });
+</script>
 </head>
 <body class="bg-white">
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">🍳 Automations Cookbook</a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="https://www.automationscookbook.com/" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="/integracoes/" class="text-gray-700 hover:text-blue-600">N8N Templates</a>
-                    <a href="/blog" class="text-gray-700 hover:text-blue-600">Blog</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <article class="container mx-auto px-4 py-8 max-w-4xl">
-        <div class="mb-4"><span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-1 rounded-full">⚙️ Setup</span></div>
-        
-        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">n8n + LangChain: Setup Mínimo 15min</h1>
-        <p class="text-xl text-gray-600 mb-6 leading-relaxed">Sem community nodes. LangChain nativo no n8n v1+. AI Agent + RAG funcionando em 15 minutos.</p>
-        
-        <div class="flex flex-wrap gap-4 text-sm text-gray-600 mb-8 pb-6 border-b">
-            <time datetime="2025-11-25">25 de Novembro de 2025</time>
-            <span>8 min de leitura</span>
-        </div>
-        
-        <div class="prose prose-lg max-w-none">
-            <p>Tutorial completo sobre <strong>n8n + LangChain: Setup Mínimo 15min</strong> para desenvolvedores que trabalham com n8n e OpenAI.</p>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">Principais Tópicos</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li>Configuração passo a passo</li>
-                    <li>Best practices e segurança</li>
-                    <li>Exemplos de código prontos</li>
-                    <li>Troubleshooting comum</li>
-                </ul>
-            </div>
-            
-            <h2>Como Implementar</h2>
-            <p>Siga os passos abaixo para configurar corretamente:</p>
-            
-            <div class="code-box">
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" href="/">🍳 Automations Cookbook</a>
+<div class="hidden md:flex space-x-6">
+<a class="text-gray-700 hover:text-blue-600 transition" href="https://www.automationscookbook.com/">Home</a>
+<a class="text-gray-700 hover:text-blue-600" href="/integracoes/">N8N Templates</a>
+<a class="text-gray-700 hover:text-blue-600" href="/blog">Blog</a>
+</div>
+</div>
+</div>
+</nav>
+<article class="container mx-auto px-4 py-8 max-w-4xl">
+<div class="mb-4"><span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-1 rounded-full">⚙️ Setup</span></div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">n8n + LangChain: Setup Mínimo 15min</h1>
+<p class="text-xl text-gray-600 mb-6 leading-relaxed">Sem community nodes. LangChain nativo no n8n v1+. AI Agent + RAG funcionando em 15 minutos.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-600 mb-8 pb-6 border-b">
+<time datetime="2025-11-25">25 de Novembro de 2025</time>
+<span>8 min de leitura</span>
+</div>
+<div class="prose prose-lg max-w-none">
+<p>Tutorial completo sobre <strong>n8n + LangChain: Setup Mínimo 15min</strong> para desenvolvedores que trabalham com n8n e OpenAI.</p>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">Principais Tópicos</h3>
+<ul class="text-gray-700 mb-0">
+<li>Configuração passo a passo</li>
+<li>Best practices e segurança</li>
+<li>Exemplos de código prontos</li>
+<li>Troubleshooting comum</li>
+</ul>
+</div>
+<h2>Como Implementar</h2>
+<p>Siga os passos abaixo para configurar corretamente:</p>
+<div class="code-box">
 # Exemplo de configuração
 # Adapte para seu ambiente
 
@@ -65,42 +157,38 @@ config:
   security: enabled
   monitoring: true
             </div>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">Checklist Final</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li>✅ Configuração validada</li>
-                    <li>✅ Testes executados</li>
-                    <li>✅ Segurança verificada</li>
-                    <li>✅ Documentação atualizada</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Explore mais tutoriais n8n</h3>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="/integracoes/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition">Templates n8n</a>
-                <a href="/blog" class="inline-block bg-gray-800 hover:bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg transition">Mais Tutoriais</a>
-            </div>
-        </div>
-        
-        <div class="mt-12 pt-8 border-t border-gray-200">
-            <div class="flex flex-wrap gap-2">
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#n8n</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#OpenAI</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Tutorial</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Automação</span>
-            </div>
-        </div>
-    </article>
-    
-    <footer class="bg-gray-900 text-white mt-20">
-        <div class="container mx-auto px-4 py-12">
-            <div class="text-center text-gray-400">
-                <p>&copy; 2025 Automations Cookbook</p>
-            </div>
-        </div>
-    </footer>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">Checklist Final</h3>
+<ul class="text-gray-700 mb-0">
+<li>✅ Configuração validada</li>
+<li>✅ Testes executados</li>
+<li>✅ Segurança verificada</li>
+<li>✅ Documentação atualizada</li>
+</ul>
+</div>
+</div>
+<div class="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Explore mais tutoriais n8n</h3>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition" href="/integracoes/">Templates n8n</a>
+<a class="inline-block bg-gray-800 hover:bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg transition" href="/blog">Mais Tutoriais</a>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-200">
+<div class="flex flex-wrap gap-2">
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#n8n</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#OpenAI</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Tutorial</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Automação</span>
+</div>
+</div>
+</article>
+<footer class="bg-gray-900 text-white mt-20">
+<div class="container mx-auto px-4 py-12">
+<div class="text-center text-gray-400">
+<p>© 2025 Automations Cookbook</p>
+</div>
+</div>
+</footer>
 </body>
 </html>

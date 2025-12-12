@@ -1,132 +1,215 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Triage AI: Classifique tickets com n8n | Fábrica n8n</title>
-    <meta name="description" content="Support Triage AI: Classifique tickets com n8n - Guia completo e prático de automação com n8n e IA.">
-    <meta name="keywords" content="n8n, automação, IA, agentes, suporte, tutorial">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support Triage AI: Classifique tickets com n8n | Fábrica n8n</title>
+<meta content="Support Triage AI: Classifique tickets com n8n - Guia completo e prático de automação com n8n e IA." name="description"/>
+<meta content="n8n, automação, IA, agentes, suporte, tutorial" name="keywords"/>
+<!-- Open Graph -->
+<meta content="Support Triage AI: Classifique tickets com n8n" property="og:title"/>
+<meta content="Guia completo de automação com n8n e IA" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://fabrica-n8n.com/blog/support-triage-ai-n8n.html" property="og:url"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Support Triage AI: Classifique tickets com n8n" name="twitter:title"/>
+<link href="https://fabrica-n8n.com/blog/support-triage-ai-n8n.html" rel="canonical"/>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CEYC26V1T3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Support Triage AI: Classifique tickets com n8n">
-    <meta property="og:description" content="Guia completo de automação com n8n e IA">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://fabrica-n8n.com/blog/support-triage-ai-n8n.html">
+    // Configuração básica
+    gtag('config', 'G-CEYC26V1T3', {
+        'send_page_view': true,
+        'anonymize_ip': true,
+        'allow_google_signals': true,
+        'allow_ad_personalization_signals': false
+    });
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Support Triage AI: Classifique tickets com n8n">
-    
-    <link rel="canonical" href="https://fabrica-n8n.com/blog/support-triage-ai-n8n.html">
-    <script src="https://cdn.tailwindcss.com"></script>
+    // Eventos personalizados para templates
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Track download de template (clique em botões de download)
+        const downloadButtons = document.querySelectorAll('a[href*=".json"], button[class*="download"], a[class*="download"]');
+        downloadButtons.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                gtag('event', 'template_download', {
+                    'event_category': 'engagement',
+                    'event_label': window.location.pathname,
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track scroll depth (75% da página)
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            if (scrollTracked) return;
+            
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            if (scrollPercent >= 75) {
+                gtag('event', 'scroll', {
+                    'event_category': 'engagement',
+                    'event_label': '75_percent',
+                    'value': 75
+                });
+                scrollTracked = true;
+            }
+        });
+        
+        // Track tempo na página (2+ minutos = engajamento alto)
+        setTimeout(function() {
+            gtag('event', 'time_on_page', {
+                'event_category': 'engagement',
+                'event_label': '2_minutes',
+                'value': 120
+            });
+        }, 120000); // 2 minutos
+        
+        // Track clique em links internos (navegação)
+        const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+        internalLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                gtag('event', 'internal_navigation', {
+                    'event_category': 'navigation',
+                    'event_label': this.getAttribute('href'),
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track expansão de FAQ (se existir)
+        const faqItems = document.querySelectorAll('details.faq-item');
+        faqItems.forEach(function(item, index) {
+            item.addEventListener('toggle', function() {
+                if (this.open) {
+                    gtag('event', 'faq_expansion', {
+                        'event_category': 'engagement',
+                        'event_label': 'faq_item_' + (index + 1),
+                        'value': 1
+                    });
+                }
+            });
+        });
+        
+        // Track copy de prompt LLM (se existir)
+        const llmSection = document.querySelector('.llm-friendly');
+        if (llmSection) {
+            const promptBox = llmSection.querySelector('div[style*="monospace"]');
+            if (promptBox) {
+                promptBox.addEventListener('click', function() {
+                    gtag('event', 'llm_prompt_interaction', {
+                        'event_category': 'engagement',
+                        'event_label': 'prompt_clicked',
+                        'value': 1
+                    });
+                });
+            }
+        }
+    });
+</script>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="../index.html" class="text-2xl font-bold text-blue-600">Fábrica n8n</a>
-                <div class="flex gap-6">
-                    <a href="../index.html" class="text-gray-600 hover:text-blue-600">Início</a>
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
-                    <a href="../integracoes/index.html" class="text-gray-600 hover:text-blue-600">Integrações</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Article -->
-    <article class="container mx-auto px-4 py-12 max-w-4xl">
-        <!-- Banner -->
-        <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl mb-8 flex items-center justify-center">
-            <div class="text-center text-white">
-                <div class="text-6xl mb-4">🎫</div>
-                <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-semibold">Suporte</span>
-            </div>
-        </div>
-
-        <!-- Metadata -->
-        <div class="flex items-center gap-4 text-sm text-gray-600 mb-6">
-            <span>01 de Dezembro de 2025</span>
-            <span>•</span>
-            <span>10 min de leitura</span>
-            <span>•</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded">Suporte</span>
-        </div>
-
-        <!-- Title -->
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">Support Triage AI: Classifique tickets com n8n</h1>
-
-        <!-- Content -->
-        <div class="prose prose-lg max-w-none">
-            <p class="text-xl text-gray-700 mb-8">
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<nav class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a class="text-2xl font-bold text-blue-600" href="../index.html">Fábrica n8n</a>
+<div class="flex gap-6">
+<a class="text-gray-600 hover:text-blue-600" href="../index.html">Início</a>
+<a class="text-gray-600 hover:text-blue-600" href="index.html">Blog</a>
+<a class="text-gray-600 hover:text-blue-600" href="../integracoes/index.html">Integrações</a>
+</div>
+</div>
+</nav>
+</header>
+<!-- Article -->
+<article class="container mx-auto px-4 py-12 max-w-4xl">
+<!-- Banner -->
+<div class="h-64 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl mb-8 flex items-center justify-center">
+<div class="text-center text-white">
+<div class="text-6xl mb-4">🎫</div>
+<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-semibold">Suporte</span>
+</div>
+</div>
+<!-- Metadata -->
+<div class="flex items-center gap-4 text-sm text-gray-600 mb-6">
+<span>01 de Dezembro de 2025</span>
+<span>•</span>
+<span>10 min de leitura</span>
+<span>•</span>
+<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded">Suporte</span>
+</div>
+<!-- Title -->
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">Support Triage AI: Classifique tickets com n8n</h1>
+<!-- Content -->
+<div class="prose prose-lg max-w-none">
+<p class="text-xl text-gray-700 mb-8">
                 Este guia apresenta estratégias práticas e comprovadas para implementar automação avançada com n8n e inteligência artificial.
             </p>
-
-            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Por que isso importa?</h2>
-            <p class="text-gray-700 mb-6">
+<h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Por que isso importa?</h2>
+<p class="text-gray-700 mb-6">
                 A combinação de n8n com IA está transformando a forma como empresas automatizam processos. 
                 Este artigo demonstra técnicas avançadas que você pode aplicar imediatamente em seus projetos.
             </p>
-
-            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Implementação Prática</h2>
-            <p class="text-gray-700 mb-6">
+<h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Implementação Prática</h2>
+<p class="text-gray-700 mb-6">
                 Seguindo uma abordagem passo a passo, você aprenderá a configurar e otimizar seus workflows 
                 para obter máxima eficiência e resultados mensuráveis.
             </p>
-
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
-                <p class="text-blue-900">
-                    <strong>💡 Dica Pro:</strong> Sempre teste suas automações em ambiente de desenvolvimento 
+<div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+<p class="text-blue-900">
+<strong>💡 Dica Pro:</strong> Sempre teste suas automações em ambiente de desenvolvimento 
                     antes de colocar em produção. Isso evita surpresas e garante estabilidade.
                 </p>
-            </div>
-
-            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Melhores Práticas</h2>
-            <ul class="list-disc pl-6 text-gray-700 space-y-3">
-                <li>Configure credenciais de forma segura usando o sistema de Credentials do n8n</li>
-                <li>Implemente tratamento de erros em pontos críticos do workflow</li>
-                <li>Monitore logs e métricas para identificar gargalos</li>
-                <li>Documente seus workflows para facilitar manutenção futura</li>
-                <li>Use variáveis de ambiente para configurações sensíveis</li>
-            </ul>
-
-            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Próximos Passos</h2>
-            <p class="text-gray-700 mb-6">
+</div>
+<h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Melhores Práticas</h2>
+<ul class="list-disc pl-6 text-gray-700 space-y-3">
+<li>Configure credenciais de forma segura usando o sistema de Credentials do n8n</li>
+<li>Implemente tratamento de erros em pontos críticos do workflow</li>
+<li>Monitore logs e métricas para identificar gargalos</li>
+<li>Documente seus workflows para facilitar manutenção futura</li>
+<li>Use variáveis de ambiente para configurações sensíveis</li>
+</ul>
+<h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Próximos Passos</h2>
+<p class="text-gray-700 mb-6">
                 Agora que você domina os conceitos fundamentais, experimente aplicá-los em um projeto real. 
                 Comece pequeno, valide os resultados e escale gradualmente.
             </p>
-
-            <div class="bg-green-50 border-l-4 border-green-500 p-6 my-8">
-                <p class="text-green-900">
-                    <strong>✅ Conclusão:</strong> Com as técnicas apresentadas neste guia, você está 
+<div class="bg-green-50 border-l-4 border-green-500 p-6 my-8">
+<p class="text-green-900">
+<strong>✅ Conclusão:</strong> Com as técnicas apresentadas neste guia, você está 
                     preparado para criar automações robustas e escaláveis que entregam valor real para o negócio.
                 </p>
-            </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center">
-            <h3 class="text-2xl font-bold text-white mb-4">Quer automatizar seu negócio?</h3>
-            <p class="text-blue-100 mb-6">Entre em contato para uma consultoria personalizada</p>
-            <a href="../index.html#contato" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition inline-block">
+</div>
+</div>
+<!-- CTA -->
+<div class="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center">
+<h3 class="text-2xl font-bold text-white mb-4">Quer automatizar seu negócio?</h3>
+<p class="text-blue-100 mb-6">Entre em contato para uma consultoria personalizada</p>
+<a class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition inline-block" href="../index.html#contato">
                 Falar com Especialista
             </a>
-        </div>
-
-        <!-- Navigation -->
-        <div class="mt-12 pt-8 border-t border-gray-200">
-            <a href="index.html" class="text-blue-600 hover:text-blue-700 font-semibold">
+</div>
+<!-- Navigation -->
+<div class="mt-12 pt-8 border-t border-gray-200">
+<a class="text-blue-600 hover:text-blue-700 font-semibold" href="index.html">
                 ← Voltar para o Blog
             </a>
-        </div>
-    </article>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-20">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">© 2025 Fábrica n8n. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+</div>
+</article>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-20">
+<div class="container mx-auto px-4 text-center">
+<p class="text-gray-400">© 2025 Fábrica n8n. Todos os direitos reservados.</p>
+</div>
+</footer>
 </body>
 </html>

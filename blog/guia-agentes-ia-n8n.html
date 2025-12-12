@@ -1,51 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Guia Completo: Como Criar Agentes de IA com n8n | Automations Cookbook</title>
-    <meta name="title" content="Guia Completo: Como Criar Agentes de IA com n8n">
-    <meta name="description" content="Tutorial passo a passo para construir Agentes de IA autônomos usando n8n, LangChain e modelos de linguagem. Aprenda a criar workflows inteligentes que tomam decisões e executam tarefas automaticamente.">
-    <meta name="keywords" content="n8n, agentes IA, LangChain, AI Agent, automação, workflow, RAG, embeddings, vector store, tutorial n8n, chatbot, OpenAI">
-    <meta name="author" content="Felipe Lourenzo">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.automationscookbook.com/blog/guia-agentes-ia-n8n">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.automationscookbook.com/blog/guia-agentes-ia-n8n">
-    <meta property="og:title" content="Guia Completo: Como Criar Agentes de IA com n8n">
-    <meta property="og:description" content="Aprenda a criar agentes de IA autônomos com n8n: desde o básico até RAG, multi-agentes e automações complexas. Tutorial prático com exemplos.">
-    <meta property="og:image" content="https://www.automationscookbook.com/logo.png">
-    <meta property="article:published_time" content="2025-11-09T00:00:00Z">
-    <meta property="article:author" content="Felipe Lourenzo">
-    <meta property="article:section" content="Tutorial">
-    <meta property="article:tag" content="n8n">
-    <meta property="article:tag" content="Agentes IA">
-    <meta property="article:tag" content="LangChain">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.automationscookbook.com/blog/guia-agentes-ia-n8n">
-    <meta property="twitter:title" content="Guia Completo: Como Criar Agentes de IA com n8n">
-    <meta property="twitter:description" content="10 passos práticos para construir agentes autônomos com n8n e LangChain. De iniciante a avançado.">
-    <meta property="twitter:image" content="https://www.automationscookbook.com/logo.png">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Schema.org Article Markup -->
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Primary Meta Tags -->
+<title>Guia Completo: Como Criar Agentes de IA com n8n | Automations Cookbook</title>
+<meta content="Guia Completo: Como Criar Agentes de IA com n8n" name="title"/>
+<meta content="Tutorial passo a passo para construir Agentes de IA autônomos usando n8n, LangChain e modelos de linguagem. Aprenda a criar workflows inteligentes que tomam decisões e executam tarefas automaticamente." name="description"/>
+<meta content="n8n, agentes IA, LangChain, AI Agent, automação, workflow, RAG, embeddings, vector store, tutorial n8n, chatbot, OpenAI" name="keywords"/>
+<meta content="Felipe Lourenzo" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://www.automationscookbook.com/blog/guia-agentes-ia-n8n" rel="canonical"/>
+<!-- Open Graph / Facebook -->
+<meta content="article" property="og:type"/>
+<meta content="https://www.automationscookbook.com/blog/guia-agentes-ia-n8n" property="og:url"/>
+<meta content="Guia Completo: Como Criar Agentes de IA com n8n" property="og:title"/>
+<meta content="Aprenda a criar agentes de IA autônomos com n8n: desde o básico até RAG, multi-agentes e automações complexas. Tutorial prático com exemplos." property="og:description"/>
+<meta content="https://www.automationscookbook.com/logo.png" property="og:image"/>
+<meta content="2025-11-09T00:00:00Z" property="article:published_time"/>
+<meta content="Felipe Lourenzo" property="article:author"/>
+<meta content="Tutorial" property="article:section"/>
+<meta content="n8n" property="article:tag"/>
+<meta content="Agentes IA" property="article:tag"/>
+<meta content="LangChain" property="article:tag"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://www.automationscookbook.com/blog/guia-agentes-ia-n8n" property="twitter:url"/>
+<meta content="Guia Completo: Como Criar Agentes de IA com n8n" property="twitter:title"/>
+<meta content="10 passos práticos para construir agentes autônomos com n8n e LangChain. De iniciante a avançado." property="twitter:description"/>
+<meta content="https://www.automationscookbook.com/logo.png" property="twitter:image"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<!-- Schema.org Article Markup -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
@@ -106,8 +100,7 @@
       "dateModified": "2025-11-09"
     }
     </script>
-    
-    <style>
+<style>
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -221,657 +214,651 @@
             }
         }
     </style>
+
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CEYC26V1T3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // Configuração básica
+    gtag('config', 'G-CEYC26V1T3', {
+        'send_page_view': true,
+        'anonymize_ip': true,
+        'allow_google_signals': true,
+        'allow_ad_personalization_signals': false
+    });
+    
+    // Eventos personalizados para templates
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Track download de template (clique em botões de download)
+        const downloadButtons = document.querySelectorAll('a[href*=".json"], button[class*="download"], a[class*="download"]');
+        downloadButtons.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                gtag('event', 'template_download', {
+                    'event_category': 'engagement',
+                    'event_label': window.location.pathname,
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track scroll depth (75% da página)
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            if (scrollTracked) return;
+            
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            if (scrollPercent >= 75) {
+                gtag('event', 'scroll', {
+                    'event_category': 'engagement',
+                    'event_label': '75_percent',
+                    'value': 75
+                });
+                scrollTracked = true;
+            }
+        });
+        
+        // Track tempo na página (2+ minutos = engajamento alto)
+        setTimeout(function() {
+            gtag('event', 'time_on_page', {
+                'event_category': 'engagement',
+                'event_label': '2_minutes',
+                'value': 120
+            });
+        }, 120000); // 2 minutos
+        
+        // Track clique em links internos (navegação)
+        const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+        internalLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                gtag('event', 'internal_navigation', {
+                    'event_category': 'navigation',
+                    'event_label': this.getAttribute('href'),
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track expansão de FAQ (se existir)
+        const faqItems = document.querySelectorAll('details.faq-item');
+        faqItems.forEach(function(item, index) {
+            item.addEventListener('toggle', function() {
+                if (this.open) {
+                    gtag('event', 'faq_expansion', {
+                        'event_category': 'engagement',
+                        'event_label': 'faq_item_' + (index + 1),
+                        'value': 1
+                    });
+                }
+            });
+        });
+        
+        // Track copy de prompt LLM (se existir)
+        const llmSection = document.querySelector('.llm-friendly');
+        if (llmSection) {
+            const promptBox = llmSection.querySelector('div[style*="monospace"]');
+            if (promptBox) {
+                promptBox.addEventListener('click', function() {
+                    gtag('event', 'llm_prompt_interaction', {
+                        'event_category': 'engagement',
+                        'event_label': 'prompt_clicked',
+                        'value': 1
+                    });
+                });
+            }
+        }
+    });
+</script>
 </head>
 <body class="bg-white">
-    
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" href="/">
                     🍳 Automations Cookbook
                 </a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="https://www.automationscookbook.com/" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="/integracoes/" class="text-gray-700 hover:text-blue-600 transition">N8N Templates</a>
-                    <a href="/integracoes-zapier/" class="text-gray-700 hover:text-blue-600 transition">Zapier Templates</a>
-                    <a href="/casos-de-uso" class="text-gray-700 hover:text-blue-600 transition">Casos de Uso</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Breadcrumb -->
-    <div class="container mx-auto px-4 py-4">
-        <nav class="text-sm text-gray-500">
-            <a href="/" class="hover:text-blue-600">Home</a>
-            <span class="mx-2">/</span>
-            <a href="/blog" class="hover:text-blue-600">Blog</a>
-            <span class="mx-2">/</span>
-            <span class="text-gray-900">Guia Agentes IA n8n</span>
-        </nav>
-    </div>
-    
-    <!-- Article Header -->
-    <article class="container mx-auto px-4 py-8 max-w-4xl">
-        
-        <!-- Category Badge -->
-        <div class="mb-4">
-            <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-4 py-1 rounded-full">
+<div class="hidden md:flex space-x-6">
+<a class="text-gray-700 hover:text-blue-600 transition" href="https://www.automationscookbook.com/">Home</a>
+<a class="text-gray-700 hover:text-blue-600 transition" href="/integracoes/">N8N Templates</a>
+<a class="text-gray-700 hover:text-blue-600 transition" href="/integracoes-zapier/">Zapier Templates</a>
+<a class="text-gray-700 hover:text-blue-600 transition" href="/casos-de-uso">Casos de Uso</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Breadcrumb -->
+<div class="container mx-auto px-4 py-4">
+<nav class="text-sm text-gray-500">
+<a class="hover:text-blue-600" href="/">Home</a>
+<span class="mx-2">/</span>
+<a class="hover:text-blue-600" href="/blog">Blog</a>
+<span class="mx-2">/</span>
+<span class="text-gray-900">Guia Agentes IA n8n</span>
+</nav>
+</div>
+<!-- Article Header -->
+<article class="container mx-auto px-4 py-8 max-w-4xl">
+<!-- Category Badge -->
+<div class="mb-4">
+<span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-4 py-1 rounded-full">
                 📚 Tutorial Prático
             </span>
-        </div>
-        
-        <!-- Title -->
-        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+</div>
+<!-- Title -->
+<h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
             Guia Completo: Como Criar Agentes de IA com n8n
         </h1>
-        
-        <!-- Subtitle -->
-        <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+<!-- Subtitle -->
+<p class="text-xl text-gray-600 mb-6 leading-relaxed">
             Tutorial passo a passo para construir <strong>Agentes de IA autônomos</strong> usando n8n, LangChain e modelos de linguagem. Aprenda a criar workflows inteligentes que <strong>tomam decisões</strong> e <strong>executam tarefas automaticamente</strong>.
         </p>
-        
-        <!-- Meta Info -->
-        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-8 pb-6 border-b border-gray-200">
-            <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                </svg>
-                <span>Por <strong>Felipe Lourenzo</strong></span>
-            </div>
-            <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                </svg>
-                <time datetime="2025-11-09">09 de Novembro de 2025</time>
-            </div>
-            <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <span>Leitura: 20 min</span>
-            </div>
-        </div>
-        
-        <!-- Featured Icon -->
-        <div class="mb-10 flex justify-center">
-            <div class="w-full max-w-2xl h-64 bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 rounded-xl flex items-center justify-center relative overflow-hidden">
-                <div class="absolute inset-0 opacity-20">
-                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <path d="M0,50 Q25,20 50,50 T100,50" stroke="white" stroke-width="0.5" fill="none" opacity="0.3"/>
-                        <path d="M0,60 Q25,30 50,60 T100,60" stroke="white" stroke-width="0.5" fill="none" opacity="0.2"/>
-                        <path d="M0,40 Q25,10 50,40 T100,40" stroke="white" stroke-width="0.5" fill="none" opacity="0.2"/>
-                    </svg>
-                </div>
-                <div class="relative z-10 text-center">
-                    <div class="text-7xl mb-4">🔧</div>
-                    <div class="text-white font-bold text-3xl mb-2">n8n + AI Agents</div>
-                    <div class="text-white text-lg opacity-90">Tutorial Completo</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Article Content -->
-        <div class="prose prose-lg max-w-none">
-            
-            <!-- Introduction -->
-            <h2>Visão geral: o que é um agente de IA no n8n</h2>
-            
-            <p>
-                <strong>Agentes de IA em n8n</strong> são workflows que usam um modelo de linguagem (LLM) conectado ao node <strong>AI Agent</strong> para tomar decisões, escolher ferramentas (outros nodes) e executar tarefas de forma semi ou totalmente autônoma.
+<!-- Meta Info -->
+<div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-8 pb-6 border-b border-gray-200">
+<div class="flex items-center gap-2">
+<svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Por <strong>Felipe Lourenzo</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<time datetime="2025-11-09">09 de Novembro de 2025</time>
+</div>
+<div class="flex items-center gap-2">
+<svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Leitura: 20 min</span>
+</div>
+</div>
+<!-- Featured Icon -->
+<div class="mb-10 flex justify-center">
+<div class="w-full max-w-2xl h-64 bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 rounded-xl flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,50 Q25,20 50,50 T100,50" fill="none" opacity="0.3" stroke="white" stroke-width="0.5"></path>
+<path d="M0,60 Q25,30 50,60 T100,60" fill="none" opacity="0.2" stroke="white" stroke-width="0.5"></path>
+<path d="M0,40 Q25,10 50,40 T100,40" fill="none" opacity="0.2" stroke="white" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="relative z-10 text-center">
+<div class="text-7xl mb-4">🔧</div>
+<div class="text-white font-bold text-3xl mb-2">n8n + AI Agents</div>
+<div class="text-white text-lg opacity-90">Tutorial Completo</div>
+</div>
+</div>
+</div>
+<!-- Article Content -->
+<div class="prose prose-lg max-w-none">
+<!-- Introduction -->
+<h2>Visão geral: o que é um agente de IA no n8n</h2>
+<p>
+<strong>Agentes de IA em n8n</strong> são workflows que usam um modelo de linguagem (LLM) conectado ao node <strong>AI Agent</strong> para tomar decisões, escolher ferramentas (outros nodes) e executar tarefas de forma semi ou totalmente autônoma.
             </p>
-            
-            <p>
+<p>
                 Em vez de seguir uma sequência fixa de nodes, o agente <strong>recebe um objetivo</strong>, decide quais "tools" usar (APIs, bancos de dados, automações) e coordena essas chamadas até atingir o resultado.
             </p>
-            
-            <div class="stat-card">
-                <p class="text-lg font-semibold text-gray-900 mb-2">🔧 Componentes de um Agente n8n</p>
-                <ul class="text-gray-700 mb-0 space-y-2">
-                    <li><strong>Gatilho:</strong> Webhook, Chat Trigger, cron, evento externo</li>
-                    <li><strong>AI Agent node:</strong> Usa LangChain por baixo dos panos</li>
-                    <li><strong>Ferramentas:</strong> Outros workflows, HTTP Request, Google Sheets, etc.</li>
-                    <li><strong>RAG (opcional):</strong> Embeddings + vector store para pesquisa em documentos</li>
-                </ul>
-            </div>
-            
-            <!-- Pré-requisitos -->
-            <h2>Pré-requisitos para iniciantes</h2>
-            
-            <p>
+<div class="stat-card">
+<p class="text-lg font-semibold text-gray-900 mb-2">🔧 Componentes de um Agente n8n</p>
+<ul class="text-gray-700 mb-0 space-y-2">
+<li><strong>Gatilho:</strong> Webhook, Chat Trigger, cron, evento externo</li>
+<li><strong>AI Agent node:</strong> Usa LangChain por baixo dos panos</li>
+<li><strong>Ferramentas:</strong> Outros workflows, HTTP Request, Google Sheets, etc.</li>
+<li><strong>RAG (opcional):</strong> Embeddings + vector store para pesquisa em documentos</li>
+</ul>
+</div>
+<!-- Pré-requisitos -->
+<h2>Pré-requisitos para iniciantes</h2>
+<p>
                 Antes de criar seu primeiro agente, você precisa de três blocos básicos:
             </p>
-            
-            <h3>1. Conta ou instância do n8n</h3>
-            <ul>
-                <li>Pode ser em <strong>cloud da própria n8n</strong> ou <strong>self-host via Docker</strong></li>
-                <li>O editor visual é o mesmo: arrastar nodes e conectar com setas</li>
-            </ul>
-            
-            <h3>2. Chave de API de um modelo de linguagem</h3>
-            <ul>
-                <li><strong>OpenAI, Gemini</strong>, ou outro LLM compatível</li>
-                <li>No n8n, isso é configurado como credencial (ex.: "OpenAI API")</li>
-            </ul>
-            
-            <h3>3. Noções mínimas de fluxo de dados</h3>
-            <ul>
-                <li>Entender que cada node recebe <strong>items em JSON</strong>, processa e devolve saída</li>
-                <li>Saber ler as abas "JSON" e "Binary" na saída de cada node ajuda a debugar</li>
-            </ul>
-            
-            <div class="quote-box">
-                <p class="mb-0">
+<h3>1. Conta ou instância do n8n</h3>
+<ul>
+<li>Pode ser em <strong>cloud da própria n8n</strong> ou <strong>self-host via Docker</strong></li>
+<li>O editor visual é o mesmo: arrastar nodes e conectar com setas</li>
+</ul>
+<h3>2. Chave de API de um modelo de linguagem</h3>
+<ul>
+<li><strong>OpenAI, Gemini</strong>, ou outro LLM compatível</li>
+<li>No n8n, isso é configurado como credencial (ex.: "OpenAI API")</li>
+</ul>
+<h3>3. Noções mínimas de fluxo de dados</h3>
+<ul>
+<li>Entender que cada node recebe <strong>items em JSON</strong>, processa e devolve saída</li>
+<li>Saber ler as abas "JSON" e "Binary" na saída de cada node ajuda a debugar</li>
+</ul>
+<div class="quote-box">
+<p class="mb-0">
                     Com isso em mãos, você já consegue seguir o passo a passo para montar um agente simples.
                 </p>
-            </div>
-            
-            <!-- Conceitos LangChain -->
-            <h2>Conceitos de LangChain no n8n</h2>
-            
-            <p>
+</div>
+<!-- Conceitos LangChain -->
+<h2>Conceitos de LangChain no n8n</h2>
+<p>
                 O n8n integra <strong>LangChain</strong> através de um conjunto de <em>cluster nodes</em>, como <strong>AI Agent, Chains</strong> e sub-nodes de embeddings, tools e vector stores.
             </p>
-            
-            <div class="stat-card">
-                <p class="text-lg font-semibold text-gray-900 mb-2">🧠 Conceitos Clássicos de LangChain</p>
-                <ul class="text-gray-700 mb-0 space-y-2">
-                    <li><strong>Agent (AI Agent node):</strong> Recebe um objetivo, tem acesso a tools e decide quando chamá-las</li>
-                    <li><strong>Tools:</strong> Funções externas – desde um HTTP Request a um sub-workflow</li>
-                    <li><strong>Chains:</strong> Sequências de chamadas LLM (ex.: "resumir depois reescrever")</li>
-                    <li><strong>Embeddings / Vector Stores:</strong> Transformar texto em vetores e buscar por similaridade para RAG</li>
-                </ul>
-            </div>
-            
-            <p>
+<div class="stat-card">
+<p class="text-lg font-semibold text-gray-900 mb-2">🧠 Conceitos Clássicos de LangChain</p>
+<ul class="text-gray-700 mb-0 space-y-2">
+<li><strong>Agent (AI Agent node):</strong> Recebe um objetivo, tem acesso a tools e decide quando chamá-las</li>
+<li><strong>Tools:</strong> Funções externas – desde um HTTP Request a um sub-workflow</li>
+<li><strong>Chains:</strong> Sequências de chamadas LLM (ex.: "resumir depois reescrever")</li>
+<li><strong>Embeddings / Vector Stores:</strong> Transformar texto em vetores e buscar por similaridade para RAG</li>
+</ul>
+</div>
+<p>
                 O node <strong>AI Agent</strong> do n8n, nas versões mais recentes, opera como um <strong>Tools Agent</strong> padrão do LangChain, com foco explícito em chamar ferramentas de forma estruturada.
             </p>
-            
-            <!-- Passo 1 -->
-            <h2>Passo 1: Escolher o tipo de agente que você quer</h2>
-            
-            <p>
+<!-- Passo 1 -->
+<h2>Passo 1: Escolher o tipo de agente que você quer</h2>
+<p>
                 Para iniciantes, vale pensar em três tipos básicos de agente:
             </p>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">🎯 Agente de automação pontual</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li><strong>Exemplo:</strong> Recebe um pedido via Webhook, enriquece com IA e grava no Google Sheets</li>
-                    <li><strong>Gatilho:</strong> Webhook ou formulário</li>
-                    <li><strong>Autonomia:</strong> Baixa – ele só faz um job bem definido</li>
-                </ul>
-            </div>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">💬 Agente assistente</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li><strong>Exemplo:</strong> Responde dúvidas de clientes usando base de conhecimento em RAG</li>
-                    <li><strong>Gatilho:</strong> Chat Trigger (chat embutido) ou canal externo</li>
-                    <li><strong>Autonomia:</strong> Média – decide quais documentos buscar e como responder</li>
-                </ul>
-            </div>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">🤖 Agente autônomo de tarefas recorrentes</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li><strong>Exemplo:</strong> Todo dia às 8h faz um resumo de notícias, manda e-mail e loga em planilha</li>
-                    <li><strong>Gatilho:</strong> Cron (Schedule Trigger)</li>
-                    <li><strong>Autonomia:</strong> Maior – ele decide o que buscar, como resumir e como enviar</li>
-                </ul>
-            </div>
-            
-            <p>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">🎯 Agente de automação pontual</h3>
+<ul class="text-gray-700 mb-0">
+<li><strong>Exemplo:</strong> Recebe um pedido via Webhook, enriquece com IA e grava no Google Sheets</li>
+<li><strong>Gatilho:</strong> Webhook ou formulário</li>
+<li><strong>Autonomia:</strong> Baixa – ele só faz um job bem definido</li>
+</ul>
+</div>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">💬 Agente assistente</h3>
+<ul class="text-gray-700 mb-0">
+<li><strong>Exemplo:</strong> Responde dúvidas de clientes usando base de conhecimento em RAG</li>
+<li><strong>Gatilho:</strong> Chat Trigger (chat embutido) ou canal externo</li>
+<li><strong>Autonomia:</strong> Média – decide quais documentos buscar e como responder</li>
+</ul>
+</div>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">🤖 Agente autônomo de tarefas recorrentes</h3>
+<ul class="text-gray-700 mb-0">
+<li><strong>Exemplo:</strong> Todo dia às 8h faz um resumo de notícias, manda e-mail e loga em planilha</li>
+<li><strong>Gatilho:</strong> Cron (Schedule Trigger)</li>
+<li><strong>Autonomia:</strong> Maior – ele decide o que buscar, como resumir e como enviar</li>
+</ul>
+</div>
+<p>
                 Ter clareza disso muda a forma como você escreve o <strong>prompt do agente</strong>, define <strong>tools</strong> e <strong>gatilhos</strong>.
             </p>
-            
-            <!-- Passo 2 -->
-            <h2>Passo 2: Montar a base do workflow no n8n</h2>
-            
-            <h3>Crie um novo workflow</h3>
-            <p>Clique em <strong>New workflow</strong> no editor do n8n.</p>
-            
-            <h3>Adicione um node de gatilho</h3>
-            <ul>
-                <li>Para chat: <strong>Chat Trigger</strong></li>
-                <li>Para chamadas HTTP: <strong>Webhook</strong></li>
-                <li>Para rotina cronometrada: <strong>Cron</strong> ou <strong>Schedule Trigger</strong></li>
-            </ul>
-            
-            <h3>Conecte o gatilho ao AI Agent</h3>
-            <ul>
-                <li>Adicione o node <strong>AI Agent (LangChain)</strong> como próximo passo</li>
-                <li>Conecte a seta do gatilho para o AI Agent para que os dados da entrada cheguem ao modelo</li>
-            </ul>
-            
-            <div class="quote-box">
-                <p class="mb-0">
+<!-- Passo 2 -->
+<h2>Passo 2: Montar a base do workflow no n8n</h2>
+<h3>Crie um novo workflow</h3>
+<p>Clique em <strong>New workflow</strong> no editor do n8n.</p>
+<h3>Adicione um node de gatilho</h3>
+<ul>
+<li>Para chat: <strong>Chat Trigger</strong></li>
+<li>Para chamadas HTTP: <strong>Webhook</strong></li>
+<li>Para rotina cronometrada: <strong>Cron</strong> ou <strong>Schedule Trigger</strong></li>
+</ul>
+<h3>Conecte o gatilho ao AI Agent</h3>
+<ul>
+<li>Adicione o node <strong>AI Agent (LangChain)</strong> como próximo passo</li>
+<li>Conecte a seta do gatilho para o AI Agent para que os dados da entrada cheguem ao modelo</li>
+</ul>
+<div class="quote-box">
+<p class="mb-0">
                     Nesse ponto, você já tem um fluxo <strong>"Gatilho → AI Agent"</strong>. O restante será dar "cérebro, ferramentas e memória" para o agente.
                 </p>
-            </div>
-            
-            <!-- Passo 3 -->
-            <h2>Passo 3: Configurar o node AI Agent</h2>
-            
-            <p>No painel do node <strong>AI Agent</strong>:</p>
-            
-            <h3>Escolha o modelo de linguagem</h3>
-            <p>
+</div>
+<!-- Passo 3 -->
+<h2>Passo 3: Configurar o node AI Agent</h2>
+<p>No painel do node <strong>AI Agent</strong>:</p>
+<h3>Escolha o modelo de linguagem</h3>
+<p>
                 Em <strong>"LLM"</strong> selecione seu provedor (OpenAI, Gemini etc.) e a credencial correspondente. Se estiver usando um endpoint compatível com OpenAI self-hosted, configure a base URL na credencial ou no node adequado.
             </p>
-            
-            <h3>Defina o "system prompt" do agente</h3>
-            <p>
+<h3>Defina o "system prompt" do agente</h3>
+<p>
                 O <strong>system prompt</strong> é a instrução principal sobre quem o agente é e como deve agir.
             </p>
-            
-            <div class="highlight-box">
-                <h3 class="text-white text-2xl font-bold mb-3">📝 Estrutura RTTO para Prompts</h3>
-                <p class="text-white mb-2">Para iniciantes, use uma estrutura simples de quatro blocos:</p>
-                <ul class="text-white mb-0 space-y-2">
-                    <li><strong>Role (Papel):</strong> "Você é um agente de automação no n8n especializado em [seu caso de uso]"</li>
-                    <li><strong>Task (Tarefas):</strong> Liste claramente o que ele pode ou não pode fazer</li>
-                    <li><strong>Tools (Ferramentas):</strong> Descreva em linguagem natural as tools disponíveis</li>
-                    <li><strong>Output (Saída):</strong> Formato esperado (JSON, texto, markdown etc.)</li>
-                </ul>
-            </div>
-            
-            <h3>Ative ou não o retorno de "intermediate steps"</h3>
-            <p>
+<div class="highlight-box">
+<h3 class="text-white text-2xl font-bold mb-3">📝 Estrutura RTTO para Prompts</h3>
+<p class="text-white mb-2">Para iniciantes, use uma estrutura simples de quatro blocos:</p>
+<ul class="text-white mb-0 space-y-2">
+<li><strong>Role (Papel):</strong> "Você é um agente de automação no n8n especializado em [seu caso de uso]"</li>
+<li><strong>Task (Tarefas):</strong> Liste claramente o que ele pode ou não pode fazer</li>
+<li><strong>Tools (Ferramentas):</strong> Descreva em linguagem natural as tools disponíveis</li>
+<li><strong>Output (Saída):</strong> Formato esperado (JSON, texto, markdown etc.)</li>
+</ul>
+</div>
+<h3>Ative ou não o retorno de "intermediate steps"</h3>
+<p>
                 A opção de retornar passos intermediários ajuda a visualizar que ferramentas o agente chamou, para debug. Para iniciantes, é útil manter <strong>ligado em ambiente de teste</strong> e desligar em produção para respostas mais limpas.
             </p>
-            
-            <h3>Configure memória (opcional, mas recomendável em chat)</h3>
-            <p>
+<h3>Configure memória (opcional, mas recomendável em chat)</h3>
+<p>
                 Em cenários de chat, é possível anexar um <strong>sub-node de memory</strong> ao AI Agent para manter contexto entre mensagens em uma mesma sessão.
             </p>
-            
-            <div class="alert-box">
-                <p class="text-lg font-semibold text-red-900 mb-2">⚠️ Atenção: Persistência de Memória</p>
-                <p class="text-red-800 mb-0">
+<div class="alert-box">
+<p class="text-lg font-semibold text-red-900 mb-2">⚠️ Atenção: Persistência de Memória</p>
+<p class="text-red-800 mb-0">
                     A maioria das memórias do agent <strong>não persiste automaticamente</strong> entre sessões, a menos que você conecte a um armazenamento externo (banco, vector store etc.).
                 </p>
-            </div>
-            
-            <!-- Passo 4 -->
-            <h2>Passo 4: Adicionar ferramentas (tools) ao agente</h2>
-            
-            <p>
+</div>
+<!-- Passo 4 -->
+<h2>Passo 4: Adicionar ferramentas (tools) ao agente</h2>
+<p>
                 O poder de um agente vem da capacidade de <strong>chamar ferramentas</strong>. No n8n isso acontece de duas formas principais:
             </p>
-            
-            <h3>4.1 Sub-nodes internos do AI Agent</h3>
-            <p>
+<h3>4.1 Sub-nodes internos do AI Agent</h3>
+<p>
                 O node AI Agent suporta <strong>sub-nodes de Tools</strong>, que representam funções específicas expostas ao modelo:
             </p>
-            
-            <ul>
-                <li>Tool para fazer <strong>HTTP Request</strong> em uma API</li>
-                <li>Tool para buscar em um <strong>vector store</strong></li>
-                <li>Tool para chamar outro workflow (<strong>Call Workflow</strong>)</li>
-            </ul>
-            
-            <div class="stat-card">
-                <p class="text-lg font-semibold text-gray-900 mb-2">🛠️ Para cada tool você define:</p>
-                <ul class="text-gray-700 mb-0">
-                    <li><strong>Nome da ferramenta:</strong> ID que o LLM verá</li>
-                    <li><strong>Descrição clara:</strong> "busca eventos no Google Calendar para um intervalo de datas"</li>
-                    <li><strong>Parâmetros obrigatórios:</strong> Ex.: email, data_inicio, data_fim</li>
-                </ul>
-            </div>
-            
-            <h3>4.2 Tools via outros nodes / workflows</h3>
-            <p>
+<ul>
+<li>Tool para fazer <strong>HTTP Request</strong> em uma API</li>
+<li>Tool para buscar em um <strong>vector store</strong></li>
+<li>Tool para chamar outro workflow (<strong>Call Workflow</strong>)</li>
+</ul>
+<div class="stat-card">
+<p class="text-lg font-semibold text-gray-900 mb-2">🛠️ Para cada tool você define:</p>
+<ul class="text-gray-700 mb-0">
+<li><strong>Nome da ferramenta:</strong> ID que o LLM verá</li>
+<li><strong>Descrição clara:</strong> "busca eventos no Google Calendar para um intervalo de datas"</li>
+<li><strong>Parâmetros obrigatórios:</strong> Ex.: email, data_inicio, data_fim</li>
+</ul>
+</div>
+<h3>4.2 Tools via outros nodes / workflows</h3>
+<p>
                 Você também pode deixar o AI Agent "decidir" coisas e, depois, usar a saída para acionar nodes comuns do n8n, como:
             </p>
-            
-            <ul>
-                <li><strong>HTTP Request</strong> para integrar com qualquer API</li>
-                <li><strong>Google Sheets, Gmail, Slack</strong>, etc.</li>
-            </ul>
-            
-            <p>Um padrão comum:</p>
-            <ol>
-                <li>AI Agent decide o plano de ação e devolve um <strong>JSON bem estruturado</strong></li>
-                <li>Nodes seguintes leem esse JSON (<code>{{$json.campo}}</code>) e executam as ações necessárias</li>
-            </ol>
-            
-            <p>
+<ul>
+<li><strong>HTTP Request</strong> para integrar com qualquer API</li>
+<li><strong>Google Sheets, Gmail, Slack</strong>, etc.</li>
+</ul>
+<p>Um padrão comum:</p>
+<ol>
+<li>AI Agent decide o plano de ação e devolve um <strong>JSON bem estruturado</strong></li>
+<li>Nodes seguintes leem esse JSON (<code>{{$json.campo}}</code>) e executam as ações necessárias</li>
+</ol>
+<p>
                 Isso <strong>reduz a complexidade</strong> dentro do agent e aumenta o controle sobre o que ele pode fazer.
             </p>
-            
-            <!-- Passo 5 -->
-            <h2>Passo 5: Conectando LangChain + embeddings para RAG</h2>
-            
-            <p>
+<!-- Passo 5 -->
+<h2>Passo 5: Conectando LangChain + embeddings para RAG</h2>
+<p>
                 Para agentes que precisam <strong>"ler arquivos"</strong> ou <strong>"consultar base de conhecimento"</strong>, você precisa de <strong>embeddings + vector store</strong>.
             </p>
-            
-            <h3>Fluxo típico em n8n:</h3>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">1. Pré-processar documentos</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li>Nodes para carregar PDFs, textos, dados externos</li>
-                    <li>Aplicar <strong>text splitting</strong> (tamanho de chunk, overlap) para quebrar textos longos</li>
-                </ul>
-            </div>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">2. Gerar embeddings</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li>Usar o node <strong>Embeddings OpenAI</strong> (ou similar) para transformar cada chunk em vetor</li>
-                    <li>Gravar esses vetores em um vector store (Pinecone, pgvector, etc.)</li>
-                </ul>
-            </div>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">3. Na hora da pergunta (runtime)</h3>
-                <ul class="text-gray-700 mb-0">
-                    <li>O Chat Trigger recebe a pergunta do usuário</li>
-                    <li>Um node de busca no vector store encontra os chunks mais relevantes</li>
-                    <li>Uma chain (ou o próprio AI Agent) combina pergunta + contexto recuperado e gera a resposta</li>
-                </ul>
-            </div>
-            
-            <div class="highlight-box">
-                <h3 class="text-white text-2xl font-bold mb-3">🔍 RAG - Retrieval-Augmented Generation</h3>
-                <p class="text-white mb-0">
+<h3>Fluxo típico em n8n:</h3>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">1. Pré-processar documentos</h3>
+<ul class="text-gray-700 mb-0">
+<li>Nodes para carregar PDFs, textos, dados externos</li>
+<li>Aplicar <strong>text splitting</strong> (tamanho de chunk, overlap) para quebrar textos longos</li>
+</ul>
+</div>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">2. Gerar embeddings</h3>
+<ul class="text-gray-700 mb-0">
+<li>Usar o node <strong>Embeddings OpenAI</strong> (ou similar) para transformar cada chunk em vetor</li>
+<li>Gravar esses vetores em um vector store (Pinecone, pgvector, etc.)</li>
+</ul>
+</div>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">3. Na hora da pergunta (runtime)</h3>
+<ul class="text-gray-700 mb-0">
+<li>O Chat Trigger recebe a pergunta do usuário</li>
+<li>Um node de busca no vector store encontra os chunks mais relevantes</li>
+<li>Uma chain (ou o próprio AI Agent) combina pergunta + contexto recuperado e gera a resposta</li>
+</ul>
+</div>
+<div class="highlight-box">
+<h3 class="text-white text-2xl font-bold mb-3">🔍 RAG - Retrieval-Augmented Generation</h3>
+<p class="text-white mb-0">
                     Esse padrão é conhecido como <strong>Retrieval-Augmented Generation (RAG)</strong> e é muito comum em exemplos oficiais do n8n e tutoriais de terceiros.
                 </p>
-            </div>
-            
-            <!-- Passo 6 -->
-            <h2>Passo 6: Construindo um agente autônomo simples (exemplo prático)</h2>
-            
-            <p>
+</div>
+<!-- Passo 6 -->
+<h2>Passo 6: Construindo um agente autônomo simples (exemplo prático)</h2>
+<p>
                 Vamos montar mentalmente um <strong>agente de "briefing diário"</strong>, cenário muito usado em tutoriais para iniciantes.
             </p>
-            
-            <h3>Objetivo do agente</h3>
-            <p>Todo dia às 8h:</p>
-            <ul>
-                <li>Buscar as principais notícias de tecnologia</li>
-                <li>Resumir em português, em 3 a 5 tópicos</li>
-                <li>Enviar por e-mail ou Slack</li>
-                <li>Registrar o que foi enviado em um Google Sheets</li>
-            </ul>
-            
-            <h3>Passo a passo resumido</h3>
-            
-            <div class="step-box">
-                <h4 class="text-blue-900 mt-0">1. Gatilho</h4>
-                <p class="text-gray-700 mb-0">Adicione um node <strong>Cron/Schedule Trigger</strong> configurado para 08:00 diariamente.</p>
-            </div>
-            
-            <div class="step-box">
-                <h4 class="text-blue-900 mt-0">2. AI Agent</h4>
-                <p class="text-gray-700 mb-2">Adicione o node AI Agent conectado ao LLM (OpenAI, GPT-4.5, etc.).</p>
-                <p class="text-gray-700 font-semibold mb-1">System prompt sugerido:</p>
-                <ul class="text-gray-700 mb-0">
-                    <li><strong>Papel:</strong> "Você é um agente de briefing diário de tecnologia"</li>
-                    <li><strong>Tarefas:</strong> Gerar resumo conciso em bullet points, citar fontes, sempre em PT-BR</li>
-                    <li><strong>Formato:</strong> JSON com campos titulo, resumo_markdown, topicos[]</li>
-                </ul>
-            </div>
-            
-            <div class="step-box">
-                <h4 class="text-blue-900 mt-0">3. Tool de busca de notícias</h4>
-                <p class="text-gray-700 mb-0">Node <strong>HTTP Request</strong> chamando uma API de notícias (ou SerpAPI) com query=tecnologia.</p>
-            </div>
-            
-            <div class="step-box">
-                <h4 class="text-blue-900 mt-0">4. Processar e enviar</h4>
-                <ul class="text-gray-700 mb-0">
-                    <li>Adicione node de <strong>Gmail ou Slack</strong> para enviar o resumo</li>
-                    <li>Adicione node <strong>Google Sheets</strong> para logar data, título e link</li>
-                </ul>
-            </div>
-            
-            <div class="step-box">
-                <h4 class="text-blue-900 mt-0">5. Testar</h4>
-                <ul class="text-gray-700 mb-0">
-                    <li>Rode o workflow manualmente</li>
-                    <li>Verifique no <strong>Execution log</strong> se o AI Agent está escolhendo a tool certa</li>
-                </ul>
-            </div>
-            
-            <p>
+<h3>Objetivo do agente</h3>
+<p>Todo dia às 8h:</p>
+<ul>
+<li>Buscar as principais notícias de tecnologia</li>
+<li>Resumir em português, em 3 a 5 tópicos</li>
+<li>Enviar por e-mail ou Slack</li>
+<li>Registrar o que foi enviado em um Google Sheets</li>
+</ul>
+<h3>Passo a passo resumido</h3>
+<div class="step-box">
+<h4 class="text-blue-900 mt-0">1. Gatilho</h4>
+<p class="text-gray-700 mb-0">Adicione um node <strong>Cron/Schedule Trigger</strong> configurado para 08:00 diariamente.</p>
+</div>
+<div class="step-box">
+<h4 class="text-blue-900 mt-0">2. AI Agent</h4>
+<p class="text-gray-700 mb-2">Adicione o node AI Agent conectado ao LLM (OpenAI, GPT-4.5, etc.).</p>
+<p class="text-gray-700 font-semibold mb-1">System prompt sugerido:</p>
+<ul class="text-gray-700 mb-0">
+<li><strong>Papel:</strong> "Você é um agente de briefing diário de tecnologia"</li>
+<li><strong>Tarefas:</strong> Gerar resumo conciso em bullet points, citar fontes, sempre em PT-BR</li>
+<li><strong>Formato:</strong> JSON com campos titulo, resumo_markdown, topicos[]</li>
+</ul>
+</div>
+<div class="step-box">
+<h4 class="text-blue-900 mt-0">3. Tool de busca de notícias</h4>
+<p class="text-gray-700 mb-0">Node <strong>HTTP Request</strong> chamando uma API de notícias (ou SerpAPI) com query=tecnologia.</p>
+</div>
+<div class="step-box">
+<h4 class="text-blue-900 mt-0">4. Processar e enviar</h4>
+<ul class="text-gray-700 mb-0">
+<li>Adicione node de <strong>Gmail ou Slack</strong> para enviar o resumo</li>
+<li>Adicione node <strong>Google Sheets</strong> para logar data, título e link</li>
+</ul>
+</div>
+<div class="step-box">
+<h4 class="text-blue-900 mt-0">5. Testar</h4>
+<ul class="text-gray-700 mb-0">
+<li>Rode o workflow manualmente</li>
+<li>Verifique no <strong>Execution log</strong> se o AI Agent está escolhendo a tool certa</li>
+</ul>
+</div>
+<p>
                 Esse é um exemplo clássico de <strong>"agente autônomo leve"</strong>: ele roda sozinho todo dia, mas atua dentro de um escopo bem controlado.
             </p>
-            
-            <!-- Passo 7 -->
-            <h2>Passo 7: Boas práticas de prompt e controle</h2>
-            
-            <p>
+<!-- Passo 7 -->
+<h2>Passo 7: Boas práticas de prompt e controle</h2>
+<p>
                 Para iniciantes, o erro mais comum é escrever <strong>prompts vagos</strong>. Boas práticas:
             </p>
-            
-            <h3>Role / Task / Tools / Output (RTTO)</h3>
-            <ul>
-                <li><strong>Role:</strong> Quem é o agente</li>
-                <li><strong>Task:</strong> O que ele precisa fazer, com exemplos</li>
-                <li><strong>Tools:</strong> Descreva em linguagem de negócio quando usar cada tool</li>
-                <li><strong>Output:</strong> Formato exato (JSON com campos nomeados, markdown, etc.)</li>
-            </ul>
-            
-            <h3>Limitar escopo</h3>
-            <p>
+<h3>Role / Task / Tools / Output (RTTO)</h3>
+<ul>
+<li><strong>Role:</strong> Quem é o agente</li>
+<li><strong>Task:</strong> O que ele precisa fazer, com exemplos</li>
+<li><strong>Tools:</strong> Descreva em linguagem de negócio quando usar cada tool</li>
+<li><strong>Output:</strong> Formato exato (JSON com campos nomeados, markdown, etc.)</li>
+</ul>
+<h3>Limitar escopo</h3>
+<p>
                 Deixe explícito o que o agente <strong>não pode fazer</strong> (ex.: "não envie e-mails diretamente, apenas gere o texto"). Isso reduz risco de comportamentos inesperados, principalmente quando você der mais autonomia.
             </p>
-            
-            <h3>Validar saídas</h3>
-            <p>
+<h3>Validar saídas</h3>
+<p>
                 Em n8n, você pode usar um node extra de validação (ex.: um <strong>node de Function</strong> para checar se campos essenciais existem antes de prosseguir). Em casos mais avançados, usar "structured output"/parsing do próprio LangChain via AI Agent.
             </p>
-            
-            <!-- Passo 8 -->
-            <h2>Passo 8: Tornando o agente realmente autônomo (multi-step)</h2>
-            
-            <p>
+<!-- Passo 8 -->
+<h2>Passo 8: Tornando o agente realmente autônomo (multi-step)</h2>
+<p>
                 Agentes autônomos de verdade:
             </p>
-            
-            <ul>
-                <li>Quebram um objetivo em <strong>subtarefas</strong></li>
-                <li>Escolhem <strong>ferramentas</strong></li>
-                <li>Monitoram progresso e <strong>iteram</strong></li>
-            </ul>
-            
-            <p>No n8n, isso normalmente é feito com:</p>
-            
-            <div class="stat-card">
-                <p class="text-lg font-semibold text-gray-900 mb-2">🎭 Arquitetura Multi-Agente</p>
-                <ul class="text-gray-700 mb-0">
-                    <li>Um <strong>orchestrator agent</strong> (AI Agent principal)</li>
-                    <li>Vários <strong>sub-workflows especializados</strong> (pesquisa, escrita, revisão etc.)</li>
-                    <li>Tools do tipo <strong>"Call workflow"</strong> ou HTTP para orquestrar essas especializações</li>
-                </ul>
-            </div>
-            
-            <h3>Exemplo: Multi-agente para criação de conteúdo</h3>
-            <ul>
-                <li><strong>Agente 1:</strong> Pesquisa</li>
-                <li><strong>Agente 2:</strong> Redator</li>
-                <li><strong>Agente 3:</strong> Editor/SEO</li>
-                <li><strong>Agente 4:</strong> Publicador (integração com CMS)</li>
-                <li><strong>Orchestrator:</strong> Recebe o tema, define etapas e coordena a execução</li>
-            </ul>
-            
-            <p>
+<ul>
+<li>Quebram um objetivo em <strong>subtarefas</strong></li>
+<li>Escolhem <strong>ferramentas</strong></li>
+<li>Monitoram progresso e <strong>iteram</strong></li>
+</ul>
+<p>No n8n, isso normalmente é feito com:</p>
+<div class="stat-card">
+<p class="text-lg font-semibold text-gray-900 mb-2">🎭 Arquitetura Multi-Agente</p>
+<ul class="text-gray-700 mb-0">
+<li>Um <strong>orchestrator agent</strong> (AI Agent principal)</li>
+<li>Vários <strong>sub-workflows especializados</strong> (pesquisa, escrita, revisão etc.)</li>
+<li>Tools do tipo <strong>"Call workflow"</strong> ou HTTP para orquestrar essas especializações</li>
+</ul>
+</div>
+<h3>Exemplo: Multi-agente para criação de conteúdo</h3>
+<ul>
+<li><strong>Agente 1:</strong> Pesquisa</li>
+<li><strong>Agente 2:</strong> Redator</li>
+<li><strong>Agente 3:</strong> Editor/SEO</li>
+<li><strong>Agente 4:</strong> Publicador (integração com CMS)</li>
+<li><strong>Orchestrator:</strong> Recebe o tema, define etapas e coordena a execução</li>
+</ul>
+<p>
                 Como iniciante, você pode começar com um único AI Agent e, aos poucos, extrair partes do fluxo para sub-workflows especializados.
             </p>
-            
-            <!-- Passo 9 -->
-            <h2>Passo 9: Memória, logs e monitoramento</h2>
-            
-            <p>
+<!-- Passo 9 -->
+<h2>Passo 9: Memória, logs e monitoramento</h2>
+<p>
                 Para agentes que conversam com usuários ou rodam várias vezes ao dia, é crítico ter:
             </p>
-            
-            <h3>Memória de curto prazo</h3>
-            <p>
+<h3>Memória de curto prazo</h3>
+<p>
                 Usando o <strong>sub-node de memory</strong> ligado ao Chat Trigger + AI Agent, o usuário pode fazer várias perguntas sequenciais sem perder contexto.
             </p>
-            
-            <h3>Memória de longo prazo</h3>
-            <p>
+<h3>Memória de longo prazo</h3>
+<p>
                 Guardar <strong>resumos de conversas</strong>, preferências ou histórico em banco de dados ou vector store, e recuperar via RAG quando necessário.
             </p>
-            
-            <h3>Logs de execução</h3>
-            <p>
+<h3>Logs de execução</h3>
+<p>
                 O <strong>painel de execuções</strong> do n8n mostra cada chamada do agent, tools usadas e erros. Em workflows críticos, é comum logar também em uma planilha ou tabela interna (timestamp, input, output, tool chamada, sucesso/erro).
             </p>
-            
-            <div class="quote-box">
-                <p class="mb-0">
+<div class="quote-box">
+<p class="mb-0">
                     Isso é o que permite evoluir o agente de <strong>"brinquedo"</strong> para <strong>"componente confiável de produto"</strong>.
                 </p>
-            </div>
-            
-            <!-- Passo 10 -->
-            <h2>Passo 10: Limites, custos e segurança</h2>
-            
-            <p>
+</div>
+<!-- Passo 10 -->
+<h2>Passo 10: Limites, custos e segurança</h2>
+<p>
                 Alguns cuidados importantes para quem está começando:
             </p>
-            
-            <h3>Custos de LLM e embeddings</h3>
-            <p>
+<h3>Custos de LLM e embeddings</h3>
+<p>
                 Cada chamada ao LLM <strong>consome tokens</strong>; cada embedding gera custo adicional.
             </p>
-            
-            <div class="stat-card">
-                <p class="text-lg font-semibold text-gray-900 mb-2">💰 Estratégias de Economia</p>
-                <ul class="text-gray-700 mb-0">
-                    <li>Limitar tamanho de contexto</li>
-                    <li>Usar modelos mais baratos para tarefas simples</li>
-                    <li>Cachear resultados recorrentes</li>
-                </ul>
-            </div>
-            
-            <h3>Segurança de credenciais</h3>
-            <p>
+<div class="stat-card">
+<p class="text-lg font-semibold text-gray-900 mb-2">💰 Estratégias de Economia</p>
+<ul class="text-gray-700 mb-0">
+<li>Limitar tamanho de contexto</li>
+<li>Usar modelos mais baratos para tarefas simples</li>
+<li>Cachear resultados recorrentes</li>
+</ul>
+</div>
+<h3>Segurança de credenciais</h3>
+<p>
                 Use o sistema de <strong>Credentials do n8n</strong> – nunca hardcode chaves em campos de texto. Em instâncias compartilhadas, controle quem pode editar workflows sensíveis.
             </p>
-            
-            <h3>Autonomia graduada</h3>
-            <p>
+<h3>Autonomia graduada</h3>
+<p>
                 Comece com <strong>"human in the loop"</strong> (ex.: enviar rascunho para revisão humana antes de disparar e-mail). Só depois permita ações totalmente automáticas, e sempre com escopo limitado (apenas certos tipos de cliente, contas de teste etc.).
             </p>
-            
-            <!-- Como praticar -->
-            <h2>Como praticar e evoluir a partir daqui</h2>
-            
-            <p>
+<!-- Como praticar -->
+<h2>Como praticar e evoluir a partir daqui</h2>
+<p>
                 Para consolidar o aprendizado de iniciantes, três projetos simples e progressivos:
             </p>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">1. Agente de resposta de FAQ interno</h3>
-                <p class="text-gray-700 mb-0">
-                    <strong>Chat Trigger + AI Agent + RAG</strong> em documentos da empresa.
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">1. Agente de resposta de FAQ interno</h3>
+<p class="text-gray-700 mb-0">
+<strong>Chat Trigger + AI Agent + RAG</strong> em documentos da empresa.
                 </p>
-            </div>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">2. Agente de cobrança amigável</h3>
-                <p class="text-gray-700 mb-0">
+</div>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">2. Agente de cobrança amigável</h3>
+<p class="text-gray-700 mb-0">
                     Integra com sistema financeiro, lê faturas em atraso e redige e-mails personalizados para <strong>revisão humana</strong>.
                 </p>
-            </div>
-            
-            <div class="step-box">
-                <h3 class="text-blue-900 mt-0">3. Agente de resumo diário</h3>
-                <p class="text-gray-700 mb-0">
-                    <strong>Cron + AI Agent + APIs externas</strong> (notícias, analytics) + envio por e-mail/Slack.
+</div>
+<div class="step-box">
+<h3 class="text-blue-900 mt-0">3. Agente de resumo diário</h3>
+<p class="text-gray-700 mb-0">
+<strong>Cron + AI Agent + APIs externas</strong> (notícias, analytics) + envio por e-mail/Slack.
                 </p>
-            </div>
-            
-            <div class="highlight-box">
-                <h3 class="text-white text-2xl font-bold mb-3">🚀 Próximos Passos</h3>
-                <p class="text-white mb-0">
+</div>
+<div class="highlight-box">
+<h3 class="text-white text-2xl font-bold mb-3">🚀 Próximos Passos</h3>
+<p class="text-white mb-0">
                     Com esses três projetos, você terá dominado os fundamentos de <strong>agentes de IA no n8n</strong>. A partir daí, explore arquiteturas multi-agente, integração com sistemas corporativos e automações complexas com RAG avançado.
                 </p>
-            </div>
-            
-        </div>
-        
-        <!-- Call to Action -->
-        <div class="mt-16 bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Comece a criar seus agentes de IA hoje mesmo</h3>
-            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-16 bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 text-center">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Comece a criar seus agentes de IA hoje mesmo</h3>
+<p class="text-gray-700 mb-6 max-w-2xl mx-auto">
                 Explore nossa biblioteca de templates prontos para n8n e aprenda com casos de uso reais. Transforme teoria em prática.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="/integracoes/" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg hover:shadow-xl">
+<div class="flex flex-wrap justify-center gap-4">
+<a class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg hover:shadow-xl" href="/integracoes/">
                     🔧 Templates n8n
                 </a>
-                <a href="/casos-de-uso" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg hover:shadow-xl">
+<a class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg hover:shadow-xl" href="/casos-de-uso">
                     📚 Casos de Uso
                 </a>
-                <a href="/blog" class="inline-block bg-gray-800 hover:bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg hover:shadow-xl">
+<a class="inline-block bg-gray-800 hover:bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg transition shadow-lg hover:shadow-xl" href="/blog">
                     📖 Mais Tutoriais
                 </a>
-            </div>
-        </div>
-        
-        <!-- Tags -->
-        <div class="mt-12 pt-8 border-t border-gray-200">
-            <div class="flex flex-wrap gap-2">
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#n8n</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#AgentesIA</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#LangChain</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#AIAgent</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Tutorial</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#RAG</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Embeddings</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Automação</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#OpenAI</span>
-                <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Workflow</span>
-            </div>
-        </div>
-        
-    </article>
-    
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white mt-20">
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">🍳 Automations Cookbook</h3>
-                    <p class="text-gray-400">Receitas prontas de automação para n8n e Zapier. Conecte suas ferramentas em minutos.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Templates</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/integracoes/" class="hover:text-white transition">N8N</a></li>
-                        <li><a href="/integracoes-zapier/" class="hover:text-white transition">Zapier</a></li>
-                        <li><a href="/casos-de-uso" class="hover:text-white transition">Casos de Uso</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Conteúdo</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="/#" class="hover:text-white transition">Guias</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Social</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://github.com/felipejac" class="hover:text-white transition">GitHub</a></li>
-                        <li><a href="https://linkedin.com/in/felipelourenzo" class="hover:text-white transition">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Automations Cookbook. Feito com ☕ e código.</p>
-            </div>
-        </div>
-    </footer>
-    
+</div>
+</div>
+<!-- Tags -->
+<div class="mt-12 pt-8 border-t border-gray-200">
+<div class="flex flex-wrap gap-2">
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#n8n</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#AgentesIA</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#LangChain</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#AIAgent</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Tutorial</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#RAG</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Embeddings</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Automação</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#OpenAI</span>
+<span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">#Workflow</span>
+</div>
+</div>
+</article>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white mt-20">
+<div class="container mx-auto px-4 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">🍳 Automations Cookbook</h3>
+<p class="text-gray-400">Receitas prontas de automação para n8n e Zapier. Conecte suas ferramentas em minutos.</p>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Templates</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white transition" href="/integracoes/">N8N</a></li>
+<li><a class="hover:text-white transition" href="/integracoes-zapier/">Zapier</a></li>
+<li><a class="hover:text-white transition" href="/casos-de-uso">Casos de Uso</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Conteúdo</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white transition" href="/blog">Blog</a></li>
+<li><a class="hover:text-white transition" href="/#">Guias</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Social</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white transition" href="https://github.com/felipejac">GitHub</a></li>
+<li><a class="hover:text-white transition" href="https://linkedin.com/in/felipelourenzo">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>© 2025 Automations Cookbook. Feito com ☕ e código.</p>
+</div>
+</div>
+</footer>
 </body>
 </html>

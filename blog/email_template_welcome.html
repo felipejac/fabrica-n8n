@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo à Newsletter - Automations Cookbook</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bem-vindo à Newsletter - Automations Cookbook</title>
+<style>
         body {
             margin: 0;
             padding: 0;
@@ -96,70 +97,159 @@
             margin: 20px 0;
         }
     </style>
+
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CEYC26V1T3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // Configuração básica
+    gtag('config', 'G-CEYC26V1T3', {
+        'send_page_view': true,
+        'anonymize_ip': true,
+        'allow_google_signals': true,
+        'allow_ad_personalization_signals': false
+    });
+    
+    // Eventos personalizados para templates
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Track download de template (clique em botões de download)
+        const downloadButtons = document.querySelectorAll('a[href*=".json"], button[class*="download"], a[class*="download"]');
+        downloadButtons.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                gtag('event', 'template_download', {
+                    'event_category': 'engagement',
+                    'event_label': window.location.pathname,
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track scroll depth (75% da página)
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            if (scrollTracked) return;
+            
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            if (scrollPercent >= 75) {
+                gtag('event', 'scroll', {
+                    'event_category': 'engagement',
+                    'event_label': '75_percent',
+                    'value': 75
+                });
+                scrollTracked = true;
+            }
+        });
+        
+        // Track tempo na página (2+ minutos = engajamento alto)
+        setTimeout(function() {
+            gtag('event', 'time_on_page', {
+                'event_category': 'engagement',
+                'event_label': '2_minutes',
+                'value': 120
+            });
+        }, 120000); // 2 minutos
+        
+        // Track clique em links internos (navegação)
+        const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+        internalLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                gtag('event', 'internal_navigation', {
+                    'event_category': 'navigation',
+                    'event_label': this.getAttribute('href'),
+                    'value': 1
+                });
+            });
+        });
+        
+        // Track expansão de FAQ (se existir)
+        const faqItems = document.querySelectorAll('details.faq-item');
+        faqItems.forEach(function(item, index) {
+            item.addEventListener('toggle', function() {
+                if (this.open) {
+                    gtag('event', 'faq_expansion', {
+                        'event_category': 'engagement',
+                        'event_label': 'faq_item_' + (index + 1),
+                        'value': 1
+                    });
+                }
+            });
+        });
+        
+        // Track copy de prompt LLM (se existir)
+        const llmSection = document.querySelector('.llm-friendly');
+        if (llmSection) {
+            const promptBox = llmSection.querySelector('div[style*="monospace"]');
+            if (promptBox) {
+                promptBox.addEventListener('click', function() {
+                    gtag('event', 'llm_prompt_interaction', {
+                        'event_category': 'engagement',
+                        'event_label': 'prompt_clicked',
+                        'value': 1
+                    });
+                });
+            }
+        }
+    });
+</script>
 </head>
 <body>
-    <div class="email-container">
-        <div class="header">
-            <div class="emoji">🎉</div>
-            <h1>Bem-vindo à Newsletter!</h1>
-            <p>Automations Cookbook</p>
-        </div>
-        
-        <div class="content">
-            <h2>Olá! 👋</h2>
-            
-            <p>
+<div class="email-container">
+<div class="header">
+<div class="emoji">🎉</div>
+<h1>Bem-vindo à Newsletter!</h1>
+<p>Automations Cookbook</p>
+</div>
+<div class="content">
+<h2>Olá! 👋</h2>
+<p>
                 Seja muito bem-vindo à comunidade <strong>Automations Cookbook</strong>! Estamos muito felizes em ter você conosco.
             </p>
-            
-            <p>
+<p>
                 A partir de agora, você receberá diretamente no seu email:
             </p>
-            
-            <div class="benefits">
-                <ul>
-                    <li>📝 <strong>Novos artigos</strong> assim que forem publicados</li>
-                    <li>🔍 <strong>Análises exclusivas</strong> sobre automação e IA</li>
-                    <li>💡 <strong>Dicas práticas</strong> de n8n, Zapier e Make</li>
-                    <li>📊 <strong>Tendências de mercado</strong> e insights estratégicos</li>
-                    <li>🚀 <strong>Tutoriais avançados</strong> de automação</li>
-                    <li>🎁 <strong>Conteúdos exclusivos</strong> para assinantes</li>
-                </ul>
-            </div>
-            
-            <p>
+<div class="benefits">
+<ul>
+<li>📝 <strong>Novos artigos</strong> assim que forem publicados</li>
+<li>🔍 <strong>Análises exclusivas</strong> sobre automação e IA</li>
+<li>💡 <strong>Dicas práticas</strong> de n8n, Zapier e Make</li>
+<li>📊 <strong>Tendências de mercado</strong> e insights estratégicos</li>
+<li>🚀 <strong>Tutoriais avançados</strong> de automação</li>
+<li>🎁 <strong>Conteúdos exclusivos</strong> para assinantes</li>
+</ul>
+</div>
+<p>
                 Nosso objetivo é ajudar você a dominar as melhores ferramentas de automação e se manter atualizado sobre as inovações em IA e agentes inteligentes.
             </p>
-            
-            <p style="text-align: center;">
-                <a href="https://fabrica-n8n.vercel.app/blog" class="cta-button">
+<p style="text-align: center;">
+<a class="cta-button" href="https://fabrica-n8n.vercel.app/blog">
                     Explorar o Blog 📚
                 </a>
-            </p>
-            
-            <p>
+</p>
+<p>
                 Tem alguma sugestão de conteúdo ou dúvida? Responda este email! Adoramos ouvir nossos leitores.
             </p>
-            
-            <p style="margin-top: 30px;">
-                Até breve! 🚀<br>
-                <strong>Equipe Automations Cookbook</strong>
-            </p>
-        </div>
-        
-        <div class="footer">
-            <p>
-                <strong>Automations Cookbook</strong><br>
+<p style="margin-top: 30px;">
+                Até breve! 🚀<br/>
+<strong>Equipe Automations Cookbook</strong>
+</p>
+</div>
+<div class="footer">
+<p>
+<strong>Automations Cookbook</strong><br/>
                 Seu guia para automação e IA
             </p>
-            <p>
-                Você recebeu este email porque se inscreveu em nossa newsletter.<br>
-                <a href="{{unsubscribe_url}}">Cancelar inscrição</a>
-            </p>
-            <p style="margin-top: 15px; color: #9ca3af; font-size: 12px;">
+<p>
+                Você recebeu este email porque se inscreveu em nossa newsletter.<br/>
+<a href="{{unsubscribe_url}}">Cancelar inscrição</a>
+</p>
+<p style="margin-top: 15px; color: #9ca3af; font-size: 12px;">
                 © 2025 Automations Cookbook. Todos os direitos reservados.
             </p>
-        </div>
-    </div>
+</div>
+</div>
 </body>
 </html>
